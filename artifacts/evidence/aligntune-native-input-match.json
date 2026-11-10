@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "cases": 128,
+  "all_native_input_ids_equal_OFF": true,
+  "off_predictions_sha256": "1dda20bcfe6f16ea0c89ebe9981527e9baf789c6bf9fc2ceb4eca77585cf1585",
+  "LoRA_predictions_sha256": "09de868241275184910715b1d511451292ad86673385dcfb3c392b555cd8300c",
+  "model_calls": 0
+}

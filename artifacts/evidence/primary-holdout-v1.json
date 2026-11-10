@@ -1,0 +1,253 @@
+{
+  "split": "primary holdout",
+  "selection_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "selection_unchanged": {
+    "rate": 0.001,
+    "strength": 1
+  },
+  "n": 256,
+  "arms": {
+    "off": {
+      "successes": 169,
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 256,
+        "declared": 256,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.0,
+        "paired_family_bootstrap_95ci": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 64,
+        "gains": 0,
+        "losses": 0,
+        "unchanged": 256,
+        "claim": "no positive observed gain"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 64,
+            "success_rate": 1.0
+          },
+          "missing": {
+            "n": 64,
+            "success_rate": 0.171875
+          },
+          "conflict": {
+            "n": 64,
+            "success_rate": 0.640625
+          },
+          "altered": {
+            "n": 64,
+            "success_rate": 0.828125
+          }
+        },
+        "answerable_count": 128,
+        "answerable_accuracy": 0.9140625,
+        "unnecessary_abstention_rate": 0.0
+      },
+      "performance": {
+        "cases": 256,
+        "generation_seconds": 58.53204997006105,
+        "seconds_per_query": 0.228640820195551,
+        "generated_tokens": 1074,
+        "output_tokens_per_second": 18.348921668544797,
+        "peak_allocator_bytes": 6897639936,
+        "gpu_hours_generation_only": 0.016258902769461403,
+        "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.06351133894320861,
+        "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+        "includes_cold_load": false
+      }
+    },
+    "particle_1": {
+      "successes": 184,
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 256,
+        "declared": 256,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.05859375,
+        "paired_family_bootstrap_95ci": [
+          0.01171875,
+          0.10546875
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 64,
+        "gains": 26,
+        "losses": 11,
+        "unchanged": 219,
+        "claim": "established positive gain under this protocol"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 64,
+            "success_rate": 0.96875
+          },
+          "missing": {
+            "n": 64,
+            "success_rate": 0.515625
+          },
+          "conflict": {
+            "n": 64,
+            "success_rate": 0.671875
+          },
+          "altered": {
+            "n": 64,
+            "success_rate": 0.71875
+          }
+        },
+        "answerable_count": 128,
+        "answerable_accuracy": 0.84375,
+        "unnecessary_abstention_rate": 0.0859375
+      },
+      "performance": {
+        "cases": 256,
+        "generation_seconds": 127.49171725934139,
+        "seconds_per_query": 0.4980145205443023,
+        "generated_tokens": 1073,
+        "output_tokens_per_second": 8.416233015493253,
+        "peak_allocator_bytes": 6917253632,
+        "gpu_hours_generation_only": 0.035414365905372606,
+        "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.13833736681786174,
+        "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+        "includes_cold_load": false
+      }
+    },
+    "particle_2": {
+      "successes": 173,
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 256,
+        "declared": 256,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.015625,
+        "paired_family_bootstrap_95ci": [
+          -0.0390625,
+          0.0703125
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 64,
+        "gains": 42,
+        "losses": 38,
+        "unchanged": 176,
+        "claim": "preliminary observed gain; interval spans zero"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 64,
+            "success_rate": 0.78125
+          },
+          "missing": {
+            "n": 64,
+            "success_rate": 0.703125
+          },
+          "conflict": {
+            "n": 64,
+            "success_rate": 0.71875
+          },
+          "altered": {
+            "n": 64,
+            "success_rate": 0.5
+          }
+        },
+        "answerable_count": 128,
+        "answerable_accuracy": 0.640625,
+        "unnecessary_abstention_rate": 0.3046875
+      },
+      "performance": {
+        "cases": 256,
+        "generation_seconds": 125.59465900983196,
+        "seconds_per_query": 0.4906041367571561,
+        "generated_tokens": 1080,
+        "output_tokens_per_second": 8.599091780769548,
+        "peak_allocator_bytes": 6917253632,
+        "gpu_hours_generation_only": 0.034887405280508876,
+        "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.1362789268769878,
+        "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+        "includes_cold_load": false
+      }
+    },
+    "lora": {
+      "successes": 256,
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 256,
+        "declared": 256,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.33984375,
+        "paired_family_bootstrap_95ci": [
+          0.296875,
+          0.3828125
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 64,
+        "gains": 87,
+        "losses": 0,
+        "unchanged": 169,
+        "claim": "established positive gain under this protocol"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 64,
+            "success_rate": 1.0
+          },
+          "missing": {
+            "n": 64,
+            "success_rate": 1.0
+          },
+          "conflict": {
+            "n": 64,
+            "success_rate": 1.0
+          },
+          "altered": {
+            "n": 64,
+            "success_rate": 1.0
+          }
+        },
+        "answerable_count": 128,
+        "answerable_accuracy": 1.0,
+        "unnecessary_abstention_rate": 0.0
+      },
+      "performance": {
+        "cases": 256,
+        "generation_seconds": 74.0035603538854,
+        "seconds_per_query": 0.28907640763236486,
+        "generated_tokens": 1096,
+        "output_tokens_per_second": 14.810098254177534,
+        "peak_allocator_bytes": 6913311232,
+        "gpu_hours_generation_only": 0.020556544542745945,
+        "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.08029900212010135,
+        "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+        "includes_cold_load": false
+      }
+    }
+  },
+  "selected_vs_lora": {
+    "complete": true,
+    "measured_pairs": 256,
+    "declared": 256,
+    "missing_on": [],
+    "missing_off": [],
+    "effect_gain": -0.28125,
+    "paired_family_bootstrap_95ci": [
+      -0.328125,
+      -0.23828125
+    ],
+    "bootstrap_replicates": 10000,
+    "cluster_count": 64,
+    "gains": 0,
+    "losses": 72,
+    "unchanged": 184,
+    "claim": "no positive observed gain"
+  }
+}

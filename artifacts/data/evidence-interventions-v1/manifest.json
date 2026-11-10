@@ -1,0 +1,30 @@
+{
+  "diagnostic_audit": true,
+  "created_after_original_primary_results": true,
+  "frozen_before_any_audit_generation": true,
+  "selection_unchanged_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "rows": 80,
+  "families": 16,
+  "patterns": {
+    "agreement": 16,
+    "different-scope": 16,
+    "within-document-conflict": 16,
+    "two-irrelevant-documents": 16,
+    "altered-agreement": 16
+  },
+  "seed": 20261711,
+  "file_sha256": "da8710f5e0c90ea281371e95731f321f8374b1b94675a11038985e5ba0e34241",
+  "source_sha256": "4b96eb510bd7a71784354d1dac04abc992d2df88b79803ed2cf43746fff14686",
+  "all_values_structurally_verified": true,
+  "max_input_tokens": 500,
+  "purpose": "Test whether perfect template-benchmark scores survive evidence changes that break the DocumentB/conflict cue; no candidate selection or original-test replacement",
+  "planned_arms": [
+    "off",
+    "particle_1",
+    "particle_2",
+    "lora"
+  ],
+  "decoding": "Original frozen prompt,greedy,nativeEOS3,max64newtokens",
+  "cost_cap_seconds": 1800,
+  "interpretation": "Exploratory diagnostic prompted by the perfect original score. Report all80 cases and all5 patterns. Any comparative advantage requires a fresh, separately frozen confirmation."
+}

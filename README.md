@@ -4,27 +4,41 @@ Particle Sliders' Lexsi hackathon project: a learned grounding control for
 `CohereLabs/tiny-aya-global`. The protocol and exact workflow are in
 [`docs/reproduce.md`](docs/reproduce.md).
 
-**Status: Particle training in progress; no holdout result yet.** The required
-AlignTune LoRA completed128 updates (64 cases ×4 exposures) and scored128/128
-on development, versus OFF86/128: paired gain+0.328125, family95% interval
-[0.2734375,0.3828125]. This is a supervised development result, not a Particle
-Sliders win or an untouched holdout result.
+**Status: original primary holdout complete; external and fresh evidence tests in progress.**
 
-Development headroom is measured: identical-prompt OFF 86/128
-(67.1875%); private answer-informed teacher 112/128 (87.5%). This teacher
-comparison is a feasibility probe, not an adapter benchmark. The Cohere2 native
-checks passed, including initial ON=OFF, all2,593 connected trainable tensors,
-tensor-exact FULL0 restoration, and native-only RAW generation. Evidence is in
-[`artifacts/evidence`](artifacts/evidence). **G0.012 stopped at step32** after a
-qualified catastrophic check found degenerative `CONF` repetition. Its saved
-FULL/RAW checkpoints stay intact and cannot resume or enter selection. G0.004
-completed128 updates. Both nominal strengths scored0/128 on development. Its
-old strength2 check mistook a permitted64-token cutoff for catastrophe; that
-record is retained with an explicit scope audit. The new instrument passed
-FULL128 but flagged a truncated mathematical fragment outside its established
-coverage. Qualification remains uncertain and G0.004 is blocked for promotion.
-G0.001 is completing its declared128 updates from its qualified step64 state. This is separate from effect
-ranking and is not a zero score for an unmeasured RAW128.
+| Original policy holdout | Strict successes |
+| --- | ---: |
+| OFF |169/256 (66.02%)|
+| Selected particle G0.001 / strength1 |184/256 (71.88%)|
+| Same particle / strength2 |173/256 (67.58%)|
+| AlignTune supervised LoRA |256/256 (100%)|
+
+Strength1 was selected on development before any holdout output. Its primary
+paired gain over OFF is+5.86 percentage points, family95% interval[+1.17,+10.55].
+LoRA is clearly stronger on this original test. The pipeline's ability to train
+and improve over OFF is separate from comparative superiority over LoRA.
+
+An independent audit reproduced all256 LoRA raw exact gold matches and verified
+native input/output tokens, split isolation and the absence of gold metadata in
+model prompts. It also found a weak benchmark: all16 question frames occur in
+training and holdout, and DocumentB perfectly predicts CONFLICT across448 cases.
+These results do not establish general grounding. See
+[`docs/benchmark-audit.md`](docs/benchmark-audit.md).
+
+At the owner's request,80 targeted cue checks and768 balanced cases were frozen
+before any model output on them. One/two/three documents are balanced across
+answer categories, with agreement, wrong-scope distractors, internal conflicts,
+fresh values/wording and384 order pairs. The original900-case FaithEval transfer
+benchmark is finishing first. All original scores and failures remain visible.
+No new training or test-based candidate selection has occurred.
+
+All three declared Particle rates were handled: G0.012 permanently stopped32
+for qualified repetitive collapse; G0.004 completed128 but both nominal dev
+strengths scored0/128 and mathematical-notation guard coverage remains uncertain,
+so it is blocked; G0.001 completed128 with passing checkpoint and nominal-strength
+checks. Native proof includes zero initial output/OFF equivalence,2593 connected
+trainable tensors, exact FULL restore and RAW native-only generation. Teacher
+headroom was112/128 versus OFF86/128; its cache was prepared once and retained.
 
 The pipeline uses CuratorKIT schema checks, exact deduplication and exports;
 Particle Sliders' shared routed projection and official ParticleGAN 0.9.5 game;
@@ -39,7 +53,7 @@ new tokens apply to every evaluated arm. OFF bypasses the adapter. Particle
 strengths 1 and 2 use the same RAW weights. AlignTune is a separate supervised
 LoRA trained on the same 64 gold examples. No weight EMA is permitted.
 
-The primary result is paired strict success ON minus OFF on 256 untouched
+The declared primary result is paired strict success ON minus OFF on256
 in-domain cases, with equal case weights and policy-family bootstrap intervals.
 Development selects rate/strength before any holdout generation. A missing
 generation is unmeasured. Teacher error and losses are diagnostics. A separately
@@ -90,7 +104,7 @@ non-commercial licence. CuratorKIT and AuditKIT retain their upstream
 source-available licences; AlignTune retains its upstream licences. FaithEval
 retains its original dataset terms. No gated base weights are redistributed.
 The optional closed-API ROI comparison has no configured credential and is not
-claimed. The final benchmark, particle adapter, article and demo are pending.
+claimed. The full benchmark release, particle adapter, article and demo are pending.
 The owner will fill in the final hackathon form using the submission packet.
 
 The AlignTune integration uses its pinned source `RaftTrainer` with measured
@@ -126,3 +140,8 @@ and [training archive](https://huggingface.co/datasets/ntc-ai/evidence-dial-trai
 are ungated. The archive preserves stopped and uncertain candidates with their
 original guard records. Public model publication passed4 exact retained native
 generation checks; this is implementation equivalence, not a holdout claim.
+
+Fresh [cue-controlled grounding tests](https://huggingface.co/datasets/ntc-ai/evidence-dial-grounding-tests)
+are public and verified byte-for-byte. Their manifests precede all new test
+generation. The learned particle adapter has4,766,912 parameters, compared with
+LoRA3,833,856; no footprint or inference-speed advantage is claimed.

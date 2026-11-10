@@ -1,0 +1,24 @@
+{
+  "declared_utc": "2026-11-10T04:31:39.304214+00:00",
+  "owner_request": "Show a measured advantage over AlignTune, not merely improvement over OFF",
+  "original_selection_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "selected_candidate_unchanged": {
+    "rate": 0.001,
+    "strength": 1,
+    "updates": 128
+  },
+  "FaithEval_outputs_before_declaration": 0,
+  "comparison": "Selected particle strength1 minus AlignTune LoRA, equal-case strict finished-answer success",
+  "external_cohort": "Original frozen FaithEval900,300 per stratum; all cases retained",
+  "uncertainty": "10000 fixed-seed source-question-cluster bootstrap replicates;95% percentile interval",
+  "positive_comparative_evidence": "Overall900-case success difference positive with interval lower bound above0",
+  "preliminary_evidence": "Positive overall estimate with interval spanning0",
+  "stratum_analyses": "All3 predeclared strata reported with descriptive, unadjusted intervals; no posthoc subgroup selection or broader superiority claim from one favorable subset",
+  "diagnostics": [
+    "Learned parameter count: particle4766912 vs LoRA3833856; unfavorable for footprint",
+    "Inference throughput and experimental training cost retained even if unfavorable"
+  ],
+  "used_for_rate_or_strength_selection": false,
+  "new_training_rates_or_horizon": false,
+  "follow_up": "If LoRA also dominates transfer, retain v1 as an honest comparison and design a separately declared training experiment on fresh evaluation data"
+}

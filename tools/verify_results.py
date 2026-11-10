@@ -10,14 +10,20 @@ from evidence_dial.protocol import success
 from evidence_dial.report import paired,diagnostics
 from evidence_dial.benchmark import file_sha
 from evidence_dial.faith_diagnostics import faith_diagnostics
+from evidence_dial.summarize import subgroup_effects,order_invariance
 
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--release',type=Path,required=True)
     p.add_argument('--policy',type=Path,required=True);p.add_argument('--faith',type=Path,required=True)
+    p.add_argument('--additional-data',action='append',default=[],help='Additional frozen dataset NAME=PATH')
     args=p.parse_args();report=json.loads((args.release/'results.json').read_text())
     count=0
-    for dataset,path in [('policy',args.policy),('faith',args.faith)]:
+    datasets=[('policy',args.policy),('faith',args.faith)]
+    for item in args.additional_data:
+        name,path=item.split('=',1);datasets.append((name,Path(path)))
+    assert {name for name,_ in datasets}==set(report['datasets'])
+    for dataset,path in datasets:
         data=read_jsonl(path);expected=report['datasets'][dataset]
         if file_sha(path)!=expected['data_sha256']:raise ValueError('Frozen data file identity differs')
         rows={r['id']:r for r in data};predictions={}
@@ -36,6 +42,18 @@ def main():
         for arm,pp in predictions.items():
             estimate=paired(data,pp,predictions['off'])
             assert estimate==expected['arms'][arm]['effect']
+            for field in ['audit_pattern','document_count']:
+                if field in data[0]:assert subgroup_effects(data,pp,predictions['off'],field)==expected['arms'][arm]['by_'+field]
+            if 'evidence_order' in data[0]:assert order_invariance(data,pp)==expected['arms'][arm]['order_invariance']
+        for arm,comparison in expected.get('comparisons_vs_lora',{}).items():
+            assert comparison['reference_arm']=='lora' and comparison['used_for_selection'] is False
+            assert paired(data,predictions[arm],predictions['lora'])==comparison['paired_success_difference']
+            for name,estimate in comparison.get('by_stratum',{}).items():
+                assert paired([r for r in data if r['dataset']==name],
+                    [r for r in predictions[arm] if r['dataset']==name],
+                    [r for r in predictions['lora'] if r['dataset']==name])==estimate
+            for field in ['audit_pattern','document_count']:
+                if field in data[0]:assert subgroup_effects(data,predictions[arm],predictions['lora'],field)==comparison['by_'+field]
     print(json.dumps({'verified':True,'case_arm_measurements':count,'model_or_API_calls':0}))
 
 

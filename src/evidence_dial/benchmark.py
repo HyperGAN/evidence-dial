@@ -2,6 +2,7 @@
 from __future__ import annotations
 import hashlib
 import json
+import os
 from pathlib import Path
 
 from .io import read_jsonl, write_json
@@ -26,7 +27,11 @@ def particle(artifact: Path, rows_path: Path, out: Path, strength: float, gpu: i
     rows=read_jsonl(rows_path)
     sha=file_sha(artifact)
     arm=f'particle-raw-{sha}-strength-{strength:g}'
-    with Resources(gpu,out/'resources.json') as resource:
+    tag=os.environ.get('EVIDENCE_DIAL_RESOURCE_ATTEMPT','')
+    if tag and any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in tag):
+        raise ValueError('Invalid resource-attempt tag')
+    receipt_name=f'resources-{tag}.json' if tag else 'resources.json'
+    with Resources(gpu,out/receipt_name) as resource:
         with open_inference(artifact,options={},operation='response',strength=strength) as run:
             native=run.binding.response.__self__
             gen=NativeGenerator(native.model,tokenizer())

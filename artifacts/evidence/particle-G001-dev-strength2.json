@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "measured_pairs": 128,
+  "declared": 128,
+  "missing_on": [],
+  "missing_off": [],
+  "effect_gain": 0.015625,
+  "paired_family_bootstrap_95ci": [
+    -0.0625,
+    0.09375
+  ],
+  "bootstrap_replicates": 10000,
+  "cluster_count": 32,
+  "gains": 21,
+  "losses": 19,
+  "unchanged": 88,
+  "claim": "preliminary observed gain; interval spans zero",
+  "diagnostics": {
+    "by_type": {
+      "answerable": {
+        "n": 32,
+        "success_rate": 0.84375
+      },
+      "conflict": {
+        "n": 32,
+        "success_rate": 0.75
+      },
+      "altered": {
+        "n": 32,
+        "success_rate": 0.5
+      },
+      "missing": {
+        "n": 32,
+        "success_rate": 0.65625
+      }
+    },
+    "answerable_count": 64,
+    "answerable_accuracy": 0.671875,
+    "unnecessary_abstention_rate": 0.3125
+  }
+}

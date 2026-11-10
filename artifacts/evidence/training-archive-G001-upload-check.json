@@ -1,0 +1,16 @@
+{
+  "repo": "ntc-ai/evidence-dial-training-archive",
+  "url": "https://huggingface.co/datasets/ntc-ai/evidence-dial-training-archive",
+  "commit": "2352c06b8d530295733c2000eb38567168c73a9c",
+  "private": false,
+  "gated": false,
+  "state": "All declared Particle cohorts plus AlignTune archived; original guard states retained",
+  "new_file": {
+    "file": "particle-G001-RAW128.tar.gz",
+    "bytes": 2578140011,
+    "sha256": "d3c9afc911f7546aa7ad3410c281caa52d6429b804856cbb33afd8270ff142b3",
+    "files": 498,
+    "excluded_base_assets": 5
+  },
+  "anonymous_HEAD": 200
+}

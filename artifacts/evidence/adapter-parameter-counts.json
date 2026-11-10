@@ -1,0 +1,12 @@
+{
+  "particle": {
+    "learned_parameters": 4766912,
+    "tensor_count": 2593,
+    "bytes": 19399648
+  },
+  "lora": {
+    "learned_parameters": 3833856,
+    "tensor_count": 288,
+    "bytes": 15373488
+  }
+}

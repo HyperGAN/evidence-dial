@@ -1,0 +1,9 @@
+{
+  "available": false,
+  "error": "The browser access host is unavailable",
+  "actual_CUA_inventory": {
+    "apps": [],
+    "browsers": []
+  },
+  "browser_visual_verification": false
+}

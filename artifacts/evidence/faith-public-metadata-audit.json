@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "forbidden_source_text_fields": [],
+  "files": [
+    {
+      "file": "manifest.json",
+      "records": 1
+    },
+    {
+      "file": "control-audit.json",
+      "records": 1
+    },
+    {
+      "file": "frozen-row-metadata.jsonl",
+      "records": 900
+    },
+    {
+      "file": "excluded.jsonl",
+      "records": 338
+    }
+  ]
+}

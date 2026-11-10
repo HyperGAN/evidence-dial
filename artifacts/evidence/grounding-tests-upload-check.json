@@ -1,0 +1,21 @@
+{
+  "repo": "ntc-ai/evidence-dial-grounding-tests",
+  "url": "https://huggingface.co/datasets/ntc-ai/evidence-dial-grounding-tests",
+  "commit": "7e98c915ca74489ae0991fa96d25a5cf52b9cae4",
+  "public_ungated": true,
+  "checks": [
+    {
+      "file": "balanced-grounding-v2/holdout.jsonl",
+      "bytes": 1354244,
+      "sha256": "49d8828b3885162ae5682cec3f49919d57de4ffbbf5e264be3b4eaf25ad2c720",
+      "anonymous_bytes_match": true
+    },
+    {
+      "file": "evidence-interventions-v1/holdout.jsonl",
+      "bytes": 55960,
+      "sha256": "da8710f5e0c90ea281371e95731f321f8374b1b94675a11038985e5ba0e34241",
+      "anonymous_bytes_match": true
+    }
+  ],
+  "collection_membership_added": true
+}

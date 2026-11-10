@@ -31,6 +31,7 @@ def build(release,out):
             row['question']='Source question '+c.get('source_id',c['id'])
             row['context']='The original passage is not redistributed. Read the pinned source: '+c.get('source_uri','')
             row['gold']='See the original source and frozen scorer.'
+            row['source_url']='https://huggingface.co/datasets/'+c['source_uri'].removeprefix('hf://datasets/').split('@')[0]+'/tree/'+c['source_revision']
         else:row['dataset']='policy'
         public.append(row)
     cohort=[]

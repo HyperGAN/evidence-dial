@@ -25,7 +25,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -34,6 +35,18 @@
       "file": "04e601928efb6fa14e5b3defc75792981865dc52f9c229b1bde695318cada6f9.py",
       "paths": [
         "tools/archive_run.py"
+      ],
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
+    },
+    {
+      "sha256": "04f87021addf6f00a6f9d2168ec37c3ea67f00a6397131f20649e6b58de36292",
+      "bytes": 7956,
+      "file": "04f87021addf6f00a6f9d2168ec37c3ea67f00a6397131f20649e6b58de36292.py",
+      "paths": [
+        "artifacts/execution-sources/benchmark-04f87021addf6f00a6f9d2168ec37c3ea67f00a6397131f20649e6b58de36292.py",
+        "src/evidence_dial/benchmark.py"
       ],
       "commits": []
     },
@@ -45,7 +58,8 @@
         "tools/native_text_instrument.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -57,7 +71,8 @@
       ],
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -68,7 +83,8 @@
         "tools/qualify_jev_text.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -83,7 +99,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -96,6 +113,15 @@
       "commits": [
         "0b0d9dd032cfcefb901326f5ee141c237974e139"
       ]
+    },
+    {
+      "sha256": "14601eb09eb1308b8f74240f92d266ff4bcaa4c0728f0e6f7a196b5153f2fd3e",
+      "bytes": 8744,
+      "file": "14601eb09eb1308b8f74240f92d266ff4bcaa4c0728f0e6f7a196b5153f2fd3e.py",
+      "paths": [
+        "artifacts/execution-sources/balanced-generator-14601eb09eb1308b8f74240f92d266ff4bcaa4c0728f0e6f7a196b5153f2fd3e.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "194c52cfaf92ffaea337c6c3c46e47a6acafa20435f9014d8a4baf676cb374de",
@@ -116,7 +142,8 @@
         "tools/run_phase.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -128,7 +155,8 @@
         "src/evidence_dial/guard_scope.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -152,7 +180,8 @@
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
-        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de"
+        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -191,7 +220,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -217,7 +247,8 @@
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
-        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de"
+        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -231,7 +262,8 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -241,17 +273,21 @@
       "paths": [
         "tools/cost_report.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef",
       "bytes": 3691,
       "file": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef.py",
       "paths": [
+        "artifacts/execution-sources/holdout-3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef.py",
         "src/evidence_dial/holdout.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -265,7 +301,8 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -279,7 +316,8 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -290,7 +328,8 @@
         "configs/jev-native-text-guard-v1.json"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -306,13 +345,26 @@
       ]
     },
     {
+      "sha256": "479f0c7b261bfa8114e0f938a1d5ff60d537b2262417af3d7d8041a6b2d2921f",
+      "bytes": 2064,
+      "file": "479f0c7b261bfa8114e0f938a1d5ff60d537b2262417af3d7d8041a6b2d2921f.py",
+      "paths": [
+        "tools/audit_native_pairs.py"
+      ],
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
+    },
+    {
       "sha256": "4a81830c06e716f600e92fdba8f119306887ea67dd1ac1e0cf8a1a1f2c58a9c8",
       "bytes": 4873,
       "file": "4a81830c06e716f600e92fdba8f119306887ea67dd1ac1e0cf8a1a1f2c58a9c8.py",
       "paths": [
         "tools/check_distribution.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "4ab3b62a5f1d584b50e47a8cd65669b1791e161307eb68541838c4abf44848a5",
@@ -321,7 +373,9 @@
       "paths": [
         "src/evidence_dial/summarize.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "4b160c11253b0f673191ec8d35fd72b4285c7e4cbb06b5f5b6ae267ccd124820",
@@ -336,8 +390,18 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "4b96eb510bd7a71784354d1dac04abc992d2df88b79803ed2cf43746fff14686",
+      "bytes": 4283,
+      "file": "4b96eb510bd7a71784354d1dac04abc992d2df88b79803ed2cf43746fff14686.py",
+      "paths": [
+        "tools/build_evidence_intervention_audit.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "4fb18ae893a72a28e8f20ac33128fd7e8d8e40581dcb84498fa175ef24108c25",
@@ -364,11 +428,13 @@
       "bytes": 4828,
       "file": "552d6042be034bf511821751f0975c91992503ebfbb1e3a300a112a10f5634bb.py",
       "paths": [
+        "artifacts/execution-sources/cli-552d6042be034bf511821751f0975c91992503ebfbb1e3a300a112a10f5634bb.py",
         "src/evidence_dial/cli.py"
       ],
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -391,7 +457,8 @@
       ],
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -401,7 +468,20 @@
       "paths": [
         "tools/export_public_source.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
+    },
+    {
+      "sha256": "62c2030350544978acea268a147d4cd3c96dce39b9a6231e5f338a4dc871f61d",
+      "bytes": 3437,
+      "file": "62c2030350544978acea268a147d4cd3c96dce39b9a6231e5f338a4dc871f61d.py",
+      "paths": [
+        "tools/training_diagnostics.py"
+      ],
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "65809de6be219d003402609b49553144b6c262bf626673761eaca18476e3fbac",
@@ -434,7 +514,8 @@
         "src/evidence_dial/train.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -445,8 +526,18 @@
         "tools/run_eval.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "722b620d0f680d8702f622bb6dadab2556db1a1875ac1d29e1dcbb74ddb9adb1",
+      "bytes": 1831,
+      "file": "722b620d0f680d8702f622bb6dadab2556db1a1875ac1d29e1dcbb74ddb9adb1.py",
+      "paths": [
+        "tools/plot_results.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a",
@@ -478,8 +569,18 @@
         "tools/build_guard_bundle.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "7f4a5b31dbbe916ab8f2d68ed2bd705c0db06967d750ebbc413cc9db4dcca0c0",
+      "bytes": 3695,
+      "file": "7f4a5b31dbbe916ab8f2d68ed2bd705c0db06967d750ebbc413cc9db4dcca0c0.py",
+      "paths": [
+        "tools/audit_policy_ceiling.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "8018558286bea407d85ffc2021aca26f0a12c8cc161c6c67de8a937cbcb64e49",
@@ -491,7 +592,8 @@
       ],
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -501,7 +603,9 @@
       "paths": [
         "tools/materialize_faith.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0",
@@ -514,8 +618,19 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "966a26703fbada0a501a21de4d374c9440e46a28ee7711666b7da2160ccee553",
+      "bytes": 4145,
+      "file": "966a26703fbada0a501a21de4d374c9440e46a28ee7711666b7da2160ccee553.py",
+      "paths": [
+        "artifacts/execution-sources/holdout-966a26703fbada0a501a21de4d374c9440e46a28ee7711666b7da2160ccee553.py",
+        "src/evidence_dial/holdout.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "9fa2cbc8ca53dff39b826f75420b861500f662d07c63818ccc2f327ab3348b8e",
@@ -529,17 +644,9 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
-    },
-    {
-      "sha256": "a03e738b2a385b4aeffefd9fab60092acd93db38a19161be0afc87b75e6d5118",
-      "bytes": 4532,
-      "file": "a03e738b2a385b4aeffefd9fab60092acd93db38a19161be0afc87b75e6d5118.py",
-      "paths": [
-        "tools/build_demo.py"
-      ],
-      "commits": []
     },
     {
       "sha256": "a04e9e71b4ecaf1ecb0651da5477e35e2980f35eaca85227dc3a735a9801a0c8",
@@ -548,7 +655,9 @@
       "paths": [
         "tools/snapshot_sources.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "a0660032615c12319bb404dda0dab9941714506bf8aff2acfa481870d4126720",
@@ -562,7 +671,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -573,8 +683,18 @@
         "tools/check_native_text_guard.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "a513d71d6d955adfbac5f1a2fdac21f8c438fba111d38f06254d6a772a746722",
+      "bytes": 8873,
+      "file": "a513d71d6d955adfbac5f1a2fdac21f8c438fba111d38f06254d6a772a746722.py",
+      "paths": [
+        "tools/build_balanced_grounding_test.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "a5a1e9a8f862d637607d6c1497cbd136024a1e825f873176aed894342ef88cca",
@@ -587,7 +707,8 @@
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
-        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de"
+        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -609,7 +730,8 @@
         "tools/qualify_native_text.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -624,7 +746,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -644,7 +767,8 @@
         "tools/observe_checkpoint.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -669,7 +793,8 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -683,6 +808,15 @@
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67"
       ]
+    },
+    {
+      "sha256": "ae6936f6cc0f82aa7c0295872c718a124d8728070a75af143dcd0fadad2f3fbc",
+      "bytes": 3572,
+      "file": "ae6936f6cc0f82aa7c0295872c718a124d8728070a75af143dcd0fadad2f3fbc.py",
+      "paths": [
+        "tools/verify_results.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "b5caf5e3ef25e6bbd82249c586d041519224c7e9fca9990ad155525bba2215fd",
@@ -703,7 +837,9 @@
         "artifacts/execution-sources/benchmark-bccaee0eb149f47701e828647ab72cb58962c3c02c71c4429d5f02419fd3f3c1.py",
         "src/evidence_dial/benchmark.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "c06269932679b9c91869ac0f325831d5a6485a12409767e63cddf66c84445994",
@@ -748,7 +884,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -763,7 +900,8 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -774,7 +912,8 @@
         "src/evidence_dial/diagnose.py"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -788,8 +927,18 @@
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
-        "8b218dabad92e1aeba609c5543de80c8b9638477"
+        "8b218dabad92e1aeba609c5543de80c8b9638477",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "d54bcb6025e28c58b466031585e576e17e214672906ddfbc3fafc39c3254a40b",
+      "bytes": 8369,
+      "file": "d54bcb6025e28c58b466031585e576e17e214672906ddfbc3fafc39c3254a40b.py",
+      "paths": [
+        "src/evidence_dial/summarize.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "dc469cf740f9a877aa6191eb963330b53360c3fe0541c7f6f73a6b6c3d4799b6",
@@ -799,7 +948,8 @@
         "configs/active-observer.json"
       ],
       "commits": [
-        "0b0d9dd032cfcefb901326f5ee141c237974e139"
+        "0b0d9dd032cfcefb901326f5ee141c237974e139",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -809,7 +959,9 @@
       "paths": [
         "tools/verify_results.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "e666619465c4f86f89da71e9b419e188ea89189504d855b3f061b2963c9b0ec0",
@@ -822,7 +974,8 @@
       "commits": [
         "05e8f48273e40435e363c5ade179489e694bcf67",
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
-        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de"
+        "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
     },
     {
@@ -846,6 +999,15 @@
       "commits": [
         "8b218dabad92e1aeba609c5543de80c8b9638477"
       ]
+    },
+    {
+      "sha256": "f0400d6ce2b865d2afa866416be0141ef231703682aad012ceb419ba7fde9b0f",
+      "bytes": 2094,
+      "file": "f0400d6ce2b865d2afa866416be0141ef231703682aad012ceb419ba7fde9b0f.py",
+      "paths": [
+        "tools/export_public_source.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "f327707d5a45f1f1b1482ad74062a7e6b2c65692f7420c474643775501f7c731",
@@ -880,6 +1042,17 @@
       ]
     },
     {
+      "sha256": "f94bfa49e7a499f7383567b4a76061027e39db4b746a3f628fecd1d0db140062",
+      "bytes": 4688,
+      "file": "f94bfa49e7a499f7383567b4a76061027e39db4b746a3f628fecd1d0db140062.py",
+      "paths": [
+        "tools/build_demo.py"
+      ],
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
+    },
+    {
       "sha256": "faf7e340cacb260ce496d23262061b6f21f7225587798450f6ab2cba05acc563",
       "bytes": 3604,
       "file": "faf7e340cacb260ce496d23262061b6f21f7225587798450f6ab2cba05acc563.py",
@@ -907,7 +1080,9 @@
       "paths": [
         "src/evidence_dial/portable.py"
       ],
-      "commits": []
+      "commits": [
+        "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
+      ]
     },
     {
       "sha256": "ffd2bc40c0224518750edd1b07f97efaf7c1b23442593bb58888f61005ae8830",

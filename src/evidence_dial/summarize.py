@@ -4,7 +4,7 @@ from collections import defaultdict
 import json
 from .benchmark import file_sha
 from .io import read_jsonl, write_json, write_jsonl
-from .protocol import success
+from .protocol import success,normalize
 from .report import paired, diagnostics
 
 
@@ -31,6 +31,31 @@ def performance(predictions):
             'per_1000_queries_at_1_USD_per_gpu_hour_illustrative':seconds/n*1000/3600 if n else None,
             'pricing_assumption':'Illustrative $1/GPU-hour; not a paid rental price or API comparison',
             'includes_cold_load':False}
+
+
+def subgroup_effects(rows,predictions,reference,key):
+    result={}
+    for value in sorted({r[key] for r in rows}):
+        subset=[r for r in rows if r[key]==value];ids={r['id'] for r in subset}
+        result[str(value)]=paired(subset,[p for p in predictions if p['id'] in ids],
+                                 [p for p in reference if p['id'] in ids])
+    return result
+
+
+def order_invariance(rows,predictions):
+    pairs=defaultdict(dict);measured={p['id']:p for p in predictions}
+    for row in rows:pairs[row['id'].rsplit('-',1)[0]][row['evidence_order']]=row
+    changes=flips=0
+    for pair in pairs.values():
+        assert set(pair)=={'forward','reversed'}
+        a,b=pair['forward'],pair['reversed']
+        assert a['gold']==b['gold'] and a['source_facts']==b['source_facts']
+        x,y=measured[a['id']],measured[b['id']]
+        changes+=normalize(x['output'])!=normalize(y['output'])
+        flips+=x['success']!=y['success']
+    return {'pairs':len(pairs),'normalized_output_changes':changes,'strict_success_flips':flips,
+            'normalized_output_invariance_rate':1-changes/len(pairs),
+            'strict_success_invariance_rate':1-flips/len(pairs)}
 
 
 def build(index_path: Path, out: Path):
@@ -73,17 +98,39 @@ def build(index_path: Path, out: Path):
                         'strict_substring_diagnostic':sum(p['faitheval_strict_substring'] for p in pp)/len(pp),
                         'nonstrict_substring_diagnostic':sum(p['faitheval_nonstrict_substring'] for p in pp)/len(pp),
                         'protocol':pp[0]['substring_protocol']}
+            for field in ['audit_pattern','document_count']:
+                if field in rows[0]:metrics['by_'+field]=subgroup_effects(rows,predictions,measured['off'],field)
+            if 'evidence_order' in rows[0]:metrics['order_invariance']=order_invariance(rows,predictions)
             public_path=out/f'predictions/{dataset}-{arm}.jsonl'
             write_jsonl(public_path,[public_prediction(p) for p in predictions])
             metrics['public_predictions_sha256']=file_sha(public_path)
             d['arms'][arm]=metrics
         results['datasets'][dataset]=d
+        # Secondary comparative analysis, added at the owner's request after
+        # development selection was frozen. It cannot select a new candidate.
+        if 'lora' in measured:
+            d['comparisons_vs_lora']={}
+            for arm,predictions in measured.items():
+                if arm in {'off','lora'}:continue
+                comparison={'candidate_arm':arm,'reference_arm':'lora',
+                    'used_for_selection':False,'paired_success_difference':paired(rows,predictions,measured['lora'])}
+                if dataset=='faith':
+                    comparison['by_stratum']={name:paired(
+                        [r for r in rows if r['dataset']==name],
+                        [p for p in predictions if p['dataset']==name],
+                        [p for p in measured['lora'] if p['dataset']==name])
+                        for name in sorted({r['dataset'] for r in rows})}
+                for field in ['audit_pattern','document_count']:
+                    if field in rows[0]:comparison['by_'+field]=subgroup_effects(rows,predictions,measured['lora'],field)
+                d['comparisons_vs_lora'][arm]=comparison
         maps={a:{p['id']:p for p in pp} for a,pp in measured.items()}
         for row in rows:
-            meta={k:row[k] for k in ['id','family','dataset','case_type','source_id','source_revision','source_uri'] if k in row}
+            meta={k:row[k] for k in ['id','family','dataset','case_type','source_id','source_revision','source_uri',
+                                     'audit_pattern','document_count','evidence_order'] if k in row}
+            meta['benchmark']=dataset
             meta['arms']={a:{'output':m[row['id']]['output'],'success':m[row['id']]['success'],
                             'delta':m[row['id']]['success']-maps['off'][row['id']]['success']} for a,m in maps.items()}
-            if dataset=='policy':meta.update({k:row[k] for k in ['context','question','gold','options'] if k in row})
+            if dataset!='faith':meta.update({k:row[k] for k in ['context','question','gold','options'] if k in row})
             cases.append(meta)
     write_json(out/'results.json',results)
     write_jsonl(out/'paired-cases.jsonl',cases)

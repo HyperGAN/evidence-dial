@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "index_sha256": "b77f0bf077f6cfa8fdf1373862a496f6b56f5a2103f32e82adabe4c23b8cce3a",
+  "case_arm_measurements": 1024,
+  "records": [
+    {
+      "dataset": "policy",
+      "arm": "off",
+      "cases": 256,
+      "prediction_sha256": "685f9651ed72c6b1a92e33edde3dce1c1be6b862502b2957679d4379b50912bc",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "policy",
+      "arm": "particle_1",
+      "cases": 256,
+      "prediction_sha256": "a869738f236e9aed027fcdd071203a695f192d68889c8094014187802076fe4e",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "policy",
+      "arm": "particle_2",
+      "cases": 256,
+      "prediction_sha256": "7acaf053279e9dec4ee4981c66aa7be2402e0fa6b35de01d81a1acfa88e19da9",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "policy",
+      "arm": "lora",
+      "cases": 256,
+      "prediction_sha256": "82f52eebbdbe312a2c1044c62bb398395aee43bd57a287cf8caf3fb0daf3db2c",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    }
+  ],
+  "model_calls": 0,
+  "reversible_input_ids_published": false
+}

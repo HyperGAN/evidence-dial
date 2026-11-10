@@ -1,0 +1,28 @@
+{
+  "passed_harness_checks": true,
+  "model_calls": 0,
+  "predictions_sha256": "82f52eebbdbe312a2c1044c62bb398395aee43bd57a287cf8caf3fb0daf3db2c",
+  "cases": 256,
+  "raw_exact_gold_equality": 256,
+  "independent_normalized_gold_equality": 256,
+  "all_native_input_IDs_equal_context_question_only_prompt": true,
+  "mutating_gold_ID_type_metadata_changes_prompt": false,
+  "all_native_output_IDs_decode_to_scored_text": true,
+  "teacher_flags_all_false": true,
+  "family_counts": {
+    "train": 16,
+    "dev": 32,
+    "holdout": 64
+  },
+  "exact_prompt_overlap_across_splits": 0,
+  "training_journal_uses_only64_training_IDs": true,
+  "unique_question_frames": {
+    "train": 16,
+    "dev": 16,
+    "holdout": 16
+  },
+  "holdout_question_frames_seen_in_train": 16,
+  "holdout_cases_with_gold_string_seen_in_train": 182,
+  "Document_B_marker_perfectly_predicts_conflict_across448_cases": true,
+  "interpretation": "No harness leak/error found by these checks. Shared templates, small numeric vocabularies, explicit output labels and a perfect DocumentB/conflict cue make this a weak test of general grounding. A fresh evidence-intervention audit is required before a broad reliability claim."
+}

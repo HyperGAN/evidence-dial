@@ -16,6 +16,7 @@ const fixture = {status:'Test fixture',strengths:[1,2],stats:[],rates:[],scope:'
   assert.match(byId('answers').textContent,/ONE A/);
   d.querySelector('[data-strength="2"]').click();
   assert.match(byId('answers').textContent,/TWO A/);
+  assert.equal(d.querySelector('[data-strength="2"]').getAttribute('aria-pressed'),'true');
   byId('prev').click();
   assert.equal(byId('question').textContent,'Question B');
   assert.equal(byId('answers').querySelectorAll('img').length,0);

@@ -13,7 +13,7 @@ def export(dest):
     dest=Path(dest).resolve()
     if dest==ROOT or ROOT in dest.parents:raise ValueError('Use a separate publication checkout')
     files=[]
-    for directory in ['src','tests','tools','configs','docs','demo','artifacts/evidence','artifacts/data/policy-v1']:
+    for directory in ['src','tests','tools','configs','docs','demo','artifacts/evidence','artifacts/data/policy-v1','artifacts/data/evidence-interventions-v1','artifacts/data/balanced-grounding-v2']:
         files.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     files.extend(ROOT/p for p in ['README.md','pyproject.toml','.gitignore','LICENSE'] if (ROOT/p).is_file())
     files.extend(p for p in (ROOT/'artifacts/data/faith-v1').glob('*.json*') if p.name!='holdout.jsonl')

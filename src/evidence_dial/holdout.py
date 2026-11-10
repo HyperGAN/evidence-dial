@@ -1,6 +1,7 @@
 """Run only a frozen selection, retaining complete per-case native evidence."""
 from __future__ import annotations
 import json
+import os
 from pathlib import Path
 from .io import read_jsonl, write_json
 from .benchmark import file_sha
@@ -34,7 +35,13 @@ def evaluate(selection: Path, data: Path, out: Path, arm: str, gpu: int, *,
         return particle(adapter,data,out,strength,gpu)
     from .evaluate import NativeGenerator, evaluate_rows, load_base, tokenizer
     from .resources import Resources
-    with Resources(gpu,out/'resources.json') as resource:
+    # A bounded retry preserves its earlier admission/refusal telemetry.
+    # This execution-only tag does not enter model, prompt or generation IDs.
+    tag=os.environ.get('EVIDENCE_DIAL_RESOURCE_ATTEMPT','')
+    if tag and any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_' for c in tag):
+        raise ValueError('Invalid resource-attempt tag')
+    receipt_name=f'resources-{tag}.json' if tag else 'resources.json'
+    with Resources(gpu,out/receipt_name) as resource:
         model=load_base()
         if arm=='lora':
             from peft import PeftModel

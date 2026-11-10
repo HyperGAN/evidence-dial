@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "measured_pairs": 128,
+  "declared": 128,
+  "missing_on": [],
+  "missing_off": [],
+  "effect_gain": 0.1015625,
+  "paired_family_bootstrap_95ci": [
+    0.0546875,
+    0.1484375
+  ],
+  "bootstrap_replicates": 10000,
+  "cluster_count": 32,
+  "gains": 14,
+  "losses": 1,
+  "unchanged": 113,
+  "claim": "established positive gain under this protocol",
+  "diagnostics": {
+    "by_type": {
+      "answerable": {
+        "n": 32,
+        "success_rate": 1.0
+      },
+      "conflict": {
+        "n": 32,
+        "success_rate": 0.6875
+      },
+      "altered": {
+        "n": 32,
+        "success_rate": 0.875
+      },
+      "missing": {
+        "n": 32,
+        "success_rate": 0.53125
+      }
+    },
+    "answerable_count": 64,
+    "answerable_accuracy": 0.9375,
+    "unnecessary_abstention_rate": 0.03125
+  }
+}

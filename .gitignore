@@ -28,3 +28,6 @@ artifacts/typesafe-docs/
 artifacts/repro-checks/
 
 .ui-test/
+
+# Large retained checkpoint archives are published via the HF dataset.
+publication/training-archive/*.tar.gz

@@ -1,0 +1,49 @@
+{
+  "pre_generation_revision": "Question grammar corrected; v1 had zero model calls and is retained",
+  "purpose": "Balanced grounding test prompted by the original benchmark ceiling; frozen before any output on this corpus",
+  "rows": 768,
+  "independent_families": 32,
+  "case_counts": {
+    "conflict": 192,
+    "answerable": 192,
+    "altered": 192,
+    "missing": 192
+  },
+  "document_counts": {
+    "1": 256,
+    "2": 256,
+    "3": 256
+  },
+  "document_count_independent_of_case_type": true,
+  "order_pairs": 384,
+  "seed": 20261811,
+  "max_input_tokens": 646,
+  "file_sha256": "49d8828b3885162ae5682cec3f49919d57de4ffbbf5e264be3b4eaf25ad2c720",
+  "source_sha256": "a513d71d6d955adfbac5f1a2fdac21f8c438fba111d38f06254d6a772a746722",
+  "original_selection_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "planned_arms": [
+    "off",
+    "particle_1",
+    "lora"
+  ],
+  "selected_particle_unchanged": {
+    "rate": 0.001,
+    "strength": 1,
+    "updates": 128
+  },
+  "scoring": "Original frozen exact protocol with one structurally verified gold; no substring extraction",
+  "primary_comparative_statistic": "Equal-case selected particle minus LoRA strict success;10000 family-cluster bootstrap95% interval",
+  "secondary_diagnostics": [
+    "All four case types",
+    "All three document counts",
+    "Paired order invariance",
+    "All gains and losses"
+  ],
+  "model_calls_before_freeze": 0,
+  "used_for_rate_or_strength_selection": false,
+  "teacher_information_in_evaluated_prompt": false,
+  "training_data_changed": false,
+  "status": "Fresh test frozen; generation queued after original benchmark and the80-case diagnostic",
+  "GPU_window_cap_seconds": 10800,
+  "all_original_scores_retained": true
+}
