@@ -1,0 +1,7 @@
+{
+  "version": "native-text-v1e",
+  "entrypoint": "tools/check_native_text_guard.py",
+  "qualification_path": "artifacts/observer-native-text-v1e/qualification.json",
+  "old_v5_state_preserved": true,
+  "known_failure_may_not_be_automatically_cleared": true
+}

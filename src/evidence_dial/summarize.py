@@ -73,8 +73,10 @@ def build(index_path: Path, out: Path):
                         'strict_substring_diagnostic':sum(p['faitheval_strict_substring'] for p in pp)/len(pp),
                         'nonstrict_substring_diagnostic':sum(p['faitheval_nonstrict_substring'] for p in pp)/len(pp),
                         'protocol':pp[0]['substring_protocol']}
+            public_path=out/f'predictions/{dataset}-{arm}.jsonl'
+            write_jsonl(public_path,[public_prediction(p) for p in predictions])
+            metrics['public_predictions_sha256']=file_sha(public_path)
             d['arms'][arm]=metrics
-            write_jsonl(out/f'predictions/{dataset}-{arm}.jsonl',[public_prediction(p) for p in predictions])
         results['datasets'][dataset]=d
         maps={a:{p['id']:p for p in pp} for a,pp in measured.items()}
         for row in rows:

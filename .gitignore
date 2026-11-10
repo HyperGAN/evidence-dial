@@ -24,3 +24,7 @@ artifacts/native-text-guard-observations/
 artifacts/observer-native-text-*/
 artifacts/jev-native-text-qualification-v1/
 artifacts/typesafe-docs/
+
+artifacts/repro-checks/
+
+.ui-test/

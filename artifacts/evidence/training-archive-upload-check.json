@@ -1,0 +1,24 @@
+{
+  "public_ungated": true,
+  "commit": "dee590f0e2c0b44af31bb21ab5820102afeb0c05",
+  "files": [
+    {
+      "file": "aligntune-RAW128.tar.gz",
+      "sha256": "a6eac00750429b6995ed26bf5f65a30ef866c3af3ce36828f280d12ceb1dc03c",
+      "bytes": 185420994,
+      "anonymous_HEAD": 200
+    },
+    {
+      "file": "particle-G004-RAW128-guard-unmeasured.tar.gz",
+      "sha256": "a660000a428288bfc4e52634c7daa9b84480995f1a3226b3b36eae42175c558a",
+      "bytes": 1435915701,
+      "anonymous_HEAD": 200
+    },
+    {
+      "file": "particle-G012-stopped32.tar.gz",
+      "sha256": "f9d340332f4f95f31c043553d6267431d27f68f88567d3092415793c5089ff91",
+      "bytes": 149677788,
+      "anonymous_HEAD": 200
+    }
+  ]
+}

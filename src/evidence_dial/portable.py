@@ -104,13 +104,15 @@ class Portable:
         self.slider=Slider(self.model)
         try:
             values=load_file(str(root/'particle_adapter.safetensors'),device=device)
-            assert set(values)==set(config['keys'])==set(self.slider.state_dict())
+            parameters=dict(self.slider.named_parameters())
+            assert set(values)==set(config['keys'])==set(parameters)
             for name,value in values.items():
                 assert list(value.shape)==config['tensor_schema'][name]['shape'] and value.dtype==torch.float32
                 assert torch.isfinite(value).all()
-            self.slider.load_state_dict(values,strict=True)
+            with torch.no_grad():
+                for name,value in values.items():parameters[name].copy_(value)
             self.slider.eval().requires_grad_(False)
-            for name,value in self.slider.state_dict().items():
+            for name,value in self.slider.named_parameters():
                 assert torch.equal(value,values[name])
         except BaseException:
             self.slider.close()

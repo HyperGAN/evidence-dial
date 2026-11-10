@@ -1,0 +1,18 @@
+{
+  "actual_updates": 128,
+  "nominal_dev_success": {
+    "1": 0,
+    "2": 0
+  },
+  "n_each": 128,
+  "FULL128_new_instrument": "pass",
+  "strength2_group_new_instrument": "blocked",
+  "passing_observations": 3,
+  "flagged_observation": "last math-expression fragment at native64-token limit",
+  "actual_reason": "The preceding text is coherent but the final expression is gibberish and unrequested.",
+  "qualification_limitation": "Eight fixed native text cases do not establish coverage of truncated mathematical notation; pervasiveness is disputed. Do not present this as established catastrophic collapse.",
+  "state": "unmeasured qualification/ineligible for promotion pending review; original failed guard state retained",
+  "model_or_effect_outputs_rerendered": false,
+  "qualifier_retuned_after_observation": false,
+  "new_failure_sha256": "5ca3bbf4d4668a32c762f3b042809c664a2f64d6c5a06c895fafe41276681da2"
+}

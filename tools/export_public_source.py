@@ -17,11 +17,11 @@ def export(dest):
         files.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     files.extend(ROOT/p for p in ['README.md','pyproject.toml','.gitignore','LICENSE'] if (ROOT/p).is_file())
     files.extend(p for p in (ROOT/'artifacts/data/faith-v1').glob('*.json*') if p.name!='holdout.jsonl')
-    files.extend(p for p in (ROOT/'publication/repro').glob('*') if p.is_file())
+    files.extend(p for p in (ROOT/'publication/repro').rglob('*') if p.is_file())
     manifest=[]
     for source in files:
         rel=source.relative_to(ROOT)
-        if rel.parts[:2]==('publication','repro'):rel=Path('repro')/source.name
+        if rel.parts[:2]==('publication','repro'):rel=Path('repro')/source.relative_to(ROOT/'publication/repro')
         content=source.read_bytes()
         if re.search(rb'(?:hf_[A-Za-z0-9]{25,}|sk-[A-Za-z0-9]{25,}|gh[pousr]_[A-Za-z0-9]{20,}|Bearer [A-Za-z0-9._-]{20,})',content):
             raise ValueError(f'Credential-shaped content refused in {rel}')

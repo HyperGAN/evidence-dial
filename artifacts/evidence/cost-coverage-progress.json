@@ -1,0 +1,485 @@
+{
+  "one_physical_GPU": 1,
+  "device": "NVIDIA RTX A6000",
+  "weight_EMA": null,
+  "exact_recorded_GPU_resident_lease_hours": 1.6321483330295044,
+  "observed_hours_until_resource_failures": 0.014589042597346835,
+  "legacy_phase_hours_estimated_from_timestamps": 0.05162598868211111,
+  "accounted_GPU_hours_observed_or_estimated": 1.6983633643089624,
+  "complete_cost_coverage": false,
+  "exact_resource_records": [
+    {
+      "source": "artifacts/publication/lora-equivalence-v1/resources.completed.json",
+      "seconds": 10.949715647031553,
+      "lease_hours": 0.0030415878575068846,
+      "peak_owned_nvml_bytes": 7291797504,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7291797504,
+        "allocator_reserved": 6954156032,
+        "rss": 5518528512
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37050449920,
+        "host_available": 81546362880
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/aligntune-v2/guard-resources-000128.completed.json",
+      "seconds": 32.39566508599091,
+      "lease_hours": 0.008998796237784618,
+      "peak_owned_nvml_bytes": 18291359744,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18291359744,
+        "allocator_reserved": 17926455296,
+        "rss": 5436035072
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26051870720,
+        "host_available": 81363263488
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/aligntune-v2/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 0.021041598985902965,
+      "lease_hours": 5.845094161082266e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22675456
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44348473344,
+        "host_available": 82466836480
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000002-to-000032.completed.json",
+      "seconds": 238.31330541003263,
+      "lease_hours": 0.06619814055556263,
+      "peak_owned_nvml_bytes": 7746879488,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7746879488,
+        "allocator_reserved": 7392460800,
+        "rss": 4848791552
+      },
+      "sampled_minima": {
+        "global_gpu_free": 43128586240,
+        "host_available": 88991498240
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000032.completed.json",
+      "seconds": 35.54376192600466,
+      "lease_hours": 0.009873267337776876,
+      "peak_owned_nvml_bytes": 18295554048,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18295554048,
+        "allocator_reserved": 17930649600,
+        "rss": 5557264384
+      },
+      "sampled_minima": {
+        "global_gpu_free": 32580304896,
+        "host_available": 92640587776
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000128-native-text-v1e-resource-retry1.completed.json",
+      "seconds": 78.82909887598362,
+      "lease_hours": 0.021896972132219365,
+      "peak_owned_nvml_bytes": 18113101824,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18113101824,
+        "allocator_reserved": 17750294528,
+        "rss": 5799710720
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26230128640,
+        "host_available": 79919489024
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000032-to-000064.completed.json",
+      "seconds": 247.83297475602012,
+      "lease_hours": 0.06884249321277215,
+      "peak_owned_nvml_bytes": 7748976640,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7748976640,
+        "allocator_reserved": 7394557952,
+        "rss": 2435993600
+      },
+      "sampled_minima": {
+        "global_gpu_free": 43126489088,
+        "host_available": 91955613696
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000064.completed.json",
+      "seconds": 37.93108750099782,
+      "lease_hours": 0.01053641360584556,
+      "peak_owned_nvml_bytes": 18364760064,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18364760064,
+        "allocator_reserved": 17999855616,
+        "rss": 3956764672
+      },
+      "sampled_minima": {
+        "global_gpu_free": 31973179392,
+        "host_available": 90444148736
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000064-to-000128.completed.json",
+      "seconds": 508.59621131099993,
+      "lease_hours": 0.14127672550860249,
+      "peak_owned_nvml_bytes": 7751073792,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7751073792,
+        "allocator_reserved": 7396655104,
+        "rss": 4590702592
+      },
+      "sampled_minima": {
+        "global_gpu_free": 24779227136,
+        "host_available": 91693760512
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000002.completed.json",
+      "seconds": 32.00196798297111,
+      "lease_hours": 0.008889436136944116,
+      "peak_owned_nvml_bytes": 18291359744,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18291359744,
+        "allocator_reserved": 17926455296,
+        "rss": 2619052032
+      },
+      "sampled_minima": {
+        "global_gpu_free": 32584499200,
+        "host_available": 91962298368
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000128.completed.json",
+      "seconds": 72.30525326298084,
+      "lease_hours": 0.02008479291194817,
+      "peak_owned_nvml_bytes": 18482200576,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18482200576,
+        "allocator_reserved": 18117296128,
+        "rss": 5569904640
+      },
+      "sampled_minima": {
+        "global_gpu_free": 32393658368,
+        "host_available": 93065379840
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/dev-strength1-retry1/resources.completed.json",
+      "seconds": 422.51568651304115,
+      "lease_hours": 0.11736546892583849,
+      "peak_owned_nvml_bytes": 7306477568,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7306477568,
+        "allocator_reserved": 6968836096,
+        "rss": 5872390144
+      },
+      "sampled_minima": {
+        "global_gpu_free": 43568988160,
+        "host_available": 92102840320
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-dev-strength2/guard-resources-000128.completed.json",
+      "seconds": 60.41564165696036,
+      "lease_hours": 0.01678212278805505,
+      "peak_owned_nvml_bytes": 18358468608,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18358468608,
+        "allocator_reserved": 17993564160,
+        "rss": 5097349120
+      },
+      "sampled_minima": {
+        "global_gpu_free": 25984761856,
+        "host_available": 80107220992
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-dev-strength2/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 58.70059359096922,
+      "lease_hours": 0.016305720641943886,
+      "peak_owned_nvml_bytes": 18138267648,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18138267648,
+        "allocator_reserved": 17775460352,
+        "rss": 2254876672
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26204962816,
+        "host_available": 78994272256
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/dev-strength2/resources.completed.json",
+      "seconds": 766.8012956920429,
+      "lease_hours": 0.21300036003945733,
+      "peak_owned_nvml_bytes": 7306477568,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7306477568,
+        "allocator_reserved": 6968836096,
+        "rss": 1962713088
+      },
+      "sampled_minima": {
+        "global_gpu_free": 35350380544,
+        "host_available": 79588044800
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000002-to-000032.completed.json",
+      "seconds": 1401.4229463829543,
+      "lease_hours": 0.38928415214528084,
+      "peak_owned_nvml_bytes": 7746879488,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7746879488,
+        "allocator_reserved": 7392460800,
+        "rss": 5171810304
+      },
+      "sampled_minima": {
+        "global_gpu_free": 10801119232,
+        "host_available": 71096332288
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000002-native-text-v1c.completed.json",
+      "seconds": 42.2358203860349,
+      "lease_hours": 0.011732172601671967,
+      "peak_owned_nvml_bytes": 18100518912,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18100518912,
+        "allocator_reserved": 17737711616,
+        "rss": 5299998720
+      },
+      "sampled_minima": {
+        "global_gpu_free": 25961693184,
+        "host_available": 75754258432
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000032-native-text-v1e-first.completed.json",
+      "seconds": 0.09354420204181224,
+      "lease_hours": 2.598478945502494e-05,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22659072
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44348473344,
+        "host_available": 81894010880
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000002-native-text-v1b.completed.json",
+      "seconds": 0.09008790797088295,
+      "lease_hours": 2.5024652212677108e-05,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22134784
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44068503552,
+        "host_available": 81426063360
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000000-to-000002.completed.json",
+      "seconds": 94.35436583304545,
+      "lease_hours": 0.026209546245291777,
+      "peak_owned_nvml_bytes": 7744782336,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7744782336,
+        "allocator_reserved": 7390363648,
+        "rss": 2431414272
+      },
+      "sampled_minima": {
+        "global_gpu_free": 18826919936,
+        "host_available": 79049728000
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000032-to-000064.completed.json",
+      "seconds": 1571.4691121120122,
+      "lease_hours": 0.436519198345001,
+      "peak_owned_nvml_bytes": 7736393728,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7736393728,
+        "allocator_reserved": 7381975040,
+        "rss": 4489121792
+      },
+      "sampled_minima": {
+        "global_gpu_free": 10809507840,
+        "host_available": 70942277632
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000064-native-text-v1e-first.completed.json",
+      "seconds": 61.833016308024526,
+      "lease_hours": 0.017175838024446017,
+      "peak_owned_nvml_bytes": 18073255936,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18073255936,
+        "allocator_reserved": 17710448640,
+        "rss": 5611646976
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26269974528,
+        "host_available": 80131465216
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/fresh-arm-resources.completed.json",
+      "seconds": 29.151123272953555,
+      "lease_hours": 0.00809753453693702,
+      "peak_owned_nvml_bytes": 7207911424,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 7207911424,
+        "allocator_reserved": 6876561408,
+        "rss": 1365061632
+      },
+      "sampled_minima": {
+        "global_gpu_free": 21333016576,
+        "host_available": 81121087488
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/native-text-qualification-v1/resources.completed.json",
+      "seconds": 72.13533517898759,
+      "lease_hours": 0.02003759323861838,
+      "peak_owned_nvml_bytes": 18570280960,
+      "GPU_resident": true,
+      "sampled_peaks": {
+        "own_nvml": 18570280960,
+        "allocator_reserved": 18205376512,
+        "rss": 4010369024
+      },
+      "sampled_minima": {
+        "global_gpu_free": 25772949504,
+        "host_available": 80283914240
+      },
+      "state": "complete"
+    }
+  ],
+  "bounded_failures": [
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000128-native-text-v1e-first.failure.json",
+      "observed_seconds_until_failure": 42.47415256500244,
+      "failure": "Resource refusal: GPU free floor: {'global_gpu_free': 3331325952, 'own_nvml': 16611540992, 'allocator_reserved': 16290676736, 'rss': 1548181504, 'host_available': 73687040000}",
+      "cleanup_tail_measured": false
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/dev-strength1/resources.failure.json",
+      "observed_seconds_until_failure": 10.046400785446167,
+      "failure": "Resource refusal: GPU free floor: {'global_gpu_free': 5361696768, 'own_nvml': 5037359104, 'allocator_reserved': 4762632192, 'rss': 5593497600, 'host_available': 87610204160}",
+      "cleanup_tail_measured": false
+    }
+  ],
+  "legacy_estimates": [
+    {
+      "phase": "headroom",
+      "seconds_estimated_from_artifact_timestamps": 50.5110969543457,
+      "hours_estimated": 0.01403086026509603,
+      "start_receipt": "artifacts/runs/headroom-v3/resource-admission.json",
+      "last_artifact": "artifacts/runs/headroom-v3/gate.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    },
+    {
+      "phase": "teacher_preparation",
+      "seconds_estimated_from_artifact_timestamps": 22.26062798500061,
+      "hours_estimated": 0.0061835077736112805,
+      "start_receipt": "artifacts/cache/cache-resource-admission.json",
+      "last_artifact": "artifacts/cache/teacher-v1/index.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    },
+    {
+      "phase": "original_native_proof",
+      "seconds_estimated_from_artifact_timestamps": 23.45653533935547,
+      "hours_estimated": 0.006515704260932074,
+      "start_receipt": "artifacts/runs/particle-G012-v1/native-check-resources.json",
+      "last_artifact": "artifacts/runs/particle-G012-v1/native-check.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    },
+    {
+      "phase": "AlignTune_training_and_dev",
+      "seconds_estimated_from_artifact_timestamps": 89.6252989768982,
+      "hours_estimated": 0.02489591638247172,
+      "start_receipt": "artifacts/runs/aligntune-v2/resources.json",
+      "last_artifact": "artifacts/runs/aligntune-v2/dev/summary.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    }
+  ],
+  "gaps": [
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000064-to-000128.failure.json",
+      "reason": "Earlier admission was replaced by a later exact-resume attempt; first duration unmeasured"
+    }
+  ],
+  "limits": [
+    "Failed loading/setup and cleanup tails are not all measured.",
+    "Legacy teacher-preparation peak memory is unmeasured; the completed teacher cache was not rerun.",
+    "Wall time is measured on a shared physical GPU and includes contention; it is not an exclusive-device throughput claim.",
+    "Per-query throughput/cost uses the separate retained native generation timings; $1/GPU-hour is illustrative, not a paid price.",
+    "The optional closed API comparison was not run; no model quality or billing comparison is fabricated."
+  ]
+}

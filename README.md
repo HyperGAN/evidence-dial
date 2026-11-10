@@ -19,9 +19,11 @@ tensor-exact FULL0 restoration, and native-only RAW generation. Evidence is in
 qualified catastrophic check found degenerative `CONF` repetition. Its saved
 FULL/RAW checkpoints stay intact and cannot resume or enter selection. G0.004
 completed128 updates. Both nominal strengths scored0/128 on development. Its
-old strength2 check mistook a permitted64-token cutoff for catastrophe; the
-original record is retained and the replacement check is pending. G0.001 is
-training from its saved, qualified step2 state. This is separate from effect
+old strength2 check mistook a permitted64-token cutoff for catastrophe; that
+record is retained with an explicit scope audit. The new instrument passed
+FULL128 but flagged a truncated mathematical fragment outside its established
+coverage. Qualification remains uncertain and G0.004 is blocked for promotion.
+G0.001 is completing its declared128 updates from its qualified step64 state. This is separate from effect
 ranking and is not a zero score for an unmeasured RAW128.
 
 The pipeline uses CuratorKIT schema checks, exact deduplication and exports;
@@ -87,8 +89,9 @@ Tiny Aya and derived adapters are subject to the base's **CC-BY-NC-4.0**
 non-commercial licence. CuratorKIT and AuditKIT retain their upstream
 source-available licences; AlignTune retains its upstream licences. FaithEval
 retains its original dataset terms. No gated base weights are redistributed.
-The optional closed-API ROI comparison, public model/dataset collections,
-article, public demo and final submission are still pending.
+The optional closed-API ROI comparison has no configured credential and is not
+claimed. The final benchmark, particle adapter, article and demo are pending.
+The owner will fill in the final hackathon form using the submission packet.
 
 The AlignTune integration uses its pinned source `RaftTrainer` with measured
 TRL0.25.1/Transformers4.57.6 compatibility; its latest all-extras dependency
@@ -115,3 +118,11 @@ passed8 frozen coverage cases with explicit greedy decoding. Original first
 judgments and the earlier7-case proof are retained. New checkpoint checks are
 required before promotion, and G0.012's real repetition failure stays blocked.
 See `artifacts/evidence/native-text-qualification.json` and the source bundle.
+
+Public [AlignTune adapter](https://huggingface.co/ntc-ai/evidence-dial-aligntune),
+[model collection](https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f),
+[dataset collection](https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87),
+and [training archive](https://huggingface.co/datasets/ntc-ai/evidence-dial-training-archive)
+are ungated. The archive preserves stopped and uncertain candidates with their
+original guard records. Public model publication passed4 exact retained native
+generation checks; this is implementation equivalence, not a holdout claim.

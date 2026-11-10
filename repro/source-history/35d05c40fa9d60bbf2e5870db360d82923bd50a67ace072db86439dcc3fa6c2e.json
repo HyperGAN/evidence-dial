@@ -1,0 +1,23 @@
+{
+  "base": {
+    "repo": "CohereLabs/tiny-aya-global",
+    "revision": "af89d219b53ed9b13b8a4645f9c8028973510324"
+  },
+  "kits": {
+    "CuratorKIT": "cee1aed21d14992f650c5dfe09094b9625d0ce87",
+    "AuditKIT": "9da5838e61ef54d560a37605ddbcb19aceded9b3",
+    "aligntune": "9a80753f2f0af7c5d9b1246904035e9149ea30e1",
+    "particle-sliders": "63f6e3942340d8aadca816800d19fb1ac88d92a9"
+  },
+  "environment": {
+    "torch": "2.14.1+cu130",
+    "transformers": "4.57.6",
+    "huggingface-hub": "0.35.0",
+    "curatorkit": "0.1.21",
+    "auditkit": "1.1.6",
+    "numpy": "1.26.4",
+    "psutil": "7.2.2",
+    "nvidia-ml-py": "12.570.86"
+  },
+  "python": "3.11.17"
+}

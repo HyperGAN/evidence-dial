@@ -30,17 +30,25 @@ is CC0, and derived model weights follow Tiny Aya's CC-BY-NC-4.0 licence.
 
 ## Frozen data
 
-Public policy files are in the policies dataset. FaithEval contexts are fetched
+Public policy files are included in this checkout and in the policies dataset.
+Use those frozen files directly; build-policy below is for an empty new cohort.
+FaithEval contexts are fetched
 from the original repositories at the revisions in `faith.py`; the public
 release includes frozen IDs, order, exclusions and hashes, rather than
 republishing their full passages or reversible input-token arrays.
 
 ```bash
-.venv/bin/evidence-dial build-policy --out artifacts/data/policy-v1
-.venv/bin/evidence-dial freeze-faith --out artifacts/data/faith-v1
+# Reconstruct the already frozen FaithEval IDs; no gated tokenizer/model needed.
+.venv/bin/python tools/materialize_faith.py --out artifacts/data/faith-materialized-v1
+# Only for a new, empty corpus/cohort:
+.venv/bin/evidence-dial build-policy --out artifacts/data/policy-rebuild-v1
+.venv/bin/evidence-dial freeze-faith --out artifacts/data/faith-refreeze-v1
 ```
 
-These commands refuse an existing cohort. They use eligibility before seeded
+Materialization uses the published900 IDs/order and token-count metadata, and
+asserts the exact original frozen digest before writing. Its full JSONL bytes
+were checked against the retained original. It never samples again. The full
+freeze command uses eligibility before seeded
 sampling and never truncate evidence. Check generated manifests against the
 published frozen manifests. Source-question IDs shared across FaithEval strata
 were audited: all19 shared IDs map to the same bootstrap family.
@@ -124,6 +132,12 @@ measured-host entrypoint `tools/observe_checkpoint.py` intentionally requires it
 qualified interpreter/artifact layout. The bundle does not silently qualify a
 new machine. Requalify a changed runtime explicitly before training/promotion;
 never fabricate a pass or automatically rerate a committed first observation.
+The G0.004 strength2 check subsequently flagged a truncated mathematical
+fragment. Mathematical notation was not established by the8 fixtures; its
+qualification is recorded as uncertain and the LR stays blocked. No qualifier
+was retuned to admit it. Its complete nominal effects remain visible, with
+numerical ties preserved separately from eligibility.
+
 Portable adapter inference below is separate from strict source-bound FULL and
 native-v2 training packets.
 
@@ -157,3 +171,28 @@ The shared prompt, greedy native EOS3 and64-new-token cap are built in. Input
 over2048 tokens is refused without truncation. Equivalence to retained original
 native-v2 generation is reported separately; export validity alone is no
 behavioral improvement claim.
+
+Historical owned source versions are retained by content SHA in
+`repro/source-history`, including the original teacher-cache source. Private
+Git history, account facts and full FaithEval passages are excluded.
+
+## Validate the saved-output explorer
+
+The explorer has no inference dependency. Its DOM behavior can be checked with
+Node24 and JSDOM26.1.0, without starting a browser or calling a model:
+
+```bash
+npm install --prefix .ui-test --no-audit --no-fund jsdom@26.1.0
+node tools/check_demo.cjs
+```
+
+This checks the strength selector, matched response cards, dataset/type filters,
+pager wrapping, empty states and escaping of model output text. It does not
+establish rendered CSS layout or a real browser visual check.
+
+`tools/build_demo.py` reads only a complete retained results release. FaithEval
+passages are excluded; its explorer entries link to the pinned upstream source.
+Policy evidence is our own fictional CC0 corpus. A complete benchmark's native
+input sequences, budgets and EOS are checked privately by
+`tools/audit_native_pairs.py`; the public receipt contains counts and hashes,
+not reversible source input token IDs.

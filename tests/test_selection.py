@@ -42,3 +42,21 @@ def test_known_failed_candidate_never_promotes(tmp_path):
     write_json(Path(candidates[0]['run'])/'candidate-failed.json',{'status':'failed'})
     with pytest.raises(ValueError,match='failed candidate'):
         select(data,off,candidates,tmp_path/'selection.json',failed=failed)
+
+
+def test_uncertain_guard_retains_measured_effect_and_numerical_ties(tmp_path):
+    data,off,candidates,failed=fixture(tmp_path)
+    uncertain=[c for c in candidates if c['g_rate']==.004]
+    run=Path(uncertain[0]['run']);guard=run/'guard.json';write_json(guard,{'status':'failed'})
+    evidence=run/'stop.json'
+    write_json(evidence,{'status':'unmeasured_guard_scope','no_resume_or_promotion':True,
+        'actual_updates':128,'full_sha256':file_sha(run/'FULL-000128.pt'),
+        'guard_record':str(guard),'guard_record_sha256':file_sha(guard)})
+    stopped=[{'g_rate':.004,'run':str(run),'evidence':str(evidence),
+              'measurements':[{k:c[k] for k in ['strength','predictions']} for c in uncertain]}]
+    out=tmp_path/'selection.json'
+    ties=select(data,off,[c for c in candidates if c['g_rate']==.001],out,failed=failed,stopped=stopped)
+    saved=json.loads(out.read_text())
+    assert len(ties)==2 and len(saved['all_numerical_best_ties'])==4
+    assert saved['unmeasured_guard_cohorts'][0]['guard_status']=='unmeasured'
+    assert len(saved['all_measured_development_results'])==4

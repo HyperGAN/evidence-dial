@@ -1,0 +1,1 @@
+{"passed":true,"checks":["three matched arms","strength switch","previous/next wrap","case-type filter","empty-filter clearing","dataset switch","model text escaped"],"runtime":"v24.22.1","visual_browser_check":false}

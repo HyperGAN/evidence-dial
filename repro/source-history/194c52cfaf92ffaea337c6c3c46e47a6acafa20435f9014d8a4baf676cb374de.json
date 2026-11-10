@@ -1,0 +1,10 @@
+{
+  "version": "v4",
+  "qualification_path": "artifacts/observer-context-v4/qualification.json",
+  "adapter_source": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+    "bytes": 7790,
+    "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+  },
+  "no_semantic_rerating": true
+}

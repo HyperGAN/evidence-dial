@@ -1,0 +1,16 @@
+{
+  "torch": "2.14.1+cu130",
+  "transformers": "4.57.6",
+  "particlegan": "0.9.5",
+  "particle-sliders-core": "0.14.2",
+  "peft": "0.18.0",
+  "trl": "0.25.1",
+  "datasets": "4.4.1",
+  "accelerate": "1.12.0",
+  "pyarrow": "21.0.0",
+  "fsspec": "2025.9.0",
+  "dill": "0.4.0",
+  "multiprocess": "0.70.18",
+  "numpy": "1.26.4",
+  "safetensors": "0.7.0"
+}

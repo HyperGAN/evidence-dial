@@ -34,7 +34,8 @@ def particle(artifact: Path, rows_path: Path, out: Path, strength: float, gpu: i
                 return evaluate_rows(rows,out,gen,arm=arm,resource=resource)
 
 
-def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, failed: list[dict] = (), fallback: Path | None = None):
+def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, failed: list[dict] = (),
+           stopped: list[dict] = (), fallback: Path | None = None):
     if out.exists():
         raise FileExistsError('Selection already frozen; never select again from holdout results')
     rows=read_jsonl(data/'dev.jsonl')
@@ -52,7 +53,22 @@ def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, fai
         failed_rates.add(item['g_rate'])
         failures.append({**item,'failure_sha256':file_sha(sentinel),'failure':record,
                          'RAW128_effect_gain':None,'eligible_for_selection':False})
-    expected={(r,s) for r in declared-failed_rates for s in [1,2]}
+    stopped_rates=set()
+    stopped_records=[]
+    for item in stopped:
+        run=Path(item['run']);source=Path(item['evidence']);record=json.loads(source.read_text())
+        if item['g_rate'] not in declared-failed_rates-stopped_rates:
+            raise ValueError('Stopped rate must be a distinct declared cohort')
+        if (record['status']!='unmeasured_guard_scope' or not record['no_resume_or_promotion']
+                or record['actual_updates']!=128 or record['full_sha256']!=file_sha(run/'FULL-000128.pt')
+                or record['guard_record_sha256']!=file_sha(Path(record['guard_record']))):
+            raise ValueError('An uncertain guard requires exact retained evidence, not a fabricated model failure')
+        if {m['strength'] for m in item['measurements']}!={1,2} or len(item['measurements'])!=2:
+            raise ValueError('Retain both completed nominal development measurements')
+        stopped_rates.add(item['g_rate'])
+        stopped_records.append({**item,'guard_status':'unmeasured','eligible_for_promotion':False,
+                                'evidence_sha256':file_sha(source),'evidence_record':record})
+    expected={(r,s) for r in declared-failed_rates-stopped_rates for s in [1,2]}
     nominal=[c for c in candidates if c['strength'] in [1,2]]
     if {(c['g_rate'],c['strength']) for c in nominal}!=expected or len(nominal)!=len(expected):
         raise ValueError('Every surviving declared rate needs strength1 and2; failures stay separately unmeasured')
@@ -63,6 +79,14 @@ def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, fai
     off=read_jsonl(baseline/'predictions.jsonl')
     if len(off)!=128:
         raise ValueError('Complete frozen OFF development pairs required')
+    stopped_results=[]
+    for item in stopped_records:
+        for measurement in item['measurements']:
+            on=read_jsonl(Path(measurement['predictions'])/'predictions.jsonl')
+            estimate=paired(rows,on,off)
+            if not estimate['complete']:raise ValueError('Missing retained development effects are unmeasured')
+            stopped_results.append({'g_rate':item['g_rate'],'run':item['run'],'step':128,**measurement,
+                **estimate,'diagnostics':diagnostics(rows,on),'guard_status':'unmeasured','eligible_for_promotion':False})
     results=[]
     for candidate in candidates:
         run_path=Path(candidate['run'])
@@ -84,7 +108,7 @@ def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, fai
         estimate=paired(rows,on,off)
         if not estimate['complete']:
             raise ValueError('Missing development pairs are unmeasured')
-        results.append({**candidate,**estimate,'diagnostics':diagnostics(rows,on)})
+        results.append({**candidate,**estimate,'diagnostics':diagnostics(rows,on),'eligible_for_promotion':True})
     for candidate in extra:
         base=[r for r in results if r['g_rate']==candidate['g_rate'] and r['strength'] in [1,2]]
         if not all(r['effect_gain']<=0 for r in base):
@@ -93,9 +117,14 @@ def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, fai
         raise ValueError('No eligible measured RAW128 candidate; retain incomplete cohort')
     best=max(r['effect_gain'] for r in results)
     ties=[r for r in results if r['effect_gain']==best]
+    all_measured=results+stopped_results
+    numerical_best=max(r['effect_gain'] for r in all_measured)
     write_json(out,{'selection':'equal-case finished strict-success ON minus matched OFF only',
         'data_sha256':digest(rows),'off_predictions_sha256':file_sha(baseline/'predictions.jsonl'),
         'all_results':results,'failed_cohorts':failures,'fallback_declaration':declaration,
+        'unmeasured_guard_cohorts':stopped_records,'all_measured_development_results':all_measured,
+        'best_measured_effect_gain':numerical_best,
+        'all_numerical_best_ties':[r for r in all_measured if r['effect_gain']==numerical_best],
         'selected_ties':ties,'best_effect_gain':best,
         'tiebreak':None,'holdout_generated_before_freeze':False})
     return ties

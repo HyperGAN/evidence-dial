@@ -1,0 +1,8 @@
+{
+  "rows": 900,
+  "original_and_reconstructed_file_sha256": "1ec6b069fa509c070db541991953332769f85f1d4c31c3bcfc079a0429d202c0",
+  "frozen_ids_unchanged": true,
+  "full_JSONL_bytes_equal": true,
+  "tokenizer_or_model_loaded": false,
+  "full_passages_in_public_release": false
+}
