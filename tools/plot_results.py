@@ -45,6 +45,8 @@ def plot(release,out):
     out.parent.mkdir(parents=True,exist_ok=True)
     fig.savefig(out,dpi=180)
     fig.savefig(out.with_suffix('.svg'))
+    svg=out.with_suffix('.svg')
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
     plt.close(fig)
 
 

@@ -42,10 +42,30 @@ def build(out):
         legacy.append({'phase':name,'seconds_estimated_from_artifact_timestamps':duration,
             'hours_estimated':duration/3600,'start_receipt':start,'last_artifact':end,
             'exact_GPU_release_time_measured':False,'peak_owned_nvml_bytes':None})
+    unterminated=[];interrupted=[]
+    for path in artifacts.rglob('*.json'):
+        if path.name.endswith(('.completed.json','.failure.json')):continue
+        try:d=json.loads(path.read_text())
+        except (ValueError,UnicodeDecodeError):continue
+        if not isinstance(d,dict) or d.get('state')!='admitted' or not {'caps','lease','pid','time'}.issubset(d):continue
+        if path.with_suffix('.completed.json').exists() or path.with_suffix('.failure.json').exists():continue
+        unterminated.append({'source':str(path.relative_to(ROOT)),'admitted_time':d['time'],
+            'pid':d['pid'],'terminal_resource_receipt_missing':True})
+    withdrawal=artifacts/'method-repair-v1/execution-window-v2-withdrawal.json'
+    if withdrawal.exists():
+        stop=json.loads(withdrawal.read_text())
+        for record in unterminated:
+            if record['pid']==stop['owned_train_pid']:
+                seconds=stop['time']-record['admitted_time'];assert seconds>=0
+                interrupted.append({**record,'observed_seconds_before_explicit_withdrawal':seconds,
+                    'source_withdrawal':str(withdrawal.relative_to(ROOT)),
+                    'reason':'Execution window enlarged at committed FULL68; exact resume, no prefix replay',
+                    'cleanup_tail_measured':False})
     model_resident=sum(x['lease_hours'] for x in exact if x['GPU_resident'] and x['physical_GPU1_verified_by_owned_NVML'])
     unmapped=sum(x['lease_hours'] for x in exact if x['GPU_resident'] and not x['physical_GPU1_verified_by_owned_NVML'])
     failure_hours=sum(x['observed_seconds_until_failure'] for x in failed)/3600
     estimates=sum(x['hours_estimated'] for x in legacy)
+    interrupted_hours=sum(x['observed_seconds_before_explicit_withdrawal'] for x in interrupted)/3600
     curation=artifacts/'evidence/curation-work-v1.json'
     value={'declared_physical_GPU':1,'device':'NVIDIA RTX A6000','weight_EMA':None,
         'exact_recorded_GPU_resident_lease_hours':model_resident,
@@ -53,9 +73,11 @@ def build(out):
         'all_recorded_GPU_resident_phases_verified_on_GPU1':unmapped==0,
         'observed_hours_until_resource_failures':failure_hours,
         'legacy_phase_hours_estimated_from_timestamps':estimates,
-        'accounted_GPU_hours_observed_or_estimated':model_resident+unmapped+failure_hours+estimates,
+        'observed_hours_before_explicit_execution_withdrawal':interrupted_hours,
+        'accounted_GPU_hours_observed_or_estimated':model_resident+unmapped+failure_hours+estimates+interrupted_hours,
         'complete_cost_coverage':False,'exact_resource_records':exact,'bounded_failures':failed,
         'legacy_estimates':legacy,'gaps':gaps,
+        'unterminated_resource_admissions':unterminated,'explicitly_withdrawn_phases':interrupted,
         'curation_preparation':json.loads(curation.read_text()) if curation.exists() else None,
         'Jev_billing_verified':False,
         'limits':['Failed loading/setup and cleanup tails are not all measured.',

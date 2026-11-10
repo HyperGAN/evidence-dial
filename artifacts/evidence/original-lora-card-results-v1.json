@@ -1,0 +1,9 @@
+{
+  "repository": "ntc-ai/evidence-dial-aligntune",
+  "commit": "5f7dfb6fff3841034bde19c02afa03e2da60329c",
+  "anonymous_card_bytes_verified": true,
+  "weight_bytes_unchanged": true,
+  "weight_sha256": "e19dd5540332b8810c22338f16f495d45707145f8b73d61ffa8ca62ecfe4632c",
+  "all_original_cohorts_and_regressions_reported": true,
+  "corrected_control_claimed": false
+}

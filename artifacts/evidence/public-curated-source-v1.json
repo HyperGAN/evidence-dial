@@ -1,0 +1,27 @@
+{
+  "repository": "HyperGAN/evidence-dial",
+  "commit": "fe9780c759bd23c7d0faec9d4e77be47dfdd2243",
+  "files": [
+    {
+      "path": "src/evidence_dial/curation.py",
+      "sha256": "81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "path": "src/evidence_dial/curated_binding.py",
+      "sha256": "479f253fa2aa092c0e48ce6c78fb38e353af219a558d9285e760b6adc4544441",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "path": "src/evidence_dial/curated_train.py",
+      "sha256": "d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "path": "src/evidence_dial/binding.py",
+      "sha256": "9fa2cbc8ca53dff39b826f75420b861500f662d07c63818ccc2f327ab3348b8e",
+      "anonymous_HTTP_bytes_verified": true
+    }
+  ],
+  "training_source_values_unchanged": true
+}

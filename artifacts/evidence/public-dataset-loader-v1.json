@@ -1,0 +1,10 @@
+{
+  "curated_repository": "ntc-ai/evidence-dial-curated-successes",
+  "curated_card_commit": "763c36f9a963499a8a558d31b89d625484d9123c",
+  "curated_cases": 48,
+  "approved_IDs_exact": true,
+  "benchmark_repository": "ntc-ai/evidence-dial-benchmark",
+  "benchmark_commit": "c7a4eea0139625d621bf0c71f1edf73e930469af",
+  "benchmark_paired_cases": 2004,
+  "model_or_API_inference_calls": 0
+}

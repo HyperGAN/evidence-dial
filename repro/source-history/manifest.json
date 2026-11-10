@@ -314,15 +314,6 @@
       ]
     },
     {
-      "sha256": "385df988d15255e2e136b7c90b6776c665b61fb7c802a4758b0bc590b19bdeef",
-      "bytes": 5516,
-      "file": "385df988d15255e2e136b7c90b6776c665b61fb7c802a4758b0bc590b19bdeef.py",
-      "paths": [
-        "tools/cost_report.py"
-      ],
-      "commits": []
-    },
-    {
       "sha256": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef",
       "bytes": 3691,
       "file": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef.py",
@@ -648,6 +639,15 @@
       ]
     },
     {
+      "sha256": "7e8788e0db55d395a65456e1345cf7e558845e2306dd35c81e5a12969a0529c6",
+      "bytes": 3476,
+      "file": "7e8788e0db55d395a65456e1345cf7e558845e2306dd35c81e5a12969a0529c6.py",
+      "paths": [
+        "tools/plot_comparisons.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "7f4a5b31dbbe916ab8f2d68ed2bd705c0db06967d750ebbc413cc9db4dcca0c0",
       "bytes": 3695,
       "file": "7f4a5b31dbbe916ab8f2d68ed2bd705c0db06967d750ebbc413cc9db4dcca0c0.py",
@@ -703,15 +703,6 @@
       "paths": [
         "artifacts/execution-sources/curation-81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15.py",
         "src/evidence_dial/curation.py"
-      ],
-      "commits": []
-    },
-    {
-      "sha256": "84c9e9eed0b623b1dbd91a56ad3af8ad174ecb890e4ef6c5ad68f25c843c5d96",
-      "bytes": 3353,
-      "file": "84c9e9eed0b623b1dbd91a56ad3af8ad174ecb890e4ef6c5ad68f25c843c5d96.py",
-      "paths": [
-        "tools/plot_comparisons.py"
       ],
       "commits": []
     },
@@ -1018,6 +1009,15 @@
       ]
     },
     {
+      "sha256": "cfd38ebc400e4fb2f8bfdc56b641d6c70776dea919fb1c979c5b7593f2847391",
+      "bytes": 7128,
+      "file": "cfd38ebc400e4fb2f8bfdc56b641d6c70776dea919fb1c979c5b7593f2847391.py",
+      "paths": [
+        "tools/cost_report.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "d13feeeb28c2e3308ccf7b9481d2deb98bd979fc29b23513a3b859a5ae6f7f5c",
       "bytes": 5082,
       "file": "d13feeeb28c2e3308ccf7b9481d2deb98bd979fc29b23513a3b859a5ae6f7f5c.py",
@@ -1083,15 +1083,6 @@
       ]
     },
     {
-      "sha256": "e217c0c5a7c783cdcd8a55067580edf2005f9c31ce95a3853f6e300cfe62c934",
-      "bytes": 3016,
-      "file": "e217c0c5a7c783cdcd8a55067580edf2005f9c31ce95a3853f6e300cfe62c934.py",
-      "paths": [
-        "tools/plot_results.py"
-      ],
-      "commits": []
-    },
-    {
       "sha256": "e2729fb2d8f76119affabdf9aef36f01e35d4bca74d09323c3dd53990b9f705c",
       "bytes": 2497,
       "file": "e2729fb2d8f76119affabdf9aef36f01e35d4bca74d09323c3dd53990b9f705c.py",
@@ -1125,6 +1116,15 @@
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de",
         "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "e7ec415e4fc6bbb482bd3ddfdf31b26ed1b19946329b07f2b417333fe5c7335f",
+      "bytes": 3139,
+      "file": "e7ec415e4fc6bbb482bd3ddfdf31b26ed1b19946329b07f2b417333fe5c7335f.py",
+      "paths": [
+        "tools/plot_results.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "e9e52c5debb7c535b48f602620a20e315fc181f8d5dbe1b12a8829263375b81a",

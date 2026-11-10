@@ -133,8 +133,8 @@ non-commercial licence. CuratorKIT and AuditKIT retain their upstream
 source-available licences; AlignTune retains its upstream licences. FaithEval
 retains its original dataset terms. No gated base weights are redistributed.
 The optional closed answer-model API comparison was not measured. NanoGPT is
-used as the Jev curator, not as an answer-model comparison. Corrected results,
-final particle-model publication and the final article/submission abstract are pending.
+used as the Jev curator, not as an answer-model comparison. The original hinted particle and full benchmark are public. Corrected results,
+corrected model publication and the final article/submission abstract are pending.
 The owner will fill in the final hackathon form using the submission packet.
 
 The AlignTune integration uses its pinned source `RaftTrainer` with measured
@@ -184,3 +184,5 @@ diagnostic-only50.98s phase omitted CUDA mapping: its physical device is
 unverified. The record remains and the helper is repaired; no answer score or
 selection depended on it. Cost accounting separates this exception and marks
 legacy telemetry gaps rather than claiming complete one-device coverage.
+
+Original comparison releases: [hinted particle adapter](https://huggingface.co/ntc-ai/evidence-dial-particle-hinted) and [complete benchmark](https://huggingface.co/datasets/ntc-ai/evidence-dial-benchmark). Their names and cards distinguish them from the corrected Jev-curated retry.

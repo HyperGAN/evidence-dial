@@ -1,0 +1,34 @@
+{
+  "repository": "ntc-ai/evidence-dial-particle-hinted",
+  "commit": "79c43d3d13a134072fab7d904989b4f8ecb30c3f",
+  "private": false,
+  "files": [
+    {
+      "file": "particle_adapter.safetensors",
+      "bytes": 19399648,
+      "sha256": "6da77397a523d1932a3f2a5032ec88e7dfe4eac61332abaa97b7f4da8d72a69b",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "particle_adapter.json",
+      "bytes": 558876,
+      "sha256": "b6f50ef6a07920609a692e31fdabbdd3ba3687877c8f1e5aad90ab95f5c421c5",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 4714,
+      "sha256": "b044f3a2fdbdc898160d29a7eaaec53f97ee948c09d08ba3a7c1eb2103176ae6",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "distribution-equivalence.json",
+      "bytes": 1152,
+      "sha256": "25527321d27217eba6bc1f3948c5d91fabcb8f738450d827044dbc14e712da7e",
+      "anonymous_HTTP_verified": true
+    }
+  ],
+  "collection_added": true,
+  "variant": "original_answer_hinted",
+  "corrected_retry_claimed": false
+}

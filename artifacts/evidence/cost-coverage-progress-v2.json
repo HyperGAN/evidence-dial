@@ -1,0 +1,1441 @@
+{
+  "declared_physical_GPU": 1,
+  "device": "NVIDIA RTX A6000",
+  "weight_EMA": null,
+  "exact_recorded_GPU_resident_lease_hours": 4.517778236357021,
+  "GPU_resident_lease_hours_with_unverified_physical_device": 0.014162389373329158,
+  "all_recorded_GPU_resident_phases_verified_on_GPU1": false,
+  "observed_hours_until_resource_failures": 0.034657295081350535,
+  "legacy_phase_hours_estimated_from_timestamps": 0.05162598868211111,
+  "observed_hours_before_explicit_execution_withdrawal": 0.05847648157013787,
+  "accounted_GPU_hours_observed_or_estimated": 4.6767003910639495,
+  "complete_cost_coverage": false,
+  "exact_resource_records": [
+    {
+      "source": "artifacts/curation-success-v4/resources-reachable-v2.completed.json",
+      "seconds": 602.0134440209949,
+      "lease_hours": 0.16722595696416748,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 4539383808
+      },
+      "sampled_minima": {
+        "global_gpu_free": 11181424640,
+        "host_available": 83020984320
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/evidence/particle-G001-native-response-error-v1-resources.completed.json",
+      "seconds": 50.984600563999265,
+      "lease_hours": 0.014162389373329158,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 6918504448,
+        "rss": 4582334464
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44700139520,
+        "host_available": 83973099520
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/publication/lora-equivalence-v1/resources.completed.json",
+      "seconds": 10.949715647031553,
+      "lease_hours": 0.0030415878575068846,
+      "peak_owned_nvml_bytes": 7291797504,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7291797504,
+        "allocator_reserved": 6954156032,
+        "rss": 5518528512
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37050449920,
+        "host_available": 81546362880
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/publication/particle-equivalence-v1/resources.completed.json",
+      "seconds": 22.906875001033768,
+      "lease_hours": 0.006363021000288427,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 5292748800
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37394382848,
+        "host_available": 84795572224
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/aligntune-v2/guard-resources-000128.completed.json",
+      "seconds": 32.39566508599091,
+      "lease_hours": 0.008998796237784618,
+      "peak_owned_nvml_bytes": 18291359744,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18291359744,
+        "allocator_reserved": 17926455296,
+        "rss": 5436035072
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26051870720,
+        "host_available": 81363263488
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/aligntune-v2/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 0.021041598985902965,
+      "lease_hours": 5.845094161082266e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22675456
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44348473344,
+        "host_available": 82466836480
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/guard-resources-000002-native-text-v1e-first.completed.json",
+      "seconds": 0.03026405203854665,
+      "lease_hours": 8.407136677609136e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 23138304
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44707086336,
+        "host_available": 87206248448
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/resources-000002-to-000032.completed.json",
+      "seconds": 1365.221600482997,
+      "lease_hours": 0.37922822256748784,
+      "peak_owned_nvml_bytes": 7707033600,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7707033600,
+        "allocator_reserved": 7352614912,
+        "rss": 2442633216
+      },
+      "sampled_minima": {
+        "global_gpu_free": 7571505152,
+        "host_available": 81163558912
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/native-check-resources.completed.json",
+      "seconds": 43.313647744013,
+      "lease_hours": 0.012031569126120302,
+      "peak_owned_nvml_bytes": 7419723776,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7419723776,
+        "allocator_reserved": 7082082304,
+        "rss": 4184719360
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37120376832,
+        "host_available": 83353620480
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/guard-resources-000032-native-text-v1e-first.completed.json",
+      "seconds": 0.029916927043814212,
+      "lease_hours": 8.310396402117072e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 23064576
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44482691072,
+        "host_available": 88716386304
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/resources-000000-to-000002.completed.json",
+      "seconds": 90.75004351499956,
+      "lease_hours": 0.02520834556248802,
+      "peak_owned_nvml_bytes": 7707033600,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7707033600,
+        "allocator_reserved": 7352614912,
+        "rss": 2422882304
+      },
+      "sampled_minima": {
+        "global_gpu_free": 36993826816,
+        "host_available": 83943579648
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/resources-000032-to-000064.completed.json",
+      "seconds": 1409.8828221129952,
+      "lease_hours": 0.39163411753973276,
+      "peak_owned_nvml_bytes": 7707033600,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7707033600,
+        "allocator_reserved": 7352614912,
+        "rss": 5057912832
+      },
+      "sampled_minima": {
+        "global_gpu_free": 36777820160,
+        "host_available": 85071056896
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/guard-resources-000064-native-text-v1e-first.completed.json",
+      "seconds": 0.027712316950783134,
+      "lease_hours": 7.698018598603085e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22953984
+      },
+      "sampled_minima": {
+        "global_gpu_free": 45048922112,
+        "host_available": 88540819456
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/guard-resources-000068-native-text-v1e-first.completed.json",
+      "seconds": 0.042801799019798636,
+      "lease_hours": 1.1889755276368104e-05,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 23134208
+      },
+      "sampled_minima": {
+        "global_gpu_free": 45048922112,
+        "host_available": 87318646784
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/recover-000068-resources.completed.json",
+      "seconds": 26.143617958994582,
+      "lease_hours": 0.00726211626360762,
+      "peak_owned_nvml_bytes": 7298088960,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7298088960,
+        "allocator_reserved": 6960447488,
+        "rss": 2235559936
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37744607232,
+        "host_available": 85445349376
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/initial-native-inference/resources.completed.json",
+      "seconds": 45.18835011101328,
+      "lease_hours": 0.01255231970583231,
+      "peak_owned_nvml_bytes": 7210008576,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7210008576,
+        "allocator_reserved": 6874464256,
+        "rss": 5730824192
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37490851840,
+        "host_available": 84710780928
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000002-to-000032.completed.json",
+      "seconds": 238.31330541003263,
+      "lease_hours": 0.06619814055556263,
+      "peak_owned_nvml_bytes": 7746879488,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7746879488,
+        "allocator_reserved": 7392460800,
+        "rss": 4848791552
+      },
+      "sampled_minima": {
+        "global_gpu_free": 43128586240,
+        "host_available": 88991498240
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000032.completed.json",
+      "seconds": 35.54376192600466,
+      "lease_hours": 0.009873267337776876,
+      "peak_owned_nvml_bytes": 18295554048,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18295554048,
+        "allocator_reserved": 17930649600,
+        "rss": 5557264384
+      },
+      "sampled_minima": {
+        "global_gpu_free": 32580304896,
+        "host_available": 92640587776
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000128-native-text-v1e-resource-retry1.completed.json",
+      "seconds": 78.82909887598362,
+      "lease_hours": 0.021896972132219365,
+      "peak_owned_nvml_bytes": 18113101824,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18113101824,
+        "allocator_reserved": 17750294528,
+        "rss": 5799710720
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26230128640,
+        "host_available": 79919489024
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000032-to-000064.completed.json",
+      "seconds": 247.83297475602012,
+      "lease_hours": 0.06884249321277215,
+      "peak_owned_nvml_bytes": 7748976640,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7748976640,
+        "allocator_reserved": 7394557952,
+        "rss": 2435993600
+      },
+      "sampled_minima": {
+        "global_gpu_free": 43126489088,
+        "host_available": 91955613696
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000064.completed.json",
+      "seconds": 37.93108750099782,
+      "lease_hours": 0.01053641360584556,
+      "peak_owned_nvml_bytes": 18364760064,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18364760064,
+        "allocator_reserved": 17999855616,
+        "rss": 3956764672
+      },
+      "sampled_minima": {
+        "global_gpu_free": 31973179392,
+        "host_available": 90444148736
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000064-to-000128.completed.json",
+      "seconds": 508.59621131099993,
+      "lease_hours": 0.14127672550860249,
+      "peak_owned_nvml_bytes": 7751073792,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7751073792,
+        "allocator_reserved": 7396655104,
+        "rss": 4590702592
+      },
+      "sampled_minima": {
+        "global_gpu_free": 24779227136,
+        "host_available": 91693760512
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000002.completed.json",
+      "seconds": 32.00196798297111,
+      "lease_hours": 0.008889436136944116,
+      "peak_owned_nvml_bytes": 18291359744,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18291359744,
+        "allocator_reserved": 17926455296,
+        "rss": 2619052032
+      },
+      "sampled_minima": {
+        "global_gpu_free": 32584499200,
+        "host_available": 91962298368
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000128.completed.json",
+      "seconds": 72.30525326298084,
+      "lease_hours": 0.02008479291194817,
+      "peak_owned_nvml_bytes": 18482200576,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18482200576,
+        "allocator_reserved": 18117296128,
+        "rss": 5569904640
+      },
+      "sampled_minima": {
+        "global_gpu_free": 32393658368,
+        "host_available": 93065379840
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/dev-strength1-retry1/resources.completed.json",
+      "seconds": 422.51568651304115,
+      "lease_hours": 0.11736546892583849,
+      "peak_owned_nvml_bytes": 7306477568,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7306477568,
+        "allocator_reserved": 6968836096,
+        "rss": 5872390144
+      },
+      "sampled_minima": {
+        "global_gpu_free": 43568988160,
+        "host_available": 92102840320
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-dev-strength2/guard-resources-000128.completed.json",
+      "seconds": 60.41564165696036,
+      "lease_hours": 0.01678212278805505,
+      "peak_owned_nvml_bytes": 18358468608,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18358468608,
+        "allocator_reserved": 17993564160,
+        "rss": 5097349120
+      },
+      "sampled_minima": {
+        "global_gpu_free": 25984761856,
+        "host_available": 80107220992
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-dev-strength2/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 58.70059359096922,
+      "lease_hours": 0.016305720641943886,
+      "peak_owned_nvml_bytes": 18138267648,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18138267648,
+        "allocator_reserved": 17775460352,
+        "rss": 2254876672
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26204962816,
+        "host_available": 78994272256
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/dev-strength2/resources.completed.json",
+      "seconds": 766.8012956920429,
+      "lease_hours": 0.21300036003945733,
+      "peak_owned_nvml_bytes": 7306477568,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7306477568,
+        "allocator_reserved": 6968836096,
+        "rss": 1962713088
+      },
+      "sampled_minima": {
+        "global_gpu_free": 35350380544,
+        "host_available": 79588044800
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000002-to-000032.completed.json",
+      "seconds": 1401.4229463829543,
+      "lease_hours": 0.38928415214528084,
+      "peak_owned_nvml_bytes": 7746879488,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7746879488,
+        "allocator_reserved": 7392460800,
+        "rss": 5171810304
+      },
+      "sampled_minima": {
+        "global_gpu_free": 10801119232,
+        "host_available": 71096332288
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000002-native-text-v1c.completed.json",
+      "seconds": 42.2358203860349,
+      "lease_hours": 0.011732172601671967,
+      "peak_owned_nvml_bytes": 18100518912,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18100518912,
+        "allocator_reserved": 17737711616,
+        "rss": 5299998720
+      },
+      "sampled_minima": {
+        "global_gpu_free": 25961693184,
+        "host_available": 75754258432
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000032-native-text-v1e-first.completed.json",
+      "seconds": 0.09354420204181224,
+      "lease_hours": 2.598478945502494e-05,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22659072
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44348473344,
+        "host_available": 81894010880
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000002-native-text-v1b.completed.json",
+      "seconds": 0.09008790797088295,
+      "lease_hours": 2.5024652212677108e-05,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22134784
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44068503552,
+        "host_available": 81426063360
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000000-to-000002.completed.json",
+      "seconds": 94.35436583304545,
+      "lease_hours": 0.026209546245291777,
+      "peak_owned_nvml_bytes": 7744782336,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7744782336,
+        "allocator_reserved": 7390363648,
+        "rss": 2431414272
+      },
+      "sampled_minima": {
+        "global_gpu_free": 18826919936,
+        "host_available": 79049728000
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000032-to-000064.completed.json",
+      "seconds": 1571.4691121120122,
+      "lease_hours": 0.436519198345001,
+      "peak_owned_nvml_bytes": 7736393728,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7736393728,
+        "allocator_reserved": 7381975040,
+        "rss": 4489121792
+      },
+      "sampled_minima": {
+        "global_gpu_free": 10809507840,
+        "host_available": 70942277632
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/resources-000064-to-000128.completed.json",
+      "seconds": 3318.003491667041,
+      "lease_hours": 0.921667636832507,
+      "peak_owned_nvml_bytes": 7740588032,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7740588032,
+        "allocator_reserved": 7386169344,
+        "rss": 3164577792
+      },
+      "sampled_minima": {
+        "global_gpu_free": 11140857856,
+        "host_available": 70680047616
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000064-native-text-v1e-first.completed.json",
+      "seconds": 61.833016308024526,
+      "lease_hours": 0.017175838024446017,
+      "peak_owned_nvml_bytes": 18073255936,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18073255936,
+        "allocator_reserved": 17710448640,
+        "rss": 5611646976
+      },
+      "sampled_minima": {
+        "global_gpu_free": 26269974528,
+        "host_available": 80131465216
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/fresh-arm-resources.completed.json",
+      "seconds": 29.151123272953555,
+      "lease_hours": 0.00809753453693702,
+      "peak_owned_nvml_bytes": 7207911424,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7207911424,
+        "allocator_reserved": 6876561408,
+        "rss": 1365061632
+      },
+      "sampled_minima": {
+        "global_gpu_free": 21333016576,
+        "host_available": 81121087488
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 0.040567214018665254,
+      "lease_hours": 1.1269042782563096e-05,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 23060480
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44700794880,
+        "host_available": 86358876160
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-dev-strength1/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 0.014028533012606204,
+      "lease_hours": 3.897067508660257e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22278144
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44700794880,
+        "host_available": 86231674880
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/dev-strength1/resources.completed.json",
+      "seconds": 79.71310356998583,
+      "lease_hours": 0.02214252906389043,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 4943867904
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37394382848,
+        "host_available": 84806098944
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/guard-dev-strength2/guard-resources-000128-native-text-v1e-first.completed.json",
+      "seconds": 0.014704404980875552,
+      "lease_hours": 4.084662505192682e-06,
+      "peak_owned_nvml_bytes": 0,
+      "GPU_resident": false,
+      "physical_GPU1_verified_by_owned_NVML": false,
+      "sampled_peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 0,
+        "rss": 22597632
+      },
+      "sampled_minima": {
+        "global_gpu_free": 44420825088,
+        "host_available": 86697787392
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/runs/particle-G001-v1/dev-strength2/resources.completed.json",
+      "seconds": 81.49413130502217,
+      "lease_hours": 0.022637258929171365,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 4745457664
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37114085376,
+        "host_available": 83815510016
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/curation-success-v3/resources-parser-v2.completed.json",
+      "seconds": 32.96109288698062,
+      "lease_hours": 0.009155859346388347,
+      "peak_owned_nvml_bytes": 7293894656,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7293894656,
+        "allocator_reserved": 6956253184,
+        "rss": 2133168128
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37400674304,
+        "host_available": 85438377984
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/curation-success-v2/resources-first.completed.json",
+      "seconds": 23.592302520002704,
+      "lease_hours": 0.0065534175416622825,
+      "peak_owned_nvml_bytes": 7293894656,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7293894656,
+        "allocator_reserved": 6956253184,
+        "rss": 5895204864
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37400674304,
+        "host_available": 85516185600
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/cache/curated-success-v1/pair-cache-resources-native-v1.completed.json",
+      "seconds": 29.198644845047966,
+      "lease_hours": 0.008110735070836704,
+      "peak_owned_nvml_bytes": 7237271552,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7237271552,
+        "allocator_reserved": 6899630080,
+        "rss": 2018029568
+      },
+      "sampled_minima": {
+        "global_gpu_free": 11097538560,
+        "host_available": 81845014528
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/native-text-qualification-v1/resources.completed.json",
+      "seconds": 72.13533517898759,
+      "lease_hours": 0.02003759323861838,
+      "peak_owned_nvml_bytes": 18570280960,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 18570280960,
+        "allocator_reserved": 18205376512,
+        "rss": 4010369024
+      },
+      "sampled_minima": {
+        "global_gpu_free": 25772949504,
+        "host_available": 80283914240
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/balanced/lora/resources.completed.json",
+      "seconds": 231.23153185797855,
+      "lease_hours": 0.06423098156888349,
+      "peak_owned_nvml_bytes": 7350517760,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7350517760,
+        "allocator_reserved": 7012876288,
+        "rss": 1909952512
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37344051200,
+        "host_available": 83605471232
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/balanced/off/resources.completed.json",
+      "seconds": 173.9104409730062,
+      "lease_hours": 0.04830845612584704,
+      "peak_owned_nvml_bytes": 7335837696,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7335837696,
+        "allocator_reserved": 6998196224,
+        "rss": 1965182976
+      },
+      "sampled_minima": {
+        "global_gpu_free": 36933730304,
+        "host_available": 84022157312
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/balanced/particle_1/resources.completed.json",
+      "seconds": 353.4248702680343,
+      "lease_hours": 0.09817357529389685,
+      "peak_owned_nvml_bytes": 7344226304,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7344226304,
+        "allocator_reserved": 7006584832,
+        "rss": 5780619264
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37350342656,
+        "host_available": 83426185216
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/cue_audit/lora/resources.completed.json",
+      "seconds": 29.880713824008126,
+      "lease_hours": 0.008300198673338552,
+      "peak_owned_nvml_bytes": 7291797504,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7291797504,
+        "allocator_reserved": 6954156032,
+        "rss": 5474988032
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37402771456,
+        "host_available": 85534081024
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/cue_audit/off/resources.completed.json",
+      "seconds": 24.05244712898275,
+      "lease_hours": 0.00668123566639325,
+      "peak_owned_nvml_bytes": 7285506048,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7285506048,
+        "allocator_reserved": 6947864576,
+        "rss": 4292235264
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37409062912,
+        "host_available": 84508565504
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/cue_audit/particle_2/resources.completed.json",
+      "seconds": 52.02752921497449,
+      "lease_hours": 0.014452091640268918,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 3071127552
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37394382848,
+        "host_available": 84116287488
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/followup-tests-v2/cue_audit/particle_1/resources.completed.json",
+      "seconds": 50.11324049701216,
+      "lease_hours": 0.013920344851940172,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 4887220224
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37394382848,
+        "host_available": 84830273536
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/policy/lora/resources-resource-retry1.completed.json",
+      "seconds": 26.94239922403358,
+      "lease_hours": 0.007484000053890567,
+      "peak_owned_nvml_bytes": 7291797504,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7291797504,
+        "allocator_reserved": 6954156032,
+        "rss": 5787488256
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37402771456,
+        "host_available": 84523827200
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/policy/off/resources.completed.json",
+      "seconds": 70.10481489996891,
+      "lease_hours": 0.019473560105543585,
+      "peak_owned_nvml_bytes": 7285506048,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7285506048,
+        "allocator_reserved": 6947864576,
+        "rss": 3810762752
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37128765440,
+        "host_available": 82575212544
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/policy/particle_2/resources.completed.json",
+      "seconds": 152.37063735199627,
+      "lease_hours": 0.0423251776061079,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 5538447360
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37114085376,
+        "host_available": 82952097792
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/policy/particle_1/resources.completed.json",
+      "seconds": 155.72842024697457,
+      "lease_hours": 0.043257894735272404,
+      "peak_owned_nvml_bytes": 7300186112,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7300186112,
+        "allocator_reserved": 6962544640,
+        "rss": 5828218880
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37114085376,
+        "host_available": 81707520000
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/faith/lora/resources.completed.json",
+      "seconds": 363.9016826649895,
+      "lease_hours": 0.10108380098473087,
+      "peak_owned_nvml_bytes": 7969177600,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7969177600,
+        "allocator_reserved": 7629438976,
+        "rss": 3415564288
+      },
+      "sampled_minima": {
+        "global_gpu_free": 36725391360,
+        "host_available": 83418599424
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/faith/off/resources.completed.json",
+      "seconds": 312.56515842705267,
+      "lease_hours": 0.08682365546583444,
+      "peak_owned_nvml_bytes": 7952400384,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7952400384,
+        "allocator_reserved": 7614758912,
+        "rss": 2517790720
+      },
+      "sampled_minima": {
+        "global_gpu_free": 19328139264,
+        "host_available": 82359861248
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/faith/particle_2/resources-resource-retry1.completed.json",
+      "seconds": 182.7639943260001,
+      "lease_hours": 0.05076777695443727,
+      "peak_owned_nvml_bytes": 7541358592,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7541358592,
+        "allocator_reserved": 7203717120,
+        "rss": 5560455168
+      },
+      "sampled_minima": {
+        "global_gpu_free": 37153210368,
+        "host_available": 83911688192
+      },
+      "state": "complete"
+    },
+    {
+      "source": "artifacts/holdout-v1/faith/particle_2/resources.completed.json",
+      "seconds": 438.40921753202565,
+      "lease_hours": 0.12178033845888826,
+      "peak_owned_nvml_bytes": 7973371904,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7973371904,
+        "allocator_reserved": 7633633280,
+        "rss": 5998243840
+      },
+      "sampled_minima": {
+        "global_gpu_free": 5098962944,
+        "host_available": 82975440896
+      },
+      "state": "exception"
+    },
+    {
+      "source": "artifacts/holdout-v1/faith/particle_1/resources.completed.json",
+      "seconds": 600.4573537709657,
+      "lease_hours": 0.16679370962806084,
+      "peak_owned_nvml_bytes": 7973371904,
+      "GPU_resident": true,
+      "physical_GPU1_verified_by_owned_NVML": true,
+      "sampled_peaks": {
+        "own_nvml": 7973371904,
+        "allocator_reserved": 7633633280,
+        "rss": 2678353920
+      },
+      "sampled_minima": {
+        "global_gpu_free": 36721197056,
+        "host_available": 83696623616
+      },
+      "state": "complete"
+    }
+  ],
+  "bounded_failures": [
+    {
+      "source": "artifacts/runs/particle-G004-v1/guard-resources-000128-native-text-v1e-first.failure.json",
+      "observed_seconds_until_failure": 42.47415256500244,
+      "failure": "Resource refusal: GPU free floor: {'global_gpu_free': 3331325952, 'own_nvml': 16611540992, 'allocator_reserved': 16290676736, 'rss': 1548181504, 'host_available': 73687040000}",
+      "cleanup_tail_measured": false
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/dev-strength1/resources.failure.json",
+      "observed_seconds_until_failure": 10.046400785446167,
+      "failure": "Resource refusal: GPU free floor: {'global_gpu_free': 5361696768, 'own_nvml': 5037359104, 'allocator_reserved': 4762632192, 'rss': 5593497600, 'host_available': 87610204160}",
+      "cleanup_tail_measured": false
+    },
+    {
+      "source": "artifacts/holdout-v1/policy/lora/resources.failure.json",
+      "observed_seconds_until_failure": 72.24570894241333,
+      "failure": "Resource refusal: GPU free floor: {'global_gpu_free': 5335941120, 'own_nvml': 7291797504, 'allocator_reserved': 6954156032, 'rss': 1879420928, 'host_available': 80679841792}",
+      "cleanup_tail_measured": false
+    }
+  ],
+  "legacy_estimates": [
+    {
+      "phase": "headroom",
+      "seconds_estimated_from_artifact_timestamps": 50.5110969543457,
+      "hours_estimated": 0.01403086026509603,
+      "start_receipt": "artifacts/runs/headroom-v3/resource-admission.json",
+      "last_artifact": "artifacts/runs/headroom-v3/gate.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    },
+    {
+      "phase": "teacher_preparation",
+      "seconds_estimated_from_artifact_timestamps": 22.26062798500061,
+      "hours_estimated": 0.0061835077736112805,
+      "start_receipt": "artifacts/cache/cache-resource-admission.json",
+      "last_artifact": "artifacts/cache/teacher-v1/index.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    },
+    {
+      "phase": "original_native_proof",
+      "seconds_estimated_from_artifact_timestamps": 23.45653533935547,
+      "hours_estimated": 0.006515704260932074,
+      "start_receipt": "artifacts/runs/particle-G012-v1/native-check-resources.json",
+      "last_artifact": "artifacts/runs/particle-G012-v1/native-check.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    },
+    {
+      "phase": "AlignTune_training_and_dev",
+      "seconds_estimated_from_artifact_timestamps": 89.6252989768982,
+      "hours_estimated": 0.02489591638247172,
+      "start_receipt": "artifacts/runs/aligntune-v2/resources.json",
+      "last_artifact": "artifacts/runs/aligntune-v2/dev/summary.json",
+      "exact_GPU_release_time_measured": false,
+      "peak_owned_nvml_bytes": null
+    }
+  ],
+  "gaps": [
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000064-to-000128.failure.json",
+      "reason": "Earlier admission was replaced by a later exact-resume attempt; first duration unmeasured"
+    }
+  ],
+  "unterminated_resource_admissions": [
+    {
+      "source": "artifacts/runs/aligntune-v2/resources.json",
+      "admitted_time": 1794269364.351387,
+      "pid": 417473,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/headroom-v1/resource-admission.json",
+      "admitted_time": 1794268192.3752954,
+      "pid": 350980,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G012-v1/resources-000000-to-000002.json",
+      "admitted_time": 1794268974.0344436,
+      "pid": 394588,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G012-v1/resources-000002-to-000032.json",
+      "admitted_time": 1794269585.5969694,
+      "pid": 429890,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G012-v1/guard-resources-000032.json",
+      "admitted_time": 1794270162.4410388,
+      "pid": 463882,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G012-v1/guard-resources-000002.json",
+      "admitted_time": 1794269501.1349037,
+      "pid": 424014,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G012-v1/native-check-resources.json",
+      "admitted_time": 1794268888.0207303,
+      "pid": 386890,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/headroom-v2/resource-admission.json",
+      "admitted_time": 1794268221.4668984,
+      "pid": 352643,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/resources-000068-to-000128.json",
+      "admitted_time": 1794293408.4087138,
+      "pid": 1667353,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/resources-000064-to-000128.json",
+      "admitted_time": 1794293056.3535302,
+      "pid": 1652945,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/aligntune-v1/resources.json",
+      "admitted_time": 1794269079.1348069,
+      "pid": 401002,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/resources-000000-to-000002.json",
+      "admitted_time": 1794270236.32364,
+      "pid": 469899,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/particle-G004-v1/fresh-arm-resources.json",
+      "admitted_time": 1794269907.5353372,
+      "pid": 448595,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/headroom-v3/resource-admission.json",
+      "admitted_time": 1794268253.4546936,
+      "pid": 354149,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/runs/raw0-native-generation-v1/resources.json",
+      "admitted_time": 1794268945.1992877,
+      "pid": 392759,
+      "terminal_resource_receipt_missing": true
+    },
+    {
+      "source": "artifacts/cache/cache-resource-admission.json",
+      "admitted_time": 1794268662.753613,
+      "pid": 374222,
+      "terminal_resource_receipt_missing": true
+    }
+  ],
+  "explicitly_withdrawn_phases": [
+    {
+      "source": "artifacts/runs/particle-curated-G001-v1/resources-000064-to-000128.json",
+      "admitted_time": 1794293056.3535302,
+      "pid": 1652945,
+      "terminal_resource_receipt_missing": true,
+      "observed_seconds_before_explicit_withdrawal": 210.51533365249634,
+      "source_withdrawal": "artifacts/method-repair-v1/execution-window-v2-withdrawal.json",
+      "reason": "Execution window enlarged at committed FULL68; exact resume, no prefix replay",
+      "cleanup_tail_measured": false
+    }
+  ],
+  "curation_preparation": {
+    "selected_cases": 48,
+    "source_cases": 64,
+    "ineligible_cases": [
+      {
+        "id": "policy-P036-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P067-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P089-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P043-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P095-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P095-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P054-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P007-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P016-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P021-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P035-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P067-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P087-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P035-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P089-conflict",
+        "case_type": "conflict",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      },
+      {
+        "id": "policy-P016-missing",
+        "case_type": "missing",
+        "attempts": 16,
+        "reason": "No approved success in the fixed candidate budget"
+      }
+    ],
+    "approved_coverage": {
+      "missing": 9,
+      "altered": 16,
+      "answerable": 16,
+      "conflict": 7
+    },
+    "native_generated_attempts": 455,
+    "native_input_tokens": 227430,
+    "native_output_tokens": 16135,
+    "Jev_completed_calls_including8fixtures": 65,
+    "Jev_usage": {
+      "input_tokens": 41883,
+      "output_tokens": 2145,
+      "estimated_cost": 0
+    },
+    "Jev_request_seconds_sum": 50.573866437829565,
+    "rejection_reasons": {
+      "wrong_strict_final_answer": 302,
+      "missing_explanation_or_final_marker": 85,
+      "Jev_below_unchanged_threshold": 9
+    },
+    "selected_sha256": "adb9caac08ae439fa9076df26bc54aa1f2a926bd794e28101bfe5d644001ce00",
+    "scores_used_for_model_selection": false,
+    "cost_note": "Jev usage includes fixtures and rejected candidates; mining cold loads/API waits are measured separately by Resources. No closed answer-model comparison is implied."
+  },
+  "Jev_billing_verified": false,
+  "limits": [
+    "Failed loading/setup and cleanup tails are not all measured.",
+    "Legacy teacher-preparation peak memory is unmeasured; the completed teacher cache was not rerun.",
+    "One legacy diagnostic-only50.98s phase omitted CUDA mapping: allocator residency was measured but GPU1 owned NVML was0. It is retained as an unverified-device exception, not counted as certified GPU1 time; future direct diagnostics map the physical UUID explicitly.",
+    "Wall time is measured on a shared physical GPU and includes contention; it is not an exclusive-device throughput claim.",
+    "Jev usage includes qualification fixtures and rejected candidates. Provider estimated_cost=0 is retained as reported and does not establish zero billed cost.",
+    "Per-query throughput/cost uses the separate retained native generation timings; $1/GPU-hour is illustrative, not a paid price.",
+    "The optional closed API comparison was not run; no model quality or billing comparison is fabricated."
+  ]
+}

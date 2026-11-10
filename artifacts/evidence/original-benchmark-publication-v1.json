@@ -1,0 +1,130 @@
+{
+  "repository": "ntc-ai/evidence-dial-benchmark",
+  "commit": "c7a4eea0139625d621bf0c71f1edf73e930469af",
+  "private": false,
+  "files": [
+    {
+      "file": "original-answer-hinted-v1/results.json",
+      "bytes": 144064,
+      "sha256": "e5e94503933f7f2bf1cbcd64574351301374b21157e51b194eddc552c71d9c5b",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/paired-cases.jsonl",
+      "bytes": 1800988,
+      "sha256": "08a0ccd7662fe591192ff8f966f3be10a7b00e9804b9501b7296e1f77e8499a4",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/release-index.json",
+      "bytes": 1427,
+      "sha256": "72c4a25b7ccb25f45c4aa467f577b3bb9467f1131f92c4e3bbf140c790f7eba8",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/balanced-lora.jsonl",
+      "bytes": 443880,
+      "sha256": "428ec55f2d884530550ffb0342bcc1ca10444d57f241bbbce238c0a9d3d36e67",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/cue_audit-lora.jsonl",
+      "bytes": 47502,
+      "sha256": "5c1742da78230ee45fa8e295d9f98fee29db71852ee4577b047305f424a99e15",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/faith-lora.jsonl",
+      "bytes": 714903,
+      "sha256": "7a90e524d9048cb24336bd44bf48c6b04161a9c19701c98824cc67d767dfb9ce",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/balanced-particle_1.jsonl",
+      "bytes": 445683,
+      "sha256": "055f429c9546fc00e8f5b4306240bf30a4628ad95f098a880cd48fe3d61965f3",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/policy-off.jsonl",
+      "bytes": 118889,
+      "sha256": "731237677717a043edcb536f4af025f2b963d7d970b4044853cb206970ab8f99",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/balanced-off.jsonl",
+      "bytes": 379974,
+      "sha256": "c842e4974519378062b4fc4eb64a9e2b65e3880c08ad97f448e66aa5a0b87a27",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/cue_audit-off.jsonl",
+      "bytes": 41034,
+      "sha256": "16430bdbd8dcb65707214e7812b78baf71ca06398adf31c149fa3c58c3bd4b79",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/policy-particle_1.jsonl",
+      "bytes": 140582,
+      "sha256": "3fe67863d582b1ba97a9305ab29beb9680c549fa2bd23da6b0453da484957a7c",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/cue_audit-particle_1.jsonl",
+      "bytes": 47858,
+      "sha256": "c2a432b71bab1c8c9c9c47fb9a30c242cd53f48df3818fdfc9593013e3a1ca6d",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/faith-off.jsonl",
+      "bytes": 649290,
+      "sha256": "656f1acc8cccbf9ad57a178ef0e753db26c54f5c6392e6b96e659723de0b2a89",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/faith-particle_2.jsonl",
+      "bytes": 723828,
+      "sha256": "723ed942b108d8399b27926c8da51f6f19b8a73704c3a96d65a18d107371958b",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/policy-lora.jsonl",
+      "bytes": 139643,
+      "sha256": "dea7b19da85c4190223f8d166e41060a192907e7738310852d893663cd56e9d5",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/policy-particle_2.jsonl",
+      "bytes": 140697,
+      "sha256": "b95a7ad1cd8074b22ba2b28a670b4f9610fec24dc78badec430bec1fd77571dc",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/cue_audit-particle_2.jsonl",
+      "bytes": 47889,
+      "sha256": "49e54bf836a4b08db7d5357964d600cbd8ffff64bd904aac6a620bcde3bfb97a",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-answer-hinted-v1/predictions/faith-particle_1.jsonl",
+      "bytes": 724803,
+      "sha256": "f8eb3d2ac4a159288c2290e4d182b074fc87f8c4d3e00055f8c0c75da4b24eef",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 4935,
+      "sha256": "1339ea55c2c680656beafb3ee5c6e1a13f02758d84415dfb5dff5b94f6f8b9af",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "original-publication-manifest.json",
+      "bytes": 3637,
+      "sha256": "18cdac638c714ec14b86b6019a388af38942b6622b0ab807c03520a260be2fff",
+      "anonymous_HTTP_verified": true
+    }
+  ],
+  "collection_added": true,
+  "case_arm_measurements": 7248,
+  "corrected_retry_pending": true
+}

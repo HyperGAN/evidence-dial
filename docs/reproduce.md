@@ -73,6 +73,20 @@ two valid examples scored.89; its conservative-filter admission preserves
 those first results and the unchanged.90/3.0 acceptance thresholds. That
 admission cannot be copied to a different runtime without checking its scope.
 
+The public archive restores the exact measured `artifacts/` paths. In an empty
+checkout, download and verify it before extracting:
+
+```bash
+hf download ntc-ai/evidence-dial-curated-successes curation-and-pairs-v1.tar.gz --repo-type dataset --revision 1338cf30f4fa643ff3de295d5087f8572b678955 --local-dir .downloads/curated
+sha256sum .downloads/curated/curation-and-pairs-v1.tar.gz
+tar -xzf .downloads/curated/curation-and-pairs-v1.tar.gz -C .
+```
+
+Expected archive SHA256:
+`c3d290f7887ec49a0173e1563c2f0a203cebc477c8f594bd9738171ae026d175`.
+Extraction creates an already-completed paired cache: skip cache generation
+and use its saved values. It contains no base weights or training checkpoint.
+
 For a new, explicitly bounded mining experiment, provide your own NanoGPT key
 through `NANOGPT_API_KEY` and use an empty output directory. The code refuses
 ambiguous already-committed API calls. Run qualification first and inspect its

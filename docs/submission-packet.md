@@ -15,9 +15,12 @@ documents, with explicit missing-evidence and conflict answers.
 | AlignTune model | https://huggingface.co/ntc-ai/evidence-dial-aligntune |
 | Policy corpus | https://huggingface.co/datasets/ntc-ai/evidence-dial-policies |
 | Checkpoints and training logs | https://huggingface.co/datasets/ntc-ai/evidence-dial-training-archive |
-| Particle adapter | Pending final guard, development selection and publication |
-| Public demo | Pending final benchmark and static Space deployment |
-| Benchmark results | Pending selection and complete matched holdout generation |
+| Original answer-hinted particle comparison | https://huggingface.co/ntc-ai/evidence-dial-particle-hinted |
+| Corrected Jev-curated particle | Pending final guard, development selection and publication |
+| Successful samples, seeds and paired states | https://huggingface.co/datasets/ntc-ai/evidence-dial-curated-successes |
+| Public demo | https://huggingface.co/spaces/ntc-ai/evidence-dial — original results live; corrected data pending |
+| Complete original benchmark | https://huggingface.co/datasets/ntc-ai/evidence-dial-benchmark |
+| Corrected benchmark results | Pending selection and complete matched holdout generation |
 
 ## Abstract draft — replace pending result before submission
 
