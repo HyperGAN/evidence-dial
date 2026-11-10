@@ -1,0 +1,15 @@
+{
+  "g_rate": 0.012,
+  "completed_steps": 32,
+  "status": "catastrophic_failure",
+  "failure_output": "UNKNOWN\nCONF\nCONF\nCONF",
+  "reason": "Repetitive 'CONF' text appearing multiple times in place of coherent output.",
+  "kept_checkpoints": [
+    0,
+    2,
+    32
+  ],
+  "effect_score": null,
+  "eligible_for_selection": false,
+  "resumed_after_failure": false
+}

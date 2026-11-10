@@ -1,0 +1,14 @@
+{
+  "original_worker": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+  "original_sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a",
+  "derivative_sha256": "3fc92a97ad0be8e356d1d79b0dd5ba5775f163e2d03249df5f102170be116c3d",
+  "semantic_call_functions_ast_exact": [
+    "visible_image",
+    "one_call",
+    "fixture_metadata",
+    "worker"
+  ],
+  "runtime_only_change": "CUDA allocator hard cap29GiB to22GiB; original source imports point to unchanged original directory",
+  "original_files_modified": false,
+  "qualification_replayed": false
+}

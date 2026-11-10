@@ -1,0 +1,372 @@
+{
+  "files": [
+    {
+      "path": "src/evidence_dial/cli.py",
+      "bytes": 4828,
+      "sha256": "552d6042be034bf511821751f0975c91992503ebfbb1e3a300a112a10f5634bb"
+    },
+    {
+      "path": "src/evidence_dial/summarize.py",
+      "bytes": 5520,
+      "sha256": "c06269932679b9c91869ac0f325831d5a6485a12409767e63cddf66c84445994"
+    },
+    {
+      "path": "src/evidence_dial/aligntune_train.py",
+      "bytes": 5604,
+      "sha256": "3fc302150cc0aa8af62fb49b21e827bb7d97e173b579c1385137052dd337f502"
+    },
+    {
+      "path": "src/evidence_dial/portable.py",
+      "bytes": 7786,
+      "sha256": "e9e52c5debb7c535b48f602620a20e315fc181f8d5dbe1b12a8829263375b81a"
+    },
+    {
+      "path": "src/evidence_dial/diagnose.py",
+      "bytes": 2490,
+      "sha256": "f7dd06413269ca80057c4cccaee8ad5d0717873681b4e2688221eaa258fff154"
+    },
+    {
+      "path": "src/evidence_dial/benchmark.py",
+      "bytes": 5348,
+      "sha256": "acd5ae1345f17f37e91526f3a3b6cb7b9f15c5a7b1a2489e399cc71d592dfc3a"
+    },
+    {
+      "path": "src/evidence_dial/__init__.py",
+      "bytes": 80,
+      "sha256": "111eb7e7c814ba2e1306c210a5148428745fa7a1cd68236090f2a0d363fb3da0"
+    },
+    {
+      "path": "src/evidence_dial/data.py",
+      "bytes": 8728,
+      "sha256": "ce003cb1f7e7869539e0eb247d2ce7ed47a4ccc97f2e9131eaa379181b68d801"
+    },
+    {
+      "path": "src/evidence_dial/train.py",
+      "bytes": 9795,
+      "sha256": "c6381ffbb6e8b945fcbceb21419f84beaf4b050a22a66550ad504c901ed32312"
+    },
+    {
+      "path": "src/evidence_dial/io.py",
+      "bytes": 703,
+      "sha256": "03636623a7dba36a998166b66786bf91e561855c599384ae9af708839816881c"
+    },
+    {
+      "path": "src/evidence_dial/faith.py",
+      "bytes": 5082,
+      "sha256": "d13feeeb28c2e3308ccf7b9481d2deb98bd979fc29b23513a3b859a5ae6f7f5c"
+    },
+    {
+      "path": "src/evidence_dial/protocol.py",
+      "bytes": 3121,
+      "sha256": "30785c733ee1177cf30282fbd6929c6b1f3d83aacfebee06a7c665ccbb3df59a"
+    },
+    {
+      "path": "src/evidence_dial/faith_diagnostics.py",
+      "bytes": 1190,
+      "sha256": "e666619465c4f86f89da71e9b419e188ea89189504d855b3f061b2963c9b0ec0"
+    },
+    {
+      "path": "src/evidence_dial/evaluate.py",
+      "bytes": 9368,
+      "sha256": "a5a1e9a8f862d637607d6c1497cbd136024a1e825f873176aed894342ef88cca"
+    },
+    {
+      "path": "src/evidence_dial/resources.py",
+      "bytes": 6277,
+      "sha256": "8018558286bea407d85ffc2021aca26f0a12c8cc161c6c67de8a937cbcb64e49"
+    },
+    {
+      "path": "src/evidence_dial/report.py",
+      "bytes": 3349,
+      "sha256": "4b160c11253b0f673191ec8d35fd72b4285c7e4cbb06b5f5b6ae267ccd124820"
+    },
+    {
+      "path": "src/evidence_dial/binding.py",
+      "bytes": 12481,
+      "sha256": "9fa2cbc8ca53dff39b826f75420b861500f662d07c63818ccc2f327ab3348b8e"
+    },
+    {
+      "path": "src/evidence_dial/holdout.py",
+      "bytes": 3604,
+      "sha256": "faf7e340cacb260ce496d23262061b6f21f7225587798450f6ab2cba05acc563"
+    },
+    {
+      "path": "src/lexica_evidence_dial.egg-info/SOURCES.txt",
+      "bytes": 672,
+      "sha256": "f683e8506b2b4cf350600986fbeab445c0b4b706084683bc5d2b7874bd34bd83"
+    },
+    {
+      "path": "src/lexica_evidence_dial.egg-info/entry_points.txt",
+      "bytes": 246,
+      "sha256": "239ebf515e0beb513fe9c60ab16bd9b355ae50c0c653753adc15a6ebfb96e524"
+    },
+    {
+      "path": "src/lexica_evidence_dial.egg-info/dependency_links.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "src/lexica_evidence_dial.egg-info/requires.txt",
+      "bytes": 95,
+      "sha256": "e4e622c6ba8fd9e35ce2b298e8a09b104ab427c41139a49a8afbedd5f806bfd7"
+    },
+    {
+      "path": "src/lexica_evidence_dial.egg-info/top_level.txt",
+      "bytes": 14,
+      "sha256": "d2dedaf93c7ace718c68fd6f50631b78ed93ec9504adbb46204e1e41198ae625"
+    },
+    {
+      "path": "src/lexica_evidence_dial.egg-info/PKG-INFO",
+      "bytes": 328,
+      "sha256": "d51f10c1d757f061e386dbbaad348e96fdf2169a4b7375e713c4a14d2f4ab432"
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "bytes": 936,
+      "sha256": "98949165652b600f9f56b76a07e7bb1cfcd22bf1c8864e41f8f87d44035609ee"
+    },
+    {
+      "path": "tests/test_data.py",
+      "bytes": 398,
+      "sha256": "e162b0ca5005a33cca52ccb3bd9e960234304f1043fc53650cf512ed5f80041b"
+    },
+    {
+      "path": "tests/test_report.py",
+      "bytes": 918,
+      "sha256": "c7a97eef0177e2d686d24afaa8431d4e7d5320fc2c3cf5cfc18639e026316be8"
+    },
+    {
+      "path": "tests/test_faith_diagnostics.py",
+      "bytes": 806,
+      "sha256": "43d40fd34894ee29cd340f11d0ec7ead85fef675cd4ee2fb5fff27f3a272ecff"
+    },
+    {
+      "path": "tests/test_protocol.py",
+      "bytes": 1420,
+      "sha256": "af1943790482b9fda5d1ab8cdf7ff6d01e4e430b6bf5f258e2df4278a6187ff0"
+    },
+    {
+      "path": "tests/test_selection.py",
+      "bytes": 2222,
+      "sha256": "710a5e6033319a82f3d5a77db9c5b36fa6873da79a4e2f239198a7fe96dbf075"
+    },
+    {
+      "path": "tools/bootstrap_sources.py",
+      "bytes": 1012,
+      "sha256": "5cc15e7ad967ccdc844f591ff0f2d606bbe9696b0896b74d7f3fca37b1e23ba6"
+    },
+    {
+      "path": "tools/text_observation_parser.py",
+      "bytes": 3590,
+      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+    },
+    {
+      "path": "tools/build_guard_bundle.py",
+      "bytes": 2906,
+      "sha256": "2887cfb0affc34b12091a5f7dba24fa33afbe8bd483fe5d617d3f23eb0b7670e"
+    },
+    {
+      "path": "tools/qwen_observer_runtime.py",
+      "bytes": 17576,
+      "sha256": "3fc92a97ad0be8e356d1d79b0dd5ba5775f163e2d03249df5f102170be116c3d"
+    },
+    {
+      "path": "tools/check_text_guard.py",
+      "bytes": 8892,
+      "sha256": "0ccbca004c55b9936002568b5d44bacb02cfabe75c507a710055fe2c14aaea08"
+    },
+    {
+      "path": "tools/run_phase.py",
+      "bytes": 3410,
+      "sha256": "65809de6be219d003402609b49553144b6c262bf626673761eaca18476e3fbac"
+    },
+    {
+      "path": "tools/observe_checkpoint.py",
+      "bytes": 466,
+      "sha256": "00c45f66cd1d4e5d6b6b11c9cfae788eb2b05233629e6e671685a92987d8ff0c"
+    },
+    {
+      "path": "tools/export_public_source.py",
+      "bytes": 1978,
+      "sha256": "7483a633135af55f8e2b6c360bca83ff7347ac81e5690cdf88bec611521cddd8"
+    },
+    {
+      "path": "tools/run_eval.py",
+      "bytes": 2893,
+      "sha256": "ffd2bc40c0224518750edd1b07f97efaf7c1b23442593bb58888f61005ae8830"
+    },
+    {
+      "path": "configs/aligntune.json",
+      "bytes": 1017,
+      "sha256": "d43d4419bd319c260b809cc786d317ffb7c1b6fcbd7a9d85b29bb076b076a962"
+    },
+    {
+      "path": "configs/training-environment.json",
+      "bytes": 351,
+      "sha256": "ac27767c37107717c15b1cb6d803b4c9c0ea886d217c9667bd825d19d165353e"
+    },
+    {
+      "path": "configs/observer-equivalence.json",
+      "bytes": 643,
+      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+    },
+    {
+      "path": "configs/active-observer.json",
+      "bytes": 348,
+      "sha256": "22a99923c142b232aab99752644314a86342b2b44d66261cb634e429577fc175"
+    },
+    {
+      "path": "configs/training-sources.lock.json",
+      "bytes": 658,
+      "sha256": "35d05c40fa9d60bbf2e5870db360d82923bd50a67ace072db86439dcc3fa6c2e"
+    },
+    {
+      "path": "configs/sources.lock.json",
+      "bytes": 590,
+      "sha256": "a0660032615c12319bb404dda0dab9941714506bf8aff2acfa481870d4126720"
+    },
+    {
+      "path": "configs/qwen-launch-context.json",
+      "bytes": 514,
+      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+    },
+    {
+      "path": "configs/cohort.json",
+      "bytes": 1139,
+      "sha256": "a8fdd249593b65f54846fa24425ad1c9bd426e59e1fdf193178038905227f8f5"
+    },
+    {
+      "path": "docs/reproduce.md",
+      "bytes": 8065,
+      "sha256": "3b7d3cf15aa03a29d630fca69663211523c9ed4c5c361ebf9bf19520bfbdb1fb"
+    },
+    {
+      "path": "demo/example.json",
+      "bytes": 316,
+      "sha256": "07fbc020b261287f34355b091ffe257c45e1d96aebc19e86e45a606086b180bc"
+    },
+    {
+      "path": "demo/README.md",
+      "bytes": 676,
+      "sha256": "d878e0f91388d34db5d74c8c4eb8da62c9599929a93ef9f0fb7a459dc31060cc"
+    },
+    {
+      "path": "demo/index.html",
+      "bytes": 11776,
+      "sha256": "55881a91fd12d854af058b657cf99775bfb19448618ed5d9f5931842d27c1d5e"
+    },
+    {
+      "path": "artifacts/evidence/aligntune-training.json",
+      "bytes": 1574,
+      "sha256": "b176c35351f669fa8ff9f697b120af84327b23d4c00a27245de52beb24f4b396"
+    },
+    {
+      "path": "artifacts/evidence/aligntune-dev-paired-effect.json",
+      "bytes": 370,
+      "sha256": "83fda37a462268a6e1857b0494b081218704d9363f17839e49a19fd49fcc34e0"
+    },
+    {
+      "path": "artifacts/evidence/headroom.json",
+      "bytes": 1363,
+      "sha256": "11cb0ed9c25fd43fdc2155101fb6d118e1f161122d1fc4c9e12a6998cd694a1f"
+    },
+    {
+      "path": "artifacts/evidence/native-check.json",
+      "bytes": 502,
+      "sha256": "e443f31ce490603aa4e6a16f58528aeb88d0420e82fdaac32c389369bf12e0cd"
+    },
+    {
+      "path": "artifacts/evidence/aligntune-dev-summary.json",
+      "bytes": 533,
+      "sha256": "8eeb2eab6036ccbd02d8125578a6d1ddfac46c29648a4a4adbc0990d99924d5a"
+    },
+    {
+      "path": "artifacts/evidence/aligntune-exposure-audit.json",
+      "bytes": 2141,
+      "sha256": "3fe26832784e3ee8fd1791d51defc41804bff1e24ecd5029a233540d3e65b20e"
+    },
+    {
+      "path": "artifacts/evidence/particle-G012-failure.json",
+      "bytes": 367,
+      "sha256": "297710e4e56fc0e2f9e74876c7d866c625e8608ed3b8f599a2e4d3319978f8a5"
+    },
+    {
+      "path": "artifacts/data/policy-v1/manifest.json",
+      "bytes": 2231,
+      "sha256": "001d25bdc69c142bd97446f86707035177370be11d20ae62d0e48fa327b52c02"
+    },
+    {
+      "path": "artifacts/data/policy-v1/holdout.jsonl",
+      "bytes": 219467,
+      "sha256": "77bce98ae223d62121016e240f5dacfd87eab7124449b96909a43813d500fe93"
+    },
+    {
+      "path": "artifacts/data/policy-v1/dev.jsonl",
+      "bytes": 108866,
+      "sha256": "c97ae7e94bea01e1fb9a4b731b30c93df9f0ea4d90d98f6df526cf5be4f8d072"
+    },
+    {
+      "path": "artifacts/data/policy-v1/dpo.jsonl",
+      "bytes": 42794,
+      "sha256": "391d0683ca0aac771c069c1e79ca22ba4468590f13732fbc353ee003ebc4a314"
+    },
+    {
+      "path": "artifacts/data/policy-v1/curatorkit-provenance.jsonl",
+      "bytes": 1082438,
+      "sha256": "d4d1565b0900c5abba9e694ed8b09a982686d7cb34a851bc8cb3a7ea996ebcca"
+    },
+    {
+      "path": "artifacts/data/policy-v1/sft_messages.jsonl",
+      "bytes": 44905,
+      "sha256": "98598077b3edd17969356013d06adbbac3f5c1e5e2175bf4b4db91d8c002db0f"
+    },
+    {
+      "path": "artifacts/data/policy-v1/train.jsonl",
+      "bytes": 54529,
+      "sha256": "10c51429e76053267879557fe462bca0aef087d8a05bbec5826e458870d4babe"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6314,
+      "sha256": "6c4bcf643c7cf3e8599c2571f81182cbe55e1268c092f000c1c13bba8272af5c"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1155,
+      "sha256": "f897f23441c7f4d8a4adaf2d1d93e42df3f845a38a60b4e4f7bd626b0a642148"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 404,
+      "sha256": "0d0f9858039ed5ed9c139fa6b1e8308fb50c93df91bcbc607ceed33f04a070d4"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1086,
+      "sha256": "149692de5f8214edaced34233b57fdca5fb6b2affe0a4da09820a61cd02a3468"
+    },
+    {
+      "path": "artifacts/data/faith-v1/manifest.json",
+      "bytes": 49733,
+      "sha256": "15126fa56c09f6a35fe3a16d23a4f71b3b7368a0c64d2d238adf1b8dd37ef9ac"
+    },
+    {
+      "path": "artifacts/data/faith-v1/control-audit.json",
+      "bytes": 68879,
+      "sha256": "8fd83b56ae6f4edb0ad3f5a89bd2147d156968defe39e4f643022a0a4386b6cf"
+    },
+    {
+      "path": "artifacts/data/faith-v1/excluded.jsonl",
+      "bytes": 36166,
+      "sha256": "f6f9397f02a67703d2445d42f70266006c4cb60d36250ca87dd8237e7a376024"
+    },
+    {
+      "path": "repro/observer-layout-v5.zip",
+      "bytes": 80789,
+      "sha256": "1404bb1f511d59aba46b5aa3b7a3c887b9863703a4123f2dcf00d9c140347a03"
+    }
+  ],
+  "research_history_included": false,
+  "FaithEval_full_passages_included": false,
+  "source_inputs_reproducible_from_pinned_upstream_revisions": true
+}

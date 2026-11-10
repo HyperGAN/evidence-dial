@@ -1,0 +1,27 @@
+{
+  "off_matches_cached_native": true,
+  "initial_on_equals_off": true,
+  "zero_up_preserved": true,
+  "native_width": [
+    1,
+    2048
+  ],
+  "connected_trainable_tensors": 2593,
+  "finite_gradients": true,
+  "some_nonzero_gradient": true,
+  "full_restore_tensor_exact": true,
+  "raw_exports_saved": true,
+  "ema": {
+    "decay": null,
+    "values": null
+  },
+  "actual_g_groups": [
+    0.012,
+    0.03
+  ],
+  "actual_d_groups": [
+    0.018
+  ],
+  "completed_steps": 0,
+  "new_training_updates": 0
+}

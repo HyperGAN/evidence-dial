@@ -1,0 +1,18 @@
+{
+  "complete": true,
+  "measured_pairs": 128,
+  "declared": 128,
+  "missing_on": [],
+  "missing_off": [],
+  "effect_gain": 0.328125,
+  "paired_family_bootstrap_95ci": [
+    0.2734375,
+    0.3828125
+  ],
+  "bootstrap_replicates": 10000,
+  "cluster_count": 32,
+  "gains": 42,
+  "losses": 0,
+  "unchanged": 86,
+  "claim": "established positive gain under this protocol"
+}

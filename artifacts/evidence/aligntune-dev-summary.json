@@ -1,0 +1,29 @@
+{
+  "arm": "aligntune-lora",
+  "teacher": false,
+  "complete": true,
+  "measured": 128,
+  "declared": 128,
+  "success_rate": 1.0,
+  "by_type": {
+    "answerable": {
+      "n": 32,
+      "success_rate": 1.0
+    },
+    "conflict": {
+      "n": 32,
+      "success_rate": 1.0
+    },
+    "altered": {
+      "n": 32,
+      "success_rate": 1.0
+    },
+    "missing": {
+      "n": 32,
+      "success_rate": 1.0
+    }
+  },
+  "this_execution_seconds": 26.801244806032628,
+  "generation_seconds": 25.791552543989383,
+  "generated_tokens": 546
+}

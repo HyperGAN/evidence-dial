@@ -1,0 +1,58 @@
+{
+  "steps": 128,
+  "seconds_this_execution": 59.60839649703121,
+  "metrics": {
+    "train_runtime": 59.0711,
+    "train_samples_per_second": 4.334,
+    "train_steps_per_second": 2.167,
+    "total_flos": 2135731259326464.0,
+    "train_loss": 0.021572356187874675,
+    "epoch": 4.0
+  },
+  "ema_decay": null,
+  "weight_selection": "raw",
+  "recipe": {
+    "algorithm": "AlignTune RaftTrainer, standard supervised completion-only loss",
+    "aligntune_commit": "9a80753f2f0af7c5d9b1246904035e9149ea30e1",
+    "citation_loss": false,
+    "document_ranking_loss": false,
+    "preformatted_exact_evaluation_prompt": true,
+    "train_cases": 64,
+    "steps": 128,
+    "batch": 2,
+    "gradient_accumulation": 1,
+    "seed": 20261110,
+    "lora_rank": 8,
+    "lora_alpha": 8,
+    "lora_dropout": 0.0,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ],
+    "learning_rate": 0.0002,
+    "optimizer": "adamw_torch",
+    "scheduler": "constant",
+    "warmup_steps": 0,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "base_precision": "bfloat16",
+    "ema_decay": null,
+    "packing": false,
+    "truncation": false,
+    "initialization": "Preserve standard PEFT Kaiming A and zero B; no experimental LoRA QR",
+    "save_steps": [
+      32,
+      64,
+      128
+    ],
+    "completion_suffix": [
+      261001,
+      3
+    ],
+    "completion_suffix_explanation": "Pinned base's native END_RESPONSE and generation EOS; tokenizer chat EOS6 is not generation EOS3"
+  },
+  "peak_allocated_bytes": 10173515776,
+  "peak_reserved_bytes": 12377391104
+}

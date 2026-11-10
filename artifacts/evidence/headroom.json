@@ -1,0 +1,64 @@
+{
+  "off": {
+    "arm": "off",
+    "teacher": false,
+    "complete": true,
+    "measured": 128,
+    "declared": 128,
+    "success_rate": 0.671875,
+    "by_type": {
+      "answerable": {
+        "n": 32,
+        "success_rate": 1.0
+      },
+      "conflict": {
+        "n": 32,
+        "success_rate": 0.5625
+      },
+      "altered": {
+        "n": 32,
+        "success_rate": 0.84375
+      },
+      "missing": {
+        "n": 32,
+        "success_rate": 0.28125
+      }
+    },
+    "this_execution_seconds": 23.61446288198931,
+    "generation_seconds": 22.33018908952363,
+    "generated_tokens": 536
+  },
+  "teacher": {
+    "arm": "off",
+    "teacher": true,
+    "complete": true,
+    "measured": 128,
+    "declared": 128,
+    "success_rate": 0.875,
+    "by_type": {
+      "answerable": {
+        "n": 32,
+        "success_rate": 1.0
+      },
+      "conflict": {
+        "n": 32,
+        "success_rate": 0.9375
+      },
+      "altered": {
+        "n": 32,
+        "success_rate": 0.84375
+      },
+      "missing": {
+        "n": 32,
+        "success_rate": 0.71875
+      }
+    },
+    "this_execution_seconds": 20.96061337494757,
+    "generation_seconds": 19.683833556075115,
+    "generated_tokens": 550
+  },
+  "teacher_beats_off": true,
+  "off_failure_count": 42,
+  "holdout_generated": false,
+  "next": "review headroom by case type before training or binding"
+}
