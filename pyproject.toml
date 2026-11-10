@@ -17,9 +17,11 @@ evidence-dial = "evidence_dial.cli:main"
 
 [project.entry-points."particle_sliders.response_backends"]
 tiny-aya-evidence-dial = "evidence_dial.binding:BACKEND"
+tiny-aya-evidence-dial-curated-v1 = "evidence_dial.curated_binding:BACKEND"
 
 [project.entry-points."particle_sliders.inference_backends"]
 tiny-aya-evidence-dial = "evidence_dial.binding:INFERENCE"
+tiny-aya-evidence-dial-curated-v1 = "evidence_dial.curated_binding:INFERENCE"
 
 [tool.setuptools.packages.find]
 where = ["src"]

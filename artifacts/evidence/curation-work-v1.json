@@ -1,0 +1,126 @@
+{
+  "selected_cases": 48,
+  "source_cases": 64,
+  "ineligible_cases": [
+    {
+      "id": "policy-P036-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P067-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P089-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P043-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P095-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P095-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P054-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P007-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P016-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P021-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P035-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P067-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P087-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P035-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P089-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P016-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    }
+  ],
+  "approved_coverage": {
+    "missing": 9,
+    "altered": 16,
+    "answerable": 16,
+    "conflict": 7
+  },
+  "native_generated_attempts": 455,
+  "native_input_tokens": 227430,
+  "native_output_tokens": 16135,
+  "Jev_completed_calls_including8fixtures": 65,
+  "Jev_usage": {
+    "input_tokens": 41883,
+    "output_tokens": 2145,
+    "estimated_cost": 0
+  },
+  "Jev_request_seconds_sum": 50.573866437829565,
+  "rejection_reasons": {
+    "wrong_strict_final_answer": 302,
+    "missing_explanation_or_final_marker": 85,
+    "Jev_below_unchanged_threshold": 9
+  },
+  "selected_sha256": "adb9caac08ae439fa9076df26bc54aa1f2a926bd794e28101bfe5d644001ce00",
+  "scores_used_for_model_selection": false,
+  "cost_note": "Jev usage includes fixtures and rejected candidates; mining cold loads/API waits are measured separately by Resources. No closed answer-model comparison is implied."
+}

@@ -1,42 +1,40 @@
-# Plan requirement audit
+# Requirement audit
 
-Work in progress. This audit follows `docs/lexica-plan.md` in the parent
-workspace. It does not claim a final benchmark or completed submission.
+The original answer-hinted experiment and its stronger tests are complete. A
+separately authorized Jev-curated retry is training; its final evaluation and
+publication remain pending. This audit does not claim a completed submission.
 
-| Requirement | Evidence and current state |
+| Requirement | Evidence and state |
 | --- | --- |
-| Track1/problem3, registered Particle Sliders | Submission packet records project/track; owner confirmed registration contact and Discord membership. |
-| Pinned Tiny Aya Global3.35B | `configs/sources.lock.json`; exact base af89d219b53ed9b13b8a4645f9c8028973510324. No base weights redistributed. |
-| Actual CuratorKIT → trainers → AuditKIT | `src/evidence_dial/data.py`, `aligntune_train.py`, `binding.py`, `evaluate.py`; actual pinned source paths, schema/dedup/exports, real RaftTrainer and callable scorers. |
-| Policy64/128/256, family split first | `artifacts/data/policy-v1`;16/32/64 families with4 variants each, equal types; shared templates disclosed. |
-| FaithEval eligibility before sampling | `artifacts/data/faith-v1/manifest.json`, exclusions and frozen-row metadata;900 frozen cases,338 overlength exclusions, no truncation. |
-| Verify full inconsistent-set controls | Full1500-row conservative check unverified on483; semantic support not established. Declared fallback: omit matched FaithEval controls. |
-| Original source reconstruction | `artifacts/evidence/faith-materialization.json`; actual reconstructed900-row file is byte-identical. Public metadata excludes passages/input IDs. |
-| Headroom before binding/cache | `artifacts/evidence/headroom.json`: OFF86/128, private teacher112/128. |
-| Teacher cache once, exact student prompt | Retained cache146 response positions from64 cases; captured original cache source in public source history. No teacher-informed evaluated arm. |
-| Native binding proof | `artifacts/evidence/native-check.json`: zero initial output/OFF equality,2593 connected tensors, exact FULL restore, RAW native generation. |
-| Scoped fresh initialization | Native proof and per-arm receipts preserve pretrained/tied weights, zero up outputs and restore states. Experimental adapter-leaf QR/R2 policy disclosed. |
-| No model-weight EMA | All session/export receipts use `ema_decay=None`/RAW. Official scalar optimizer statistics preserved. |
-| Three rates,128 updates, fixed D/bank | G.012 stopped32; G.004 completed128 but guard scope uncertain/blocked; G.001 completing128. Actual journals and RAW/FULL in training archive. No extra rates/horizon or checkpoint sweep. |
-| Qualified catastrophe separate from effect | G.012 true repetition permanently stopped. Old cutoff/UNKNOWN flags preserved with narrow audits; distinct8-fixture native-text proof. G.004 mathematical-notation coverage remains uncertain and blocked. |
-| No replay of completed updates/proofs | Immutable source/attempt captures, exact FULL resume; original native proof and teacher cache reused. Every G.001 update is journaled once. |
-| Required AlignTune supervised arm |128 updates,256 exposures, each case4times; `artifacts/evidence/aligntune-training.json` and exposure audit. Dev128/128, gain+.328125; development only. |
-| Matching prompts and native decoding | Greedy, EOS3,64 new tokens, train/dev≤512/eval≤2048; no evidence truncation. All128 LoRA/OFF dev native input sequences match. Full holdout audit pending. |
-| RAW128 dev strength1 then2 | G.004 both measured0/128; G.001 pending. Extra strengths require a recorded declaration before outputs. |
-| Sole effect selector, ties preserved | `benchmark.select` enforces complete nominal results, exact guard/checkpoint, failed/uncertain exclusions and numerical tie retention. Selection not yet frozen. |
-| Holdout selection freeze before generation | No holdout generation yet. Pending full selection record and measured-throughput size declaration. |
-| Primary256 and external transfer for all arms | Pending. Every arm must use the same frozen IDs; missing outputs stay unmeasured. |
-| Equal-case effects, intervals, gains/losses | `report.py` uses10000 fixed-seed family/source-question cluster resamples. Final retained-output recomputation pending. |
-| Per-type, answerable accuracy/abstention | Frozen diagnostics implemented. FaithEval matched-control rates unavailable because controls were not verified; disclose omission. |
-| Published QA substring diagnostics | Separate diagnostic implementation; MC is explicitly a custom option-text substring check, not the unavailable published full MC script. No diagnostic ranks candidates. |
-| Native response error and losses | Cached-target diagnostic and committed loss/exposure reporting implemented; final healthy-arm run pending. Failed/uncertain candidate diagnostics remain unmeasured. |
-| Latency, tokens/sec, peak/GPU-hours incl teacher | Native records plus resource receipts. Legacy teacher time has artifact-timestamp estimate; peak unmeasured. Do not rerun cache/proofs to fill telemetry. Final cost report pending. |
-| Optional closed-API ROI | Not run: no configured credential. Final report will give measured self-hosted generation cost at an explicit illustrative price, without a fabricated API comparison. |
-| Public ungated model collection | AlignTune model published,15.37MB anonymously downloaded/SHA-verified;4 retained native sequences exact. Particle export and membership pending. |
-| Public dataset collection | Policy corpus and3-archive training dataset published/verified. Final G.001 archive and benchmark outputs pending. |
-| GitHub exact commands/source provenance | Clean public HyperGAN/evidence-dial export, pinned sources and historical owned files by SHA. Private research history/full FaithEval passages excluded. Final commands/results pending. |
-| Public HF demo | Live ZeroGPU create actually refused402 at account cap; declared static fallback. DOM checks pass. Final benchmark/deploy pending; actual browser host unavailable, visual check unmeasured. |
-| Article and under500-word abstract | README fallback and packet draft prepared; final metrics/abstract verification pending. |
-| New versus pre-existing work and licence | Binding/corpus/pipeline are new hackathon work; Particle Sliders core pre-existing. Tiny Aya and derived adapters CC-BY-NC-4.0; own policy corpus CC0. |
-| Account checks and final form | User confirmed Discord and will fill form. Registration HF username matching ntc-ai remains an owner credit check. No agent submission is claimed. |
-| Releases notification | Authenticated Ember reports queued for policy/AlignTune/archive. Receipt and onward Releases delivery unverified; final release notice pending. |
+| Track1/problem3, registered Particle Sliders | Grounded organizational-document answers, UNKNOWN for absence and CONFLICT for incompatible evidence. Owner confirmed registration contact and Discord membership. |
+| Pinned Tiny Aya3.35B | Exact base revision in `configs/sources.lock.json`; no base weights redistributed. |
+| Actual CuratorKIT → trainers → AuditKIT | Schema/dedup/exports, shared Particle Sliders native response API, real AlignTune RaftTrainer and actual AuditKIT callable/scorers. Source and kit revisions pinned. |
+| Frozen64/128/256 policy splits | Family splits precede variants; shared question frames disclosed. Exact prompts/families are disjoint; structural shortcut found and documented. |
+| FaithEval900 with eligibility before sampling |300 per stratum,338 overlength exclusions, no truncation. Frozen IDs/revisions reconstruct identical data bytes. Full passages and reversible input arrays excluded publicly. |
+| FaithEval answerable controls | Full inconsistent-set structural check unverified on483 rows; semantic validation not established. Controls explicitly omitted, not fabricated. |
+| Headroom and teacher cache | Original OFF86/128, hinted teacher112/128 before binding/cache;146 response positions cached once. No replay. |
+| Original native binding | InitialON=OFF,2593 connected tensors, exact FULL restore, RAW native generation. Current source and historical versions retained. |
+| Fresh scoped initialization and no EMA | Pretrained/tied tensors and zero up-projections preserved; experimental adapter-leaf QR/R2 documented. RAW current weights and ema_decay=None. Official scalar statistics unchanged. |
+| Original three rates | G.012 permanently stopped32 for qualified repetitive collapse; G.004 completed128 but blocked for uncertain math-notation guard coverage; G.001 completed128. No completed rate search replay. |
+| Catastrophic rejection separate from effect | Native-text-v1e bounded8-fixture qualification; original verdicts and narrow contract audits retained. Weak effect is not a failure verdict. |
+| Development-only selector | Original G.001/strength1 frozen before all holdout outputs.99/128 at1,88/128 at2 versus86. No fallback; exact ties preserved. |
+| Required AlignTune control | Original64-case LoRA128 updates,256 exposures, dev128/128. Public adapter,4 retained-token equivalence proof and exact OFF-input matching. |
+| Same prompts/native decoding | Every evaluated arm uses unchanged strong prompt, greedy, EOS3,64 new tokens and≤2048 input tokens without truncation. All7248 original case-arm native input pairs checked. |
+| Full original holdout | Primary256: OFF169,P1 184,P2 173,LoRA256. Faith900: OFF323,P1 337,P2 359,LoRA375. Complete per-case results retained. |
+| Equal-case effects and clustered intervals |10000 fixed-seed family/source-question bootstrap replicates; gains/losses/unchanged, per-type accuracy/abstention, transfer strata and substring diagnostics separately reproduced. |
+| Stronger tests after perfect-score audit | Cue80: OFF53,P1 43,P2 34,LoRA36. Balanced768: OFF353,P1 341,LoRA492;32 families/384 order pairs. Frozen before output. Every regression retained. |
+| Perfect-score integrity | Raw exact256/256 reproduced, token decoding/input matching checked, gold metadata mutations do not change prompts.16/16 frames shared and DocB perfectly predictsCONFLICT: narrow benchmark. |
+| Corrected reachable-success method | Owner authorized fix/retry.48/64 unhinted Tiny Aya examples passed strict final-answer and actual NanoGPT Jev1.14 correctness/quality gates.16 ineligible cases explicitly retained. Seed/RNG/token/hidden traces saved;118 exact paired positive/neutral states verified. |
+| New shared-API retry | New registered backend, fixedG.001/D.018/bank.03,b2/r8/h128, RAW/noEMA. New native checks and RAW0 inference pass. Training active, guards2/32/64/68 passed; exact FULL68 continuation, final dev/selection pending. |
+| Data-matched new LoRA | Same48 approved cases, original fixed supervised recipe and128 updates/batch2. Queued after particle GPU release; no model-quality claim yet. |
+| New unseen confirmation |768 R032..R063 cases frozen before retry training. Four types balanced across1/2/3 documents and two orders. New primary comparison=dev-selected particle versus same-pool LoRA; OFF/original models and both nominal strengths retained. |
+| Losses/native-response error | Original journals/exposure diagnostics/plots retained. Original G.001 native SSE ratios1.043/1.292 are diagnostic only. New diagnostics queued after all evaluations. |
+| GPU/time/memory/cost | GPU1 UUID,22GiB allocator/24GiB ownNVML/32GiB RSS,5GiB freeGPU/47GiB host floors, one-day deadline. Exception: one50.98s legacy diagnostic omitted CUDA mapping; physical device unverified. Record retained, helper fixed, cost accounting separates it. Do not claim every historical phase met one-device scope. |
+| Optional closed answer-API ROI | No closed answer-model arm measured. NanoGPT is used as the Jev judge. Self-hosted per-query cost at an explicitly illustrative price is reported; no fabricated API-quality/billing comparison. |
+| Model collection | Original LoRA public and SHA-verified. Original particle portable4-case proof passed; publication held while corrected method is measured. Corrected particle/LoRA exports and proofs queued. |
+| Dataset collection | Policies, fresh grounding tests and all four original training archives public/verified. Corrected48-case curation,455 sample traces,65 Jev calls and118 paired states public/verified at ntc-ai/evidence-dial-curated-successes. Corrected run archives and final benchmark pending. |
+| Reproducible GitHub source | Clean allowlist export with exact sources/commands and historical owned files bySHA. Private Git history, keys, account fields and FaithEval passages excluded. Final results update pending. |
+| Public demo | ntc-ai/evidence-dial static Space RUNNING after actual live ZeroGPU402 freecap. Original-results assets/servedJSON verified; live-HTTP DOM checks pass. Corrected data update pending. CUA host unavailable, real-browser visual QA unmeasured. |
+| Article/abstract/owner handoff | README fallback article and under500-word submission packet must be finalized with measured corrected results and all URLs. Owner will fill form; registration HF-name match remains an owner credit check. No submission receipt claimed. |
+| Attribution/licences | New Cohere2 binding/corpus/pipeline/evaluation; Particle Sliders core pre-existing. Own source corpusCC0, project codeMIT, Tiny Aya/derived weightsCC-BY-NC-4.0, upstream kit/dataset terms retained. |
+| Releases notice | Authenticated Ember reports queued for original artifacts and method transitions. Receipt/onward delivery unverified; final release notice remains pending. |

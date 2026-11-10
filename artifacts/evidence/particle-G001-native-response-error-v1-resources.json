@@ -1,0 +1,21 @@
+{
+  "state": "admitted",
+  "pid": 1432629,
+  "gpu": 1,
+  "caps": {
+    "allocator_cap": 23622320128,
+    "nvml_cap": 25769803776,
+    "rss_cap": 34359738368,
+    "gpu_floor": 5368709120,
+    "host_floor": 50465865728
+  },
+  "initial": {
+    "global_gpu_free": 44700139520,
+    "own_nvml": 0,
+    "allocator_reserved": 0,
+    "rss": 567304192,
+    "host_available": 85918285824
+  },
+  "lease": "SH admission/GPU; EX Evidence Dial",
+  "time": 1794288313.3798227
+}

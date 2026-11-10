@@ -9,6 +9,9 @@
       "actual_updates": 32,
       "journal_sha256": "277c1b9c4e81bfcad22ef3b1f7ec13d8136c8fbe3e2f68e786910ab74e3e2133",
       "weight_EMA": null,
+      "cache_index_sha256": "314f1424b1421f34104dbc33b55707689b4a86a39a14067d54f5ea966fcdeffd",
+      "response_targets": 146,
+      "training_cases": 64,
       "g_response_exposures": 64,
       "g_unique_positions": 64,
       "g_case_exposures": {
@@ -139,6 +142,9 @@
       "actual_updates": 128,
       "journal_sha256": "2bbe2f19a9d93f021fc83a67052e90edb0f6e38795a2c7fe2ba5ad6768d7ec02",
       "weight_EMA": null,
+      "cache_index_sha256": "314f1424b1421f34104dbc33b55707689b4a86a39a14067d54f5ea966fcdeffd",
+      "response_targets": 146,
+      "training_cases": 64,
       "g_response_exposures": 256,
       "g_unique_positions": 146,
       "g_case_exposures": {
@@ -310,6 +316,9 @@
       "actual_updates": 128,
       "journal_sha256": "4515c0f3a8ff34aa3ebef97e60e8040a634ab067bee1d48b485ecd3b6f10e3a7",
       "weight_EMA": null,
+      "cache_index_sha256": "314f1424b1421f34104dbc33b55707689b4a86a39a14067d54f5ea966fcdeffd",
+      "response_targets": 146,
+      "training_cases": 64,
       "g_response_exposures": 256,
       "g_unique_positions": 146,
       "g_case_exposures": {
@@ -480,6 +489,11 @@
     "aligntune-v2": {
       "actual_updates": 128,
       "journal_sha256": "5bfc0ac4d6342aa7647cb5dc4b64b6bef635b6089ee52e2ba037ef18089bc7cc",
+      "training_cases": 64,
+      "total_case_exposures": 256,
+      "exposures_per_case_distribution": {
+        "4": 64
+      },
       "case_exposures": {
         "policy-P002-altered": 4,
         "policy-P002-answerable": 4,

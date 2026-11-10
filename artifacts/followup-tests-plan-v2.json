@@ -1,0 +1,156 @@
+{
+  "declared_utc": "2026-11-10T04:58:04.083323+00:00",
+  "purpose": "Owner requested better tests after independently verified perfect but structurally weak synthetic scores",
+  "cohorts": [
+    {
+      "name": "cue_audit",
+      "data_sha256": "da8710f5e0c90ea281371e95731f321f8374b1b94675a11038985e5ba0e34241",
+      "manifest_sha256": "bf8a145d866a88f0076ebe6f36bce49f4731e311d25574cb2a4cb0d462a77070",
+      "window_seconds": 1800,
+      "jobs": [
+        {
+          "attempt": "cue_audit-off-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/evidence-interventions-v1/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/cue_audit/off",
+            "--arm",
+            "off",
+            "--gpu",
+            "1"
+          ]
+        },
+        {
+          "attempt": "cue_audit-particle_1-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/evidence-interventions-v1/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/cue_audit/particle_1",
+            "--arm",
+            "particle",
+            "--gpu",
+            "1",
+            "--adapter",
+            "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+            "--strength",
+            "1"
+          ]
+        },
+        {
+          "attempt": "cue_audit-particle_2-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/evidence-interventions-v1/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/cue_audit/particle_2",
+            "--arm",
+            "particle",
+            "--gpu",
+            "1",
+            "--adapter",
+            "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+            "--strength",
+            "2"
+          ]
+        },
+        {
+          "attempt": "cue_audit-lora-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/evidence-interventions-v1/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/cue_audit/lora",
+            "--arm",
+            "lora",
+            "--gpu",
+            "1",
+            "--adapter",
+            "artifacts/runs/aligntune-v2/adapter"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "balanced",
+      "data_sha256": "49d8828b3885162ae5682cec3f49919d57de4ffbbf5e264be3b4eaf25ad2c720",
+      "manifest_sha256": "5205e0d8693a8b4a67995a135f4516ac9305da05de80e9698e4d0e4297b99f70",
+      "window_seconds": 10800,
+      "jobs": [
+        {
+          "attempt": "balanced-off-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/balanced-grounding-v2/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/balanced/off",
+            "--arm",
+            "off",
+            "--gpu",
+            "1"
+          ]
+        },
+        {
+          "attempt": "balanced-particle_1-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/balanced-grounding-v2/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/balanced/particle_1",
+            "--arm",
+            "particle",
+            "--gpu",
+            "1",
+            "--adapter",
+            "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+            "--strength",
+            "1"
+          ]
+        },
+        {
+          "attempt": "balanced-lora-first",
+          "arguments": [
+            "evaluate",
+            "--selection",
+            "artifacts/selection-v1.json",
+            "--data",
+            "artifacts/data/balanced-grounding-v2/holdout.jsonl",
+            "--out",
+            "artifacts/followup-tests-v2/balanced/lora",
+            "--arm",
+            "lora",
+            "--gpu",
+            "1",
+            "--adapter",
+            "artifacts/runs/aligntune-v2/adapter"
+          ]
+        }
+      ]
+    }
+  ],
+  "new_training": false,
+  "selection_unchanged_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "source_sha256": "edf126909e19db6e158f76a704c11f4788ab2ce03065746e505794ef589ea487",
+  "all_original_results_retained": true,
+  "supersedes_before_any_generation_sha256": "80dfe76ea43cb10ece167fbd67f572c27f83ca4d2f031eb3b7529afd3464997e",
+  "revision_reason": "Simulator question grammar corrected before any model outputs; v1 waiting process withdrawn with zero model calls"
+}

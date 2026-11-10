@@ -147,6 +147,15 @@
       ]
     },
     {
+      "sha256": "1f52de49ba56605e75646b408b92f9d028032836305e0858653d2500aa6eb249",
+      "bytes": 4968,
+      "file": "1f52de49ba56605e75646b408b92f9d028032836305e0858653d2500aa6eb249.py",
+      "paths": [
+        "tools/training_diagnostics.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "1f6261ff94c87cbf8403b51b8b97b14d4509371b4e23680eb99661d4d9ca0194",
       "bytes": 6359,
       "file": "1f6261ff94c87cbf8403b51b8b97b14d4509371b4e23680eb99661d4d9ca0194.py",
@@ -196,6 +205,15 @@
       ]
     },
     {
+      "sha256": "29e731653ddf61cecd125f527b7e3d0e219c8df6aadf33ed4e952cdf4ff35c48",
+      "bytes": 4626,
+      "file": "29e731653ddf61cecd125f527b7e3d0e219c8df6aadf33ed4e952cdf4ff35c48.py",
+      "paths": [
+        "tools/verify_results.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "2e06d2eaffbbe7acb41de2250cf3210dae8d64377a74e7ad5fbd6fe2f57abc86",
       "bytes": 9338,
       "file": "2e06d2eaffbbe7acb41de2250cf3210dae8d64377a74e7ad5fbd6fe2f57abc86.py",
@@ -206,6 +224,24 @@
         "86fe8c80809fd6828a1a83219ef97ffbdc056b88",
         "8b218dabad92e1aeba609c5543de80c8b9638477"
       ]
+    },
+    {
+      "sha256": "2f925e091bb72bb4b807a9cba90ff9e21e32127c4cb1148c43b897005af2f1ae",
+      "bytes": 3117,
+      "file": "2f925e091bb72bb4b807a9cba90ff9e21e32127c4cb1148c43b897005af2f1ae.py",
+      "paths": [
+        "tools/export_public_source.py"
+      ],
+      "commits": []
+    },
+    {
+      "sha256": "30241e4f3777d84c3532e0e118f3745d3735f8636c35aece4477686bf1f22338",
+      "bytes": 3677,
+      "file": "30241e4f3777d84c3532e0e118f3745d3735f8636c35aece4477686bf1f22338.py",
+      "paths": [
+        "tools/check_sample_replay.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "30785c733ee1177cf30282fbd6929c6b1f3d83aacfebee06a7c665ccbb3df59a",
@@ -278,6 +314,15 @@
       ]
     },
     {
+      "sha256": "385df988d15255e2e136b7c90b6776c665b61fb7c802a4758b0bc590b19bdeef",
+      "bytes": 5516,
+      "file": "385df988d15255e2e136b7c90b6776c665b61fb7c802a4758b0bc590b19bdeef.py",
+      "paths": [
+        "tools/cost_report.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef",
       "bytes": 3691,
       "file": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef.py",
@@ -295,6 +340,7 @@
       "bytes": 5604,
       "file": "3fc302150cc0aa8af62fb49b21e827bb7d97e173b579c1385137052dd337f502.py",
       "paths": [
+        "artifacts/execution-sources/aligntune_train-3fc302150cc0aa8af62fb49b21e827bb7d97e173b579c1385137052dd337f502.py",
         "src/evidence_dial/aligntune_train.py"
       ],
       "commits": [
@@ -319,6 +365,15 @@
         "8b218dabad92e1aeba609c5543de80c8b9638477",
         "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "408423df11decaf42cda684aefcfa9d0986600355ca937ff9e61f4a57f05a849",
+      "bytes": 16131,
+      "file": "408423df11decaf42cda684aefcfa9d0986600355ca937ff9e61f4a57f05a849.py",
+      "paths": [
+        "artifacts/execution-sources/curation-408423df11decaf42cda684aefcfa9d0986600355ca937ff9e61f4a57f05a849.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "420f8363410fd285ce787bb70a6418a3c324ad36ec1fad6d9877bb4d492f47b9",
@@ -356,6 +411,16 @@
       ]
     },
     {
+      "sha256": "479f253fa2aa092c0e48ce6c78fb38e353af219a558d9285e760b6adc4544441",
+      "bytes": 11359,
+      "file": "479f253fa2aa092c0e48ce6c78fb38e353af219a558d9285e760b6adc4544441.py",
+      "paths": [
+        "artifacts/execution-sources/curated_binding-479f253fa2aa092c0e48ce6c78fb38e353af219a558d9285e760b6adc4544441.py",
+        "src/evidence_dial/curated_binding.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "4a81830c06e716f600e92fdba8f119306887ea67dd1ac1e0cf8a1a1f2c58a9c8",
       "bytes": 4873,
       "file": "4a81830c06e716f600e92fdba8f119306887ea67dd1ac1e0cf8a1a1f2c58a9c8.py",
@@ -376,6 +441,15 @@
       "commits": [
         "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "4ac3fba1ce44409ca8d28846de8500b2250ee8ead0ecefb46129a53277e729cd",
+      "bytes": 8469,
+      "file": "4ac3fba1ce44409ca8d28846de8500b2250ee8ead0ecefb46129a53277e729cd.py",
+      "paths": [
+        "tools/build_demo.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "4b160c11253b0f673191ec8d35fd72b4285c7e4cbb06b5f5b6ae267ccd124820",
@@ -436,6 +510,15 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "5b6529394b0252231efdc4550807d94714a19bbd30b8fe2776ed938bc762c5b1",
+      "bytes": 15265,
+      "file": "5b6529394b0252231efdc4550807d94714a19bbd30b8fe2776ed938bc762c5b1.py",
+      "paths": [
+        "artifacts/execution-sources/curation-5b6529394b0252231efdc4550807d94714a19bbd30b8fe2776ed938bc762c5b1.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "5c287e6f3a4efea052879c4207a73179f4cc9cf7304c2063e91d721998a39c8a",
@@ -531,15 +614,6 @@
       ]
     },
     {
-      "sha256": "722b620d0f680d8702f622bb6dadab2556db1a1875ac1d29e1dcbb74ddb9adb1",
-      "bytes": 1831,
-      "file": "722b620d0f680d8702f622bb6dadab2556db1a1875ac1d29e1dcbb74ddb9adb1.py",
-      "paths": [
-        "tools/plot_results.py"
-      ],
-      "commits": []
-    },
-    {
       "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a",
       "bytes": 7790,
       "file": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a.py",
@@ -623,12 +697,49 @@
       ]
     },
     {
+      "sha256": "81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15",
+      "bytes": 17223,
+      "file": "81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15.py",
+      "paths": [
+        "artifacts/execution-sources/curation-81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15.py",
+        "src/evidence_dial/curation.py"
+      ],
+      "commits": []
+    },
+    {
+      "sha256": "84c9e9eed0b623b1dbd91a56ad3af8ad174ecb890e4ef6c5ad68f25c843c5d96",
+      "bytes": 3353,
+      "file": "84c9e9eed0b623b1dbd91a56ad3af8ad174ecb890e4ef6c5ad68f25c843c5d96.py",
+      "paths": [
+        "tools/plot_comparisons.py"
+      ],
+      "commits": []
+    },
+    {
+      "sha256": "8e76f362dd05fc7af017526d68a97a9d58cf30df2d64131066e5fc04d999cfb9",
+      "bytes": 4500,
+      "file": "8e76f362dd05fc7af017526d68a97a9d58cf30df2d64131066e5fc04d999cfb9.py",
+      "paths": [
+        "tools/package_curation.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "966a26703fbada0a501a21de4d374c9440e46a28ee7711666b7da2160ccee553",
       "bytes": 4145,
       "file": "966a26703fbada0a501a21de4d374c9440e46a28ee7711666b7da2160ccee553.py",
       "paths": [
         "artifacts/execution-sources/holdout-966a26703fbada0a501a21de4d374c9440e46a28ee7711666b7da2160ccee553.py",
         "src/evidence_dial/holdout.py"
+      ],
+      "commits": []
+    },
+    {
+      "sha256": "99178a3370958443c94e9e9d62d3b7cf76d33f38fe2de95b364c848a1f42806e",
+      "bytes": 2826,
+      "file": "99178a3370958443c94e9e9d62d3b7cf76d33f38fe2de95b364c848a1f42806e.py",
+      "paths": [
+        "src/evidence_dial/diagnose.py"
       ],
       "commits": []
     },
@@ -676,6 +787,15 @@
       ]
     },
     {
+      "sha256": "a2f18dc80c02f58599f2862e206f705f0249ec1dc2653e6a29c95d79f99b6258",
+      "bytes": 8527,
+      "file": "a2f18dc80c02f58599f2862e206f705f0249ec1dc2653e6a29c95d79f99b6258.py",
+      "paths": [
+        "src/evidence_dial/summarize.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "a2f3267d5d7db0c8b1dab476f52ab518fcb903bfec388c2051a7aa4e6013fffe",
       "bytes": 8858,
       "file": "a2f3267d5d7db0c8b1dab476f52ab518fcb903bfec388c2051a7aa4e6013fffe.py",
@@ -688,11 +808,20 @@
       ]
     },
     {
+      "sha256": "a3ad6c15783764284565858c185e95bf61e21f4aa1477ca8d8315359dce2708d",
+      "bytes": 5805,
+      "file": "a3ad6c15783764284565858c185e95bf61e21f4aa1477ca8d8315359dce2708d.py",
+      "paths": [
+        "src/evidence_dial/aligntune_train.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "a513d71d6d955adfbac5f1a2fdac21f8c438fba111d38f06254d6a772a746722",
       "bytes": 8873,
       "file": "a513d71d6d955adfbac5f1a2fdac21f8c438fba111d38f06254d6a772a746722.py",
       "paths": [
-        "tools/build_balanced_grounding_test.py"
+        "artifacts/execution-sources/balanced-generator-a513d71d6d955adfbac5f1a2fdac21f8c438fba111d38f06254d6a772a746722.py"
       ],
       "commits": []
     },
@@ -810,15 +939,6 @@
       ]
     },
     {
-      "sha256": "ae6936f6cc0f82aa7c0295872c718a124d8728070a75af143dcd0fadad2f3fbc",
-      "bytes": 3572,
-      "file": "ae6936f6cc0f82aa7c0295872c718a124d8728070a75af143dcd0fadad2f3fbc.py",
-      "paths": [
-        "tools/verify_results.py"
-      ],
-      "commits": []
-    },
-    {
       "sha256": "b5caf5e3ef25e6bbd82249c586d041519224c7e9fca9990ad155525bba2215fd",
       "bytes": 3900,
       "file": "b5caf5e3ef25e6bbd82249c586d041519224c7e9fca9990ad155525bba2215fd.py",
@@ -869,6 +989,15 @@
       "file": "c7516d019327e8ae857d9ce77e6fd547a78ddafc8d2b96518f3052168cffcc96.py",
       "paths": [
         "artifacts/execution-sources/cli-c7516d019327e8ae857d9ce77e6fd547a78ddafc8d2b96518f3052168cffcc96.py"
+      ],
+      "commits": []
+    },
+    {
+      "sha256": "c8a157662252d8d7c6e1c686d7702739ef5553bf522234cee4cda702a829318d",
+      "bytes": 16221,
+      "file": "c8a157662252d8d7c6e1c686d7702739ef5553bf522234cee4cda702a829318d.py",
+      "paths": [
+        "artifacts/execution-sources/curation-c8a157662252d8d7c6e1c686d7702739ef5553bf522234cee4cda702a829318d.py"
       ],
       "commits": []
     },
@@ -932,11 +1061,12 @@
       ]
     },
     {
-      "sha256": "d54bcb6025e28c58b466031585e576e17e214672906ddfbc3fafc39c3254a40b",
-      "bytes": 8369,
-      "file": "d54bcb6025e28c58b466031585e576e17e214672906ddfbc3fafc39c3254a40b.py",
+      "sha256": "d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815",
+      "bytes": 5758,
+      "file": "d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815.py",
       "paths": [
-        "src/evidence_dial/summarize.py"
+        "artifacts/execution-sources/curated_train-d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815.py",
+        "src/evidence_dial/curated_train.py"
       ],
       "commits": []
     },
@@ -951,6 +1081,24 @@
         "0b0d9dd032cfcefb901326f5ee141c237974e139",
         "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "e217c0c5a7c783cdcd8a55067580edf2005f9c31ce95a3853f6e300cfe62c934",
+      "bytes": 3016,
+      "file": "e217c0c5a7c783cdcd8a55067580edf2005f9c31ce95a3853f6e300cfe62c934.py",
+      "paths": [
+        "tools/plot_results.py"
+      ],
+      "commits": []
+    },
+    {
+      "sha256": "e2729fb2d8f76119affabdf9aef36f01e35d4bca74d09323c3dd53990b9f705c",
+      "bytes": 2497,
+      "file": "e2729fb2d8f76119affabdf9aef36f01e35d4bca74d09323c3dd53990b9f705c.py",
+      "paths": [
+        "tools/check_static_space.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "e32887060cb493eeaec9e1b3b1e7729e9fb3e0298a7348bcbef7b85974f44ed8",
@@ -990,6 +1138,15 @@
       ]
     },
     {
+      "sha256": "eb8c70bd701e437c391600fee720bcaa6a43eb77581c24fa5066382826638d79",
+      "bytes": 10214,
+      "file": "eb8c70bd701e437c391600fee720bcaa6a43eb77581c24fa5066382826638d79.py",
+      "paths": [
+        "tools/build_balanced_grounding_test.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "ebae9cabeea7cf9879b0408f7b91623fa2a9c9273e4045041031d61f5a2f3f0e",
       "bytes": 7290,
       "file": "ebae9cabeea7cf9879b0408f7b91623fa2a9c9273e4045041031d61f5a2f3f0e.py",
@@ -999,15 +1156,6 @@
       "commits": [
         "8b218dabad92e1aeba609c5543de80c8b9638477"
       ]
-    },
-    {
-      "sha256": "f0400d6ce2b865d2afa866416be0141ef231703682aad012ceb419ba7fde9b0f",
-      "bytes": 2094,
-      "file": "f0400d6ce2b865d2afa866416be0141ef231703682aad012ceb419ba7fde9b0f.py",
-      "paths": [
-        "tools/export_public_source.py"
-      ],
-      "commits": []
     },
     {
       "sha256": "f327707d5a45f1f1b1482ad74062a7e6b2c65692f7420c474643775501f7c731",

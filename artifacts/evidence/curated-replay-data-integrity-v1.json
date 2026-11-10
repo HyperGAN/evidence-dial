@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "accepted_cases": 48,
+  "paired_rows": 118,
+  "paired_states_equal_assembled_cache_bit_for_bit": true,
+  "exact_input_and_history_IDs_verified": true,
+  "all48_trace_shapes_and_finiteness_verified": true,
+  "all48_initial_CPU_RNG_states_match_saved_seed": true,
+  "generation_and_pair_content_hashes_verified": true,
+  "native_generation_replayed": false,
+  "new_model_calls": 0,
+  "selected_sha256": "adb9caac08ae439fa9076df26bc54aa1f2a926bd794e28101bfe5d644001ce00",
+  "pair_index_sha256": "6ea44c1595fe07a5cb883ec9dacbcef653c497b09f94993be86df58fc78cd854"
+}

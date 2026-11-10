@@ -1,0 +1,18 @@
+{
+  "schema": "conservative-curation-filter-admission-v1",
+  "first_result_sha256": "c8785e158fca2dd2f8250a767a51093f4ff3c4f37f2b0c6ee8abf385ed9b81f0",
+  "original_8of8_acceptance_qualification": false,
+  "qualified_catastrophic_observer": false,
+  "semantic_probability_sides_match_all8": true,
+  "incorrect_fixture_acceptances": 0,
+  "correct_fixture_acceptances": 2,
+  "correct_fixture_rejections": 2,
+  "curation_thresholds_unchanged": {
+    "correctness": 0.9,
+    "quality": 3.0
+  },
+  "admitted_for_conservative_curation": true,
+  "reason": "The filter may reject valid examples. Two valid first judgments were.89, below the unchanged.90 data threshold; none of four invalid examples were accepted. Preserve the failed full-recall qualification, admit only a conservative data filter, and allow pending cases rather than relaxing acceptance. This is not the separate catastrophic-output qualification.",
+  "new_Jev_calls": 0,
+  "original_result_modified": false
+}

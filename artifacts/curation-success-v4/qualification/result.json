@@ -1,0 +1,104 @@
+{
+  "qualified": false,
+  "bounded_scope": "English short fictional-policy grounded explanations",
+  "questions_sha256": "2096262fb93a0d3dc1b764f1cebd416efd51b0e79e968887bbee6820d0803963",
+  "records": [
+    {
+      "id": "answerable-positive",
+      "scores": {
+        "refused": false,
+        "correctness": 0.89,
+        "quality": 3.55,
+        "key": "c877111f070e1860bb848ca72c0384703e1be4f0e38e61c95a0ffc452bd5cc0f"
+      },
+      "expected_accept": true,
+      "accepted": false,
+      "matches": false
+    },
+    {
+      "id": "answerable-negative",
+      "scores": {
+        "refused": false,
+        "correctness": 0.01,
+        "quality": 0.01,
+        "key": "02adce7ce72d6f52539e338abd3eafb5c2950d6a0c221e6fdd477899246ec562"
+      },
+      "expected_accept": false,
+      "accepted": false,
+      "matches": true
+    },
+    {
+      "id": "missing-positive",
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.68,
+        "key": "21be5d1e16cdf76a08fee77658c3cf5c3b9875f0ffca59a80f2f175d9195c656"
+      },
+      "expected_accept": true,
+      "accepted": true,
+      "matches": true
+    },
+    {
+      "id": "missing-negative",
+      "scores": {
+        "refused": false,
+        "correctness": 0.02,
+        "quality": 0.15,
+        "key": "468c1af327067994a9905a90d24d98e905de2825fe704d7bf3c8635340d66c00"
+      },
+      "expected_accept": false,
+      "accepted": false,
+      "matches": true
+    },
+    {
+      "id": "conflict-positive",
+      "scores": {
+        "refused": false,
+        "correctness": 0.95,
+        "quality": 3.37,
+        "key": "733fa02c22ebad100b050528d94612303ef1ae72a3ffff09e5ee42e106819172"
+      },
+      "expected_accept": true,
+      "accepted": true,
+      "matches": true
+    },
+    {
+      "id": "conflict-negative",
+      "scores": {
+        "refused": false,
+        "correctness": 0.02,
+        "quality": 0.82,
+        "key": "af4c71f22be2a74ffa3a0df73fc6c520af3a594b47868455948c06730440c4e4"
+      },
+      "expected_accept": false,
+      "accepted": false,
+      "matches": true
+    },
+    {
+      "id": "altered-positive",
+      "scores": {
+        "refused": false,
+        "correctness": 0.89,
+        "quality": 3.73,
+        "key": "f158b7bdc24470837e30ef1353a9f0a95a211cd46677f6615cd7518568bd2d41"
+      },
+      "expected_accept": true,
+      "accepted": false,
+      "matches": false
+    },
+    {
+      "id": "altered-negative",
+      "scores": {
+        "refused": false,
+        "correctness": 0.01,
+        "quality": 0.02,
+        "key": "c887fe7d211c604176c9754ee2956bfd358e2ec326a19e894247adf5360aa503"
+      },
+      "expected_accept": false,
+      "accepted": false,
+      "matches": true
+    }
+  ],
+  "retuned": false
+}

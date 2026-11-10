@@ -4,7 +4,22 @@ Particle Sliders' Lexsi hackathon project: a learned grounding control for
 `CohereLabs/tiny-aya-global`. The protocol and exact workflow are in
 [`docs/reproduce.md`](docs/reproduce.md).
 
-**Status: original primary holdout complete; external and fresh evidence tests in progress.**
+**Problem statement — Track1, problem3:** answer from an organization's supplied
+documents, say UNKNOWN when the answer is absent, and CONFLICT when equally
+authoritative evidence disagrees. The experiment asks whether a continuous
+particle adapter improves those finished answers, and where it beats a
+supervised LoRA trained on the same source cases.
+
+**Status: a Jev-curated successful-sample retry is training.**
+
+The results below belong to the original answer-hinted target recipe. The corrected
+workflow mines actual Tiny Aya successes, retains seed/token/hidden-state provenance,
+and caches exact positive/neutral pairs. It retained48 of64 source cases; a same48-case
+LoRA control and a fresh768-case confirmation are declared before evaluation. No new
+quality win is claimed yet. See [the method and audit trail](docs/method-repair.md).
+The [curated samples and paired-state archive](https://huggingface.co/datasets/ntc-ai/evidence-dial-curated-successes)
+are public and verified. The [saved-output explorer](https://huggingface.co/spaces/ntc-ai/evidence-dial)
+currently labels the complete original experiment; the corrected retry is pending.
 
 | Original policy holdout | Strict successes |
 | --- | ---: |
@@ -29,8 +44,22 @@ At the owner's request,80 targeted cue checks and768 balanced cases were frozen
 before any model output on them. One/two/three documents are balanced across
 answer categories, with agreement, wrong-scope distractors, internal conflicts,
 fresh values/wording and384 order pairs. The original900-case FaithEval transfer
-benchmark is finishing first. All original scores and failures remain visible.
-No new training or test-based candidate selection has occurred.
+benchmark is complete, alongside the cue audit and balanced test. All original scores and failures remain visible.
+The separately authorized curated retry does not change the old selection.
+
+| Original selected particle versus LoRA | OFF | Particle strength1 | LoRA | Particle − LoRA, pp ·95% interval |
+| --- | ---: | ---: | ---: | --- |
+| Policy256 |169|184|256|−28.13 [−32.81,−23.83]|
+| FaithEval900 |323|337|375|−4.22 [−6.69,−1.74]|
+| Cue audit80 |53|43|36|+8.75 [+3.75,+13.75]|
+| Balanced stress768 |353|341|492|−19.66 [−23.96,−15.36]|
+
+The original particle has a specific transfer advantage on FaithEval's
+missing-evidence stratum:196/300 versus LoRA166/300, +10pp [5.37,14.57]. It loses
+on counterfactual cases130/300 versus180/300 and inconsistent cases11/300 versus
+29/300. These descriptive strata have unadjusted intervals. On the cue audit
+it beats LoRA while both adapters hurt OFF. The balanced test favors LoRA
+strongly. None of these results establishes broad particle superiority.
 
 All three declared Particle rates were handled: G0.012 permanently stopped32
 for qualified repetitive collapse; G0.004 completed128 but both nominal dev
@@ -103,8 +132,9 @@ Tiny Aya and derived adapters are subject to the base's **CC-BY-NC-4.0**
 non-commercial licence. CuratorKIT and AuditKIT retain their upstream
 source-available licences; AlignTune retains its upstream licences. FaithEval
 retains its original dataset terms. No gated base weights are redistributed.
-The optional closed-API ROI comparison has no configured credential and is not
-claimed. The full benchmark release, particle adapter, article and demo are pending.
+The optional closed answer-model API comparison was not measured. NanoGPT is
+used as the Jev curator, not as an answer-model comparison. Corrected results,
+final particle-model publication and the final article/submission abstract are pending.
 The owner will fill in the final hackathon form using the submission packet.
 
 The AlignTune integration uses its pinned source `RaftTrainer` with measured
@@ -123,7 +153,9 @@ this does not establish a general Transformer/LoRA initialization recommendation
 Public curated corpus: [ntc-ai/evidence-dial-policies](https://huggingface.co/datasets/ntc-ai/evidence-dial-policies).
 It is ungated and its uploaded training bytes were checked against the frozen
 local source. Public live Space creation returned HTTP402 (free ZeroGPU limit);
-the declared static explorer fallback is being prepared.
+the declared static explorer fallback is live. Anonymous source/data bytes and
+live-HTTP DOM behavior passed checks. The browser host is unavailable, so a
+real browser visual check remains unmeasured.
 
 The initial text checker also flagged the explicitly legal `UNKNOWN` label.
 Two narrow audits preserve these old verdicts as out-of-contract, unmeasured
@@ -145,3 +177,10 @@ Fresh [cue-controlled grounding tests](https://huggingface.co/datasets/ntc-ai/ev
 are public and verified byte-for-byte. Their manifests precede all new test
 generation. The learned particle adapter has4,766,912 parameters, compared with
 LoRA3,833,856; no footprint or inference-speed advantage is claimed.
+
+The measured cohort uses one declared physical A6000, private sequencing,
+explicit memory caps/floors and the original one-day deadline. One old
+diagnostic-only50.98s phase omitted CUDA mapping: its physical device is
+unverified. The record remains and the helper is repaired; no answer score or
+selection depended on it. Cost accounting separates this exception and marks
+legacy telemetry gaps rather than claiming complete one-device coverage.

@@ -1,0 +1,45 @@
+{
+  "declared_utc": "2026-11-10T05:56:16.073746+00:00",
+  "data_sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
+  "manifest_sha256": "95da75c52b8d019341f6ba7a6e8790a1bb6ee8fe23ac1a342840c6d5574ee999",
+  "recipe_sha256": "2b49923ad05a761365b70258b6466e6cfcf347e7ca08b98394b5e20b69547f5a",
+  "rows": 768,
+  "families": 32,
+  "order_pairs": 384,
+  "arms": [
+    "off",
+    "particle_hinted_G001_strength1",
+    "particle_curated_strength1",
+    "particle_curated_strength2",
+    "AlignTune_original64_case_LoRA",
+    "AlignTune_same_curated_case_pool_LoRA"
+  ],
+  "primary_new_comparison": "equal-case strict selected curated-particle minus same-curated-pool LoRA success;10000 fixed-seed family-bootstrap95%CI",
+  "also_report": [
+    "curated minus OFF",
+    "curated minus original hinted particle",
+    "all four case types",
+    "document counts1/2/3",
+    "order invariance and strict-success flips",
+    "all gains/losses",
+    "curated particle minus original64-case LoRA"
+  ],
+  "selection": "curatedRAW128 healthy nominal strengths1then2 on original128dev; sole matched ONminusOFF metric; preserve ties; freeze before any new holdout output",
+  "no_test_tuning": true,
+  "existing_tests": "repeat as research comparisons with old outputs reused; not pristine confirmation",
+  "new_holdout_outputs_at_declaration": 0,
+  "new_training_updates_at_declaration": 0,
+  "limit": "A fresh required supervised control uses the identical Jev-approved source cases and128updates/batch2. Objectives/exposure units and teacher preparation costs differ and are reported. Original64-case LoRA and every earlier result remain visible.",
+  "previous_plan_sha256": "dd26eb92be05bfdaabadbefc84f7821b3cf2cc2612bca9debca3ff9959cb69ae",
+  "curated_LoRA_recipe": {
+    "source_recipe": "configs/aligntune.json",
+    "changed_fields": [
+      "train_cases=eligible pool size",
+      "dataloader_drop_last=True to preserve actualbatch2"
+    ],
+    "unchanged": "samebase,prompt,LR.0002,r8alpha8,128updates,seed,completiononlyloss,RAW/noEMA",
+    "selection": "fixed128 finaladapter, strength1; no newLoRAsearch"
+  },
+  "nominal_strength2": "Measure both nominal strengths to support the saved-output dial; selected strength remains frozen using dev only. Never promote a test winner.",
+  "repeat_earlier_tests": "Generate only the new curated particle strengths1/2 and curated LoRA on policy256,Faith900,cue80,balanced768. Reuse every old OFF/hinted/LoRA output. Report these as repeated research comparisons."
+}

@@ -1,0 +1,40 @@
+{
+  "selection": "artifacts/selection-v1.json",
+  "datasets": {
+    "policy": {
+      "data": "artifacts/data/policy-v1/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/holdout-v1/policy/off",
+        "particle_1": "artifacts/holdout-v1/policy/particle_1",
+        "particle_2": "artifacts/holdout-v1/policy/particle_2",
+        "lora": "artifacts/holdout-v1/policy/lora"
+      }
+    },
+    "faith": {
+      "data": "artifacts/data/faith-v1/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/holdout-v1/faith/off",
+        "particle_1": "artifacts/holdout-v1/faith/particle_1",
+        "particle_2": "artifacts/holdout-v1/faith/particle_2",
+        "lora": "artifacts/holdout-v1/faith/lora"
+      }
+    },
+    "cue_audit": {
+      "data": "artifacts/data/evidence-interventions-v1/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/followup-tests-v2/cue_audit/off",
+        "particle_1": "artifacts/followup-tests-v2/cue_audit/particle_1",
+        "particle_2": "artifacts/followup-tests-v2/cue_audit/particle_2",
+        "lora": "artifacts/followup-tests-v2/cue_audit/lora"
+      }
+    },
+    "balanced": {
+      "data": "artifacts/data/balanced-grounding-v2/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/followup-tests-v2/balanced/off",
+        "particle_1": "artifacts/followup-tests-v2/balanced/particle_1",
+        "lora": "artifacts/followup-tests-v2/balanced/lora"
+      }
+    }
+  }
+}

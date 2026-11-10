@@ -1,0 +1,30 @@
+{
+  "declared_utc": "2026-11-10T05:45:51.587593+00:00",
+  "data_sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
+  "manifest_sha256": "95da75c52b8d019341f6ba7a6e8790a1bb6ee8fe23ac1a342840c6d5574ee999",
+  "recipe_sha256": "2b49923ad05a761365b70258b6466e6cfcf347e7ca08b98394b5e20b69547f5a",
+  "rows": 768,
+  "families": 32,
+  "order_pairs": 384,
+  "arms": [
+    "off",
+    "particle_hinted_G001_strength1",
+    "particle_curated_development_selected_ties",
+    "AlignTune_original64_case_LoRA"
+  ],
+  "primary_new_comparison": "equal-case strict selected curated-particle minus original LoRA success;10000 fixed-seed family-bootstrap95%CI",
+  "also_report": [
+    "curated minus OFF",
+    "curated minus original hinted particle",
+    "all four case types",
+    "document counts1/2/3",
+    "order invariance and strict-success flips",
+    "all gains/losses"
+  ],
+  "selection": "curatedRAW128 healthy nominal strengths1then2 on original128dev; sole matched ONminusOFF metric; preserve ties; freeze before any new holdout output",
+  "no_test_tuning": true,
+  "existing_tests": "repeat as research comparisons with old outputs reused; not pristine confirmation",
+  "new_holdout_outputs_at_declaration": 0,
+  "new_training_updates_at_declaration": 0,
+  "limit": "Curated particle uses only Jev-approved reachable source cases; original LoRA used all64. This is a method/curriculum comparison, not a data-matched causal estimate. Prior exact results and every failed curation attempt retained."
+}

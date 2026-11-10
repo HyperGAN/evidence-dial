@@ -1,0 +1,1225 @@
+{
+  "selection": "equal-case finished strict-success ON minus matched OFF only",
+  "data_sha256": "e6924beedbb718186e28e044f8ac01e1020e1f022b760b0dea64f30bbba9bd23",
+  "off_predictions_sha256": "1dda20bcfe6f16ea0c89ebe9981527e9baf789c6bf9fc2ceb4eca77585cf1585",
+  "all_results": [
+    {
+      "g_rate": 0.001,
+      "run": "artifacts/runs/particle-G001-v1",
+      "step": 128,
+      "strength": 1,
+      "predictions": "artifacts/runs/particle-G001-v1/dev-strength1",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": 0.1015625,
+      "paired_family_bootstrap_95ci": [
+        0.0546875,
+        0.1484375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 14,
+      "losses": 1,
+      "unchanged": 113,
+      "claim": "established positive gain under this protocol",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 1.0
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.6875
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.875
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.53125
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.9375,
+        "unnecessary_abstention_rate": 0.03125
+      },
+      "eligible_for_promotion": true
+    },
+    {
+      "g_rate": 0.001,
+      "run": "artifacts/runs/particle-G001-v1",
+      "step": 128,
+      "strength": 2,
+      "predictions": "artifacts/runs/particle-G001-v1/dev-strength2",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": 0.015625,
+      "paired_family_bootstrap_95ci": [
+        -0.0625,
+        0.09375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 21,
+      "losses": 19,
+      "unchanged": 88,
+      "claim": "preliminary observed gain; interval spans zero",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 0.84375
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.75
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.5
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.65625
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.671875,
+        "unnecessary_abstention_rate": 0.3125
+      },
+      "eligible_for_promotion": true
+    }
+  ],
+  "failed_cohorts": [
+    {
+      "g_rate": 0.012,
+      "run": "artifacts/runs/particle-G012-v1",
+      "failure_sha256": "3b72794e519a16a173da4511e100e111b47ffd33a03f1204384b3309674bbbce",
+      "failure": {
+        "binding": {
+          "actual_instrument_source": {
+            "actual_effective_decoding": {
+              "bytes": 4413,
+              "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+              "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+            },
+            "environment": {
+              "bytes": 52057,
+              "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+              "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+            },
+            "execution_adapter_source": {
+              "bytes": 7790,
+              "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+              "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+            },
+            "explicit_runtime_context": {
+              "bytes": 514,
+              "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+              "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+            },
+            "instrument_profile": {
+              "bytes": 2315,
+              "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+              "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+            },
+            "judgment_kind": "categorical",
+            "model_download": {
+              "bytes": 4120,
+              "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+              "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+            },
+            "observation_parser": {
+              "bytes": 3590,
+              "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+              "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+            },
+            "observer_kind": "categorical_Qwen3VL_not_probability",
+            "resource_execution_equivalence": {
+              "bytes": 643,
+              "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+              "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+            },
+            "worker_source": {
+              "bytes": 17505,
+              "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+              "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+            }
+          },
+          "candidate_id": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1",
+          "detector_contract": {
+            "bytes": 6439,
+            "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+            "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+          },
+          "judgment_kind": "categorical",
+          "media": "text",
+          "scientific_protocol": {
+            "backend": "tiny-aya-evidence-dial",
+            "cohort": "evidence-dial-pg095-G0.012-particle-G012-v1",
+            "options": {
+              "base_precision": "bfloat16",
+              "batch": 2,
+              "cache": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/cache/teacher-v1",
+              "cohort_id": "evidence-dial-pg095-G0.012-particle-G012-v1",
+              "ema_decay": null,
+              "g_lr": 0.012,
+              "initialization_receipt": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/initialization.json",
+              "seed": 20261110,
+              "steps": 128
+            }
+          }
+        },
+        "checkpoints": {
+          "27c773c3755552878081356857bff155948a2c8633fc216c4e6b1e5e1fc4ef4a": {
+            "checkpoint": {
+              "bytes": 22227237,
+              "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/FULL-000032.pt",
+              "sha256": "9f1393c8e873b6e15474855e4ba07450daa7148aa80c33e3d4f98c1ce9b26fff"
+            },
+            "observations": [
+              {
+                "actual_qualification": {
+                  "bytes": 22313,
+                  "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/observer-context-v4/qualification.json",
+                  "sha256": "3eca9ba1d7db420236c2d9cbd60c5d6b5c013d9cec269682b42923b6ef354913"
+                },
+                "binding": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "judgment_kind": "categorical",
+                  "media": "text",
+                  "native_contract": {
+                    "allowed_output": "Any coherent short answer, number, option letter, abstention label or prose is allowed. Mistaken facts, failure to follow a grounding instruction, weak or absent effect, normal token-budget truncation and native early EOS are not catastrophic. Native early EOS may produce empty text. Only pervasive unrequested degenerative repetition or gibberish replacing meaningful text is catastrophic.",
+                    "intentional_degenerative_repetition": false,
+                    "kind": "finished_text",
+                    "representation_class": "short_answer_or_prose"
+                  },
+                  "output_source": {
+                    "bytes": 220,
+                    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-0.txt",
+                    "sha256": "1497fbf817dd36ef780006ab048e62128f89b4cd323ae102d8cb21a14ad1ecb9"
+                  }
+                },
+                "categorical_failure": false,
+                "failure_probability": null,
+                "identity": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "judgment_kind": "categorical",
+                  "media": "text",
+                  "native_contract": {
+                    "allowed_output": "Any coherent short answer, number, option letter, abstention label or prose is allowed. Mistaken facts, failure to follow a grounding instruction, weak or absent effect, normal token-budget truncation and native early EOS are not catastrophic. Native early EOS may produce empty text. Only pervasive unrequested degenerative repetition or gibberish replacing meaningful text is catastrophic.",
+                    "intentional_degenerative_repetition": false,
+                    "kind": "finished_text",
+                    "representation_class": "short_answer_or_prose"
+                  },
+                  "output_source": {
+                    "bytes": 220,
+                    "sha256": "1497fbf817dd36ef780006ab048e62128f89b4cd323ae102d8cb21a14ad1ecb9"
+                  }
+                },
+                "judgment_kind": "categorical",
+                "observer_invoked": true,
+                "raw_response": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "audit": {
+                    "artifact_modified": false,
+                    "entire_native_text": true,
+                    "generated_token_count": 54,
+                    "input_token_count": 693,
+                    "no_image_input": true,
+                    "original_file": {
+                      "bytes": 220,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-0.txt",
+                      "sha256": "1497fbf817dd36ef780006ab048e62128f89b4cd323ae102d8cb21a14ad1ecb9"
+                    },
+                    "prompt_SHA256": "e5ae494ae25bd61cbcd14534aa2dac2657388031d7d1f8d49d4efd8a3169e027"
+                  },
+                  "categorical_failure": false,
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "failure_probability": null,
+                  "judgment_kind": "categorical",
+                  "output_source": {
+                    "bytes": 220,
+                    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-0.txt",
+                    "sha256": "1497fbf817dd36ef780006ab048e62128f89b4cd323ae102d8cb21a14ad1ecb9"
+                  },
+                  "raw_response": "{\n  \"opaque_id\": \"text_1497fbf817dd\",\n  \"observable_evidence\": \"Text content includes fictional policy details about Birch and Cedar plans with specific numbers and terms.\",\n  \"categorical_failure\": false\n}",
+                  "reason": "Text content includes fictional policy details about Birch and Cedar plans with specific numbers and terms.",
+                  "retained_first_raw_reused": true,
+                  "status": "pass"
+                },
+                "reason": "Text content includes fictional policy details about Birch and Cedar plans with specific numbers and terms.",
+                "status": "pass"
+              },
+              {
+                "actual_qualification": {
+                  "bytes": 22313,
+                  "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/observer-context-v4/qualification.json",
+                  "sha256": "3eca9ba1d7db420236c2d9cbd60c5d6b5c013d9cec269682b42923b6ef354913"
+                },
+                "binding": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "judgment_kind": "categorical",
+                  "media": "text",
+                  "native_contract": {
+                    "allowed_output": "Any coherent short answer, number, option letter, abstention label or prose is allowed. Mistaken facts, failure to follow a grounding instruction, weak or absent effect, normal token-budget truncation and native early EOS are not catastrophic. Native early EOS may produce empty text. Only pervasive unrequested degenerative repetition or gibberish replacing meaningful text is catastrophic.",
+                    "intentional_degenerative_repetition": false,
+                    "kind": "finished_text",
+                    "representation_class": "short_answer_or_prose"
+                  },
+                  "output_source": {
+                    "bytes": 168,
+                    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-1.txt",
+                    "sha256": "e809254c99bd10561433856a7d36c3ec0a72e66b7a98d299d6146f94b259ed02"
+                  }
+                },
+                "categorical_failure": false,
+                "failure_probability": null,
+                "identity": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "judgment_kind": "categorical",
+                  "media": "text",
+                  "native_contract": {
+                    "allowed_output": "Any coherent short answer, number, option letter, abstention label or prose is allowed. Mistaken facts, failure to follow a grounding instruction, weak or absent effect, normal token-budget truncation and native early EOS are not catastrophic. Native early EOS may produce empty text. Only pervasive unrequested degenerative repetition or gibberish replacing meaningful text is catastrophic.",
+                    "intentional_degenerative_repetition": false,
+                    "kind": "finished_text",
+                    "representation_class": "short_answer_or_prose"
+                  },
+                  "output_source": {
+                    "bytes": 168,
+                    "sha256": "e809254c99bd10561433856a7d36c3ec0a72e66b7a98d299d6146f94b259ed02"
+                  }
+                },
+                "judgment_kind": "categorical",
+                "observer_invoked": true,
+                "raw_response": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "audit": {
+                    "artifact_modified": false,
+                    "entire_native_text": true,
+                    "generated_token_count": 42,
+                    "input_token_count": 680,
+                    "no_image_input": true,
+                    "original_file": {
+                      "bytes": 168,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-1.txt",
+                      "sha256": "e809254c99bd10561433856a7d36c3ec0a72e66b7a98d299d6146f94b259ed02"
+                    },
+                    "prompt_SHA256": "de2277c4dfdc7001a8c106f41b4be7f4fca7feae4556ad6d8b40b64fb562f785"
+                  },
+                  "categorical_failure": false,
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "failure_probability": null,
+                  "judgment_kind": "categorical",
+                  "output_source": {
+                    "bytes": 168,
+                    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-1.txt",
+                    "sha256": "e809254c99bd10561433856a7d36c3ec0a72e66b7a98d299d6146f94b259ed02"
+                  },
+                  "raw_response": "{\n  \"opaque_id\": \"text_e809254c99bd\",\n  \"observable_evidence\": \"Answer: 3\",\n  \"categorical_failure\": false\n}",
+                  "reason": "Answer: 3",
+                  "retained_first_raw_reused": true,
+                  "status": "pass"
+                },
+                "reason": "Answer: 3",
+                "status": "pass"
+              },
+              {
+                "actual_qualification": {
+                  "bytes": 22313,
+                  "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/observer-context-v4/qualification.json",
+                  "sha256": "3eca9ba1d7db420236c2d9cbd60c5d6b5c013d9cec269682b42923b6ef354913"
+                },
+                "binding": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "judgment_kind": "categorical",
+                  "media": "text",
+                  "native_contract": {
+                    "allowed_output": "Any coherent short answer, number, option letter, abstention label or prose is allowed. Mistaken facts, failure to follow a grounding instruction, weak or absent effect, normal token-budget truncation and native early EOS are not catastrophic. Native early EOS may produce empty text. Only pervasive unrequested degenerative repetition or gibberish replacing meaningful text is catastrophic.",
+                    "intentional_degenerative_repetition": false,
+                    "kind": "finished_text",
+                    "representation_class": "short_answer_or_prose"
+                  },
+                  "output_source": {
+                    "bytes": 22,
+                    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-2.txt",
+                    "sha256": "a787ae32a3d4cc76499c5023592455775e3c4cdc61e1c5c19f8d2d6074836b15"
+                  }
+                },
+                "categorical_failure": true,
+                "failure_probability": null,
+                "identity": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "judgment_kind": "categorical",
+                  "media": "text",
+                  "native_contract": {
+                    "allowed_output": "Any coherent short answer, number, option letter, abstention label or prose is allowed. Mistaken facts, failure to follow a grounding instruction, weak or absent effect, normal token-budget truncation and native early EOS are not catastrophic. Native early EOS may produce empty text. Only pervasive unrequested degenerative repetition or gibberish replacing meaningful text is catastrophic.",
+                    "intentional_degenerative_repetition": false,
+                    "kind": "finished_text",
+                    "representation_class": "short_answer_or_prose"
+                  },
+                  "output_source": {
+                    "bytes": 22,
+                    "sha256": "a787ae32a3d4cc76499c5023592455775e3c4cdc61e1c5c19f8d2d6074836b15"
+                  }
+                },
+                "judgment_kind": "categorical",
+                "observer_invoked": true,
+                "raw_response": {
+                  "actual_instrument_source": {
+                    "actual_effective_decoding": {
+                      "bytes": 4413,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-Qwen-effective-decoding-audit-source-v1/actual-effective-decoding-source-v1.json",
+                      "sha256": "8e322cb3c4bd4d12bf1399b20642ac0f8ed97d3abcd4e23353fa7cd5958dcf0a"
+                    },
+                    "environment": {
+                      "bytes": 52057,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-env-preparation-v1/Root-environment-receipt-v1.json",
+                      "sha256": "3e0034b8ae549f49a7188ae30144b6fc35ff0f6ff51d07a0650a3748740a4db4"
+                    },
+                    "execution_adapter_source": {
+                      "bytes": 7790,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
+                      "sha256": "72cd26d26360480fb5349cac134743eebd2c23dc9d60374ef853e133fd07d72a"
+                    },
+                    "explicit_runtime_context": {
+                      "bytes": 514,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/qwen-launch-context.json",
+                      "sha256": "25d92adf1e47d4d134e2438d0e4993a02f536473e394b7872de57c20b1036f4e"
+                    },
+                    "instrument_profile": {
+                      "bytes": 2315,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/instrument-contract-v1.json",
+                      "sha256": "631bbca8fff051d80d2ac26c34d378fc71000a5713e050241eb92bb2ee11cd26"
+                    },
+                    "judgment_kind": "categorical",
+                    "model_download": {
+                      "bytes": 4120,
+                      "path": "/mnt/nvme/qualification/metrics/qwen3-vl-8b-0c351dd0/Root-model-download-receipt-v1.json",
+                      "sha256": "baaf05bc6720f7a5b8fdf96e30145f6afd0bfcac44d3e2e5d7c8f6b1af82d7dc"
+                    },
+                    "observation_parser": {
+                      "bytes": 3590,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/text_observation_parser.py",
+                      "sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96"
+                    },
+                    "observer_kind": "categorical_Qwen3VL_not_probability",
+                    "resource_execution_equivalence": {
+                      "bytes": 643,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/configs/observer-equivalence.json",
+                      "sha256": "817f673e98dd7c2ef0a123241811815e8343bf73aeec027a2c9e366e0bde9bb0"
+                    },
+                    "worker_source": {
+                      "bytes": 17505,
+                      "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-failure-Qwen3VL8B-categorical-GPU1-source-v1/worker.py",
+                      "sha256": "52ca68699119b8b4fd647547342e1991144e6e1230d80154b01607f7fc9f1b4a"
+                    }
+                  },
+                  "audit": {
+                    "artifact_modified": false,
+                    "entire_native_text": true,
+                    "generated_token_count": 53,
+                    "input_token_count": 641,
+                    "no_image_input": true,
+                    "original_file": {
+                      "bytes": 22,
+                      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-2.txt",
+                      "sha256": "a787ae32a3d4cc76499c5023592455775e3c4cdc61e1c5c19f8d2d6074836b15"
+                    },
+                    "prompt_SHA256": "8fbe84e25724cfa4ae74bdf73e3517a3e0bc0451c247e09c374333c8652aa7ad"
+                  },
+                  "categorical_failure": true,
+                  "detector_contract": {
+                    "bytes": 6439,
+                    "path": "/ml2/particlesliders-working/lr-work/source-reviews/universal-catastrophic-failure-detector-contract-source-20261109-v1/contract.json",
+                    "sha256": "dfeb4ebb21c11a58764c23876c8bb10abff40a77d19b6a7003a46d3825a39057"
+                  },
+                  "failure_probability": null,
+                  "judgment_kind": "categorical",
+                  "output_source": {
+                    "bytes": 22,
+                    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/guard-text-000032-2.txt",
+                    "sha256": "a787ae32a3d4cc76499c5023592455775e3c4cdc61e1c5c19f8d2d6074836b15"
+                  },
+                  "raw_response": "{\n  \"opaque_id\": \"text_a787ae32a3d4\",\n  \"observable_evidence\": \"Repetitive 'CONF' text appearing multiple times in place of coherent output.\",\n  \"categorical_failure\": true\n}",
+                  "reason": "Repetitive 'CONF' text appearing multiple times in place of coherent output.",
+                  "retained_first_raw_reused": false,
+                  "status": "fail"
+                },
+                "reason": "Repetitive 'CONF' text appearing multiple times in place of coherent output.",
+                "status": "fail"
+              }
+            ],
+            "status": "failed"
+          }
+        },
+        "latest_checkpoint": {
+          "bytes": 22227237,
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G012-v1/FULL-000032.pt",
+          "sha256": "9f1393c8e873b6e15474855e4ba07450daa7148aa80c33e3d4f98c1ce9b26fff"
+        },
+        "schema": "particle-sliders-candidate-failure-state-v1",
+        "status": "failed"
+      },
+      "RAW128_effect_gain": null,
+      "eligible_for_selection": false
+    }
+  ],
+  "fallback_declaration": null,
+  "unmeasured_guard_cohorts": [
+    {
+      "g_rate": 0.004,
+      "run": "artifacts/runs/particle-G004-v1",
+      "evidence": "artifacts/runs/particle-G004-v1/candidate-unmeasured-guard.json",
+      "measurements": [
+        {
+          "strength": 1,
+          "predictions": "artifacts/runs/particle-G004-v1/dev-strength1-retry1"
+        },
+        {
+          "strength": 2,
+          "predictions": "artifacts/runs/particle-G004-v1/dev-strength2"
+        }
+      ],
+      "guard_status": "unmeasured",
+      "eligible_for_promotion": false,
+      "evidence_sha256": "aa87da1c15cc5d8ad5acbeacd7ffda47018407f58de6ed073f176584d9ee1b02",
+      "evidence_record": {
+        "status": "unmeasured_guard_scope",
+        "no_resume_or_promotion": true,
+        "actual_updates": 128,
+        "full_sha256": "de66c4e055d35fb56451f7a50e6c05d2c2f896b991aea860b8706466f36d82ba",
+        "guard_record": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-G004-v1/guard-dev-strength2/candidate-confirmed-failed-native-text-v1e.json",
+        "guard_record_sha256": "5ca3bbf4d4668a32c762f3b042809c664a2f64d6c5a06c895fafe41276681da2",
+        "scope_reason": "Native64-token cutoff leaves a partial LaTeX fraction. The preceding output is coherent, and pervasiveness/coverage of truncated mathematical notation is not established by the8fixed English fixtures. Retain actual flagged judgment as an uncertain stop, not an established model catastrophe.",
+        "effect_results": "Both nominal128case effects measured0/128 success vsOFF86/128; scores unchanged.",
+        "qualifier_retuned": false,
+        "original_states_modified": false
+      }
+    }
+  ],
+  "all_measured_development_results": [
+    {
+      "g_rate": 0.001,
+      "run": "artifacts/runs/particle-G001-v1",
+      "step": 128,
+      "strength": 1,
+      "predictions": "artifacts/runs/particle-G001-v1/dev-strength1",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": 0.1015625,
+      "paired_family_bootstrap_95ci": [
+        0.0546875,
+        0.1484375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 14,
+      "losses": 1,
+      "unchanged": 113,
+      "claim": "established positive gain under this protocol",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 1.0
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.6875
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.875
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.53125
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.9375,
+        "unnecessary_abstention_rate": 0.03125
+      },
+      "eligible_for_promotion": true
+    },
+    {
+      "g_rate": 0.001,
+      "run": "artifacts/runs/particle-G001-v1",
+      "step": 128,
+      "strength": 2,
+      "predictions": "artifacts/runs/particle-G001-v1/dev-strength2",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": 0.015625,
+      "paired_family_bootstrap_95ci": [
+        -0.0625,
+        0.09375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 21,
+      "losses": 19,
+      "unchanged": 88,
+      "claim": "preliminary observed gain; interval spans zero",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 0.84375
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.75
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.5
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.65625
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.671875,
+        "unnecessary_abstention_rate": 0.3125
+      },
+      "eligible_for_promotion": true
+    },
+    {
+      "g_rate": 0.004,
+      "run": "artifacts/runs/particle-G004-v1",
+      "step": 128,
+      "strength": 1,
+      "predictions": "artifacts/runs/particle-G004-v1/dev-strength1-retry1",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.671875,
+      "paired_family_bootstrap_95ci": [
+        -0.7265625,
+        -0.6171875
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 0,
+      "losses": 86,
+      "unchanged": 42,
+      "claim": "no positive observed gain",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 0.0
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.0
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.0
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.0
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.0,
+        "unnecessary_abstention_rate": 0.0
+      },
+      "guard_status": "unmeasured",
+      "eligible_for_promotion": false
+    },
+    {
+      "g_rate": 0.004,
+      "run": "artifacts/runs/particle-G004-v1",
+      "step": 128,
+      "strength": 2,
+      "predictions": "artifacts/runs/particle-G004-v1/dev-strength2",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.671875,
+      "paired_family_bootstrap_95ci": [
+        -0.7265625,
+        -0.6171875
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 0,
+      "losses": 86,
+      "unchanged": 42,
+      "claim": "no positive observed gain",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 0.0
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.0
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.0
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.0
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.0,
+        "unnecessary_abstention_rate": 0.0
+      },
+      "guard_status": "unmeasured",
+      "eligible_for_promotion": false
+    }
+  ],
+  "best_measured_effect_gain": 0.1015625,
+  "all_numerical_best_ties": [
+    {
+      "g_rate": 0.001,
+      "run": "artifacts/runs/particle-G001-v1",
+      "step": 128,
+      "strength": 1,
+      "predictions": "artifacts/runs/particle-G001-v1/dev-strength1",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": 0.1015625,
+      "paired_family_bootstrap_95ci": [
+        0.0546875,
+        0.1484375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 14,
+      "losses": 1,
+      "unchanged": 113,
+      "claim": "established positive gain under this protocol",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 1.0
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.6875
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.875
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.53125
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.9375,
+        "unnecessary_abstention_rate": 0.03125
+      },
+      "eligible_for_promotion": true
+    }
+  ],
+  "selected_ties": [
+    {
+      "g_rate": 0.001,
+      "run": "artifacts/runs/particle-G001-v1",
+      "step": 128,
+      "strength": 1,
+      "predictions": "artifacts/runs/particle-G001-v1/dev-strength1",
+      "complete": true,
+      "measured_pairs": 128,
+      "declared": 128,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": 0.1015625,
+      "paired_family_bootstrap_95ci": [
+        0.0546875,
+        0.1484375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 14,
+      "losses": 1,
+      "unchanged": 113,
+      "claim": "established positive gain under this protocol",
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 32,
+            "success_rate": 1.0
+          },
+          "conflict": {
+            "n": 32,
+            "success_rate": 0.6875
+          },
+          "altered": {
+            "n": 32,
+            "success_rate": 0.875
+          },
+          "missing": {
+            "n": 32,
+            "success_rate": 0.53125
+          }
+        },
+        "answerable_count": 64,
+        "answerable_accuracy": 0.9375,
+        "unnecessary_abstention_rate": 0.03125
+      },
+      "eligible_for_promotion": true
+    }
+  ],
+  "best_effect_gain": 0.1015625,
+  "tiebreak": null,
+  "holdout_generated_before_freeze": false
+}

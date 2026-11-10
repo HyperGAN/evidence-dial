@@ -1,0 +1,18 @@
+{
+  "reason": "The native base produced a correct UNKNOWN with an explicit Markdown Answer footer, rejected solely because the miner demanded literal FINAL. Support explicit final-answer labels without changing semantic or evaluation criteria.",
+  "original_attempts": 16,
+  "new_generations_for_amendment": 0,
+  "reuse_existing_generation_and_Jev_records": true,
+  "old_decisions_preserved": true,
+  "source_before_sha256": "408423df11decaf42cda684aefcfa9d0986600355ca937ff9e61f4a57f05a849",
+  "allowed_footer_labels": [
+    "FINAL",
+    "Answer"
+  ],
+  "case_insensitive_and_Markdown_bold": true,
+  "answer_must_still_exactly_match_frozen_gold_alias": true,
+  "Jev_correctness_min": 0.9,
+  "Jev_quality_min": 3.0,
+  "benchmark_scorer_changed": false,
+  "new_output": "artifacts/curation-success-v3"
+}

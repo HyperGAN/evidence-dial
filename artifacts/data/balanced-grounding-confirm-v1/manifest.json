@@ -1,0 +1,52 @@
+{
+  "pre_generation_revision": "Fresh family cohort for the owner-authorized Jev-curated retry; prior cohorts retained",
+  "purpose": "Unseen family-balanced confirmation of the corrected successful-sample method",
+  "rows": 768,
+  "independent_families": 32,
+  "case_counts": {
+    "answerable": 192,
+    "conflict": 192,
+    "altered": 192,
+    "missing": 192
+  },
+  "document_counts": {
+    "3": 256,
+    "2": 256,
+    "1": 256
+  },
+  "document_count_independent_of_case_type": true,
+  "order_pairs": 384,
+  "seed": 20262811,
+  "max_input_tokens": 646,
+  "file_sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
+  "source_sha256": "eb8c70bd701e437c391600fee720bcaa6a43eb77581c24fa5066382826638d79",
+  "original_selection_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "planned_arms": [
+    "off",
+    "particle_hinted_selected",
+    "particle_curated_development_selected",
+    "lora"
+  ],
+  "selected_particle_unchanged": null,
+  "scoring": "Original frozen exact protocol with one structurally verified gold; no substring extraction",
+  "primary_comparative_statistic": "Equal-case selected particle minus LoRA strict success;10000 family-cluster bootstrap95% interval",
+  "secondary_diagnostics": [
+    "All four case types",
+    "All three document counts",
+    "Paired order invariance",
+    "All gains and losses"
+  ],
+  "model_calls_before_freeze": 0,
+  "used_for_rate_or_strength_selection": false,
+  "teacher_information_in_evaluated_prompt": false,
+  "training_data_changed": false,
+  "status": "Frozen before retry training or any model output on this cohort; select retry strength on dev only",
+  "GPU_window_cap_seconds": 10800,
+  "all_original_scores_retained": true,
+  "family_indices": [
+    32,
+    63
+  ],
+  "dataset_name": "balanced-grounding-confirm-v1",
+  "training_recipe_sha256": "d3a5129dccc3c64f059a89a9ada91f81de5590b3e4b5f8fc751ee3509511063c"
+}

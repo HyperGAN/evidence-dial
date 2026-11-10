@@ -23,15 +23,15 @@ def render(fact,style):
  assert parsed==fact
  return text,parsed
 
-def build(out):
+def build(out, *, start_family=0, shuffle_seed=SEED+701, dataset_name="balanced-grounding-v2"):
  if out.exists():raise FileExistsError('Never regenerate a test after model outputs')
  from curatorkit.schema import DataSample,ProvenanceRecord
  from curatorkit.gates.schema import SchemaGate
  from curatorkit.normalizers.dedup import ExactDeduplicator
- tok=tokenizer();rng=random.Random(SEED+701);rows=[];samples=[]
+ tok=tokenizer();rng=random.Random(shuffle_seed);rows=[];samples=[]
  old=[r for s in ['train','dev','holdout'] for r in read_jsonl(ROOT/f'artifacts/data/policy-v1/{s}.jsonl')]
  oldprompts={digest(prompt(r)) for r in old};oldfamilies={r['family'] for r in old}
- for i in range(32):
+ for i in range(start_family,start_family+32):
   family=f'R{i:03d}';assert family not in oldfamilies
   name=f'{family} Laboratory';plan=['Sandstone','Alder','Copper','Willow'][i%4]
   scope=f"{name}'s {plan} plan";field,unit=FIELDS[i%8]
@@ -77,19 +77,27 @@ def build(out):
        text,parsed=render(fact,i%3);lines.append(text);roundtrip.append(parsed)
       parts.append(f'[Record {d+1}]\nAll entries carry equal authority. '+' '.join(lines))
      assert oracle(roundtrip,target_scope,target_field)==expected
-     row={'id':f'balanced-{family}-{kind}-docs{count}-{order}','family':family,'dataset':'balanced-grounding-v2','split':'holdout','case_type':kind,'document_count':count,'evidence_order':order,'context':'\n'.join(parts),'question':question,'gold':expected,'aliases':[expected],'source_uri':f'synthetic://balanced-grounding-v2/{family}/{kind}/{count}/{order}','source_facts':flat,'query_scope':target_scope,'query_field':target_field}
+     row={'id':f'balanced-{family}-{kind}-docs{count}-{order}','family':family,'dataset':dataset_name,'split':'holdout','case_type':kind,'document_count':count,'evidence_order':order,'context':'\n'.join(parts),'question':question,'gold':expected,'aliases':[expected],'source_uri':f'synthetic://{dataset_name}/{family}/{kind}/{count}/{order}','source_facts':flat,'query_scope':target_scope,'query_field':target_field}
      row['input_tokens']=len(tok.apply_chat_template(messages(row),add_generation_prompt=True));assert row['input_tokens']<=2048
      assert digest(prompt(row)) not in oldprompts
      rows.append(row)
      sample=DataSample(id=row['id'],source_uri=row['source_uri'],instruction=prompt(row),output=expected,metadata=row)
-     sample.append_provenance(ProvenanceRecord(step_name='ParsedEvidenceOracle',step_version='1',config_hash=digest({'seed':SEED+701,'oracle':'unique supported values by exact scope and field'}),notes={'render_roundtrip_verified':True}))
+     sample.append_provenance(ProvenanceRecord(step_name='ParsedEvidenceOracle',step_version='1',config_hash=digest({'seed':shuffle_seed,'oracle':'unique supported values by exact scope and field'}),notes={'render_roundtrip_verified':True}))
      samples.append(sample)
  passed,rejected=SchemaGate(min_tokens=1,max_tokens=10000).run(samples);passed=ExactDeduplicator().run(passed)
  assert not rejected and len(passed)==len(rows)==768
  assert len({digest(prompt(r)) for r in rows})==768
  for count in [1,2,3]:assert Counter(r['case_type'] for r in rows if r['document_count']==count)=={k:64 for k in ['answerable','missing','conflict','altered']}
  rng.shuffle(rows);write_jsonl(out/'holdout.jsonl',rows);write_jsonl(out/'curatorkit-provenance.jsonl',[s.model_dump(mode='json') for s in passed])
- manifest={'pre_generation_revision':'Question grammar corrected; v1 had zero model calls and is retained', 'purpose':'Balanced grounding test prompted by the original benchmark ceiling; frozen before any output on this corpus','rows':768,'independent_families':32,'case_counts':dict(Counter(r['case_type'] for r in rows)),'document_counts':dict(Counter(r['document_count'] for r in rows)),'document_count_independent_of_case_type':True,'order_pairs':384,'seed':SEED+701,'max_input_tokens':max(r['input_tokens'] for r in rows),'file_sha256':file_sha(out/'holdout.jsonl'),'source_sha256':file_sha(__file__),'original_selection_sha256':file_sha(ROOT/'artifacts/selection-v1.json'),'planned_arms':['off','particle_1','lora'],'selected_particle_unchanged':{'rate':.001,'strength':1,'updates':128},'scoring':'Original frozen exact protocol with one structurally verified gold; no substring extraction','primary_comparative_statistic':'Equal-case selected particle minus LoRA strict success;10000 family-cluster bootstrap95% interval','secondary_diagnostics':['All four case types','All three document counts','Paired order invariance','All gains and losses'], 'model_calls_before_freeze':0,'used_for_rate_or_strength_selection':False,'teacher_information_in_evaluated_prompt':False,'training_data_changed':False,'status':'Fresh test frozen; generation queued after original benchmark and the80-case diagnostic','GPU_window_cap_seconds':10800,'all_original_scores_retained':True}
+ manifest={'pre_generation_revision':'Question grammar corrected; v1 had zero model calls and is retained', 'purpose':'Balanced grounding test prompted by the original benchmark ceiling; frozen before any output on this corpus','rows':768,'independent_families':32,'case_counts':dict(Counter(r['case_type'] for r in rows)),'document_counts':dict(Counter(r['document_count'] for r in rows)),'document_count_independent_of_case_type':True,'order_pairs':384,'seed':shuffle_seed,'max_input_tokens':max(r['input_tokens'] for r in rows),'file_sha256':file_sha(out/'holdout.jsonl'),'source_sha256':file_sha(__file__),'original_selection_sha256':file_sha(ROOT/'artifacts/selection-v1.json'),'planned_arms':['off','particle_1','lora'],'selected_particle_unchanged':{'rate':.001,'strength':1,'updates':128},'scoring':'Original frozen exact protocol with one structurally verified gold; no substring extraction','primary_comparative_statistic':'Equal-case selected particle minus LoRA strict success;10000 family-cluster bootstrap95% interval','secondary_diagnostics':['All four case types','All three document counts','Paired order invariance','All gains and losses'], 'model_calls_before_freeze':0,'used_for_rate_or_strength_selection':False,'teacher_information_in_evaluated_prompt':False,'training_data_changed':False,'status':'Fresh test frozen; generation queued after original benchmark and the80-case diagnostic','GPU_window_cap_seconds':10800,'all_original_scores_retained':True}
+ if start_family:
+  previous=read_jsonl(ROOT/'artifacts/data/balanced-grounding-v2/holdout.jsonl')
+  assert not ({r['family'] for r in previous}&{r['family'] for r in rows})
+  assert not ({digest(prompt(r)) for r in previous}&{digest(prompt(r)) for r in rows})
+  manifest.update(pre_generation_revision='Fresh family cohort for the owner-authorized Jev-curated retry; prior cohorts retained',purpose='Unseen family-balanced confirmation of the corrected successful-sample method',family_indices=[start_family,start_family+31],dataset_name=dataset_name,planned_arms=['off','particle_hinted_selected','particle_curated_development_selected','lora'],selected_particle_unchanged=None,training_recipe_sha256=file_sha(ROOT/'artifacts/method-repair-v1/recipe.json'),status='Frozen before retry training or any model output on this cohort; select retry strength on dev only')
  write_json(out/'manifest.json',manifest);print(json.dumps({k:manifest[k] for k in ['rows','independent_families','max_input_tokens','document_count_independent_of_case_type']}))
 
-if __name__=='__main__':build(ROOT/'artifacts/data/balanced-grounding-v2')
+if __name__=='__main__':
+ import argparse
+ p=argparse.ArgumentParser();p.add_argument('--out',type=Path,default=ROOT/'artifacts/data/balanced-grounding-v2');p.add_argument('--start-family',type=int,default=0);p.add_argument('--shuffle-seed',type=int,default=SEED+701);p.add_argument('--dataset-name',default='balanced-grounding-v2');a=p.parse_args()
+ build(a.out,start_family=a.start_family,shuffle_seed=a.shuffle_seed,dataset_name=a.dataset_name)

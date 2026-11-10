@@ -1,0 +1,217 @@
+{
+  "declared_utc": "2026-11-10T04:22:59.122522+00:00",
+  "declared_before_any_holdout_output": true,
+  "selection_sha256": "e83ccee954204445067f329e76f7ab2775b5e6d9dc911c9c412410dca6abef91",
+  "primary_cases": 256,
+  "faith_cases": 900,
+  "faith_size": "full frozen300 per stratum; no post-output reduction",
+  "measurement_sources": {
+    "off": {
+      "predictions_sha256": "1dda20bcfe6f16ea0c89ebe9981527e9baf789c6bf9fc2ceb4eca77585cf1585",
+      "cases": 128,
+      "generation_seconds": 22.33018908952363,
+      "seconds_per_query": 0.17445460226190335,
+      "generated_tokens": 536,
+      "output_tokens_per_second": 24.003379364640864,
+      "peak_allocator_bytes": 6897639936,
+      "gpu_hours_generation_only": 0.006202830302645452,
+      "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.048459611739417596,
+      "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+      "includes_cold_load": false
+    },
+    "lora": {
+      "predictions_sha256": "09de868241275184910715b1d511451292ad86673385dcfb3c392b555cd8300c",
+      "cases": 128,
+      "generation_seconds": 25.791552543989383,
+      "seconds_per_query": 0.20149650424991705,
+      "generated_tokens": 546,
+      "output_tokens_per_second": 21.169722104505226,
+      "peak_allocator_bytes": 10173515776,
+      "gpu_hours_generation_only": 0.007164320151108162,
+      "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.05597125118053251,
+      "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+      "includes_cold_load": false
+    },
+    "particle_1": {
+      "predictions_sha256": "f405febaba97d378ab90127ea9282ca5a217796cd98e2bc97b0fc12fbd82066d",
+      "cases": 128,
+      "generation_seconds": 56.54302878177259,
+      "seconds_per_query": 0.44174241235759837,
+      "generated_tokens": 538,
+      "output_tokens_per_second": 9.514877635515548,
+      "peak_allocator_bytes": 6917253632,
+      "gpu_hours_generation_only": 0.01570639688382572,
+      "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.12270622565488844,
+      "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+      "includes_cold_load": false
+    },
+    "particle_2": {
+      "predictions_sha256": "ce570ef668d12e16f3e0d63cc34f240819f68591eec61157ae16646a43ae9d2d",
+      "cases": 128,
+      "generation_seconds": 60.126632720115595,
+      "seconds_per_query": 0.4697393181259031,
+      "generated_tokens": 540,
+      "output_tokens_per_second": 8.98104509716442,
+      "peak_allocator_bytes": 6917253632,
+      "gpu_hours_generation_only": 0.01670184242225433,
+      "per_1000_queries_at_1_USD_per_gpu_hour_illustrative": 0.13048314392386196,
+      "pricing_assumption": "Illustrative $1/GPU-hour; not a paid rental price or API comparison",
+      "includes_cold_load": false
+    }
+  },
+  "estimated_seconds_at_dev_mean": 1488.272359566592,
+  "planning_seconds_primary_plus_4x_transfer_context_and_30min_loading_margin": 6764.341019453961,
+  "benchmark_window_seconds": 18000,
+  "no_new_rates_or_strengths": true,
+  "jobs": [
+    {
+      "attempt": "holdout-policy-off-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/policy-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/policy/off",
+        "--arm",
+        "off",
+        "--gpu",
+        "1"
+      ]
+    },
+    {
+      "attempt": "holdout-policy-particle_1-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/policy-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/policy/particle_1",
+        "--arm",
+        "particle",
+        "--gpu",
+        "1",
+        "--adapter",
+        "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+        "--strength",
+        "1"
+      ]
+    },
+    {
+      "attempt": "holdout-policy-particle_2-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/policy-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/policy/particle_2",
+        "--arm",
+        "particle",
+        "--gpu",
+        "1",
+        "--adapter",
+        "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+        "--strength",
+        "2"
+      ]
+    },
+    {
+      "attempt": "holdout-policy-lora-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/policy-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/policy/lora",
+        "--arm",
+        "lora",
+        "--gpu",
+        "1",
+        "--adapter",
+        "artifacts/runs/aligntune-v2/adapter"
+      ]
+    },
+    {
+      "attempt": "holdout-faith-off-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/faith-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/faith/off",
+        "--arm",
+        "off",
+        "--gpu",
+        "1"
+      ]
+    },
+    {
+      "attempt": "holdout-faith-particle_1-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/faith-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/faith/particle_1",
+        "--arm",
+        "particle",
+        "--gpu",
+        "1",
+        "--adapter",
+        "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+        "--strength",
+        "1"
+      ]
+    },
+    {
+      "attempt": "holdout-faith-particle_2-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/faith-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/faith/particle_2",
+        "--arm",
+        "particle",
+        "--gpu",
+        "1",
+        "--adapter",
+        "artifacts/runs/particle-G001-v1/NATIVE-000128.pt",
+        "--strength",
+        "2"
+      ]
+    },
+    {
+      "attempt": "holdout-faith-lora-first",
+      "arguments": [
+        "evaluate",
+        "--selection",
+        "artifacts/selection-v1.json",
+        "--data",
+        "artifacts/data/faith-v1/holdout.jsonl",
+        "--out",
+        "artifacts/holdout-v1/faith/lora",
+        "--arm",
+        "lora",
+        "--gpu",
+        "1",
+        "--adapter",
+        "artifacts/runs/aligntune-v2/adapter"
+      ]
+    }
+  ],
+  "batch_source_sha256": "0344b3b51709c61b1109dc85ef1b289147773a97ce910a8425fc2b29cd440719"
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "answerable-positive",
+    "context": "For Alder plan, refund period is 19 days.",
+    "question": "What is Alder plan refund period?",
+    "gold": "19 days",
+    "candidate": "The Alder plan explicitly states a refund period of 19 days.\nFINAL: 19 days",
+    "expected_accept": true
+  },
+  {
+    "id": "answerable-negative",
+    "context": "For Alder plan, refund period is 19 days.",
+    "question": "What is Alder plan refund period?",
+    "gold": "19 days",
+    "candidate": "The Alder plan states a refund period of 31 days.\nFINAL: 31 days",
+    "expected_accept": false
+  },
+  {
+    "id": "missing-positive",
+    "context": "For Alder plan, badge validity is 19 days.",
+    "question": "What is Alder plan refund period?",
+    "gold": "UNKNOWN",
+    "candidate": "The evidence states badge validity but gives no refund period.\nFINAL: UNKNOWN",
+    "expected_accept": true
+  },
+  {
+    "id": "missing-negative",
+    "context": "For Alder plan, badge validity is 19 days.",
+    "question": "What is Alder plan refund period?",
+    "gold": "UNKNOWN",
+    "candidate": "Badge validity also determines the refund period.\nFINAL: 19 days",
+    "expected_accept": false
+  },
+  {
+    "id": "conflict-positive",
+    "context": "[Document A] Alder plan refund period is 19 days.\n[Document B] Alder plan refund period is 31 days.",
+    "question": "What is Alder plan refund period?",
+    "gold": "CONFLICT",
+    "candidate": "The equal-authority documents give incompatible refund periods for the same Alder plan.\nFINAL: CONFLICT",
+    "expected_accept": true
+  },
+  {
+    "id": "conflict-negative",
+    "context": "[Document A] Alder plan refund period is 19 days.\n[Document B] Alder plan refund period is 31 days.",
+    "question": "What is Alder plan refund period?",
+    "gold": "CONFLICT",
+    "candidate": "The second document is newer and overrides the first.\nFINAL: 31 days",
+    "expected_accept": false
+  },
+  {
+    "id": "altered-positive",
+    "context": "Inside Alder simulator, one week contains 13 days.",
+    "question": "How many days are in one week inside Alder simulator?",
+    "gold": "13 days",
+    "candidate": "The simulator explicitly defines one week as 13 days.\nFINAL: 13 days",
+    "expected_accept": true
+  },
+  {
+    "id": "altered-negative",
+    "context": "Inside Alder simulator, one week contains 13 days.",
+    "question": "How many days are in one week inside Alder simulator?",
+    "gold": "13 days",
+    "candidate": "A week always contains seven days despite the simulator definition.\nFINAL: 7 days",
+    "expected_accept": false
+  }
+]

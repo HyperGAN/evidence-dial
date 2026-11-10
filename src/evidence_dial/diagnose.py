@@ -6,6 +6,12 @@ from .benchmark import file_sha
 
 
 def response_error(artifact: Path, cache: Path, out: Path, strengths, gpu=1):
+    import os
+    import subprocess
+    # This helper also runs directly, outside the CLI's CUDA mapping.
+    # Bind the actual physical device before importing/loading CUDA models.
+    os.environ['CUDA_VISIBLE_DEVICES']=subprocess.check_output(
+        ['nvidia-smi',f'--id={gpu}','--query-gpu=uuid','--format=csv,noheader'],text=True).strip()
     import torch
     from particle_sliders.inference import open_inference
     from .resources import Resources
@@ -38,6 +44,6 @@ def response_error(artifact: Path, cache: Path, out: Path, strengths, gpu=1):
         off=sum(r['neutral_squared_error_sum'] for r in subset)
         results[str(strength)]={'native_mse':sse/sum(r['coordinates'] for r in subset),
                               'relative_teacher_sse':sse/off,'rows':len(subset)}
-    write_json(out,{'diagnostic_only':True,'used_for_selection':False,'training_cases_only':64,
+    write_json(out,{'diagnostic_only':True,'used_for_selection':False,'training_cases_only':len({r['id'] for r in index}),
                    'artifact_sha256':file_sha(artifact),'cache_sha256':file_sha(cache/'responses.pt'),
                    'results':results,'rows':records})

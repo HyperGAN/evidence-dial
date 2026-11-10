@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-11-10T06:08:05.692671+00:00",
+  "issue": "Direct response-error helper omitted physical CUDA mapping while Resources monitoredGPU1. SessionCUDA_VISIBLE_DEVICES was unset; allocator showedGPUresidency but physicalGPU1 NVML own peak was0. That diagnostic cannot be certified asGPU1 execution.",
+  "affected_records": [
+    {
+      "source": "artifacts/evidence/particle-G001-native-response-error-v1-resources.completed.json",
+      "seconds": 50.984600563999265,
+      "peaks": {
+        "own_nvml": 0,
+        "allocator_reserved": 6918504448,
+        "rss": 4582334464
+      }
+    }
+  ],
+  "measured_effect_or_selection_changed": false,
+  "training_or_evaluation_rerun": false,
+  "old_records_preserved": true,
+  "fix": "response_error explicitly maps the requested physical GPU UUID before CUDA/model loading. Corrected retry diagnostic has not run yet and will use this source.",
+  "new_source_sha256": "99178a3370958443c94e9e9d62d3b7cf76d33f38fe2de95b364c848a1f42806e"
+}

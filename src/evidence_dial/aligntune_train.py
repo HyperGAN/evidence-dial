@@ -15,7 +15,7 @@ from .io import read_jsonl, write_json
 from .protocol import SEED, digest, messages
 
 
-def train(data: Path, out: Path, gpu: int):
+def train(data: Path, out: Path, gpu: int, *, recipe_path: Path | None = None):
     import torch
     from datasets import Dataset
     from transformers import TrainerCallback
@@ -27,7 +27,8 @@ def train(data: Path, out: Path, gpu: int):
     from .evaluate import load_base, tokenizer, NativeGenerator, evaluate_rows
     from .resources import Resources
 
-    recipe = json.loads((root / "configs/aligntune.json").read_text())
+    recipe = json.loads((recipe_path or root / "configs/aligntune.json").read_text())
+    assert recipe['train_cases'] == len(read_jsonl(data / 'train.jsonl'))
     out.mkdir(parents=True, exist_ok=True)
     ident = {"recipe": recipe, "train_sha256":digest(read_jsonl(data / "train.jsonl")),
         "source_sha256":digest(Path(__file__).read_text()),
@@ -78,6 +79,7 @@ def train(data: Path, out: Path, gpu: int):
             gradient_checkpointing=True, gradient_checkpointing_kwargs={"use_reentrant":False},
             packing=False, max_length=None, dataset_kwargs={"skip_prepare_dataset":True},
             remove_unused_columns=False, dataloader_num_workers=0, push_to_hub=False,
+            dataloader_drop_last=recipe.get('dataloader_drop_last', False),
             eos_token="<EOS_TOKEN>", completion_only_loss=True)
         trainer = RaftTrainer(model=model, args=args, train_dataset=Dataset.from_list(prepared),
             processing_class=tok, data_collator=collate, callbacks=[Journal()],

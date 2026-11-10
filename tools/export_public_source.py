@@ -13,9 +13,21 @@ def export(dest):
     dest=Path(dest).resolve()
     if dest==ROOT or ROOT in dest.parents:raise ValueError('Use a separate publication checkout')
     files=[]
-    for directory in ['src','tests','tools','configs','docs','demo','artifacts/evidence','artifacts/data/policy-v1','artifacts/data/evidence-interventions-v1','artifacts/data/balanced-grounding-v2']:
+    for directory in ['src','tests','tools','configs','docs','demo','artifacts/evidence','artifacts/data/policy-v1','artifacts/data/evidence-interventions-v1','artifacts/data/balanced-grounding-v2','artifacts/data/balanced-grounding-confirm-v1','artifacts/data/policy-curated-success-v1']:
         files.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
     files.extend(ROOT/p for p in ['README.md','pyproject.toml','.gitignore','LICENSE'] if (ROOT/p).is_file())
+    files.extend(ROOT/p for p in ['artifacts/selection-v1.json','artifacts/holdout-plan-v1.json',
+        'artifacts/followup-tests-plan-v2.json','artifacts/release-index-v2.json'] if (ROOT/p).is_file())
+    files.extend(ROOT/'artifacts/method-repair-v1'/name for name in [
+        'historical-method-audit.json','recipe.json','recipe-v2.json','parser-amendment-v2.json',
+        'confirmation-plan-v1.json','confirmation-plan-v2.json','confirmation-plan-v3.json',
+        'selection-v1.json','evaluation-plan-v1.json','release-index-v1.json',
+        'aligntune-curated-recipe-v1.json']
+        if (ROOT/'artifacts/method-repair-v1'/name).is_file())
+    files.extend(ROOT/'artifacts/curation-success-v4'/name for name in [
+        'selected.json','qualification/fixtures.json','qualification/result.json',
+        'qualification/conservative-filter-admission.json']
+        if (ROOT/'artifacts/curation-success-v4'/name).is_file())
     files.extend(p for p in (ROOT/'artifacts/data/faith-v1').glob('*.json*') if p.name!='holdout.jsonl')
     files.extend(p for p in (ROOT/'publication/repro').rglob('*') if p.is_file())
     manifest=[]

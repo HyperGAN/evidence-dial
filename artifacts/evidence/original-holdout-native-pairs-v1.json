@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "index_sha256": "f2f092eb7f8416357b94043f1af1066714984605b212801a510cc156bbd9b156",
+  "case_arm_measurements": 4624,
+  "records": [
+    {
+      "dataset": "policy",
+      "arm": "off",
+      "cases": 256,
+      "prediction_sha256": "685f9651ed72c6b1a92e33edde3dce1c1be6b862502b2957679d4379b50912bc",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "policy",
+      "arm": "particle_1",
+      "cases": 256,
+      "prediction_sha256": "a869738f236e9aed027fcdd071203a695f192d68889c8094014187802076fe4e",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "policy",
+      "arm": "particle_2",
+      "cases": 256,
+      "prediction_sha256": "7acaf053279e9dec4ee4981c66aa7be2402e0fa6b35de01d81a1acfa88e19da9",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "policy",
+      "arm": "lora",
+      "cases": 256,
+      "prediction_sha256": "82f52eebbdbe312a2c1044c62bb398395aee43bd57a287cf8caf3fb0daf3db2c",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "faith",
+      "arm": "off",
+      "cases": 900,
+      "prediction_sha256": "89993f2277148e664fcab3281ec8502f8ca726e72349d7b0b9a8188401756aaf",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "faith",
+      "arm": "particle_1",
+      "cases": 900,
+      "prediction_sha256": "bbaafeda9cfa8e2412aabd3e4029e816efd2273a7fe580672ab7a005409adf87",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "faith",
+      "arm": "particle_2",
+      "cases": 900,
+      "prediction_sha256": "c7b37df002e584b29a192ae2c9fd3fc42d2d32c8eb7697fba938d8eb1a9ebbe7",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    },
+    {
+      "dataset": "faith",
+      "arm": "lora",
+      "cases": 900,
+      "prediction_sha256": "1b6c857ece828575dda61a85b11c7b15b6b1b3ef9cee4fcb4ecbaf5185bd13da",
+      "all_native_input_IDs_equal_matched_OFF": true,
+      "all_teacher_flags_false": true,
+      "input_budget_no_truncation": 2048,
+      "output_cap": 64,
+      "native_EOS": 3
+    }
+  ],
+  "model_calls": 0,
+  "reversible_input_ids_published": false
+}

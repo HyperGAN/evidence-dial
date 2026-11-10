@@ -1,0 +1,13 @@
+{
+  "repository": "ntc-ai/evidence-dial",
+  "commit": "2720a24baa2605d9a7f5a460baf5c32b396750d8",
+  "sdk": "static",
+  "paid_hardware_requested": false,
+  "variant": "original_answer_hinted_only",
+  "corrected_results_pending": true,
+  "files": {
+    "benchmark.json": "ab78421cef3e16f1ff0914a6ffcd0deaf66dcf64f2a4442f91c3b7d7582392f7",
+    "README.md": "7191209285010472ae27b8d3bb783dd2579ab1f1d8d94a484bedc26843fa31e0",
+    "index.html": "cea12899d47b15b177598efdc99f5935b9cedd5c443e19ee947087b6c9c61f41"
+  }
+}

@@ -53,15 +53,83 @@ sampling and never truncate evidence. Check generated manifests against the
 published frozen manifests. Source-question IDs shared across FaithEval strata
 were audited: all19 shared IDs map to the same bootstrap family.
 
-## New training experiment on the measured host
+## Jev-curated retry
+
+The corrected method is a distinct experiment, described in
+[method-repair.md](method-repair.md). Its frozen inputs are
+`artifacts/method-repair-v1/recipe-v2.json`, the48 accepted cases in
+`artifacts/curation-success-v4/selected.json`, and the118-position paired cache.
+Do not substitute the original146-position gold-hinted cache below. The new
+fresh confirmation corpus is
+`artifacts/data/balanced-grounding-confirm-v1/holdout.jsonl`; its768 cases and
+comparison plan were frozen before the retry committed an update.
+
+The original mining pass made455 seeded native generations. Exact sampled
+tokens, CPU/CUDA RNG states and hidden trajectories were retained, with65
+successful Jev requests including8 fixtures. Use these retained artifacts for
+exact reproduction. A fresh API judgment is a new observation, even with the
+same prompt and model name. Jev's first full-recall fixture check failed because
+two valid examples scored.89; its conservative-filter admission preserves
+those first results and the unchanged.90/3.0 acceptance thresholds. That
+admission cannot be copied to a different runtime without checking its scope.
+
+For a new, explicitly bounded mining experiment, provide your own NanoGPT key
+through `NANOGPT_API_KEY` and use an empty output directory. The code refuses
+ambiguous already-committed API calls. Run qualification first and inspect its
+actual result before mining; never lower a threshold or rerate a first judgment
+to make it pass.
+
+```bash
+.venv/bin/python -m evidence_dial.curation qualify --out artifacts/curation-new
+.venv/bin/python -m evidence_dial.curation mine --out artifacts/curation-new --recipe artifacts/method-repair-v1/recipe-v2.json --attempt first
+```
+
+On the measured host the following phases consumed the retainedv4 curation.
+Run them only with empty new cache/run paths, or reuse the already completed
+cache/checkpoints. The source-bound run paths shown identify the measured
+cohort; do not execute them over an existing release.
+
+```bash
+.venv/bin/python -m evidence_dial.curated_train cache --curation artifacts/curation-success-v4 --cache artifacts/cache/curated-success-v1 --run artifacts/runs/particle-curated-G001-v1 --attempt first
+.venv/bin/python -m evidence_dial.curated_train native-check --cache artifacts/cache/curated-success-v1 --run artifacts/runs/particle-curated-G001-v1 --attempt first
+.venv/bin/python -m evidence_dial.curated_train raw-check --cache artifacts/cache/curated-success-v1 --run artifacts/runs/particle-curated-G001-v1 --attempt first
+.venv/bin/python -m evidence_dial.curated_train train --cache artifacts/cache/curated-success-v1 --run artifacts/runs/particle-curated-G001-v1 --stop 2 --attempt first
+.venv/bin/python tools/observe_checkpoint.py --candidate artifacts/runs/particle-curated-G001-v1 --step 2
+```
+
+Continue the train/check pair at32,64,128 only after a qualified passing guard.
+The actual run was stopped and reaped at committed FULL68 to enlarge its
+execution window, then resumed exactly68→128. The68 checkpoint received its
+own passing check before continuation. No completed update was replayed and
+the fixed128-update horizon was unchanged.
+
+The supervised control uses the identical48 accepted source-case IDs, their
+original strict gold completions and the original AlignTune recipe with
+`train_cases=48` and `dataloader_drop_last=true`. Its recipe is retained as
+`artifacts/method-repair-v1/aligntune-curated-recipe-v1.json`. It commits128
+updates at batch2. Particle training samples paired answer positions; LoRA
+samples whole cases. The journals, rather than a claim of identical exposure,
+establish what each optimizer saw.
+
+Selection uses only the128 original development cases, strengths1 then2 and
+equal-case finished-answer ON−OFF success. The retry writes a separate
+`method-repair-v1/selection-v1.json` before any new holdout output. It cannot
+replace the old selection. Fresh confirmation compares against the same-pool
+LoRA; repeated earlier tests retain their status as research comparisons.
+
+## Original answer-hinted training experiment
 
 The following are the actual workflow commands, with the published recipe and
 an empty output root. On an existing completed checkout, use its saved states
-and outputs instead. All jobs use one physical GPU, sequenced by a private
+and outputs instead. Jobs declare one physical GPU, sequenced by a private
 lease; allocator22GiB, own NVML24GiB, RSS32GiB, free GPU floor5GiB and host
 available floor47GiB. Create `artifacts/execution-budget.json` with a new explicit
 24-hour UTC deadline before a new experiment. The measured cohort's deadline
-was November10 at23:41UTC; it is not extended by resuming a process.
+was November10 at23:41UTC; it is not extended by resuming a process. One old
+diagnostic-only50.98s phase omitted the device mapping: GPU residency was
+measured, but its physical device is unverified. Its receipt is preserved in
+`artifacts/evidence/diagnostic-device-mapping-audit-v1.json`. The direct
+diagnostic helper now maps the requested physical UUID before CUDA use.
 
 ```bash
 .venv/bin/evidence-dial headroom --data artifacts/data/policy-v1 --out artifacts/runs/headroom-v3 --gpu 1
@@ -196,3 +264,26 @@ Policy evidence is our own fictional CC0 corpus. A complete benchmark's native
 input sequences, budgets and EOS are checked privately by
 `tools/audit_native_pairs.py`; the public receipt contains counts and hashes,
 not reversible source input token IDs.
+
+## Recompute a complete corrected release
+
+These operations consume only saved outputs and make zero model/API calls.
+The release builder refuses missing case-arm measurements; run it only after
+the declared comparison index is complete. Use a new output directory:
+
+```bash
+.venv/bin/python -c "from pathlib import Path; from evidence_dial.summarize import build; build(Path('artifacts/method-repair-v1/release-index-v1.json'), Path('publication/corrected-benchmark-v1'))"
+.venv/bin/python tools/verify_results.py --release publication/corrected-benchmark-v1 --policy artifacts/data/policy-v1/holdout.jsonl --faith artifacts/data/faith-v1/holdout.jsonl --additional-data confirmation=artifacts/data/balanced-grounding-confirm-v1/holdout.jsonl --additional-data cue_audit=artifacts/data/evidence-interventions-v1/holdout.jsonl --additional-data balanced=artifacts/data/balanced-grounding-v2/holdout.jsonl
+.venv/bin/python tools/audit_native_pairs.py --index artifacts/method-repair-v1/release-index-v1.json --out artifacts/evidence/corrected-native-pair-audit-v1.json
+.venv/bin/python tools/training_diagnostics.py --include-curated --out artifacts/evidence/corrected-training-v1
+.venv/bin/python tools/cost_report.py --out artifacts/evidence/corrected-resource-cost-v1.json
+.venv/bin/python tools/build_demo.py --release publication/corrected-benchmark-v1 --out demo/benchmark.json
+node tools/check_demo.cjs
+```
+
+The public FaithEval metadata must first be materialized from the pinned
+upstream sources as above; pass that exact byte-identical file with the
+verifier's `--faith` option when it is outside the measured default path.
+Resource receipts include mining, target preparation, training, inference and
+observer phases where measured. The report marks legacy telemetry gaps and
+does not interpret a provider's reported `estimated_cost=0` as verified billing.

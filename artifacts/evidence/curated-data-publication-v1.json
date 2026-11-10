@@ -1,0 +1,33 @@
+{
+  "repository": "ntc-ai/evidence-dial-curated-successes",
+  "commit": "1338cf30f4fa643ff3de295d5087f8572b678955",
+  "private": false,
+  "files_verified": [
+    {
+      "file": "train.jsonl",
+      "bytes": 41275,
+      "sha256": "a12c7f5b6623be9d2fdcc9b20103b8016d66d1e20a210cee39b223363acb25d9",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "selected.json",
+      "bytes": 47125,
+      "sha256": "adb9caac08ae439fa9076df26bc54aa1f2a926bd794e28101bfe5d644001ce00",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "curation-and-pairs-v1.tar.gz",
+      "bytes": 69588680,
+      "sha256": "c3d290f7887ec49a0173e1563c2f0a203cebc477c8f594bd9738171ae026d175",
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 4058,
+      "sha256": "1ec622818504a2fd8acffce4fe35f3f9c9fc06000216a5c31177cb0ab8f3e26f",
+      "anonymous_HTTP_verified": true
+    }
+  ],
+  "collection_added": true,
+  "corrected_model_effect_claimed": false
+}

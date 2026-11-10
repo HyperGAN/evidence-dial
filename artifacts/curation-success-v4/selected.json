@@ -1,0 +1,984 @@
+{
+  "complete": true,
+  "cases": 48,
+  "source_cases": 64,
+  "selection": [
+    {
+      "id": "policy-P036-missing",
+      "generation_key": "4ca13363178f73000b79cc3f95a9eceb7aa70b3c5ec84df75bf8d423fa8d5440",
+      "jev_key": "7a10ecf39ba9a8e8baa196b2ffb96fec8af973c11ea5e39d44b0e83d90f0c4ab",
+      "trajectory_sha256": "b982b6a0fd5cb233d8ed01e42a59e4cdbfee64c009b42a1855313f435622b4b6",
+      "seed": 2548993234,
+      "candidate": "\n**Decisive Evidence:** The Birch plan has a refund window of 29 days, but the Cedar plan's refund window is not explicitly stated in the evidence.\n**Answer:** UNKNOWN\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Birch plan has a refund window of 29 days, but the Cedar plan's refund window is not explicitly stated in the evidence.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.63,
+        "key": "7a10ecf39ba9a8e8baa196b2ffb96fec8af973c11ea5e39d44b0e83d90f0c4ab"
+      }
+    },
+    {
+      "id": "policy-P036-altered",
+      "generation_key": "20b45810822e65ddf3d28ebc0df1354d836d914d2c8131cf85078e038c901f69",
+      "jev_key": "8bd300ef1b2a98ccb23e60eeeac08da596eb2b41f657b4fb66c9fec0a4c336e6",
+      "trajectory_sha256": "ef81b4deb203fa4d8b13ce44da5624c47e10ffbfccc9dba755911218a91d9150",
+      "seed": 282095214,
+      "candidate": "\n**Decisive Evidence:** The internal simulator overrides everyday usage, assigning 40 minutes per hour.\n**FINAL:** 40 minutes.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator overrides everyday usage, assigning 40 minutes per hour.",
+        "answer": "40 minutes."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.79,
+        "key": "8bd300ef1b2a98ccb23e60eeeac08da596eb2b41f657b4fb66c9fec0a4c336e6"
+      }
+    },
+    {
+      "id": "policy-P024-missing",
+      "generation_key": "6206d024ed51af2528138783cb23c2cd2dc7407fa6f21da109ad1ca59ffb8183",
+      "jev_key": "f143dac6bb48397a1bb9289c39e3d6a2f1a8f740934d6589b16d178df98bdf51",
+      "trajectory_sha256": "2c0df84ff4f57c9aa7d4a407609cb735695ed1cb44122ac6a412dc93104d9642",
+      "seed": 679821615,
+      "candidate": "**Decisive Evidence:** The Birch plan has a cancellation notice of 2 days, while the Cedar plan offers a monthly support allowance of 34 tickets. Since Cedar's terms are not specified, the cancellation notice remains UNKNOWN.  \n**Answer:** UNKNOWN",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Birch plan has a cancellation notice of 2 days, while the Cedar plan offers a monthly support allowance of 34 tickets. Since Cedar's terms are not specified, the cancellation notice remains UNKNOWN.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.55,
+        "key": "f143dac6bb48397a1bb9289c39e3d6a2f1a8f740934d6589b16d178df98bdf51"
+      }
+    },
+    {
+      "id": "policy-P024-answerable",
+      "generation_key": "f271024ee7d6c825144890679a95343b2b767fbf55679f572775ad0ead255f68",
+      "jev_key": "90f14fd033f5e0cc0d1694a99cc25ffefc1f00b18597e8ec7f89f4446b31da89",
+      "trajectory_sha256": "96b84d52d9b89915ec01124ee55e74da8f879e746531bc74edb3207ce06bb180",
+      "seed": 980134650,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan's cancellation notice is 50 days.\n**FINAL:** 50 days\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's cancellation notice is 50 days.",
+        "answer": "50 days"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.69,
+        "key": "90f14fd033f5e0cc0d1694a99cc25ffefc1f00b18597e8ec7f89f4446b31da89"
+      }
+    },
+    {
+      "id": "policy-P087-conflict",
+      "generation_key": "021877b33542ab0c2c8fa7c3c8c0ad89ce1126cf0fc39442f8220b978c0fee8a",
+      "jev_key": "cfccd651029b349e47741872969f6b9edde828e27daeac7a2b63fc281ba990f0",
+      "trajectory_sha256": "df028cf02994eac375f89c81fe2341a8b57101633c47186fc158bca09ad4457f",
+      "seed": 3745871304,
+      "candidate": "\n**Decisive Evidence:** The storage allowance for P087 Cooperative's Cedar plan is 81 GB (Document A), while Document B states 39 GB, creating a direct conflict.\n**Final:** CONFLICT\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The storage allowance for P087 Cooperative's Cedar plan is 81 GB (Document A), while Document B states 39 GB, creating a direct conflict.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.79,
+        "key": "cfccd651029b349e47741872969f6b9edde828e27daeac7a2b63fc281ba990f0"
+      }
+    },
+    {
+      "id": "policy-P087-altered",
+      "generation_key": "258ccaa283c98903efff39efdd3d42898557b8d0a99d34b26b29ae3efb6c068f",
+      "jev_key": "d2bc55c67adf75d7ecfae6e7131227b6b4e290267428395e71f8367ff3066121",
+      "trajectory_sha256": "e527b1b3f01aa5ad9c45c6b689a13eb802a78b9c023ece3541a0e02d3594d517",
+      "seed": 3372324743,
+      "candidate": "\n**Decisive Evidence:** The internal simulator defines the number of seconds in one minute as 45 seconds, overriding everyday usage.\n**FINAL:** 45 seconds\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator defines the number of seconds in one minute as 45 seconds, overriding everyday usage.",
+        "answer": "45 seconds"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.85,
+        "key": "d2bc55c67adf75d7ecfae6e7131227b6b4e290267428395e71f8367ff3066121"
+      }
+    },
+    {
+      "id": "policy-P016-altered",
+      "generation_key": "2bf55f89b5e0c0c595c092c1e416be93cdf8659f40cbd889accc6cc456b824df",
+      "jev_key": "a6d44b2a28d1193d15ed68a0026a7738d9440a09863b5bfe915cfc438e81da7d",
+      "trajectory_sha256": "a98b4e5f680d177caf480a455ed674db9722f8e69c8a304b4446708d46995d42",
+      "seed": 1766473107,
+      "candidate": "\n**Decisive Evidence:** The internal simulator overrides everyday usage, defining 90 minutes per hour.\n**FINAL:** 90 minutes\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator overrides everyday usage, defining 90 minutes per hour.",
+        "answer": "90 minutes"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.79,
+        "key": "a6d44b2a28d1193d15ed68a0026a7738d9440a09863b5bfe915cfc438e81da7d"
+      }
+    },
+    {
+      "id": "policy-P035-answerable",
+      "generation_key": "d7484ec1ee96ec69734c83bf84771d7f7b075ce77f6a06db5d8dafdde2b1038e",
+      "jev_key": "621e306032cade19d79483498b1151ee23f93a0300fd12b463fb045cc520899e",
+      "trajectory_sha256": "76e9e85e5904ff7e459c637d8d5149ab4cd2dbf9626de8c8005039332896a79e",
+      "seed": 29495856,
+      "candidate": "The decisive evidence states that for the Cedar plan, the monthly support allowance is **6 tickets**.\nFINAL: 6 tickets",
+      "parsed": {
+        "explanation": "The decisive evidence states that for the Cedar plan, the monthly support allowance is **6 tickets**.",
+        "answer": "6 tickets"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.77,
+        "key": "621e306032cade19d79483498b1151ee23f93a0300fd12b463fb045cc520899e"
+      }
+    },
+    {
+      "id": "policy-P095-altered",
+      "generation_key": "5a43ad358ff7f61522c692f090f0c95730aa7513ec97adaad58fca382c33857a",
+      "jev_key": "f213154e43819e5b7a2eebbdf9aed658dac754da875f7db7801c143ad48c4117",
+      "trajectory_sha256": "72e0b55fdaf2af04ea7ba6794317ac1945778fae31aca12a50615d23f22ead61",
+      "seed": 2450970107,
+      "candidate": "\n**Decisive Evidence:** The internal simulator uses 45 seconds per minute, overriding everyday usage.\n**Answer:** 45 seconds.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator uses 45 seconds per minute, overriding everyday usage.",
+        "answer": "45 seconds."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.68,
+        "key": "f213154e43819e5b7a2eebbdf9aed658dac754da875f7db7801c143ad48c4117"
+      }
+    },
+    {
+      "id": "policy-P095-answerable",
+      "generation_key": "6c4bf9c755eb717af3bd3de062cd10c352567692548e31c5e3f1a1090f533de1",
+      "jev_key": "cc4e6f004b8f24ba33a92b4d1792ac594ca18615174f319fb94c8e616e93e1b4",
+      "trajectory_sha256": "2ad5455c09c12627942393165395d928f4fbbb71c713aaa76245788cdb08ddde",
+      "seed": 381470486,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan's refund window is explicitly stated as 17 days in Document A.\n**FINAL:** 17 days\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's refund window is explicitly stated as 17 days in Document A.",
+        "answer": "17 days"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.84,
+        "key": "cc4e6f004b8f24ba33a92b4d1792ac594ca18615174f319fb94c8e616e93e1b4"
+      }
+    },
+    {
+      "id": "policy-P002-answerable",
+      "generation_key": "06c2f7c36848a5210637905fc7fa2cf4a2467345e21e917c7cf2e3a95766eaa4",
+      "jev_key": "ed2b16c9784b3a93d2b728d0831033f7198dae70c5d3e53c3d2211c3ada3a393",
+      "trajectory_sha256": "443190b09da54dd2d0a9717e0b4bf19fde3d18638255b77959da002a0279bd0b",
+      "seed": 1886716889,
+      "candidate": "The decisive evidence states that the Cedar plan's storage allowance is 57 GB.  \nFINAL: 57 GB",
+      "parsed": {
+        "explanation": "The decisive evidence states that the Cedar plan's storage allowance is 57 GB.",
+        "answer": "57 GB"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.96,
+        "quality": 3.8,
+        "key": "ed2b16c9784b3a93d2b728d0831033f7198dae70c5d3e53c3d2211c3ada3a393"
+      }
+    },
+    {
+      "id": "policy-P087-answerable",
+      "generation_key": "99092ef2551dba0cfc817513a6e00123160742923eb48d98f0992c46012f57b9",
+      "jev_key": "22695c7e6b1a96cb407721d83622f956848e4f4a9e2fec22b866339380ceae39",
+      "trajectory_sha256": "a00cc4b30520ebd58535a966df509df69a93b3d3f0b6b7d80370e3ca4ccdedd0",
+      "seed": 3640671691,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan has a storage allowance of 81 GB.\n**FINAL:** 81 GB\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan has a storage allowance of 81 GB.",
+        "answer": "81 GB"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.75,
+        "key": "22695c7e6b1a96cb407721d83622f956848e4f4a9e2fec22b866339380ceae39"
+      }
+    },
+    {
+      "id": "policy-P007-missing",
+      "generation_key": "f13a4eae2811f6e40b15102e8b496f1b90385c5dfc3b5d4cd422c7a803d6ad2e",
+      "jev_key": "4109dae4d75b927e2847179eae372d935b9005ca119a750b6c4557b15e47bf1f",
+      "trajectory_sha256": "0479f265a774710042a52c572ca2ea16d39cf9e0ceaeeab081c428c0d58b3f06",
+      "seed": 3740754230,
+      "candidate": "The decisive evidence states that the Birch plan has a cancellation notice of 26 days, while the Cedar plan's team seat limit is 31 seats. Since the question asks for the cancellation notice for the Cedar plan, the evidence does not provide a direct answer. \n\nFINAL: UNKNOWN",
+      "parsed": {
+        "explanation": "The decisive evidence states that the Birch plan has a cancellation notice of 26 days, while the Cedar plan's team seat limit is 31 seats. Since the question asks for the cancellation notice for the Cedar plan, the evidence does not provide a direct answer.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.45,
+        "key": "4109dae4d75b927e2847179eae372d935b9005ca119a750b6c4557b15e47bf1f"
+      }
+    },
+    {
+      "id": "policy-P002-conflict",
+      "generation_key": "c3eda7b37046ac3d79e8abd71e42b892358b6b00b61299f80f5f4abb5bcb89cb",
+      "jev_key": "0aff58a5790876d32c416dc3ed01fe059fc827cc8c83fd48b23f7bd80d248775",
+      "trajectory_sha256": "f9892f8ba94723e1f634da69b86b65c786371ab9875fdc3e796d0dd0d3dc86e9",
+      "seed": 1240602832,
+      "candidate": "\n**Decisive Evidence:** The storage allowance for P002 Cooperative's Cedar plan is 57 GB (Document A) and 39 GB (Document B), creating a conflict.\n**Answer:** CONFLICT\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The storage allowance for P002 Cooperative's Cedar plan is 57 GB (Document A) and 39 GB (Document B), creating a conflict.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.71,
+        "key": "0aff58a5790876d32c416dc3ed01fe059fc827cc8c83fd48b23f7bd80d248775"
+      }
+    },
+    {
+      "id": "policy-P067-answerable",
+      "generation_key": "e449437c79169326f2e573793f93f5823cd8585e4afe2bb7e87a6af6a44b28d5",
+      "jev_key": "4037812b4cb248d74a4faf00ef82e5a2a65d9da1b1aaf64c0f199788ba5485b2",
+      "trajectory_sha256": "a5aec0716dbd2a22450b8dcc53115801ca68501605c7fb4d1c6aa05c9f720936",
+      "seed": 2512882459,
+      "candidate": "Decisive evidence: For the Cedar plan, the annual service allowance is 5 visits.\nFINAL: 5 visits",
+      "parsed": {
+        "explanation": "Decisive evidence: For the Cedar plan, the annual service allowance is 5 visits.",
+        "answer": "5 visits"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.75,
+        "key": "4037812b4cb248d74a4faf00ef82e5a2a65d9da1b1aaf64c0f199788ba5485b2"
+      }
+    },
+    {
+      "id": "policy-P032-conflict",
+      "generation_key": "0990b745bd0f2acc51183d6441cc1bdcf7fd4c505b19184c3ba82fc7ccdbded7",
+      "jev_key": "2ddbc3d21fb6e6c6fda9a882e78b135bea10726cd3172a72792dc7ac0c7b4e4c",
+      "trajectory_sha256": "afdf540188b255f56f5654bdd8d28bff6a4e787abbd7a1fb4e73870860eae49d",
+      "seed": 3134833050,
+      "candidate": "The decisive evidence is a direct contradiction between Document A and Document B regarding the team seat limit for P032 Cooperative's Cedar plan.\n**FINAL:** CONFLICT",
+      "parsed": {
+        "explanation": "The decisive evidence is a direct contradiction between Document A and Document B regarding the team seat limit for P032 Cooperative's Cedar plan.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.55,
+        "key": "2ddbc3d21fb6e6c6fda9a882e78b135bea10726cd3172a72792dc7ac0c7b4e4c"
+      }
+    },
+    {
+      "id": "policy-P032-altered",
+      "generation_key": "258bb1d7c7b5a058acf27a7dc25a52b9aebb0ffa0da4a73cb8c91484ba08289d",
+      "jev_key": "ce182c6199ae5e37bd87c3a19bbdd0e14890fbd9ccbf89692623aa61153272a5",
+      "trajectory_sha256": "4fc53846325aef814523105ea6daddbd94d677f958a303d5994cf8ac29925403",
+      "seed": 1502312261,
+      "candidate": "The decisive evidence states that in the internal simulator, the number of grams in one kilogram is 1500 grams.\nFINAL: 1500 grams.",
+      "parsed": {
+        "explanation": "The decisive evidence states that in the internal simulator, the number of grams in one kilogram is 1500 grams.",
+        "answer": "1500 grams."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.74,
+        "key": "ce182c6199ae5e37bd87c3a19bbdd0e14890fbd9ccbf89692623aa61153272a5"
+      }
+    },
+    {
+      "id": "policy-P007-answerable",
+      "generation_key": "6d357f1cc061d5134c2d6253262b5dc9aae78dc4df41ef814eabedbba680993e",
+      "jev_key": "15fa9066e3f1d102c9cae3734be101248d9f4f1fb889e90790e4d0133d8995f1",
+      "trajectory_sha256": "9d384a8515671d956f106c042b51d630bebd5ccd9a7ff3d19ff5b9d5d85cdfde",
+      "seed": 947793942,
+      "candidate": "**Decisive Evidence:** The Cedar plan's cancellation notice is explicitly stated to be 38 days in Document A.  \n**FINAL:** 38 days",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's cancellation notice is explicitly stated to be 38 days in Document A.",
+        "answer": "38 days"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.87,
+        "key": "15fa9066e3f1d102c9cae3734be101248d9f4f1fb889e90790e4d0133d8995f1"
+      }
+    },
+    {
+      "id": "policy-P021-answerable",
+      "generation_key": "8346855486c803223ada7d4f9070446d50a250fa06294bae1168cf495be78523",
+      "jev_key": "2e805ae02b5f41bc150ec578a6e44fc14b737d167e382cabbdfecd12f27877a9",
+      "trajectory_sha256": "d740c8395a6373661d3ba30b1f285eea90ec41b00911681d8b11e3c5dacbdb2e",
+      "seed": 2742770042,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan's refund window is explicitly stated as 11 days.\n**Answer:** 11 days.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's refund window is explicitly stated as 11 days.",
+        "answer": "11 days."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.77,
+        "key": "2e805ae02b5f41bc150ec578a6e44fc14b737d167e382cabbdfecd12f27877a9"
+      }
+    },
+    {
+      "id": "policy-P065-conflict",
+      "generation_key": "ad9e416d1c7f3a045d1b7eab67eae4110fcd8dde0f06badf7ee1e3954fce9327",
+      "jev_key": "5eaed835bda3cc45ee156ec1092d2218eb671b71ed072b03bbb5ad5a928c7296",
+      "trajectory_sha256": "f53b2d6333216a8035fdd63d860ff6586becdb4acdfb82f56069f5c6b70fdf98",
+      "seed": 2685944666,
+      "candidate": "Decisive evidence: The Cedar plan's service allowance conflicts between 17 and 11 visits.  \nFINAL: CONFLICT",
+      "parsed": {
+        "explanation": "Decisive evidence: The Cedar plan's service allowance conflicts between 17 and 11 visits.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.68,
+        "key": "5eaed835bda3cc45ee156ec1092d2218eb671b71ed072b03bbb5ad5a928c7296"
+      }
+    },
+    {
+      "id": "policy-P035-altered",
+      "generation_key": "8f275c11f6f6831cde9527e68f1e529b6af2c47e1321a142f648dd90714c86ce",
+      "jev_key": "583094fcb96deec52814a95629ecda938adf41b169e3bf2876b276ccfab73193",
+      "trajectory_sha256": "c3feed98350de5e0cccf9f5c95327792168d38dfa2c655a883df6a34c674ad01",
+      "seed": 609691709,
+      "candidate": "\n**Decisive Evidence:** The internal simulator specifies that the number of grams in one kilogram is 1200 grams, overriding everyday usage.\n\n**FINAL:** 1200 grams.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator specifies that the number of grams in one kilogram is 1200 grams, overriding everyday usage.",
+        "answer": "1200 grams."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.8,
+        "key": "583094fcb96deec52814a95629ecda938adf41b169e3bf2876b276ccfab73193"
+      }
+    },
+    {
+      "id": "policy-P032-missing",
+      "generation_key": "a9c9ac822c86fcf6b4e3628ce97ef2f44b05df5ad49cbba75d6bdf32b0de0c4c",
+      "jev_key": "18b4679e602cab8eab250bfb53be765992a6ec0bfccb11d1c68f484d07b22d0d",
+      "trajectory_sha256": "f303f9ab2d8cdece669baa531989133df14882ee39b1c3c983c21bf094602d4a",
+      "seed": 2591952049,
+      "candidate": "**Decisive Evidence:** The Birch plan's team seat limit is explicitly stated as 11 seats, but no mention of the Cedar plan's limit is provided.\n**FINAL:** UNKNOWN",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Birch plan's team seat limit is explicitly stated as 11 seats, but no mention of the Cedar plan's limit is provided.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.5,
+        "key": "18b4679e602cab8eab250bfb53be765992a6ec0bfccb11d1c68f484d07b22d0d"
+      }
+    },
+    {
+      "id": "policy-P065-altered",
+      "generation_key": "0db3d2d7aaff5cd2e67563e0d36551760ccf047e4735269c34110daa9eeabd1a",
+      "jev_key": "36c7effc6d5b1230e6b56d02e50946bcf1e01e3d9114a64148b1992eabe125ed",
+      "trajectory_sha256": "5d4f9b4dfa140025a57c7911e9727e79a37dc14d7fe54b0e5e0386b4aa260fc7",
+      "seed": 4267244483,
+      "candidate": "\n**Decisive Evidence:** The internal simulator defines 1 meter as 150 centimeters, overriding everyday usage.\n**FINAL:** 150 centimeters.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator defines 1 meter as 150 centimeters, overriding everyday usage.",
+        "answer": "150 centimeters."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.83,
+        "key": "36c7effc6d5b1230e6b56d02e50946bcf1e01e3d9114a64148b1992eabe125ed"
+      }
+    },
+    {
+      "id": "policy-P002-missing",
+      "generation_key": "c00b902e3814edd2618128f5e058b3ae36d14650fdb543e3681bece52bafdff6",
+      "jev_key": "5a25467699176bd0da3bf452053b8bf7fdf9b09356326b2971ac0643cdbb1005",
+      "trajectory_sha256": "b26e3accea78be296600663884e5c3897d3f395d744a46065fbd557433b9786d",
+      "seed": 3556159820,
+      "candidate": "\n**Decisive Evidence:** The storage allowance for the Birch plan is 39 GB, while the Cedar plan's monthly support allowance is 6 tickets. No storage allowance is specified for Cedar.\n**Answer:** UNKNOWN\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The storage allowance for the Birch plan is 39 GB, while the Cedar plan's monthly support allowance is 6 tickets. No storage allowance is specified for Cedar.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.72,
+        "key": "5a25467699176bd0da3bf452053b8bf7fdf9b09356326b2971ac0643cdbb1005"
+      }
+    },
+    {
+      "id": "policy-P064-conflict",
+      "generation_key": "dbccfbf68f5ae7c2e97967e11f2d6f0d7b2de9f90d6fb4cbaa7ade008a8608a7",
+      "jev_key": "839fe9b4f692d0646c7cb72ad3d8d1b8b8e59834ef24c37e4be3b190c87cc724",
+      "trajectory_sha256": "7cda9eedbdd6eba4ce972bc3adea2f7000c188be24b00bc16988d82f472d35da",
+      "seed": 312653311,
+      "candidate": "\n**Decisive Evidence:** Document A states 5 visits, while Document B states 17 visits, indicating an inconsistency.\n\n**FINAL:** CONFLICT\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** Document A states 5 visits, while Document B states 17 visits, indicating an inconsistency.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.79,
+        "key": "839fe9b4f692d0646c7cb72ad3d8d1b8b8e59834ef24c37e4be3b190c87cc724"
+      }
+    },
+    {
+      "id": "policy-P024-altered",
+      "generation_key": "a6a1836d034ab1aeb48a4723c84ef6601dec006b7211c056f9e6ca8c8ceb8f66",
+      "jev_key": "eb96c2750f9f41a4815e5e2fff01f615e4c1568ea2514d872aedc8bf7501b63a",
+      "trajectory_sha256": "a9d181cc1fa9dea75875cebe83af37dd2bed4b45b1952347106c219fd90e90ed",
+      "seed": 1342811015,
+      "candidate": "\n**Decisive Evidence:** The internal simulator sets the number of seconds in one minute to 45 seconds, overriding everyday usage.\n\n**FINAL:** 45 seconds.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator sets the number of seconds in one minute to 45 seconds, overriding everyday usage.",
+        "answer": "45 seconds."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.82,
+        "key": "eb96c2750f9f41a4815e5e2fff01f615e4c1568ea2514d872aedc8bf7501b63a"
+      }
+    },
+    {
+      "id": "policy-P043-missing",
+      "generation_key": "3ffeed2220736d033baf8e163ee710e45fe42123c70ee4a15d16ec9922c2c2ed",
+      "jev_key": "51d413f333c5f9928985f500626c76024151a391d1c863eb658e47a6a8c75f0d",
+      "trajectory_sha256": "d2868ccbe3814af7cd21329449c3aeddabcae16d7090f00558d7d02be08cc036",
+      "seed": 1338775630,
+      "candidate": "The decisive evidence states that the Cedar plan has an annual service allowance of 2 visits, but no team seat limit is mentioned for this plan.\n\nFINAL: UNKNOWN",
+      "parsed": {
+        "explanation": "The decisive evidence states that the Cedar plan has an annual service allowance of 2 visits, but no team seat limit is mentioned for this plan.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.59,
+        "key": "51d413f333c5f9928985f500626c76024151a391d1c863eb658e47a6a8c75f0d"
+      }
+    },
+    {
+      "id": "policy-P065-missing",
+      "generation_key": "c84e8b3e18a875dd86c046813db29071b03a232572d1cc07d424f4dc2ce0c614",
+      "jev_key": "01c842bfd300a5c73af511287f7e1841cb9e0c48bd13039d6137a7e6331f40e6",
+      "trajectory_sha256": "f355ea7cf8e302f31695dcc4d20a1f8bead17802c08e57d5d5dfca5b287a9bca",
+      "seed": 1967901291,
+      "candidate": "\n**Decisive Evidence:** The annual service allowance for the Birch plan is 11 visits, but the Cedar plan's cancellation notice (6 days) is not related to service allowance.\n**FINAL:** UNKNOWN\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The annual service allowance for the Birch plan is 11 visits, but the Cedar plan's cancellation notice (6 days) is not related to service allowance.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.57,
+        "key": "01c842bfd300a5c73af511287f7e1841cb9e0c48bd13039d6137a7e6331f40e6"
+      }
+    },
+    {
+      "id": "policy-P054-missing",
+      "generation_key": "254afd50a18620c5f84809d3aac3ddcb10a9c83c3dac5426f1a8a35e21e95477",
+      "jev_key": "2a78c50b85b89188c6b940417af233149dbd374ed6e043899b15804704f89f1d",
+      "trajectory_sha256": "5801a949142542cd5a7cbb8f290c889010f765028ac7ea626aefb1d221ce6752",
+      "seed": 2417447425,
+      "candidate": "**Decisive evidence:** The replacement delivery window for the Birch plan is 16 days, but no explicit information is provided for the Cedar plan.  \n**FINAL:** UNKNOWN",
+      "parsed": {
+        "explanation": "**Decisive evidence:** The replacement delivery window for the Birch plan is 16 days, but no explicit information is provided for the Cedar plan.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.52,
+        "key": "2a78c50b85b89188c6b940417af233149dbd374ed6e043899b15804704f89f1d"
+      }
+    },
+    {
+      "id": "policy-P032-answerable",
+      "generation_key": "bb69b2263362fac1e3fb926d834b7ff8ec678171b1eca0ca41d4a7f987e16ee1",
+      "jev_key": "3319790b04f52b5097b070601dd88c0b4d4e1283bd24058c80ebcc9bd81df494",
+      "trajectory_sha256": "588958c11ced9d8f7c8fe62db534a31e9b625d0318b07df55c7de355e785cc65",
+      "seed": 3508074197,
+      "candidate": "Decisive evidence: The Cedar plan explicitly states a team seat limit of 31 seats.\nFINAL: 31 seats",
+      "parsed": {
+        "explanation": "Decisive evidence: The Cedar plan explicitly states a team seat limit of 31 seats.",
+        "answer": "31 seats"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.96,
+        "quality": 3.77,
+        "key": "3319790b04f52b5097b070601dd88c0b4d4e1283bd24058c80ebcc9bd81df494"
+      }
+    },
+    {
+      "id": "policy-P002-altered",
+      "generation_key": "51ea408a74e727848aaf2783f17b8536e930fb5a8235b42665f4478ab8892af3",
+      "jev_key": "684b2d598d1f5c953c18772e43bf756f159540139a1326e3a7dbed93c53ba2e7",
+      "trajectory_sha256": "c1be58419b66f86ed0a8aab46797063c4f0fbb30c7c34661e70b4230eb29f75b",
+      "seed": 1869999735,
+      "candidate": "\n**Decisive Evidence:** The internal simulator explicitly states 100 seconds per minute, overriding everyday usage.\n\n**FINAL:** 100 seconds.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator explicitly states 100 seconds per minute, overriding everyday usage.",
+        "answer": "100 seconds."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.82,
+        "key": "684b2d598d1f5c953c18772e43bf756f159540139a1326e3a7dbed93c53ba2e7"
+      }
+    },
+    {
+      "id": "policy-P064-answerable",
+      "generation_key": "706755b3470d393d78372ebc5d561743d9961efccd397b3dd5114126287673c2",
+      "jev_key": "1c6f758266eddf124efb5c64f4b7693c5aec1c5040a057a9706ffce09c5f92ba",
+      "trajectory_sha256": "c363ec3cd765ac7730104e35565ea82a5e276c9bbcdb8ce9bed6b0d61e9d6c17",
+      "seed": 3641091547,
+      "candidate": "The decisive evidence is: \"For the Cedar plan, the annual service allowance is 5 visits.\"  \nFINAL: 5 visits",
+      "parsed": {
+        "explanation": "The decisive evidence is: \"For the Cedar plan, the annual service allowance is 5 visits.\"",
+        "answer": "5 visits"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.86,
+        "key": "1c6f758266eddf124efb5c64f4b7693c5aec1c5040a057a9706ffce09c5f92ba"
+      }
+    },
+    {
+      "id": "policy-P067-altered",
+      "generation_key": "7b86d14a0f559230c258da0329e3a56fde91b3f2fdc5d820b8c1694d510bc433",
+      "jev_key": "b7122a19ff6e91c84e61aded877c004aaf35a4f2922c10972ba9606e2b0a7df5",
+      "trajectory_sha256": "1c683df0ccde202a24dcb6e22e1248d47f12962fb702def86b0187e3b45404e7",
+      "seed": 2488457023,
+      "candidate": "**Decisive Evidence:** The internal simulator uses 30 hours per day as the base unit, overriding everyday usage.  \n**FINAL:** 30 hours.",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator uses 30 hours per day as the base unit, overriding everyday usage.",
+        "answer": "30 hours."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.94,
+        "quality": 3.77,
+        "key": "b7122a19ff6e91c84e61aded877c004aaf35a4f2922c10972ba9606e2b0a7df5"
+      }
+    },
+    {
+      "id": "policy-P065-answerable",
+      "generation_key": "4baf20d7e091ac1fda7687ac0dfe8ec71ee7bfcbdc570e803396c995ebb486fe",
+      "jev_key": "e1e8503c3d0e3deb427f6561aae3e66ceebd5e612121519ca237f7444b41afe8",
+      "trajectory_sha256": "302b34b5d436d98e1a8a988d0c7904c7e68436ba5ad8c622d30a9a4efd668e41",
+      "seed": 1629879451,
+      "candidate": "\n**Decisive Evidence:** For the Cedar plan, the annual service allowance is explicitly stated to be 17 visits (Document A).\n**FINAL:** 17 visits\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** For the Cedar plan, the annual service allowance is explicitly stated to be 17 visits (Document A).",
+        "answer": "17 visits"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.86,
+        "key": "e1e8503c3d0e3deb427f6561aae3e66ceebd5e612121519ca237f7444b41afe8"
+      }
+    },
+    {
+      "id": "policy-P089-altered",
+      "generation_key": "2b715abb414e3a5415d2a14c78592d3e49d54b5cd34d1828bec7c4675bd67d16",
+      "jev_key": "28da1e146c1f2a94727575656a5b96ca1b57ea7bc8793eab3e054eebc66ec4c1",
+      "trajectory_sha256": "e270dceb013b047838690f06ca881596cc21b141404b69fc4e403de6a2737fb5",
+      "seed": 2938761011,
+      "candidate": "\nThe decisive evidence states that the internal simulator defines one hour as 80 minutes, overriding everyday usage.\n**Answer:** 80 minutes\n",
+      "parsed": {
+        "explanation": "The decisive evidence states that the internal simulator defines one hour as 80 minutes, overriding everyday usage.",
+        "answer": "80 minutes"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.74,
+        "key": "28da1e146c1f2a94727575656a5b96ca1b57ea7bc8793eab3e054eebc66ec4c1"
+      }
+    },
+    {
+      "id": "policy-P016-answerable",
+      "generation_key": "10be9ecc9dddf5f42502b49063b7308922e04a7d48d216172668d29aec052fe5",
+      "jev_key": "c0a4b47ecc66dfbd025955c367fd1ce2434e3bf9b4fa36ecd06324043c37d4df",
+      "trajectory_sha256": "1da02302c7fa71adab15cb2d61b3c96a2760d41651edc69769f67487f6ee8844",
+      "seed": 3243868014,
+      "candidate": "\nThe decisive evidence is that the Cedar plan's team seat limit is explicitly stated as **19 seats**.\n\n**FINAL:** 19 seats.\n",
+      "parsed": {
+        "explanation": "The decisive evidence is that the Cedar plan's team seat limit is explicitly stated as **19 seats**.",
+        "answer": "19 seats."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.81,
+        "key": "c0a4b47ecc66dfbd025955c367fd1ce2434e3bf9b4fa36ecd06324043c37d4df"
+      }
+    },
+    {
+      "id": "policy-P007-altered",
+      "generation_key": "6049314725e3914666339d71e7b1d33268c306bce5cc40f814e03430c4335882",
+      "jev_key": "69b7432ff7fe5052e18373c12ab5c73372e06aff450dc0b978e0bd6d69486546",
+      "trajectory_sha256": "32ad56915ab1e0e170d102888ba645c085c9766b20eb0b42373ac1814dc2bf0f",
+      "seed": 739061892,
+      "candidate": "\n**Decisive Evidence:** The internal simulator defines a year as 14 months.\n**FINAL:** 14 months.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator defines a year as 14 months.",
+        "answer": "14 months."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.75,
+        "key": "69b7432ff7fe5052e18373c12ab5c73372e06aff450dc0b978e0bd6d69486546"
+      }
+    },
+    {
+      "id": "policy-P024-conflict",
+      "generation_key": "1a6582034c813ddf5936a90193b12182a8f1e09fec23e23fcb363ad98488035a",
+      "jev_key": "0ce9d6954ed66a60f755b07bf6be55df8e2f9891a170462e316ee6c3b676805a",
+      "trajectory_sha256": "e239b78e858459a548a93878ad9e756e9e2d400534bc194bbadf000268b0b301",
+      "seed": 457641999,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan explicitly states a 50-day cancellation notice in Document A, while Document B claims a 2-day notice, creating a conflict.\n**Answer:** CONFLICT\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan explicitly states a 50-day cancellation notice in Document A, while Document B claims a 2-day notice, creating a conflict.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.9,
+        "quality": 3.63,
+        "key": "0ce9d6954ed66a60f755b07bf6be55df8e2f9891a170462e316ee6c3b676805a"
+      }
+    },
+    {
+      "id": "policy-P043-answerable",
+      "generation_key": "0b771531f3c41563fb731b4d042e33a5b2f3f12179bacb70edd2b3be7e7020df",
+      "jev_key": "dcccca11e5653355bccafa24aba133398d0c3762f32cc67d10ebb10b4c1852ba",
+      "trajectory_sha256": "5c253c73b58d076b0c27a9d3fed26832429684e8c9a8eb27ae25cd6074713f96",
+      "seed": 3748426721,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan explicitly states a team seat limit of 11 seats (Document A).\n**Final:** 11 seats\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan explicitly states a team seat limit of 11 seats (Document A).",
+        "answer": "11 seats"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.81,
+        "key": "dcccca11e5653355bccafa24aba133398d0c3762f32cc67d10ebb10b4c1852ba"
+      }
+    },
+    {
+      "id": "policy-P054-answerable",
+      "generation_key": "59d49ca58fa55ed88b6ac3e9df7f9bca462864d0b7632bc4bd96c6f6439e7a4d",
+      "jev_key": "37733bd6b585751fd499ac58fa96c19357889e44031679b325234fa168062f98",
+      "trajectory_sha256": "6d412275369b9a58e28ba5abee6ffa51d0e111e34d912f8941ec4b85ac9063b9",
+      "seed": 1136128902,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan's replacement delivery window is explicitly stated as 22 days in Document A.\n**Final:** 22 days\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's replacement delivery window is explicitly stated as 22 days in Document A.",
+        "answer": "22 days"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.86,
+        "key": "37733bd6b585751fd499ac58fa96c19357889e44031679b325234fa168062f98"
+      }
+    },
+    {
+      "id": "policy-P021-altered",
+      "generation_key": "27aaf21889a088e887ce0958816b2c49efc1f893803c6160a717a80ca0f629b9",
+      "jev_key": "7b0e70814417cb14cecea3020a825a0b365c7c8428f8cc45a5fa1e18d2584587",
+      "trajectory_sha256": "967d2f295762b1254484a18621ba2763c42ef1256325d6c7838d8a6e752ddb6c",
+      "seed": 1224724697,
+      "candidate": "P021's internal simulator defines 100 seconds per minute, overriding everyday standards.\n**FINAL:** 100 seconds",
+      "parsed": {
+        "explanation": "P021's internal simulator defines 100 seconds per minute, overriding everyday standards.",
+        "answer": "100 seconds"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.73,
+        "key": "7b0e70814417cb14cecea3020a825a0b365c7c8428f8cc45a5fa1e18d2584587"
+      }
+    },
+    {
+      "id": "policy-P043-altered",
+      "generation_key": "83ffb48a5c0585ebd63ebe6c665285c37a62e3012505448e30a2b310df061544",
+      "jev_key": "95c25cb930b47b9ffd1ee57321b1c2c36e892b222450c6a8aa7382fd0dbd23d2",
+      "trajectory_sha256": "713a73d03bc5b37d69691970aa6378fbb910aa7f1e5067a7e806e7f843f1c711",
+      "seed": 1574882250,
+      "candidate": "\n**Decisive Evidence:** The number of sides on a triangle in P043's internal simulator is explicitly stated as 4 sides, overriding everyday usage.\n**FINAL:** 4 sides\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The number of sides on a triangle in P043's internal simulator is explicitly stated as 4 sides, overriding everyday usage.",
+        "answer": "4 sides"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.8,
+        "key": "95c25cb930b47b9ffd1ee57321b1c2c36e892b222450c6a8aa7382fd0dbd23d2"
+      }
+    },
+    {
+      "id": "policy-P054-altered",
+      "generation_key": "f535ddd7903651d186cc2023ea4293db9b9a09cb14a7ed4dc737ff2023a9e336",
+      "jev_key": "c58a48fbd199a73394854c2c315b569e35fab3e7c609dda4188271d2624908bf",
+      "trajectory_sha256": "f05ef000e9fb7a8bbaabeebe5fc78b3999e1cbbf59fc4cfe15bf2d2bfb8b17cc",
+      "seed": 2799720486,
+      "candidate": "\n**Decisive Evidence:** The internal simulator uses 5 days in a week, overriding everyday usage.\n**Answer:** 5 days.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The internal simulator uses 5 days in a week, overriding everyday usage.",
+        "answer": "5 days."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.68,
+        "key": "c58a48fbd199a73394854c2c315b569e35fab3e7c609dda4188271d2624908bf"
+      }
+    },
+    {
+      "id": "policy-P089-answerable",
+      "generation_key": "8199e99d29d838256b2831a5e05e56acc099033b9f2b4cf1a8acc244c4d92ac2",
+      "jev_key": "4545c9976d6310d9c2595e7bff542ddac9bb1e114f4e38d14e8f1ea03658a311",
+      "trajectory_sha256": "f2e831280905562061d3efc33d5f2aa01b66b036a769e224519da29f347b2a52",
+      "seed": 722791382,
+      "candidate": "Decisive evidence states: \"For the Cedar plan, the warranty duration is 25 months.\"  \nFINAL: 25 months",
+      "parsed": {
+        "explanation": "Decisive evidence states: \"For the Cedar plan, the warranty duration is 25 months.\"",
+        "answer": "25 months"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.97,
+        "quality": 3.82,
+        "key": "4545c9976d6310d9c2595e7bff542ddac9bb1e114f4e38d14e8f1ea03658a311"
+      }
+    },
+    {
+      "id": "policy-P021-conflict",
+      "generation_key": "bd2eb62710878628651cd7314f6ce234267eb4c6092b105a84683cb5edb0d77a",
+      "jev_key": "128f6bbac32b6dfc7260797482480d823652853e1d445f6f8f49f0a566857456",
+      "trajectory_sha256": "d45e2c1c880ac132ad32aceb0e054c5cc63cedc60bef018a9f21f95dd17c5b5e",
+      "seed": 3730075603,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan's refund window is explicitly stated as 11 days in Document A and 37 days in Document B, creating a direct conflict.\n**Answer:** CONFLICT\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's refund window is explicitly stated as 11 days in Document A and 37 days in Document B, creating a direct conflict.",
+        "answer": "CONFLICT"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.75,
+        "key": "128f6bbac32b6dfc7260797482480d823652853e1d445f6f8f49f0a566857456"
+      }
+    },
+    {
+      "id": "policy-P064-missing",
+      "generation_key": "9d33899f9cc5e335be8b7b8dd52f53b5c634971e89cd0714d7b9bdfd3f7077bb",
+      "jev_key": "da2b3a1317dd88481f3a41f98b583a057f9ddc8249bee861608f805c6e65149f",
+      "trajectory_sha256": "c9fff9e09b5a861a9679e2bdf3a34281939add9144f70d3e920c63ee47a4d279",
+      "seed": 4209830958,
+      "candidate": "\nThe decisive evidence states that the annual service allowance for the Birch plan is 17 visits, while the Cedar plan's warranty duration is 19 months. Since the question asks for the annual service allowance for the Cedar plan, the evidence does not provide this directly.\n\nFINAL: UNKNOWN\n",
+      "parsed": {
+        "explanation": "The decisive evidence states that the annual service allowance for the Birch plan is 17 visits, while the Cedar plan's warranty duration is 19 months. Since the question asks for the annual service allowance for the Cedar plan, the evidence does not provide this directly.",
+        "answer": "UNKNOWN"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.52,
+        "key": "da2b3a1317dd88481f3a41f98b583a057f9ddc8249bee861608f805c6e65149f"
+      }
+    },
+    {
+      "id": "policy-P064-altered",
+      "generation_key": "877fc8da6ea472c835cc7036b9db0ec56d4452c6e1facd4a438df3f6c8e7793c",
+      "jev_key": "5ff757993168f0d2c0e5d0faa8bf1aa216b2a830f66c6412421753fb623b4fb2",
+      "trajectory_sha256": "0bf6da7af7d8aa97d0a3a9fe60c02baf63806ef4092222d41f3f846e01b293f4",
+      "seed": 2490306495,
+      "candidate": "\n**Decisive Evidence:** Internal simulator uses 90 minutes per hour, overriding everyday usage.\n**Answer:** 90 minutes.\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** Internal simulator uses 90 minutes per hour, overriding everyday usage.",
+        "answer": "90 minutes."
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.98,
+        "quality": 3.59,
+        "key": "5ff757993168f0d2c0e5d0faa8bf1aa216b2a830f66c6412421753fb623b4fb2"
+      }
+    },
+    {
+      "id": "policy-P036-answerable",
+      "generation_key": "de62e585470151ce617fb92e4807afd846aaa7f9ec2525610311b948f038272a",
+      "jev_key": "9947b2aac6262e28815d85f16f4161ae2b855a7fd367433e3e0c6658c2e1f6ca",
+      "trajectory_sha256": "549f1cceaeff7031c73653ca320c24999bd98b6916dca11242c46f5087e6e270",
+      "seed": 3477427994,
+      "candidate": "\n**Decisive Evidence:** The Cedar plan's refund window is explicitly stated to be 43 days (Document A).\n**Answer:** 43 days\n",
+      "parsed": {
+        "explanation": "**Decisive Evidence:** The Cedar plan's refund window is explicitly stated to be 43 days (Document A).",
+        "answer": "43 days"
+      },
+      "scores": {
+        "refused": false,
+        "correctness": 0.99,
+        "quality": 3.79,
+        "key": "9947b2aac6262e28815d85f16f4161ae2b855a7fd367433e3e0c6658c2e1f6ca"
+      }
+    }
+  ],
+  "ineligible_cases": [
+    {
+      "id": "policy-P036-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P067-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P089-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P043-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P095-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P095-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P054-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P007-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P016-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P021-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P035-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P067-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P087-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P035-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P089-conflict",
+      "case_type": "conflict",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    },
+    {
+      "id": "policy-P016-missing",
+      "case_type": "missing",
+      "attempts": 16,
+      "reason": "No approved success in the fixed candidate budget"
+    }
+  ],
+  "coverage": {
+    "missing": 9,
+    "altered": 16,
+    "answerable": 16,
+    "conflict": 7
+  },
+  "minimum_coverage_passed": true,
+  "minimum_per_type": 4,
+  "identity": {
+    "recipe_sha256": "2b49923ad05a761365b70258b6466e6cfcf347e7ca08b98394b5e20b69547f5a",
+    "source_sha256": "81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15",
+    "training_sha256": "10c51429e76053267879557fe462bca0aef087d8a05bbec5826e458870d4babe"
+  },
+  "questions_sha256": "2096262fb93a0d3dc1b764f1cebd416efd51b0e79e968887bbee6820d0803963",
+  "base_generation_unhinted": true
+}

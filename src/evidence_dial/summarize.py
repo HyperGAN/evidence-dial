@@ -108,21 +108,23 @@ def build(index_path: Path, out: Path):
         results['datasets'][dataset]=d
         # Secondary comparative analysis, added at the owner's request after
         # development selection was frozen. It cannot select a new candidate.
-        if 'lora' in measured:
-            d['comparisons_vs_lora']={}
+        for reference_arm in ['lora','lora_original']:
+            if reference_arm not in measured:continue
+            comparison_key='comparisons_vs_'+reference_arm
+            d[comparison_key]={}
             for arm,predictions in measured.items():
-                if arm in {'off','lora'}:continue
-                comparison={'candidate_arm':arm,'reference_arm':'lora',
-                    'used_for_selection':False,'paired_success_difference':paired(rows,predictions,measured['lora'])}
+                if arm in {'off',reference_arm}:continue
+                comparison={'candidate_arm':arm,'reference_arm':reference_arm,
+                    'used_for_selection':False,'paired_success_difference':paired(rows,predictions,measured[reference_arm])}
                 if dataset=='faith':
                     comparison['by_stratum']={name:paired(
                         [r for r in rows if r['dataset']==name],
                         [p for p in predictions if p['dataset']==name],
-                        [p for p in measured['lora'] if p['dataset']==name])
+                        [p for p in measured[reference_arm] if p['dataset']==name])
                         for name in sorted({r['dataset'] for r in rows})}
                 for field in ['audit_pattern','document_count']:
-                    if field in rows[0]:comparison['by_'+field]=subgroup_effects(rows,predictions,measured['lora'],field)
-                d['comparisons_vs_lora'][arm]=comparison
+                    if field in rows[0]:comparison['by_'+field]=subgroup_effects(rows,predictions,measured[reference_arm],field)
+                d[comparison_key][arm]=comparison
         maps={a:{p['id']:p for p in pp} for a,pp in measured.items()}
         for row in rows:
             meta={k:row[k] for k in ['id','family','dataset','case_type','source_id','source_revision','source_uri',

@@ -1,0 +1,21 @@
+{
+  "historical_project": "/ml2/deltaleague/qwen35-curation-retries",
+  "files": {
+    "docs/teacher-data.md": "4eecbb09d7fc9536b976fddbcfd7c6cee6a075424e22e340fee670c4fe7ec9ab",
+    "src/qwen35_sliders/teacher_data.py": "68fd359c52e552e82ee199bac23b78da98422796de703281d6f01383972223c1",
+    "src/qwen35_sliders/pair_cache.py": "4ba48d730cc1d54a8ae6c7b86eb71edf0b2d144ddd9170ad7a9ef3dbf41d25ff",
+    "src/qwen35_sliders/data.py": "6dcfb7c8e9c2cb8aa09588e13d0f42aad5c3d62c9065266a305881564204b7b1",
+    "src/qwen35_sliders/training.py": "fa6f6d00c108c0185289e63cf59b394926dc5705b890d03d05376e956cb16ccf"
+  },
+  "findings": [
+    "Jev through NanoGPT selects model-generated worked solutions using correctness>=.90 and quality>=3/4",
+    "Historical generation is reference-assisted, not an unhinted-success claim",
+    "Seed plus prompt/settings/generated text retained; seed alone insufficient",
+    "Final normalized neutral and positive hidden tensors cached together with exact tokens/history and generation/Jev provenance",
+    "Historical positive prompt includes the accepted worked solution; neutral contains identical question",
+    "Current Evidence Dial omitted successful-sample curation and provenance; its targets are direct gold hints"
+  ],
+  "user_authorized_fix_and_retry": true,
+  "prior_runs_preserved": true,
+  "new_training_updates": 0
+}
