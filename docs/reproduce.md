@@ -92,22 +92,40 @@ new stable `--attempt` name. FULL saves precede update-journal commits.
 
 ## Qualified observer
 
-The measured guard reused an existing, actual Qwen3-VL8B categorical
-image/text qualification. No probability threshold was fabricated. Its effective
-decoding was sampled at temperature0.7/top-k20/top-p0.8, as retained in the
-effective-decoding audit. A structural parser repair reuses first raw judgments;
-it never rerates them. Weak effect, incorrect answers, prose, native EOS and
-normal truncation are allowed; only catastrophic outputs fail the guard.
+The first v5 guard reused an existing Qwen3-VL8B image/text qualification.
+Its actual decoding was sampled at temperature0.7/top-k20/top-p0.8. It then
+rejected two outcomes explicitly allowed by the frozen text contract: a literal
+UNKNOWN label and a normal64-token cutoff. The old raw verdicts, guard states
+and qualified7-case proof remain intact. This is not a reason to erase a real
+repetition failure or convert an uncertain case into a pass.
 
-`observer-layout-v5.zip` contains the finite original source, contracts,
-package/model manifests and actual qualification receipts. It contains no
-weights or original image fixture bytes. `tools/observe_checkpoint.py` is the
-exact measured-host entrypoint, and intentionally requires that qualified
-interpreter/artifact layout. This provenance bundle is not a claim that the
-observer or FULL checkpoints silently transfer to arbitrary machines. On a new
-runtime, explicitly requalify the fixed detector before training/promotion;
-never fabricate a pass or erase a prior failure. The portable adapter format
-below is separate from the strict source-bound FULL/native-v2 training packets.
+A distinct native-text instrument was frozen and qualified on8 new fixtures:
+UNKNOWN,CONFLICT,A,19months, coherent wrong text, coherent token-limit truncation,
+pervasive repetition and gibberish. All8 first observations matched their fixed
+expectations. It explicitly uses greedy decoding and `use_model_defaults=False`;
+this does not retroactively change the older sampled instrument. Its scope is
+bounded English short answers/prose, not all media or languages. The Jev
+alternative returnedHTTP402 before a semantic result; no retry or fabricated
+probability followed.
+
+The active wrapper stages model weights before committing a semantic observation,
+so a loading-floor refusal stays unmeasured. Identical retained observations are
+reused. Audits in `guard_scope.py` bind the exact old v5 failure/source/output
+bytes and only the two proved contract contradictions. Original failed files
+are immutable. An audit permits a replacement assessment, not training or
+promotion: the exact checkpoint and disputed output group must pass the new
+qualified check. Any new confirmed catastrophe remains permanently blocked.
+G0.012's actual CONF repetition has no applicable scope audit.
+
+`repro/observer-layout-native-text-v1e.zip` contains the finite source, contracts,
+package/model manifests, actual8-case observations and qualification records.
+It contains no model weights or original image fixture bytes. The exact
+measured-host entrypoint `tools/observe_checkpoint.py` intentionally requires its
+qualified interpreter/artifact layout. The bundle does not silently qualify a
+new machine. Requalify a changed runtime explicitly before training/promotion;
+never fabricate a pass or automatically rerate a committed first observation.
+Portable adapter inference below is separate from strict source-bound FULL and
+native-v2 training packets.
 
 ## Development, selection and holdout
 

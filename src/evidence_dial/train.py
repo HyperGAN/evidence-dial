@@ -124,8 +124,8 @@ def train_chunk(out: Path, stop: int, data: Path, gpu: int):
         from .benchmark import file_sha
         if json.loads(guard_path.read_text())['checkpoint']['sha256']!=file_sha(latest):
             raise ValueError('Passing guard must bind the exact latest committed FULL')
-    if (out / "candidate-failed.json").exists():
-        raise ValueError("Catastrophically failed candidate cannot resume")
+    from .guard_scope import admit
+    admit(out,checkpoint=latest)
     with Resources(gpu, out / f"resources-{completed:06d}-to-{stop:06d}.json") as resource:
         with open_response(cfg, resume=latest, restored_from=str(latest.resolve())) as session:
             assert session.game.completed_steps == completed
@@ -170,3 +170,37 @@ def check_raw_generation(artifact: Path, data: Path, out: Path, gpu: int):
                 "output":output, "id":row["id"], "teacher_cache_loaded":False,
                 "critic_or_optimizer_constructed":False, "new_training_updates":0,
                 "manifest":run.manifest})
+
+
+def recover_outputs(out: Path, gpu: int):
+    """Finish exports/probes of an interrupted committed update, without updates."""
+    import torch
+    from particle_sliders.lifecycle import SessionConfig
+    from particle_sliders.response import open_response
+    from .evaluate import NativeGenerator, tokenizer
+    from .resources import Resources
+    if (out/'candidate-failed.json').exists():
+        raise ValueError('A known failed LR candidate cannot generate or resume')
+    latest=sorted(out.glob('FULL-*.pt'))[-1]
+    step=int(latest.stem.split('-')[-1])
+    if not 0<step<=128:raise ValueError('Only a committed unfinished declared cohort')
+    if (out/f'probes-{step:06d}.json').exists():
+        raise ValueError('Boundary outputs already retained; observe them rather than regenerate')
+    cfg=SessionConfig.from_dict(json.loads((out/'session.json').read_text()))
+    with Resources(gpu,out/f'recover-{step:06d}-resources.json'):
+        with open_response(cfg,resume=latest,restored_from=str(latest.resolve())) as session:
+            assert session.game.completed_steps==step
+            for name,export in [('RAW',session.export),('NATIVE',session.export_inference)]:
+                path=out/f'{name}-{step:06d}.pt'
+                if not path.exists():export(path,selection='raw')
+            dev=read_jsonl(Path(__file__).resolve().parents[2]/'artifacts/data/policy-v1/dev.jsonl')
+            gen=NativeGenerator(session.game.backend.model,tokenizer())
+            probes=[]
+            with session.game.backend.slider.scaled(1.):
+                for kind in ['answerable','missing','conflict','altered']:
+                    row=next(r for r in dev if r['case_type']==kind)
+                    gen.capture_path=out/'probe-native'/f"{step:06d}-{row['id']}.json"
+                    text=gen([prompt(row)])[0]
+                    probes.append({'id':row['id'],'output':text,'native':gen.last})
+            write_json(out/f'probes-{step:06d}.json',{'checkpoint':step,'strength':1,'probes':probes,
+                'selection_metric_used':False,'guard_status':'pending','recovery_new_training_updates':0})

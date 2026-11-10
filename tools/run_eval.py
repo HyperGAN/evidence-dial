@@ -25,7 +25,7 @@ def main():
     gpu=int(values[values.index('--gpu')+1]) if '--gpu' in values else 1
     os.environ['CUDA_VISIBLE_DEVICES']=subprocess.check_output(['nvidia-smi',f'--id={gpu}',
         '--query-gpu=uuid','--format=csv,noheader'],text=True).strip()
-    names=['protocol','io','resources','faith_diagnostics','evaluate','report','benchmark','holdout','cli']
+    names=['protocol','io','resources','faith_diagnostics','evaluate','report','benchmark','guard_scope','holdout','cli']
     capture=root/'artifacts/execution-sources';capture.mkdir(parents=True,exist_ok=True)
     files={}
     for name in names+['binding']:

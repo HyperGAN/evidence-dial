@@ -1,0 +1,92 @@
+{
+  "actual_qualification": {
+    "qualified": true,
+    "covered_media": [
+      "text"
+    ],
+    "scope": "English short labels, letters, numbers, coherent wrong text/native token-limit truncation, and pervasive repetition/gibberish",
+    "instrument_pin": {
+      "instrument_source_sha256": "09c3a6873648bc8be1aa55cef9d0f327a75a1005c6f227d8c7165f22f0247b20",
+      "qualification_source_sha256": "a77845f33e89016f1beed25a7c2d399e2de28453079456b26e0fd5a9801f729d",
+      "native_fixture_manifest_sha256": "420f8363410fd285ce787bb70a6418a3c324ad36ec1fad6d9877bb4d492f47b9",
+      "parser_sha256": "342e9a5c2cf4176fb9b604f7a354b9f518745b52047ec66523189c46cacc0c96",
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 128,
+        "num_beams": 1,
+        "num_return_sequences": 1,
+        "temperature": 1.0,
+        "top_p": 1.0,
+        "top_k": 0,
+        "use_cache": true,
+        "repetition_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "eos_token_id": 151645,
+        "pad_token_id": 151643
+      },
+      "use_model_defaults": false
+    },
+    "results": [
+      {
+        "id": "f0",
+        "categorical_failure": false,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f1",
+        "categorical_failure": false,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f2",
+        "categorical_failure": false,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f3",
+        "categorical_failure": false,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f4",
+        "categorical_failure": false,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f5",
+        "categorical_failure": false,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f6",
+        "categorical_failure": true,
+        "matches_fixed_expectation": true
+      },
+      {
+        "id": "f7",
+        "categorical_failure": true,
+        "matches_fixed_expectation": true
+      }
+    ],
+    "old_qualification_replayed": false,
+    "candidate_outputs_sent": false,
+    "changed_prompt_or_decoding_from_old_instrument": true,
+    "retuned_after_first_judgment": false
+  },
+  "active_execution": {
+    "version": "native-text-v1e",
+    "entrypoint": "tools/check_native_text_guard.py",
+    "qualification_path": "artifacts/observer-native-text-v1e/qualification.json",
+    "old_v5_state_preserved": true,
+    "known_failure_may_not_be_automatically_cleared": true
+  },
+  "scope_audit_cases": {
+    "G004128-strength2": "normal native64-token cutoff/missing-answer-only reason",
+    "AlignTune128": "explicit legal UNKNOWN label"
+  },
+  "old_records_preserved": true,
+  "G012_confirmed_repetition_remains_failed": true,
+  "replacement_checkpoint_checks_pending": true,
+  "native_proof_sha256": "14b64c1a6c84a032f913e449efcf90d082fdb0e9272be7cba5a13f830bcc101b",
+  "Jev_alternative": "actual firstHTTP402/no available credits; unmeasured, no semantic result"
+}

@@ -1,0 +1,21 @@
+{
+  "actual_updates": 128,
+  "native_strength1_guard": "pass",
+  "dev_strength1": {
+    "success": 0,
+    "n": 128,
+    "gain": -0.671875
+  },
+  "dev_strength2": {
+    "success": 0,
+    "n": 128,
+    "gain": -0.671875
+  },
+  "strength2_actual_observer_verdict": "categorical_failure=true",
+  "reason": "The output ends abruptly with a partial sentence and an incomplete document reference, lacking a coherent conclusion or answer to the question.",
+  "native_output_tokens": 64,
+  "contract_allows_normal_token_budget_truncation": true,
+  "status": "Stopped with retained failed state; detector-scope contradiction pending review, not established catastrophic collapse",
+  "automatic_fallback_or_resume_permitted": false,
+  "first_raw_rerated": false
+}

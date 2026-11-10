@@ -1,10 +1,7 @@
 {
-  "version": "v5",
-  "qualification_path": "artifacts/observer-context-v5/qualification.json",
-  "adapter_source": {
-    "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/check_text_guard.py",
-    "bytes": 8892,
-    "sha256": "0ccbca004c55b9936002568b5d44bacb02cfabe75c507a710055fe2c14aaea08"
-  },
-  "no_semantic_rerating": true
+  "version": "native-text-v1e",
+  "entrypoint": "tools/check_native_text_guard.py",
+  "qualification_path": "artifacts/observer-native-text-v1e/qualification.json",
+  "old_v5_state_preserved": true,
+  "known_failure_may_not_be_automatically_cleared": true
 }

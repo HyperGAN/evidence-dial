@@ -18,8 +18,10 @@ tensor-exact FULL0 restoration, and native-only RAW generation. Evidence is in
 [`artifacts/evidence`](artifacts/evidence). **G0.012 stopped at step32** after a
 qualified catastrophic check found degenerative `CONF` repetition. Its saved
 FULL/RAW checkpoints stay intact and cannot resume or enter selection. G0.004
-completed128 updates and passed the final catastrophic guard; strength1 scored
-0/128 on development, and strength2 is running. G0.001 remains pending. This is separate from effect
+completed128 updates. Both nominal strengths scored0/128 on development. Its
+old strength2 check mistook a permitted64-token cutoff for catastrophe; the
+original record is retained and the replacement check is pending. G0.001 is
+training from its saved, qualified step2 state. This is separate from effect
 ranking and is not a zero score for an unmeasured RAW128.
 
 The pipeline uses CuratorKIT schema checks, exact deduplication and exports;
@@ -105,3 +107,11 @@ Public curated corpus: [ntc-ai/evidence-dial-policies](https://huggingface.co/da
 It is ungated and its uploaded training bytes were checked against the frozen
 local source. Public live Space creation returned HTTP402 (free ZeroGPU limit);
 the declared static explorer fallback is being prepared.
+
+The initial text checker also flagged the explicitly legal `UNKNOWN` label.
+Two narrow audits preserve these old verdicts as out-of-contract, unmeasured
+checks; they do not grant a healthy result. A distinct native-text instrument
+passed8 frozen coverage cases with explicit greedy decoding. Original first
+judgments and the earlier7-case proof are retained. New checkpoint checks are
+required before promotion, and G0.012's real repetition failure stays blocked.
+See `artifacts/evidence/native-text-qualification.json` and the source bundle.

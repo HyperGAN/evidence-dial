@@ -18,6 +18,8 @@ def file_sha(path):
 
 
 def particle(artifact: Path, rows_path: Path, out: Path, strength: float, gpu: int):
+    from .guard_scope import admit
+    admit(artifact.parent,checkpoint=artifact.parent/'FULL-000128.pt')
     from particle_sliders.inference import open_inference
     from .evaluate import NativeGenerator, evaluate_rows, tokenizer
     from .resources import Resources
@@ -64,8 +66,10 @@ def select(data: Path, baseline: Path, candidates: list[dict], out: Path, *, fai
     results=[]
     for candidate in candidates:
         run_path=Path(candidate['run'])
-        if candidate['g_rate'] in failed_rates or (run_path/'candidate-failed.json').exists():
+        if candidate['g_rate'] in failed_rates:
             raise ValueError('A known failed candidate cannot be promoted')
+        from .guard_scope import admit
+        admit(run_path,checkpoint=run_path/'FULL-000128.pt')
         if candidate in extra and [candidate['g_rate'],candidate['strength']] not in declaration['pairs']:
             raise ValueError('Undeclared fallback strength')
         version=json.loads((Path(__file__).resolve().parents[2]/'configs/active-observer.json').read_text())['version']

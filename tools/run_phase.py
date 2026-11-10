@@ -16,7 +16,7 @@ from evidence_dial.io import write_json
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument('phase',choices=['train','fresh','native-check'])
+    p.add_argument('phase',choices=['train','fresh','native-check','recover-outputs'])
     p.add_argument('--run',type=Path,required=True)
     p.add_argument('--stop',type=int)
     p.add_argument('--rate',type=float)
@@ -29,7 +29,7 @@ def main():
     capture=root/'artifacts/execution-sources'
     capture.mkdir(parents=True,exist_ok=True)
     files={}
-    for name in ['train','binding','evaluate','faith_diagnostics','protocol','resources','io']:
+    for name in ['train','binding','evaluate','faith_diagnostics','protocol','resources','io','guard_scope','benchmark']:
         source=root/f'src/evidence_dial/{name}.py'
         content=source.read_bytes();sha=hashlib.sha256(content).hexdigest()
         dest=capture/f'{name}-{sha}.py'
@@ -54,8 +54,10 @@ def main():
             module.train_chunk(args.run,args.stop,root/'artifacts/data/policy-v1',args.gpu)
         elif args.phase=='fresh':
             module.fresh_arm(args.run,root/'artifacts/cache/teacher-v1',args.rate,args.gpu,args.reference)
-        else:
+        elif args.phase=='native-check':
             module.native_check(args.run,root/'artifacts/cache/teacher-v1',root/'artifacts/data/policy-v1',args.rate,args.gpu)
+        else:
+            module.recover_outputs(args.run,args.gpu)
     except BaseException as error:
         write_json(receipt.with_suffix('.terminal.json'),{'state':'failed','error':repr(error),'seconds':time.time()-started,'time':time.time()})
         raise

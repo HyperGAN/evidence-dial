@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "arm": "particle-raw-7321965cf493c41ccef6cefc0877c1494c6bf9e3cc46dfed9d478177b3926839-strength-1",
+    "teacher": false,
+    "complete": true,
+    "measured": 128,
+    "declared": 128,
+    "success_rate": 0.0,
+    "by_type": {
+      "answerable": {
+        "n": 32,
+        "success_rate": 0.0
+      },
+      "conflict": {
+        "n": 32,
+        "success_rate": 0.0
+      },
+      "altered": {
+        "n": 32,
+        "success_rate": 0.0
+      },
+      "missing": {
+        "n": 32,
+        "success_rate": 0.0
+      }
+    },
+    "this_execution_seconds": 413.6210787789896,
+    "generation_seconds": 412.74243083188776,
+    "generated_tokens": 4777
+  },
+  "paired_effect": {
+    "complete": true,
+    "measured_pairs": 128,
+    "declared": 128,
+    "missing_on": [],
+    "missing_off": [],
+    "effect_gain": -0.671875,
+    "paired_family_bootstrap_95ci": [
+      -0.7265625,
+      -0.6171875
+    ],
+    "bootstrap_replicates": 10000,
+    "cluster_count": 32,
+    "gains": 0,
+    "losses": 86,
+    "unchanged": 42,
+    "claim": "no positive observed gain"
+  },
+  "strict_protocol_unchanged": true
+}

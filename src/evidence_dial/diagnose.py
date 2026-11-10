@@ -10,8 +10,8 @@ def response_error(artifact: Path, cache: Path, out: Path, strengths, gpu=1):
     from particle_sliders.inference import open_inference
     from .resources import Resources
     if out.exists():raise FileExistsError('Completed diagnostics are retained, not replayed')
-    if (artifact.parent/'candidate-failed.json').exists():
-        raise ValueError('Do not generate again from a known failed LR candidate')
+    from .guard_scope import admit
+    admit(artifact.parent,checkpoint=artifact.parent/'FULL-000128.pt')
     rows=torch.load(cache/'responses.pt',map_location='cpu',weights_only=False)
     index=json.loads((cache/'index.json').read_text())['rows']
     assert len(rows)==len(index)

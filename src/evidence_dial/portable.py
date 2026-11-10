@@ -22,6 +22,8 @@ FORMAT='evidence-dial-raw-routed-adapter-v1'
 
 
 def export(full: Path, native: Path, out: Path, *, guard: Path):
+    from .guard_scope import admit
+    admit(full.parent,checkpoint=full)
     import torch
     from safetensors.torch import save_file
     from particle_sliders.lifecycle import read_packet
@@ -83,6 +85,8 @@ class Portable:
         else:
             from huggingface_hub import snapshot_download
             root=Path(snapshot_download(str(directory),allow_patterns=['particle_adapter.json','particle_adapter.safetensors']))
+        if (root/'candidate-failed.json').exists():
+            raise ValueError('Retained failed candidate cannot run inference')
         config=json.loads((root/'particle_adapter.json').read_text())
         if (config['format'],config['base_model'],config['base_revision'],config['weights_kind'],config['ema_decay'])!=(FORMAT,MODEL,REVISION,'raw',None):
             raise ValueError('Unknown adapter/base identity or averaged weights refused')

@@ -18,11 +18,12 @@ def evaluate(selection: Path, data: Path, out: Path, arm: str, gpu: int, *,
         eligible=[r for r in frozen['selected_ties'] if Path(r['run']).resolve()==adapter.parent.resolve()]
         if not eligible or strength not in {1.,2.,*(float(r['strength']) for r in eligible)}:
             raise ValueError('Holdout can report nominal strengths of the dev-selected rate plus frozen selected fallbacks')
-        if (adapter.parent/'candidate-failed.json').exists():
-            raise ValueError('Known failed candidate cannot be promoted')
+        from .guard_scope import admit
+        admit(adapter.parent,checkpoint=adapter.parent/'FULL-000128.pt')
     out.mkdir(parents=True,exist_ok=True)
     receipt={'selection_sha256':file_sha(selection),'input_sha256':file_sha(data),
-             'arm':arm,'adapter_sha256':file_sha(adapter) if adapter and adapter.is_file() else None,
+             'arm':arm,'adapter_sha256':file_sha(adapter) if adapter and adapter.is_file() else
+                       file_sha(adapter/'adapter_model.safetensors') if adapter else None,
              'strength':strength if arm=='particle' else None}
     path=out/'frozen-inputs.json'
     if path.exists() and json.loads(path.read_text())!=receipt:
@@ -37,13 +38,13 @@ def evaluate(selection: Path, data: Path, out: Path, arm: str, gpu: int, *,
         model=load_base()
         if arm=='lora':
             from peft import PeftModel
-            if (adapter.parent/'candidate-failed.json').exists():
-                raise ValueError('Known failed supervised candidate')
+            from .guard_scope import admit
+            admit(adapter.parent,checkpoint=adapter.parent/'FULL-000128-manifest.json')
             model=PeftModel.from_pretrained(model,str(adapter),is_trainable=False).eval()
         elif arm!='off':
             raise ValueError('Unknown arm')
         return evaluate_rows(rows,out,NativeGenerator(model,tokenizer()),
-                             arm='off' if arm=='off' else 'aligntune-lora',resource=resource)
+                             arm='off' if arm=='off' else 'aligntune-lora-raw-'+receipt['adapter_sha256'],resource=resource)
 
 
 def prepare_strength_guard(run: Path, predictions: Path, strength: float):

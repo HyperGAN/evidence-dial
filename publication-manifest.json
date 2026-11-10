@@ -11,24 +11,29 @@
       "sha256": "c06269932679b9c91869ac0f325831d5a6485a12409767e63cddf66c84445994"
     },
     {
+      "path": "src/evidence_dial/guard_scope.py",
+      "bytes": 6359,
+      "sha256": "1f6261ff94c87cbf8403b51b8b97b14d4509371b4e23680eb99661d4d9ca0194"
+    },
+    {
       "path": "src/evidence_dial/aligntune_train.py",
       "bytes": 5604,
       "sha256": "3fc302150cc0aa8af62fb49b21e827bb7d97e173b579c1385137052dd337f502"
     },
     {
       "path": "src/evidence_dial/portable.py",
-      "bytes": 7786,
-      "sha256": "e9e52c5debb7c535b48f602620a20e315fc181f8d5dbe1b12a8829263375b81a"
+      "bytes": 7991,
+      "sha256": "12ad1a0eb477ef6846e286febdee9b0fb3df88293953ecab1f1ae1cd7ed38468"
     },
     {
       "path": "src/evidence_dial/diagnose.py",
-      "bytes": 2490,
-      "sha256": "f7dd06413269ca80057c4cccaee8ad5d0717873681b4e2688221eaa258fff154"
+      "bytes": 2454,
+      "sha256": "d330de52ca2d84d244571edac3e7fbf52a82e7467ce532981e399a3a8284b74c"
     },
     {
       "path": "src/evidence_dial/benchmark.py",
-      "bytes": 5348,
-      "sha256": "acd5ae1345f17f37e91526f3a3b6cb7b9f15c5a7b1a2489e399cc71d592dfc3a"
+      "bytes": 5507,
+      "sha256": "449d711fe77d1f178d3190d9739ff69c3d7d792fb12fefe8f7382bdc60905be1"
     },
     {
       "path": "src/evidence_dial/__init__.py",
@@ -42,8 +47,8 @@
     },
     {
       "path": "src/evidence_dial/train.py",
-      "bytes": 9795,
-      "sha256": "c6381ffbb6e8b945fcbceb21419f84beaf4b050a22a66550ad504c901ed32312"
+      "bytes": 11860,
+      "sha256": "6ca515223d3c079b50e5721f03dd65cdd692241887e545f7692699bf3344ec33"
     },
     {
       "path": "src/evidence_dial/io.py",
@@ -87,8 +92,8 @@
     },
     {
       "path": "src/evidence_dial/holdout.py",
-      "bytes": 3604,
-      "sha256": "faf7e340cacb260ce496d23262061b6f21f7225587798450f6ab2cba05acc563"
+      "bytes": 3691,
+      "sha256": "3a1e365001b8f68b0b950797d0789a20b93154a791caab56d98648354e07aeef"
     },
     {
       "path": "src/lexica_evidence_dial.egg-info/SOURCES.txt",
@@ -136,6 +141,11 @@
       "sha256": "c7a97eef0177e2d686d24afaa8431d4e7d5320fc2c3cf5cfc18639e026316be8"
     },
     {
+      "path": "tests/test_guard_scope.py",
+      "bytes": 2534,
+      "sha256": "dc3d53242bba7ea0b89def308a48e4dfd1ef5223db547a9234889dbb45c16d54"
+    },
+    {
       "path": "tests/test_faith_diagnostics.py",
       "bytes": 806,
       "sha256": "43d40fd34894ee29cd340f11d0ec7ead85fef675cd4ee2fb5fff27f3a272ecff"
@@ -147,8 +157,8 @@
     },
     {
       "path": "tests/test_selection.py",
-      "bytes": 2222,
-      "sha256": "710a5e6033319a82f3d5a77db9c5b36fa6873da79a4e2f239198a7fe96dbf075"
+      "bytes": 2226,
+      "sha256": "bb17aa9295d3faf22fd236b709e976cf6c50da3e0ab787cfdfd05af27985ad1f"
     },
     {
       "path": "tools/bootstrap_sources.py",
@@ -162,8 +172,8 @@
     },
     {
       "path": "tools/build_guard_bundle.py",
-      "bytes": 2906,
-      "sha256": "2887cfb0affc34b12091a5f7dba24fa33afbe8bd483fe5d617d3f23eb0b7670e"
+      "bytes": 3622,
+      "sha256": "7dd2e6d2d603110ce6853ce1dae19cd1e994173ddb59d495c35e24bb53df695b"
     },
     {
       "path": "tools/qwen_observer_runtime.py",
@@ -177,13 +187,18 @@
     },
     {
       "path": "tools/run_phase.py",
-      "bytes": 3410,
-      "sha256": "65809de6be219d003402609b49553144b6c262bf626673761eaca18476e3fbac"
+      "bytes": 3549,
+      "sha256": "1b1d6ff8654ceedc42cc737eba78f3df47105f1ba6bfca6130bf36465617f768"
     },
     {
       "path": "tools/observe_checkpoint.py",
-      "bytes": 466,
-      "sha256": "00c45f66cd1d4e5d6b6b11c9cfae788eb2b05233629e6e671685a92987d8ff0c"
+      "bytes": 572,
+      "sha256": "aacc572237867dcabb2727833bb036ce4d8a9404e7649b43682817811fbf6316"
+    },
+    {
+      "path": "tools/qualify_jev_text.py",
+      "bytes": 3910,
+      "sha256": "0dbd0581e11fd8873c74e9a47bd643db386a0d21072799696cde42b315ddc635"
     },
     {
       "path": "tools/export_public_source.py",
@@ -191,9 +206,24 @@
       "sha256": "7483a633135af55f8e2b6c360bca83ff7347ac81e5690cdf88bec611521cddd8"
     },
     {
+      "path": "tools/native_text_instrument.py",
+      "bytes": 2745,
+      "sha256": "09c3a6873648bc8be1aa55cef9d0f327a75a1005c6f227d8c7165f22f0247b20"
+    },
+    {
+      "path": "tools/check_native_text_guard.py",
+      "bytes": 8858,
+      "sha256": "a2f3267d5d7db0c8b1dab476f52ab518fcb903bfec388c2051a7aa4e6013fffe"
+    },
+    {
       "path": "tools/run_eval.py",
-      "bytes": 2893,
-      "sha256": "ffd2bc40c0224518750edd1b07f97efaf7c1b23442593bb58888f61005ae8830"
+      "bytes": 2907,
+      "sha256": "6e13e637a23ada89d52fdb24b8f4d640804cf60e4589b674e0d539f760524d42"
+    },
+    {
+      "path": "tools/qualify_native_text.py",
+      "bytes": 4160,
+      "sha256": "a77845f33e89016f1beed25a7c2d399e2de28453079456b26e0fd5a9801f729d"
     },
     {
       "path": "configs/aligntune.json",
@@ -212,8 +242,13 @@
     },
     {
       "path": "configs/active-observer.json",
-      "bytes": 348,
-      "sha256": "22a99923c142b232aab99752644314a86342b2b44d66261cb634e429577fc175"
+      "bytes": 260,
+      "sha256": "dc469cf740f9a877aa6191eb963330b53360c3fe0541c7f6f73a6b6c3d4799b6"
+    },
+    {
+      "path": "configs/jev-native-text-guard-v1.json",
+      "bytes": 4872,
+      "sha256": "420f8363410fd285ce787bb70a6418a3c324ad36ec1fad6d9877bb4d492f47b9"
     },
     {
       "path": "configs/training-sources.lock.json",
@@ -237,8 +272,8 @@
     },
     {
       "path": "docs/reproduce.md",
-      "bytes": 8065,
-      "sha256": "3b7d3cf15aa03a29d630fca69663211523c9ed4c5c361ebf9bf19520bfbdb1fb"
+      "bytes": 9207,
+      "sha256": "03b5af78c7d812f2ec4dd0bb840a320e826c2b519f5fa4b00e68af6edbb7e4e3"
     },
     {
       "path": "demo/example.json",
@@ -261,9 +296,19 @@
       "sha256": "b176c35351f669fa8ff9f697b120af84327b23d4c00a27245de52beb24f4b396"
     },
     {
+      "path": "artifacts/evidence/particle-G004-dev-strength2.json",
+      "bytes": 1123,
+      "sha256": "f06e2deae6853330d54585b99173de5ab2a9c3f1bbdd9be06acf31ed17fb4d8b"
+    },
+    {
       "path": "artifacts/evidence/aligntune-dev-paired-effect.json",
       "bytes": 370,
       "sha256": "83fda37a462268a6e1857b0494b081218704d9363f17839e49a19fd49fcc34e0"
+    },
+    {
+      "path": "artifacts/evidence/native-text-qualification.json",
+      "bytes": 3013,
+      "sha256": "c0b200b26ce3f159fb2505c454bfcbb5f134fc6221edec1b5965233f163df931"
     },
     {
       "path": "artifacts/evidence/headroom.json",
@@ -276,9 +321,19 @@
       "sha256": "e443f31ce490603aa4e6a16f58528aeb88d0420e82fdaac32c389369bf12e0cd"
     },
     {
+      "path": "artifacts/evidence/particle-G004-dev-strength1.json",
+      "bytes": 1124,
+      "sha256": "2ee00248cc7f6f86bc8806a70d8be467befc54a85222c93a1af62bd12fcc9e99"
+    },
+    {
       "path": "artifacts/evidence/aligntune-dev-summary.json",
       "bytes": 533,
       "sha256": "8eeb2eab6036ccbd02d8125578a6d1ddfac46c29648a4a4adbc0990d99924d5a"
+    },
+    {
+      "path": "artifacts/evidence/particle-G004-guard-dispute.json",
+      "bytes": 753,
+      "sha256": "50f58fa6f4004d7e5d46be831390434e5991b7e5e8fac56e49913f258d594d18"
     },
     {
       "path": "artifacts/evidence/aligntune-exposure-audit.json",
@@ -327,8 +382,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6314,
-      "sha256": "6c4bcf643c7cf3e8599c2571f81182cbe55e1268c092f000c1c13bba8272af5c"
+      "bytes": 6984,
+      "sha256": "be698eb1eb57e49d88256834c01ba6c5bb4b6ff0631521fffe02867cefb82a66"
     },
     {
       "path": "pyproject.toml",
@@ -337,8 +392,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 404,
-      "sha256": "0d0f9858039ed5ed9c139fa6b1e8308fb50c93df91bcbc607ceed33f04a070d4"
+      "bytes": 586,
+      "sha256": "e9a3cc89b0aca04984a42853b7bd5a259c88061caa4bffe3e47cf0cece575f21"
     },
     {
       "path": "LICENSE",
@@ -364,6 +419,11 @@
       "path": "repro/observer-layout-v5.zip",
       "bytes": 80789,
       "sha256": "1404bb1f511d59aba46b5aa3b7a3c887b9863703a4123f2dcf00d9c140347a03"
+    },
+    {
+      "path": "repro/observer-layout-native-text-v1e.zip",
+      "bytes": 129964,
+      "sha256": "ef3f973a789f88a320f3600cb5869e1fd3887b62ef0050bacf0ddb9545c591bf"
     }
   ],
   "research_history_included": false,

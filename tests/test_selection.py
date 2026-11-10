@@ -40,5 +40,5 @@ def test_failed_cohort_is_unmeasured_and_ties_preserved(tmp_path):
 def test_known_failed_candidate_never_promotes(tmp_path):
     data,off,candidates,failed=fixture(tmp_path)
     write_json(Path(candidates[0]['run'])/'candidate-failed.json',{'status':'failed'})
-    with pytest.raises(ValueError,match='known failed'):
+    with pytest.raises(ValueError,match='failed candidate'):
         select(data,off,candidates,tmp_path/'selection.json',failed=failed)

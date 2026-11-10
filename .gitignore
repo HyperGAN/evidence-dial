@@ -18,3 +18,9 @@ artifacts/*.lock
 # Registration/contact facts are for the submission form, not a public artifact.
 artifacts/publication/account-checks.json
 artifacts/portable-*/
+
+artifacts/native-text-guard-firsts/
+artifacts/native-text-guard-observations/
+artifacts/observer-native-text-*/
+artifacts/jev-native-text-qualification-v1/
+artifacts/typesafe-docs/
