@@ -125,6 +125,47 @@ updates at batch2. Particle training samples paired answer positions; LoRA
 samples whole cases. The journals, rather than a claim of identical exposure,
 establish what each optimizer saw.
 
+The measured supervised call was the following, in a separate child process.
+Use it only for a new empty run. If `training-result.json` already records128,
+skip training and reuse the saved adapter/checkpoint.
+
+```bash
+.venv/bin/python - <<'PY'
+from pathlib import Path
+import os, subprocess
+os.environ['CUDA_VISIBLE_DEVICES'] = subprocess.check_output(['nvidia-smi', '--id=1', '--query-gpu=uuid', '--format=csv,noheader'], text=True).strip()
+from evidence_dial.aligntune_train import train
+train(Path('artifacts/data/policy-curated-success-v1'), Path('artifacts/runs/aligntune-curated-v1'), 1, recipe_path=Path('artifacts/method-repair-v1/aligntune-curated-recipe-v1.json'))
+PY
+```
+
+That trainer also evaluates development after saving. In the measured retry,
+its reserved training allocator left insufficient shared free memory after8
+answers. All128 updates were already saved. The child was reaped and only
+missing development outputs were recovered using this fresh-process pattern;
+`evaluate_rows` preserves committed answers and reuses any retained capture.
+Use a new resource-attempt name after an inspected terminal failure:
+
+```bash
+.venv/bin/python - <<'PY'
+from pathlib import Path
+import os, subprocess
+os.environ['CUDA_VISIBLE_DEVICES'] = subprocess.check_output(['nvidia-smi', '--id=1', '--query-gpu=uuid', '--format=csv,noheader'], text=True).strip()
+from peft import PeftModel
+from evidence_dial.evaluate import load_base, tokenizer, NativeGenerator, evaluate_rows
+from evidence_dial.resources import Resources
+from evidence_dial.io import read_jsonl
+run = Path('artifacts/runs/aligntune-curated-v1')
+with Resources(1, run/'dev/resources-dev-only-recovery-v1.json') as resource:
+    model = PeftModel.from_pretrained(load_base(), str(run/'adapter'), is_trainable=False).eval()
+    evaluate_rows(read_jsonl(Path('artifacts/data/policy-curated-success-v1/dev.jsonl')), run/'dev', NativeGenerator(model, tokenizer()), arm='aligntune-lora', resource=resource)
+PY
+```
+
+The retained recovery verified the unchanged journal and weight SHA256, kept
+the original8 answer bytes, added120 missing cases, and passed its final guard.
+It did not resume the training optimizer. No completed recovery needs rerunning.
+
 Selection uses only the128 original development cases, strengths1 then2 and
 equal-case finished-answer ON−OFF success. The retry writes a separate
 `method-repair-v1/selection-v1.json` before any new holdout output. It cannot
@@ -301,3 +342,35 @@ verifier's `--faith` option when it is outside the measured default path.
 Resource receipts include mining, target preparation, training, inference and
 observer phases where measured. The report marks legacy telemetry gaps and
 does not interpret a provider's reported `estimated_cost=0` as verified billing.
+
+
+## Download the complete public results
+
+The final combined benchmark is pinned at
+`bbebf36c42294ea0814a397147b5809f1e846b04`. Its default configuration contains
+2,772 paired cases; the original release is preserved as a separate config.
+All result recomputation is CPU-only and requires no fresh model/API call:
+
+```bash
+hf download ntc-ai/evidence-dial-benchmark --repo-type dataset --revision bbebf36c42294ea0814a397147b5809f1e846b04 --local-dir .downloads/benchmark
+.venv/bin/python - <<'PYDATA'
+from datasets import load_dataset
+rows = load_dataset('ntc-ai/evidence-dial-benchmark', 'curated_paired_cases', revision='bbebf36c42294ea0814a397147b5809f1e846b04', split='test')
+assert len(rows) == 2772
+PYDATA
+.venv/bin/python tools/build_demo.py --release .downloads/benchmark/curated-retry-v1 --out demo/benchmark.json
+```
+
+`curated-retry-v1/results.json` records all strict comparisons and intervals;
+`paired-cases.jsonl` contains matched predictions; `predictions/` retains the
+individual arm files. `diagnostics/faith-mc-labelled-option-diagnostic-v1.json`
+is a post hoc formatting check, not a replacement primary score. The root
+manifest provides byte counts and SHA256 values. Training archive revision
+`310f70935d2b02a136ab6c0f7dfc2214347a5f48` preserves all six original/corrected
+run archives, including all 129 new particle FULL states. The model cards link
+the portable inference files and exact distribution proofs.
+
+Current CLI defaults point to recipe-v2 and the completed curation-v4. These
+prospective defaults were fixed after measurement; their executed earlier
+sources are retained in source-history. No measurement, proof or completed
+update was rerun to accommodate the defaults.

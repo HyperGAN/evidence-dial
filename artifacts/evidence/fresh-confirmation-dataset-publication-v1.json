@@ -1,0 +1,66 @@
+{
+  "repository": "ntc-ai/evidence-dial-grounding-tests",
+  "commit": "7ce92303e45c121a355a8a1c8a1d707bc6c4fc27",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 4056,
+      "sha256": "d5f8ed15beadec2e900fb7aca833e21522abc0279c344c76cf7b7cde1bd08d73",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "balanced-grounding-confirm-v1/curatorkit-provenance.jsonl",
+      "bytes": 2893302,
+      "sha256": "ef4490ba1f83fb8965cd7684d9d9298842aff483a3069ae5649eb2c3c61f00b5",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "balanced-grounding-confirm-v1/holdout.jsonl",
+      "bytes": 1368972,
+      "sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "balanced-grounding-confirm-v1/manifest.json",
+      "bytes": 1933,
+      "sha256": "95da75c52b8d019341f6ba7a6e8790a1bb6ee8fe23ac1a342840c6d5574ee999",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "balanced-grounding-v2/curatorkit-provenance.jsonl",
+      "bytes": 2870586,
+      "sha256": "0a4a4497a58ded1eef2487ab806f4c9e18ce0dbec1b11ab4a3f1b8f28fb2be63",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "balanced-grounding-v2/holdout.jsonl",
+      "bytes": 1354244,
+      "sha256": "49d8828b3885162ae5682cec3f49919d57de4ffbbf5e264be3b4eaf25ad2c720",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "balanced-grounding-v2/manifest.json",
+      "bytes": 1743,
+      "sha256": "5205e0d8693a8b4a67995a135f4516ac9305da05de80e9698e4d0e4297b99f70",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "evidence-interventions-v1/holdout.jsonl",
+      "bytes": 55960,
+      "sha256": "da8710f5e0c90ea281371e95731f321f8374b1b94675a11038985e5ba0e34241",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "evidence-interventions-v1/manifest.json",
+      "bytes": 1254,
+      "sha256": "bf8a145d866a88f0076ebe6f36bce49f4731e311d25574cb2a4cb0d462a77070",
+      "anonymous_HTTP_bytes_verified": true
+    }
+  ],
+  "fresh_confirmation_cases": 768,
+  "families": 32,
+  "source_files_frozen_before_training": true,
+  "earlier_test_file_bytes_unchanged": true,
+  "dataset_loader_verified": true,
+  "model_or_API_inference_calls": 0
+}

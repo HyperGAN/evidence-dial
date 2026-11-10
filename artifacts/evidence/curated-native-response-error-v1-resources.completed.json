@@ -1,0 +1,18 @@
+{
+  "state": "complete",
+  "pid": 2084445,
+  "gpu": 1,
+  "seconds": 55.437941603013314,
+  "gpu_lease_hours": 0.015399428431394174,
+  "sampled_peaks": {
+    "own_nvml": 7256145920,
+    "allocator_reserved": 6918504448,
+    "rss": 4073533440
+  },
+  "sampled_minima": {
+    "global_gpu_free": 6411780096,
+    "host_available": 82743508992
+  },
+  "time": 1794302075.3903847,
+  "failure": null
+}

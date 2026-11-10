@@ -107,5 +107,68 @@ phase met the one-device plan.
 The immutable declarations and source audit are under
 `artifacts/method-repair-v1`; actual curation/pair records are public in
 [the successful-sample archive](https://huggingface.co/datasets/ntc-ai/evidence-dial-curated-successes).
-Run records stay outside Git and their final archive publication is pending. No corrected-model
-quality improvement is claimed until complete matched evaluations are available.
+Run records stay outside Git and all original/corrected checkpoints and journals
+are public in the training archive. The complete corrected evaluation is below.
+
+## Development result before fresh confirmation
+
+The corrected run completed128 updates and passed its checkpoint and both
+nominal-strength output checks. Its development results are negative:
+strength1 scores39/128 and strength2 scores32/128, versus matched OFF86/128.
+The same48-case AlignTune control scores128/128. Strength1 is the fixed
+development selection because its equal-case effect is less negative; that
+selection does not establish an improvement. Strength2 emits UNKNOWN for all
+128 cases. Legal abstention passes the bounded output-failure instrument,
+while the per-type answer metrics expose excessive abstention.
+
+The supervised run completed and saved all128 updates in98.19s. Its subsequent
+development phase stopped at8 committed answers when shared GPU free memory
+fell below5GiB. The worker exited and released its training allocator. A named
+inference-only recovery retained those8 outputs and generated only the120
+missing ones; journal and weight hashes stayed unchanged. The first refusal
+and execution receipts remain. No training or completed answer was replayed.
+
+A separate CPU output-head audit uses only retained hidden vectors and the
+frozen tied embedding/output weights. All118 corrected positive positions put
+their intended next answer token first in float32 projection; all48 accepted
+answer prefixes are supported at their cached positions. This is teacher-forced
+training-state evidence, without an EOS check or new transformer forward. It
+does not establish finished-answer accuracy, choose a model, or explain the
+optimization failure by itself. Cache populations and answer tokenizations
+differ between original and corrected recipes; cross-recipe token counts are
+descriptive. See `artifacts/evidence/frozen-cache-output-head-audit-v1.json`.
+
+
+## Complete matched results and publication
+
+All declared comparisons are complete and independently verified: 17,868 native
+case-arm measurements across 2,772 distinct cases. Selected strength 1 scores
+501/900 on repeated FaithEval versus matched LoRA 270/900 (+25.67pp,
+source-question 95% interval [22.69,28.67]). Its missing-evidence count is
+278/300 versus 104/300. The fresh policy confirmation instead scores 209/768
+versus LoRA 477/768 (−34.90pp, family interval [−38.41,−31.38]), with 678 literal
+UNKNOWN responses. The original policy, cue and balanced comparisons also
+regress. Conflict handling remains weak. Neither test result changes selection.
+
+The strict FaithEval MC rule rejects a correct letter plus exact option text.
+A separate post hoc diagnostic accepts that unambiguous format, preserving the
+primary scorer. MC counts become 220/214/221 of 300 for new particle/matched
+LoRA/original LoRA; their particle choice-difference intervals include zero.
+Overall particle still wins 504/900 versus 325/900 and 416/900. The supported
+transfer result is unsupported-answer refusal, not established semantic choice
+superiority. FaithEval is repeated research, with no verified matched answerable
+QA controls. The fresh primary-use-case failure is equally part of the result.
+
+The public corrected particle and matched LoRA each reproduce four native
+saved generations. One and only one saved candidate was replayed from its RNG
+record: output tokens and hidden-state bits match exactly, maximum difference
+zero. Native teacher-relative SSE at strengths 1/2 is 2.936/5.504, worse than
+OFF; this remains diagnostic. The CPU head check above uses forced prefixes
+without EOS and does not contradict the failed free-generation result.
+
+The benchmark, model cards, all training archives and both-recipe explorer are
+linked from the final README. Complete native input pairing and all primary
+statistics were checked from retained outputs without rerunning evaluation.
+After measurement, prospective CLI defaults were repaired to select the frozen
+recipe-v2 and completed curation-v4; exact executed source versions remain
+captured by SHA. Those default changes did not modify measured weights or data.

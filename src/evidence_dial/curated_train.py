@@ -64,7 +64,7 @@ def native_check(out, cache):
 
 def main():
     p = argparse.ArgumentParser(); p.add_argument('phase', choices=['cache', 'native-check', 'train', 'raw-check'])
-    p.add_argument('--curation', type=Path, default=ROOT / 'artifacts/curation-success-v3')
+    p.add_argument('--curation', type=Path, default=ROOT / 'artifacts/curation-success-v4')
     p.add_argument('--cache', type=Path, default=ROOT / 'artifacts/cache/curated-success-v1')
     p.add_argument('--run', type=Path, default=ROOT / 'artifacts/runs/particle-curated-G001-v1')
     p.add_argument('--stop', type=int); p.add_argument('--attempt', default='first'); args = p.parse_args()

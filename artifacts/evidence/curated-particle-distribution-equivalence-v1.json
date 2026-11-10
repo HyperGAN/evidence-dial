@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "kind": "particle",
+  "implementation_equivalence_only": true,
+  "used_for_selection": false,
+  "new_training_updates": 0,
+  "teacher_or_critic_used": false,
+  "LoRA_checkpoint128_equals_final_adapter": null,
+  "public_learned_weight_values_unchanged": true,
+  "identity": {
+    "kind": "particle",
+    "run": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/runs/particle-curated-G001-v1",
+    "full_sha256": "0c003fec0ea8fe77292ade6b57372a1a7eb98808df82eceef1c1e1ca6864d7b6",
+    "probes_sha256": "b15b0b55c80b765dbb46792390d92698ce527a7cdcefcb43fba3fad9657d66b5",
+    "proof_source_sha256": "4a81830c06e716f600e92fdba8f119306887ea67dd1ac1e0cf8a1a1f2c58a9c8",
+    "portable_source_sha256": "fef5533b3efc842361cfd4094a4acca1a742635885341183973218fa769ac282"
+  },
+  "cases": [
+    {
+      "id": "policy-P055-answerable",
+      "native_token_ids_equal": true
+    },
+    {
+      "id": "policy-P015-missing",
+      "native_token_ids_equal": true
+    },
+    {
+      "id": "policy-P079-conflict",
+      "native_token_ids_equal": true
+    },
+    {
+      "id": "policy-P077-altered",
+      "native_token_ids_equal": true
+    }
+  ]
+}

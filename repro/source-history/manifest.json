@@ -169,6 +169,15 @@
       ]
     },
     {
+      "sha256": "2262d8699ffee0b8ca38bfdff7696cc78facb90832bea1c7332d396652eaa7b7",
+      "bytes": 3725,
+      "file": "2262d8699ffee0b8ca38bfdff7696cc78facb90832bea1c7332d396652eaa7b7.py",
+      "paths": [
+        "tools/audit_faith_mc_format.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "22a99923c142b232aab99752644314a86342b2b44d66261cb634e429577fc175",
       "bytes": 348,
       "file": "22a99923c142b232aab99752644314a86342b2b44d66261cb634e429577fc175.json",
@@ -434,15 +443,6 @@
       ]
     },
     {
-      "sha256": "4ac3fba1ce44409ca8d28846de8500b2250ee8ead0ecefb46129a53277e729cd",
-      "bytes": 8469,
-      "file": "4ac3fba1ce44409ca8d28846de8500b2250ee8ead0ecefb46129a53277e729cd.py",
-      "paths": [
-        "tools/build_demo.py"
-      ],
-      "commits": []
-    },
-    {
       "sha256": "4b160c11253b0f673191ec8d35fd72b4285c7e4cbb06b5f5b6ae267ccd124820",
       "bytes": 3349,
       "file": "4b160c11253b0f673191ec8d35fd72b4285c7e4cbb06b5f5b6ae267ccd124820.py",
@@ -580,6 +580,15 @@
       ]
     },
     {
+      "sha256": "6bacd799bd296a5ac54e00cc18816be589ee69b85e68240922b0857b4b452b8b",
+      "bytes": 4632,
+      "file": "6bacd799bd296a5ac54e00cc18816be589ee69b85e68240922b0857b4b452b8b.py",
+      "paths": [
+        "tools/check_cache_logits.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "6ca515223d3c079b50e5721f03dd65cdd692241887e545f7692699bf3344ec33",
       "bytes": 11860,
       "file": "6ca515223d3c079b50e5721f03dd65cdd692241887e545f7692699bf3344ec33.py",
@@ -701,8 +710,7 @@
       "bytes": 17223,
       "file": "81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15.py",
       "paths": [
-        "artifacts/execution-sources/curation-81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15.py",
-        "src/evidence_dial/curation.py"
+        "artifacts/execution-sources/curation-81d031f37f8dced21fc46c2b78757b2056d2aeb22c799b5b8f01a4477b6a5f15.py"
       ],
       "commits": []
     },
@@ -776,6 +784,15 @@
         "8b218dabad92e1aeba609c5543de80c8b9638477",
         "e7dd56615e1420cf5ae0e7dac77172e96b3352e1"
       ]
+    },
+    {
+      "sha256": "a191ea2e6cb5367ca4284893e845ceb79956c86ebd657a6e244c7801b8fc6fae",
+      "bytes": 9620,
+      "file": "a191ea2e6cb5367ca4284893e845ceb79956c86ebd657a6e244c7801b8fc6fae.py",
+      "paths": [
+        "tools/build_demo.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "a2f18dc80c02f58599f2862e206f705f0249ec1dc2653e6a29c95d79f99b6258",
@@ -1065,8 +1082,7 @@
       "bytes": 5758,
       "file": "d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815.py",
       "paths": [
-        "artifacts/execution-sources/curated_train-d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815.py",
-        "src/evidence_dial/curated_train.py"
+        "artifacts/execution-sources/curated_train-d8819088d1c717c8d83e718a4793e8cb1df856f095f542145992c521ffd3c815.py"
       ],
       "commits": []
     },
@@ -1158,6 +1174,15 @@
       ]
     },
     {
+      "sha256": "f1f14d55ceba1ee9c99de7995e0ec0da6a2ea99694120ce9d3db7fc8fe5dbaa6",
+      "bytes": 5758,
+      "file": "f1f14d55ceba1ee9c99de7995e0ec0da6a2ea99694120ce9d3db7fc8fe5dbaa6.py",
+      "paths": [
+        "src/evidence_dial/curated_train.py"
+      ],
+      "commits": []
+    },
+    {
       "sha256": "f327707d5a45f1f1b1482ad74062a7e6b2c65692f7420c474643775501f7c731",
       "bytes": 7606,
       "file": "f327707d5a45f1f1b1482ad74062a7e6b2c65692f7420c474643775501f7c731.py",
@@ -1177,6 +1202,15 @@
       "commits": [
         "7b20ba0f55d045cfacfce636d3127b6f8b9a72de"
       ]
+    },
+    {
+      "sha256": "f58b701733075c832467b0c3d6bf9877790846f6f644722fa9d9b10cb4c84b86",
+      "bytes": 17226,
+      "file": "f58b701733075c832467b0c3d6bf9877790846f6f644722fa9d9b10cb4c84b86.py",
+      "paths": [
+        "src/evidence_dial/curation.py"
+      ],
+      "commits": []
     },
     {
       "sha256": "f7dd06413269ca80057c4cccaee8ad5d0717873681b4e2688221eaa258fff154",

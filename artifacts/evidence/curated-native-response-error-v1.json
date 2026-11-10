@@ -1,0 +1,1909 @@
+{
+  "diagnostic_only": true,
+  "used_for_selection": false,
+  "training_cases_only": 48,
+  "artifact_sha256": "ab8d56c7ebcd6db0e559c5d37557f9c559e36eaa37560ed8a30d24f8ede300db",
+  "cache_sha256": "3a84c1786e058d308af11dd332da6a7283e4f3c2d93d5a9e20cd3fd0f094b540",
+  "results": {
+    "1": {
+      "native_mse": 1.1301203761565484,
+      "relative_teacher_sse": 2.936101948305095,
+      "rows": 118
+    },
+    "2": {
+      "native_mse": 2.1183454066009846,
+      "relative_teacher_sse": 5.503553609622492,
+      "rows": 118
+    }
+  },
+  "rows": [
+    {
+      "id": "policy-P036-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2375.85205078125,
+      "neutral_squared_error_sum": 1082.634765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 583.6627197265625,
+      "neutral_squared_error_sum": 279.8821716308594,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3599.053955078125,
+      "neutral_squared_error_sum": 1190.19921875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1881.10205078125,
+      "neutral_squared_error_sum": 530.9190063476562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2494.98681640625,
+      "neutral_squared_error_sum": 474.4031982421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2731.87548828125,
+      "neutral_squared_error_sum": 1465.91162109375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 696.3978271484375,
+      "neutral_squared_error_sum": 422.68475341796875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3432.05224609375,
+      "neutral_squared_error_sum": 1577.0172119140625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2234.28466796875,
+      "neutral_squared_error_sum": 486.188720703125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2449.47119140625,
+      "neutral_squared_error_sum": 999.5248413085938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 754.0595703125,
+      "neutral_squared_error_sum": 306.6827697753906,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1209.8050537109375,
+      "neutral_squared_error_sum": 640.6758422851562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3361.267333984375,
+      "neutral_squared_error_sum": 1102.8541259765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2154.884033203125,
+      "neutral_squared_error_sum": 509.4493103027344,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3386.121337890625,
+      "neutral_squared_error_sum": 1233.138916015625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2274.072265625,
+      "neutral_squared_error_sum": 528.4279174804688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3920.791259765625,
+      "neutral_squared_error_sum": 1352.036376953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1478.7099609375,
+      "neutral_squared_error_sum": 438.1573181152344,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3312.54296875,
+      "neutral_squared_error_sum": 1018.921630859375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2018.6048583984375,
+      "neutral_squared_error_sum": 488.3756408691406,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 3081.7431640625,
+      "neutral_squared_error_sum": 558.9392700195312,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3646.0771484375,
+      "neutral_squared_error_sum": 1364.1375732421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2334.90234375,
+      "neutral_squared_error_sum": 576.2511596679688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2956.87939453125,
+      "neutral_squared_error_sum": 965.9852905273438,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1585.2974853515625,
+      "neutral_squared_error_sum": 374.5949401855469,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3446.27880859375,
+      "neutral_squared_error_sum": 1123.3779296875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1651.354736328125,
+      "neutral_squared_error_sum": 381.76495361328125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2499.502685546875,
+      "neutral_squared_error_sum": 1149.9345703125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 640.3953857421875,
+      "neutral_squared_error_sum": 344.1240539550781,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2204.7607421875,
+      "neutral_squared_error_sum": 819.6654663085938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 733.1188354492188,
+      "neutral_squared_error_sum": 301.9761962890625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1258.64306640625,
+      "neutral_squared_error_sum": 700.5960083007812,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 4130.943359375,
+      "neutral_squared_error_sum": 1728.390869140625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2052.890625,
+      "neutral_squared_error_sum": 560.6868286132812,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2337.853759765625,
+      "neutral_squared_error_sum": 831.7780151367188,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 741.7930297851562,
+      "neutral_squared_error_sum": 348.36083984375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1109.43798828125,
+      "neutral_squared_error_sum": 602.6544799804688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3044.161865234375,
+      "neutral_squared_error_sum": 1383.894775390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1692.862548828125,
+      "neutral_squared_error_sum": 892.3338623046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1986.3062744140625,
+      "neutral_squared_error_sum": 367.072998046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 3,
+      "strength": 1,
+      "squared_error_sum": 2154.56640625,
+      "neutral_squared_error_sum": 1143.715576171875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3826.861328125,
+      "neutral_squared_error_sum": 1740.6947021484375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1709.9736328125,
+      "neutral_squared_error_sum": 509.075927734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 4070.25830078125,
+      "neutral_squared_error_sum": 1388.65478515625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2034.3858642578125,
+      "neutral_squared_error_sum": 480.523193359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-answerable",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2115.08984375,
+      "neutral_squared_error_sum": 496.9806213378906,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2226.546142578125,
+      "neutral_squared_error_sum": 983.9719848632812,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 702.2608642578125,
+      "neutral_squared_error_sum": 373.1429443359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1193.3148193359375,
+      "neutral_squared_error_sum": 698.2798461914062,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3398.89892578125,
+      "neutral_squared_error_sum": 1336.2130126953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1818.00244140625,
+      "neutral_squared_error_sum": 908.6339721679688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2369.797119140625,
+      "neutral_squared_error_sum": 445.83203125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 3,
+      "strength": 1,
+      "squared_error_sum": 2295.277587890625,
+      "neutral_squared_error_sum": 792.8173828125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2270.5078125,
+      "neutral_squared_error_sum": 1048.5579833984375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 599.4365844726562,
+      "neutral_squared_error_sum": 293.8254699707031,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2997.09619140625,
+      "neutral_squared_error_sum": 1093.6258544921875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2387.77099609375,
+      "neutral_squared_error_sum": 530.3496704101562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2315.775146484375,
+      "neutral_squared_error_sum": 449.32958984375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2453.41650390625,
+      "neutral_squared_error_sum": 1326.151123046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 634.9215087890625,
+      "neutral_squared_error_sum": 283.7838134765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 1985.68701171875,
+      "neutral_squared_error_sum": 732.4940185546875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 717.505859375,
+      "neutral_squared_error_sum": 327.4460754394531,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1202.31396484375,
+      "neutral_squared_error_sum": 653.0355834960938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3165.694091796875,
+      "neutral_squared_error_sum": 975.2232055664062,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2155.882568359375,
+      "neutral_squared_error_sum": 525.8056640625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2906.336669921875,
+      "neutral_squared_error_sum": 508.73809814453125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3222.97705078125,
+      "neutral_squared_error_sum": 1670.030029296875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 732.359375,
+      "neutral_squared_error_sum": 352.6261901855469,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2431.0751953125,
+      "neutral_squared_error_sum": 1171.193115234375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 589.1624145507812,
+      "neutral_squared_error_sum": 247.9858856201172,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2091.482177734375,
+      "neutral_squared_error_sum": 886.302978515625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 559.0296630859375,
+      "neutral_squared_error_sum": 284.57952880859375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3623.447265625,
+      "neutral_squared_error_sum": 1495.35107421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2162.372314453125,
+      "neutral_squared_error_sum": 425.3359680175781,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3486.778076171875,
+      "neutral_squared_error_sum": 1294.07763671875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1857.4658203125,
+      "neutral_squared_error_sum": 589.23876953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 3145.417724609375,
+      "neutral_squared_error_sum": 628.5025634765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3956.921875,
+      "neutral_squared_error_sum": 1380.8458251953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1956.4010009765625,
+      "neutral_squared_error_sum": 563.4113159179688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3456.1396484375,
+      "neutral_squared_error_sum": 1087.822998046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2147.23583984375,
+      "neutral_squared_error_sum": 500.2619323730469,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2561.40380859375,
+      "neutral_squared_error_sum": 396.7183532714844,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3403.183349609375,
+      "neutral_squared_error_sum": 1199.3216552734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2818.1533203125,
+      "neutral_squared_error_sum": 739.4332275390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3451.609619140625,
+      "neutral_squared_error_sum": 1025.805908203125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2098.05322265625,
+      "neutral_squared_error_sum": 422.4789123535156,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3718.501708984375,
+      "neutral_squared_error_sum": 1327.2589111328125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2625.685791015625,
+      "neutral_squared_error_sum": 610.3819580078125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-answerable",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2060.849853515625,
+      "neutral_squared_error_sum": 650.632568359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3240.64453125,
+      "neutral_squared_error_sum": 1185.513427734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2334.369140625,
+      "neutral_squared_error_sum": 573.49267578125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2345.727783203125,
+      "neutral_squared_error_sum": 508.22308349609375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 1933.046875,
+      "neutral_squared_error_sum": 605.3857421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 812.192138671875,
+      "neutral_squared_error_sum": 324.17926025390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1209.6795654296875,
+      "neutral_squared_error_sum": 678.4100952148438,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 4012.26513671875,
+      "neutral_squared_error_sum": 1696.771728515625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2688.73779296875,
+      "neutral_squared_error_sum": 593.6912231445312,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3231.68212890625,
+      "neutral_squared_error_sum": 1147.455322265625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2471.1337890625,
+      "neutral_squared_error_sum": 485.5667419433594,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2975.9443359375,
+      "neutral_squared_error_sum": 942.8101196289062,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 1638.0548095703125,
+      "neutral_squared_error_sum": 530.8060302734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 4002.52978515625,
+      "neutral_squared_error_sum": 1340.304443359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2607.458251953125,
+      "neutral_squared_error_sum": 507.4778747558594,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3537.795166015625,
+      "neutral_squared_error_sum": 1269.3427734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2438.255126953125,
+      "neutral_squared_error_sum": 530.0498657226562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2451.9248046875,
+      "neutral_squared_error_sum": 561.9306640625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3560.71337890625,
+      "neutral_squared_error_sum": 1426.8472900390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2108.443359375,
+      "neutral_squared_error_sum": 486.42523193359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-conflict",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 1985.638671875,
+      "neutral_squared_error_sum": 741.5595703125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-conflict",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 712.5408935546875,
+      "neutral_squared_error_sum": 287.65911865234375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-conflict",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 1103.8492431640625,
+      "neutral_squared_error_sum": 609.8080444335938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-missing",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 2449.8193359375,
+      "neutral_squared_error_sum": 1088.5775146484375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-missing",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 653.0253295898438,
+      "neutral_squared_error_sum": 321.9391174316406,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-altered",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3229.682373046875,
+      "neutral_squared_error_sum": 1047.0416259765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-altered",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2148.772705078125,
+      "neutral_squared_error_sum": 560.1185913085938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-altered",
+      "position": 2,
+      "strength": 1,
+      "squared_error_sum": 2353.256103515625,
+      "neutral_squared_error_sum": 456.13031005859375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-answerable",
+      "position": 0,
+      "strength": 1,
+      "squared_error_sum": 3445.10888671875,
+      "neutral_squared_error_sum": 1500.2520751953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-answerable",
+      "position": 1,
+      "strength": 1,
+      "squared_error_sum": 2079.033935546875,
+      "neutral_squared_error_sum": 508.81207275390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4017.198974609375,
+      "neutral_squared_error_sum": 1082.634765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1233.5821533203125,
+      "neutral_squared_error_sum": 279.8821716308594,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5766.8583984375,
+      "neutral_squared_error_sum": 1190.19921875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4098.845703125,
+      "neutral_squared_error_sum": 530.9190063476562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4952.63720703125,
+      "neutral_squared_error_sum": 474.4031982421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4310.501953125,
+      "neutral_squared_error_sum": 1465.91162109375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1283.5255126953125,
+      "neutral_squared_error_sum": 422.68475341796875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5591.6435546875,
+      "neutral_squared_error_sum": 1577.0172119140625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4230.43017578125,
+      "neutral_squared_error_sum": 486.188720703125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4452.31689453125,
+      "neutral_squared_error_sum": 999.5248413085938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2572.059814453125,
+      "neutral_squared_error_sum": 306.6827697753906,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2837.5498046875,
+      "neutral_squared_error_sum": 640.6758422851562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5533.3857421875,
+      "neutral_squared_error_sum": 1102.8541259765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4457.7685546875,
+      "neutral_squared_error_sum": 509.4493103027344,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5774.0048828125,
+      "neutral_squared_error_sum": 1233.138916015625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4526.10302734375,
+      "neutral_squared_error_sum": 528.4279174804688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 6779.3740234375,
+      "neutral_squared_error_sum": 1352.036376953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4219.30517578125,
+      "neutral_squared_error_sum": 438.1573181152344,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5508.46240234375,
+      "neutral_squared_error_sum": 1018.921630859375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4316.30517578125,
+      "neutral_squared_error_sum": 488.3756408691406,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 5511.9736328125,
+      "neutral_squared_error_sum": 558.9392700195312,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5712.24365234375,
+      "neutral_squared_error_sum": 1364.1375732421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P095-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4368.2666015625,
+      "neutral_squared_error_sum": 576.2511596679688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5476.931640625,
+      "neutral_squared_error_sum": 965.9852905273438,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4022.046142578125,
+      "neutral_squared_error_sum": 374.5949401855469,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5906.79736328125,
+      "neutral_squared_error_sum": 1123.3779296875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P087-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4169.56494140625,
+      "neutral_squared_error_sum": 381.76495361328125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4527.78369140625,
+      "neutral_squared_error_sum": 1149.9345703125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1301.498779296875,
+      "neutral_squared_error_sum": 344.1240539550781,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4127.564453125,
+      "neutral_squared_error_sum": 819.6654663085938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2361.29638671875,
+      "neutral_squared_error_sum": 301.9761962890625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2840.4296875,
+      "neutral_squared_error_sum": 700.5960083007812,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 6273.734375,
+      "neutral_squared_error_sum": 1728.390869140625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4963.998046875,
+      "neutral_squared_error_sum": 560.6868286132812,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4184.6416015625,
+      "neutral_squared_error_sum": 831.7780151367188,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2221.36328125,
+      "neutral_squared_error_sum": 348.36083984375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2367.969970703125,
+      "neutral_squared_error_sum": 602.6544799804688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5335.609375,
+      "neutral_squared_error_sum": 1383.894775390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 3236.138671875,
+      "neutral_squared_error_sum": 892.3338623046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4334.4033203125,
+      "neutral_squared_error_sum": 367.072998046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-altered",
+      "position": 3,
+      "strength": 2,
+      "squared_error_sum": 4378.65625,
+      "neutral_squared_error_sum": 1143.715576171875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5804.2685546875,
+      "neutral_squared_error_sum": 1740.6947021484375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 3640.691650390625,
+      "neutral_squared_error_sum": 509.075927734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 6217.4716796875,
+      "neutral_squared_error_sum": 1388.65478515625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4286.22802734375,
+      "neutral_squared_error_sum": 480.523193359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-answerable",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4419.0078125,
+      "neutral_squared_error_sum": 496.9806213378906,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4212.6474609375,
+      "neutral_squared_error_sum": 983.9719848632812,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2201.792724609375,
+      "neutral_squared_error_sum": 373.1429443359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2435.54345703125,
+      "neutral_squared_error_sum": 698.2798461914062,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5753.0341796875,
+      "neutral_squared_error_sum": 1336.2130126953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 3386.861328125,
+      "neutral_squared_error_sum": 908.6339721679688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4993.5205078125,
+      "neutral_squared_error_sum": 445.83203125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P035-altered",
+      "position": 3,
+      "strength": 2,
+      "squared_error_sum": 4732.9091796875,
+      "neutral_squared_error_sum": 792.8173828125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 3984.5302734375,
+      "neutral_squared_error_sum": 1048.5579833984375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1258.8878173828125,
+      "neutral_squared_error_sum": 293.8254699707031,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5222.4482421875,
+      "neutral_squared_error_sum": 1093.6258544921875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 5217.580078125,
+      "neutral_squared_error_sum": 530.3496704101562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4750.21728515625,
+      "neutral_squared_error_sum": 449.32958984375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4263.791015625,
+      "neutral_squared_error_sum": 1326.151123046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1299.6605224609375,
+      "neutral_squared_error_sum": 283.7838134765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 3802.56982421875,
+      "neutral_squared_error_sum": 732.4940185546875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2119.82275390625,
+      "neutral_squared_error_sum": 327.4460754394531,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2443.28662109375,
+      "neutral_squared_error_sum": 653.0355834960938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5359.58837890625,
+      "neutral_squared_error_sum": 975.2232055664062,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4299.185546875,
+      "neutral_squared_error_sum": 525.8056640625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 5341.923828125,
+      "neutral_squared_error_sum": 508.73809814453125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4960.04296875,
+      "neutral_squared_error_sum": 1670.030029296875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1375.5250244140625,
+      "neutral_squared_error_sum": 352.6261901855469,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4163.4228515625,
+      "neutral_squared_error_sum": 1171.193115234375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1266.131591796875,
+      "neutral_squared_error_sum": 247.9858856201172,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 3898.89990234375,
+      "neutral_squared_error_sum": 886.302978515625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1199.2642822265625,
+      "neutral_squared_error_sum": 284.57952880859375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5603.751953125,
+      "neutral_squared_error_sum": 1495.35107421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P032-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 5574.720703125,
+      "neutral_squared_error_sum": 425.3359680175781,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5864.55419921875,
+      "neutral_squared_error_sum": 1294.07763671875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4201.31103515625,
+      "neutral_squared_error_sum": 589.23876953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P002-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 5407.53759765625,
+      "neutral_squared_error_sum": 628.5025634765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 6225.73388671875,
+      "neutral_squared_error_sum": 1380.8458251953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4950.61279296875,
+      "neutral_squared_error_sum": 563.4113159179688,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5740.98046875,
+      "neutral_squared_error_sum": 1087.822998046875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4381.68994140625,
+      "neutral_squared_error_sum": 500.2619323730469,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P067-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4908.00537109375,
+      "neutral_squared_error_sum": 396.7183532714844,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5682.44189453125,
+      "neutral_squared_error_sum": 1199.3216552734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P065-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 5582.779296875,
+      "neutral_squared_error_sum": 739.4332275390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5873.8017578125,
+      "neutral_squared_error_sum": 1025.805908203125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4320.7705078125,
+      "neutral_squared_error_sum": 422.4789123535156,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5724.0556640625,
+      "neutral_squared_error_sum": 1327.2589111328125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 5469.53369140625,
+      "neutral_squared_error_sum": 610.3819580078125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P016-answerable",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4310.69873046875,
+      "neutral_squared_error_sum": 650.632568359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5468.21484375,
+      "neutral_squared_error_sum": 1185.513427734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4605.0224609375,
+      "neutral_squared_error_sum": 573.49267578125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P007-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4531.783203125,
+      "neutral_squared_error_sum": 508.22308349609375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 3819.731689453125,
+      "neutral_squared_error_sum": 605.3857421875,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2612.98876953125,
+      "neutral_squared_error_sum": 324.17926025390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P024-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2642.91943359375,
+      "neutral_squared_error_sum": 678.4100952148438,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5887.5927734375,
+      "neutral_squared_error_sum": 1696.771728515625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 5579.765625,
+      "neutral_squared_error_sum": 593.6912231445312,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5584.1591796875,
+      "neutral_squared_error_sum": 1147.455322265625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4420.9453125,
+      "neutral_squared_error_sum": 485.5667419433594,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5352.08056640625,
+      "neutral_squared_error_sum": 942.8101196289062,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 3800.218017578125,
+      "neutral_squared_error_sum": 530.8060302734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 6121.65234375,
+      "neutral_squared_error_sum": 1340.304443359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P043-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 5421.46044921875,
+      "neutral_squared_error_sum": 507.4778747558594,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5876.8994140625,
+      "neutral_squared_error_sum": 1269.3427734375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4950.1689453125,
+      "neutral_squared_error_sum": 530.0498657226562,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P054-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4647.86181640625,
+      "neutral_squared_error_sum": 561.9306640625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5756.11083984375,
+      "neutral_squared_error_sum": 1426.8472900390625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P089-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4022.81103515625,
+      "neutral_squared_error_sum": 486.42523193359375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-conflict",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 3787.792724609375,
+      "neutral_squared_error_sum": 741.5595703125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-conflict",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 2220.0869140625,
+      "neutral_squared_error_sum": 287.65911865234375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P021-conflict",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 2384.8359375,
+      "neutral_squared_error_sum": 609.8080444335938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-missing",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 4321.02734375,
+      "neutral_squared_error_sum": 1088.5775146484375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-missing",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 1306.1920166015625,
+      "neutral_squared_error_sum": 321.9391174316406,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-altered",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5556.3623046875,
+      "neutral_squared_error_sum": 1047.0416259765625,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-altered",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4564.46923828125,
+      "neutral_squared_error_sum": 560.1185913085938,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P064-altered",
+      "position": 2,
+      "strength": 2,
+      "squared_error_sum": 4841.201171875,
+      "neutral_squared_error_sum": 456.13031005859375,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-answerable",
+      "position": 0,
+      "strength": 2,
+      "squared_error_sum": 5554.8896484375,
+      "neutral_squared_error_sum": 1500.2520751953125,
+      "coordinates": 2048
+    },
+    {
+      "id": "policy-P036-answerable",
+      "position": 1,
+      "strength": 2,
+      "squared_error_sum": 4070.074462890625,
+      "neutral_squared_error_sum": 508.81207275390625,
+      "coordinates": 2048
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "complete": true,
+  "dataset": "fresh_confirmation",
+  "n": 768,
+  "families": 32,
+  "selection_sha256": "0fc605783fb93703bf811d7b516bc301f9d5e50856d91c25825900f1683c3c15",
+  "data_sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
+  "used_for_selection": false,
+  "selected_strengths": [
+    1
+  ],
+  "arms": {
+    "off": {
+      "successes": 354,
+      "success_rate": 0.4609375,
+      "prediction_sha256": "afe9c58a5c9d01a07bca0f3dee9f82a2051335ec52ce1dd1b28287182702705e",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 768,
+        "declared": 768,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.0,
+        "paired_family_bootstrap_95ci": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 32,
+        "gains": 0,
+        "losses": 0,
+        "unchanged": 768,
+        "claim": "no positive observed gain"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 192,
+            "success_rate": 0.53125
+          },
+          "conflict": {
+            "n": 192,
+            "success_rate": 0.03125
+          },
+          "altered": {
+            "n": 192,
+            "success_rate": 0.5833333333333334
+          },
+          "missing": {
+            "n": 192,
+            "success_rate": 0.6979166666666666
+          }
+        },
+        "answerable_count": 384,
+        "answerable_accuracy": 0.5572916666666666,
+        "unnecessary_abstention_rate": 0.19010416666666666
+      }
+    },
+    "hinted_particle_1": {
+      "successes": 343,
+      "success_rate": 0.4466145833333333,
+      "prediction_sha256": "ba11ece4b384ae1133686f26c688dfc2b7db05045680def96cce5b5aee4ad30e",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 768,
+        "declared": 768,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": -0.014322916666666666,
+        "paired_family_bootstrap_95ci": [
+          -0.044270833333333336,
+          0.015625
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 32,
+        "gains": 35,
+        "losses": 46,
+        "unchanged": 687,
+        "claim": "no positive observed gain"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 192,
+            "success_rate": 0.4375
+          },
+          "conflict": {
+            "n": 192,
+            "success_rate": 0.057291666666666664
+          },
+          "altered": {
+            "n": 192,
+            "success_rate": 0.4427083333333333
+          },
+          "missing": {
+            "n": 192,
+            "success_rate": 0.8489583333333334
+          }
+        },
+        "answerable_count": 384,
+        "answerable_accuracy": 0.4401041666666667,
+        "unnecessary_abstention_rate": 0.3463541666666667
+      }
+    },
+    "lora_original": {
+      "successes": 507,
+      "success_rate": 0.66015625,
+      "prediction_sha256": "0d8e45a062ba1c17a6b1ead3e50d3ed1ab7194000d5b36c121b0d81160a85858",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 768,
+        "declared": 768,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.19921875,
+        "paired_family_bootstrap_95ci": [
+          0.15625,
+          0.2421875
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 32,
+        "gains": 183,
+        "losses": 30,
+        "unchanged": 555,
+        "claim": "established positive gain under this protocol"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 192,
+            "success_rate": 0.8020833333333334
+          },
+          "conflict": {
+            "n": 192,
+            "success_rate": 0.17708333333333334
+          },
+          "altered": {
+            "n": 192,
+            "success_rate": 0.765625
+          },
+          "missing": {
+            "n": 192,
+            "success_rate": 0.8958333333333334
+          }
+        },
+        "answerable_count": 384,
+        "answerable_accuracy": 0.7838541666666666,
+        "unnecessary_abstention_rate": 0.19270833333333334
+      }
+    },
+    "particle_1": {
+      "successes": 209,
+      "success_rate": 0.2721354166666667,
+      "prediction_sha256": "dece06cff1e65150ca709ab5d2cdc066d2003b438f0fc06b27dddfef0c9a83f0",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 768,
+        "declared": 768,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": -0.18880208333333334,
+        "paired_family_bootstrap_95ci": [
+          -0.23958333333333334,
+          -0.13932291666666666
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 32,
+        "gains": 58,
+        "losses": 203,
+        "unchanged": 507,
+        "claim": "no positive observed gain"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 192,
+            "success_rate": 0.052083333333333336
+          },
+          "conflict": {
+            "n": 192,
+            "success_rate": 0.0
+          },
+          "altered": {
+            "n": 192,
+            "success_rate": 0.036458333333333336
+          },
+          "missing": {
+            "n": 192,
+            "success_rate": 1.0
+          }
+        },
+        "answerable_count": 384,
+        "answerable_accuracy": 0.044270833333333336,
+        "unnecessary_abstention_rate": 0.8229166666666666
+      }
+    },
+    "particle_2": {
+      "successes": 192,
+      "success_rate": 0.25,
+      "prediction_sha256": "9f27e23a6d28859f5280e891646ddd01b6de2734c42daeba456ac849dd017ee1",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 768,
+        "declared": 768,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": -0.2109375,
+        "paired_family_bootstrap_95ci": [
+          -0.2604166666666667,
+          -0.16276041666666666
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 32,
+        "gains": 58,
+        "losses": 220,
+        "unchanged": 490,
+        "claim": "no positive observed gain"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 192,
+            "success_rate": 0.0
+          },
+          "conflict": {
+            "n": 192,
+            "success_rate": 0.0
+          },
+          "altered": {
+            "n": 192,
+            "success_rate": 0.0
+          },
+          "missing": {
+            "n": 192,
+            "success_rate": 1.0
+          }
+        },
+        "answerable_count": 384,
+        "answerable_accuracy": 0.0,
+        "unnecessary_abstention_rate": 0.9947916666666666
+      }
+    },
+    "lora": {
+      "successes": 477,
+      "success_rate": 0.62109375,
+      "prediction_sha256": "a4866be7e9c0dddbe6087181ff80707d44517281c6fde40e2816a118a7cd0ee6",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 768,
+        "declared": 768,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.16015625,
+        "paired_family_bootstrap_95ci": [
+          0.12239583333333333,
+          0.19921875
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 32,
+        "gains": 157,
+        "losses": 34,
+        "unchanged": 577,
+        "claim": "established positive gain under this protocol"
+      },
+      "diagnostics": {
+        "by_type": {
+          "answerable": {
+            "n": 192,
+            "success_rate": 0.96875
+          },
+          "conflict": {
+            "n": 192,
+            "success_rate": 0.0
+          },
+          "altered": {
+            "n": 192,
+            "success_rate": 0.9114583333333334
+          },
+          "missing": {
+            "n": 192,
+            "success_rate": 0.6041666666666666
+          }
+        },
+        "answerable_count": 384,
+        "answerable_accuracy": 0.9401041666666666,
+        "unnecessary_abstention_rate": 0.026041666666666668
+      }
+    }
+  },
+  "comparisons": {
+    "particle_1_minus_lora": {
+      "complete": true,
+      "measured_pairs": 768,
+      "declared": 768,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.3489583333333333,
+      "paired_family_bootstrap_95ci": [
+        -0.3841145833333333,
+        -0.3138020833333333
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 76,
+      "losses": 344,
+      "unchanged": 348,
+      "claim": "no positive observed gain"
+    },
+    "particle_1_minus_lora_original": {
+      "complete": true,
+      "measured_pairs": 768,
+      "declared": 768,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.3880208333333333,
+      "paired_family_bootstrap_95ci": [
+        -0.42578125,
+        -0.3502604166666667
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 21,
+      "losses": 319,
+      "unchanged": 428,
+      "claim": "no positive observed gain"
+    },
+    "particle_2_minus_lora": {
+      "complete": true,
+      "measured_pairs": 768,
+      "declared": 768,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.37109375,
+      "paired_family_bootstrap_95ci": [
+        -0.4010416666666667,
+        -0.3424479166666667
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 76,
+      "losses": 361,
+      "unchanged": 331,
+      "claim": "no positive observed gain"
+    },
+    "particle_2_minus_lora_original": {
+      "complete": true,
+      "measured_pairs": 768,
+      "declared": 768,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.41015625,
+      "paired_family_bootstrap_95ci": [
+        -0.4440104166666667,
+        -0.375
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 20,
+      "losses": 335,
+      "unchanged": 413,
+      "claim": "no positive observed gain"
+    },
+    "hinted_particle_1_minus_lora": {
+      "complete": true,
+      "measured_pairs": 768,
+      "declared": 768,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.17447916666666666,
+      "paired_family_bootstrap_95ci": [
+        -0.22135416666666666,
+        -0.12630208333333334
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 61,
+      "losses": 195,
+      "unchanged": 512,
+      "claim": "no positive observed gain"
+    },
+    "hinted_particle_1_minus_lora_original": {
+      "complete": true,
+      "measured_pairs": 768,
+      "declared": 768,
+      "missing_on": [],
+      "missing_off": [],
+      "effect_gain": -0.21354166666666666,
+      "paired_family_bootstrap_95ci": [
+        -0.2565104166666667,
+        -0.16796875
+      ],
+      "bootstrap_replicates": 10000,
+      "cluster_count": 32,
+      "gains": 34,
+      "losses": 198,
+      "unchanged": 536,
+      "claim": "no positive observed gain"
+    }
+  },
+  "model_or_API_calls": 0
+}

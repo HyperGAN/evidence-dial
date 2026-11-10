@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "archives": [
+    {
+      "archive": "particle-curated-G001-RAW128.tar.gz",
+      "files": 510,
+      "all_inner_hashes_verified": true,
+      "base_weights_included": false,
+      "original_states_unchanged": true
+    },
+    {
+      "archive": "aligntune-curated-RAW128.tar.gz",
+      "files": 185,
+      "all_inner_hashes_verified": true,
+      "base_weights_included": false,
+      "original_states_unchanged": true
+    }
+  ],
+  "native_or_API_calls": 0
+}

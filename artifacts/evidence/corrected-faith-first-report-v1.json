@@ -1,0 +1,564 @@
+{
+  "complete": true,
+  "dataset": "repeated_FaithEval900",
+  "fresh_confirmation": false,
+  "used_for_selection": false,
+  "data_sha256": "1ec6b069fa509c070db541991953332769f85f1d4c31c3bcfc079a0429d202c0",
+  "selection_sha256": "0fc605783fb93703bf811d7b516bc301f9d5e50856d91c25825900f1683c3c15",
+  "arms": {
+    "off": {
+      "successes": 323,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.5666666666666667
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.03333333333333333
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.4766666666666667
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.4766666666666667,
+        "unnecessary_abstention_rate": 0.0
+      },
+      "prediction_sha256": "89993f2277148e664fcab3281ec8502f8ca726e72349d7b0b9a8188401756aaf",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.0,
+        "paired_family_bootstrap_95ci": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 0,
+        "losses": 0,
+        "unchanged": 900,
+        "claim": "no positive observed gain"
+      }
+    },
+    "hinted_particle_1": {
+      "successes": 337,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.6533333333333333
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.03666666666666667
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.43333333333333335
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.43333333333333335,
+        "unnecessary_abstention_rate": 0.0033333333333333335
+      },
+      "prediction_sha256": "bbaafeda9cfa8e2412aabd3e4029e816efd2273a7fe580672ab7a005409adf87",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.015555555555555555,
+        "paired_family_bootstrap_95ci": [
+          0.0011037527593818985,
+          0.029966703662597113
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 30,
+        "losses": 16,
+        "unchanged": 854,
+        "claim": "established positive gain under this protocol"
+      }
+    },
+    "lora_original": {
+      "successes": 375,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.5533333333333333
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.09666666666666666
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.6
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.6,
+        "unnecessary_abstention_rate": 0.0033333333333333335
+      },
+      "prediction_sha256": "1b6c857ece828575dda61a85b11c7b15b6b1b3ef9cee4fcb4ecbaf5185bd13da",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.057777777777777775,
+        "paired_family_bootstrap_95ci": [
+          0.0334066433627069,
+          0.08183906107385212
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 88,
+        "losses": 36,
+        "unchanged": 776,
+        "claim": "established positive gain under this protocol"
+      }
+    },
+    "hinted_particle_2": {
+      "successes": 359,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.7766666666666666
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.04
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.38
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.38,
+        "unnecessary_abstention_rate": 0.02666666666666667
+      },
+      "prediction_sha256": "c7b37df002e584b29a192ae2c9fd3fc42d2d32c8eb7697fba938d8eb1a9ebbe7",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.04,
+        "paired_family_bootstrap_95ci": [
+          0.017897091722595078,
+          0.06159014557670773
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 69,
+        "losses": 33,
+        "unchanged": 798,
+        "claim": "established positive gain under this protocol"
+      }
+    },
+    "particle_1": {
+      "successes": 501,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.9266666666666666
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.02
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.7233333333333334
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.7233333333333334,
+        "unnecessary_abstention_rate": 0.013333333333333334
+      },
+      "prediction_sha256": "24ca067a9d9c53d9a5f80b6b94d8dc231938ebdedfbd50d055c8103dffe1ea0d",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.19777777777777777,
+        "paired_family_bootstrap_95ci": [
+          0.16962161380507085,
+          0.22555555555555556
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 191,
+        "losses": 13,
+        "unchanged": 696,
+        "claim": "established positive gain under this protocol"
+      }
+    },
+    "particle_2": {
+      "successes": 468,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.9966666666666667
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.006666666666666667
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.5566666666666666
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.5566666666666666,
+        "unnecessary_abstention_rate": 0.043333333333333335
+      },
+      "prediction_sha256": "aca0996c83a3cb83aa5d257caa290bba5d8cdc6566111e41b5a3cdbde2119d63",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.16111111111111112,
+        "paired_family_bootstrap_95ci": [
+          0.12956710343494607,
+          0.19187585657852302
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 190,
+        "losses": 45,
+        "unchanged": 665,
+        "claim": "established positive gain under this protocol"
+      }
+    },
+    "lora": {
+      "successes": 270,
+      "diagnostics": {
+        "by_type": {
+          "missing": {
+            "n": 300,
+            "success_rate": 0.3466666666666667
+          },
+          "conflict": {
+            "n": 300,
+            "success_rate": 0.023333333333333334
+          },
+          "altered": {
+            "n": 300,
+            "success_rate": 0.53
+          }
+        },
+        "answerable_count": 300,
+        "answerable_accuracy": 0.53,
+        "unnecessary_abstention_rate": 0.0
+      },
+      "prediction_sha256": "78d0b86ca779fc2bfa9c03c3a7c0faa5ffb47330b48cc12ca96a73ad1375c6cd",
+      "effect_vs_OFF": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": -0.058888888888888886,
+        "paired_family_bootstrap_95ci": [
+          -0.0840710444858923,
+          -0.03504832938277879
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 38,
+        "losses": 91,
+        "unchanged": 771,
+        "claim": "no positive observed gain"
+      }
+    }
+  },
+  "comparisons": {
+    "particle_1_minus_lora": {
+      "overall": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.25666666666666665,
+        "paired_family_bootstrap_95ci": [
+          0.22691763486595481,
+          0.2866666666666667
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 242,
+        "losses": 11,
+        "unchanged": 647,
+        "claim": "established positive gain under this protocol"
+      },
+      "by_stratum": {
+        "faith-counterfactual": {
+          "particle_successes": 217,
+          "reference_successes": 159,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": 0.19333333333333333,
+            "paired_family_bootstrap_95ci": [
+              0.14666666666666667,
+              0.24333333333333335
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 300,
+            "gains": 62,
+            "losses": 4,
+            "unchanged": 234,
+            "claim": "established positive gain under this protocol"
+          }
+        },
+        "faith-inconsistent": {
+          "particle_successes": 6,
+          "reference_successes": 7,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": -0.0033333333333333335,
+            "paired_family_bootstrap_95ci": [
+              -0.026755852842809364,
+              0.02
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 291,
+            "gains": 6,
+            "losses": 7,
+            "unchanged": 287,
+            "claim": "no positive observed gain"
+          }
+        },
+        "faith-unanswerable": {
+          "particle_successes": 278,
+          "reference_successes": 104,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": 0.58,
+            "paired_family_bootstrap_95ci": [
+              0.5234899328859061,
+              0.6348684210526315
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 294,
+            "gains": 174,
+            "losses": 0,
+            "unchanged": 126,
+            "claim": "established positive gain under this protocol"
+          }
+        }
+      }
+    },
+    "particle_1_minus_lora_original": {
+      "overall": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.14,
+        "paired_family_bootstrap_95ci": [
+          0.11123467460173565,
+          0.16853048354130803
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 164,
+        "losses": 38,
+        "unchanged": 698,
+        "claim": "established positive gain under this protocol"
+      },
+      "by_stratum": {
+        "faith-counterfactual": {
+          "particle_successes": 217,
+          "reference_successes": 180,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": 0.12333333333333334,
+            "paired_family_bootstrap_95ci": [
+              0.07666666666666666,
+              0.17
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 300,
+            "gains": 46,
+            "losses": 9,
+            "unchanged": 245,
+            "claim": "established positive gain under this protocol"
+          }
+        },
+        "faith-inconsistent": {
+          "particle_successes": 6,
+          "reference_successes": 29,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": -0.07666666666666666,
+            "paired_family_bootstrap_95ci": [
+              -0.11447811447811448,
+              -0.04013377926421405
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 291,
+            "gains": 5,
+            "losses": 28,
+            "unchanged": 267,
+            "claim": "no positive observed gain"
+          }
+        },
+        "faith-unanswerable": {
+          "particle_successes": 278,
+          "reference_successes": 166,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": 0.37333333333333335,
+            "paired_family_bootstrap_95ci": [
+              0.3190789473684211,
+              0.42857142857142855
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 294,
+            "gains": 113,
+            "losses": 1,
+            "unchanged": 186,
+            "claim": "established positive gain under this protocol"
+          }
+        }
+      }
+    },
+    "particle_1_minus_hinted_particle_1": {
+      "overall": {
+        "complete": true,
+        "measured_pairs": 900,
+        "declared": 900,
+        "missing_on": [],
+        "missing_off": [],
+        "effect_gain": 0.18222222222222223,
+        "paired_family_bootstrap_95ci": [
+          0.1551528878822197,
+          0.20958751393534003
+        ],
+        "bootstrap_replicates": 10000,
+        "cluster_count": 853,
+        "gains": 176,
+        "losses": 12,
+        "unchanged": 712,
+        "claim": "established positive gain under this protocol"
+      },
+      "by_stratum": {
+        "faith-counterfactual": {
+          "particle_successes": 217,
+          "reference_successes": 130,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": 0.29,
+            "paired_family_bootstrap_95ci": [
+              0.23666666666666666,
+              0.3433333333333333
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 300,
+            "gains": 90,
+            "losses": 3,
+            "unchanged": 207,
+            "claim": "established positive gain under this protocol"
+          }
+        },
+        "faith-inconsistent": {
+          "particle_successes": 6,
+          "reference_successes": 11,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": -0.016666666666666666,
+            "paired_family_bootstrap_95ci": [
+              -0.04013377926421405,
+              0.006644518272425249
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 291,
+            "gains": 4,
+            "losses": 9,
+            "unchanged": 287,
+            "claim": "no positive observed gain"
+          }
+        },
+        "faith-unanswerable": {
+          "particle_successes": 278,
+          "reference_successes": 196,
+          "paired": {
+            "complete": true,
+            "measured_pairs": 300,
+            "declared": 300,
+            "missing_on": [],
+            "missing_off": [],
+            "effect_gain": 0.2733333333333333,
+            "paired_family_bootstrap_95ci": [
+              0.22407891022021456,
+              0.32459016393442625
+            ],
+            "bootstrap_replicates": 10000,
+            "cluster_count": 294,
+            "gains": 82,
+            "losses": 0,
+            "unchanged": 218,
+            "claim": "established positive gain under this protocol"
+          }
+        }
+      }
+    }
+  },
+  "model_or_API_calls": 0
+}

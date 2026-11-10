@@ -1,0 +1,44 @@
+{
+  "algorithm": "AlignTune RaftTrainer, standard supervised completion-only loss",
+  "aligntune_commit": "9a80753f2f0af7c5d9b1246904035e9149ea30e1",
+  "citation_loss": false,
+  "document_ranking_loss": false,
+  "preformatted_exact_evaluation_prompt": true,
+  "train_cases": 48,
+  "steps": 128,
+  "batch": 2,
+  "gradient_accumulation": 1,
+  "seed": 20261110,
+  "lora_rank": 8,
+  "lora_alpha": 8,
+  "lora_dropout": 0.0,
+  "targets": [
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "learning_rate": 0.0002,
+  "optimizer": "adamw_torch",
+  "scheduler": "constant",
+  "warmup_steps": 0,
+  "weight_decay": 0.0,
+  "max_grad_norm": 1.0,
+  "base_precision": "bfloat16",
+  "ema_decay": null,
+  "packing": false,
+  "truncation": false,
+  "initialization": "Preserve standard PEFT Kaiming A and zero B; no experimental LoRA QR",
+  "save_steps": [
+    32,
+    64,
+    128
+  ],
+  "completion_suffix": [
+    261001,
+    3
+  ],
+  "completion_suffix_explanation": "Pinned base's native END_RESPONSE and generation EOS; tokenizer chat EOS6 is not generation EOS3",
+  "dataloader_drop_last": true,
+  "curation_selected_sha256": "adb9caac08ae439fa9076df26bc54aa1f2a926bd794e28101bfe5d644001ce00"
+}

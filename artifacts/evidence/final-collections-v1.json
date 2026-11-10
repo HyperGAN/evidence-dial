@@ -1,0 +1,40 @@
+{
+  "collections": [
+    {
+      "url": "https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f",
+      "private": false,
+      "expected_members": [
+        "ntc-ai/evidence-dial-aligntune",
+        "ntc-ai/evidence-dial-aligntune-curated",
+        "ntc-ai/evidence-dial-particle",
+        "ntc-ai/evidence-dial-particle-hinted"
+      ],
+      "actual_members": [
+        "ntc-ai/evidence-dial-aligntune",
+        "ntc-ai/evidence-dial-aligntune-curated",
+        "ntc-ai/evidence-dial-particle",
+        "ntc-ai/evidence-dial-particle-hinted"
+      ],
+      "anonymous_HTTP_verified": true
+    },
+    {
+      "url": "https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87",
+      "private": false,
+      "expected_members": [
+        "ntc-ai/evidence-dial-benchmark",
+        "ntc-ai/evidence-dial-curated-successes",
+        "ntc-ai/evidence-dial-grounding-tests",
+        "ntc-ai/evidence-dial-policies",
+        "ntc-ai/evidence-dial-training-archive"
+      ],
+      "actual_members": [
+        "ntc-ai/evidence-dial-benchmark",
+        "ntc-ai/evidence-dial-curated-successes",
+        "ntc-ai/evidence-dial-grounding-tests",
+        "ntc-ai/evidence-dial-policies",
+        "ntc-ai/evidence-dial-training-archive"
+      ],
+      "anonymous_HTTP_verified": true
+    }
+  ]
+}

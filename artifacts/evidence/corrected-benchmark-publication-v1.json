@@ -1,0 +1,342 @@
+{
+  "repository": "ntc-ai/evidence-dial-benchmark",
+  "commit": "bbebf36c42294ea0814a397147b5809f1e846b04",
+  "private": false,
+  "files": [
+    {
+      "file": "curated-retry-v1/results.json",
+      "bytes": 325147,
+      "sha256": "bcb3b6fabe58254cc2a3f83b6b3bb618261bd99dbfe0371f8d6ac2c686d2386d",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/paired-cases.jsonl",
+      "bytes": 3296018,
+      "sha256": "f8408e1c3c929fa7cb519198c8ce4d635bddcaaf9868ef2b8978cc1e7fb616e5",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/release-index.json",
+      "bytes": 3961,
+      "sha256": "3e75fe29c5f8c924777a7a5cd65d6eed95a3dedee277a4b808c97cfdc0d59afb",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/curated-sample-native-replay-v1.json",
+      "bytes": 1079,
+      "sha256": "5addcd8abc2330b80ef157e6c7207bbe945895336dca295853a793301f79f141",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/curated-lora-distribution-equivalence-v1.json",
+      "bytes": 1086,
+      "sha256": "ad097678bf014bcb8404aad4db58aafc200aa5ea457ef8b7672a1f4905abdace",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/curated-particle-distribution-equivalence-v1.json",
+      "bytes": 1160,
+      "sha256": "1078c910ac6348a85b6775d45947b20f977c3bc4db292df7e6610daa6526f73f",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-faith-first-report-v1.json",
+      "bytes": 16584,
+      "sha256": "edd9239b52f7f5ed8fabc8846433a7c5cdc63d8b22b418035d9d44e743d1ccf7",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/faith-mc-labelled-option-diagnostic-v1.json",
+      "bytes": 23050,
+      "sha256": "95e4784bb1f0b62bd00292403d729a92357549eaad99ffe5d3cd47dd3602bca1",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-native-pair-audit-v1.json",
+      "bytes": 12263,
+      "sha256": "94ecd970bb1465087c75abb3c1a2f895f6d145b5ac7a27ea4193b8ad1ab8e571",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-particle-vs-lora-v1.svg",
+      "bytes": 116168,
+      "sha256": "65c569c4817148bf0bca29e07c357665dba5da420cec1e6611c064a9542f29ce",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-fresh-confirmation-first-report-v1.json",
+      "bytes": 10968,
+      "sha256": "eea4f855bf618903ecf7d38a1ede0c3de56f99cf6523c7d31b66e757c469b103",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/frozen-cache-output-head-audit-v1.json",
+      "bytes": 167535,
+      "sha256": "8b3252951db3e374887c42cb99e504d969fc86a77c8ef3c7b96a301070d71f05",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-resource-cost-v1.json",
+      "bytes": 66268,
+      "sha256": "4b410c7b6a1472ec576e920d58f7607926e0b0d6dd6b9c00dc652e4c440c2c5e",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-all-effects-v1.png",
+      "bytes": 228535,
+      "sha256": "10971ea82154f2e93a08c326fd9edad4acbcdf81e523c95991d04795535c76d3",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-all-effects-v1.svg",
+      "bytes": 130867,
+      "sha256": "ca6d8b4d444263eebf5de44fe9fa3be595d4508e2899353eb060e44b844a2d61",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/corrected-particle-vs-lora-v1.png",
+      "bytes": 159113,
+      "sha256": "1521d56e701305f6b7de2b960a5eb232253c993b98557ab471e08c69b5d7d699",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/curated-native-response-error-v1.json",
+      "bytes": 51384,
+      "sha256": "800d16fc64b96524fdc993c3b90b8326837cd1ff3308a186aafac9f9ee238db9",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/diagnostic-device-mapping-audit-v1.json",
+      "bytes": 1000,
+      "sha256": "b3d831cffc430b8c7ab8653415a1efc23c702c39aaa53f369b189987154bdaa4",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/training/training-diagnostics.json",
+      "bytes": 26736,
+      "sha256": "154f65b545216f9b3dfa6e52207f6248116fb33400c666cf1320cf2814ed8bd7",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/diagnostics/training/particle-training-losses.png",
+      "bytes": 294455,
+      "sha256": "be044632816f312364f883f898e659f619e59e21a18fa42c37fd966ba122d9a0",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/balanced-lora.jsonl",
+      "bytes": 443962,
+      "sha256": "c28235611dd03aa2fa4a56169d86dd873acb2dd31a56a50c3a8e933f2a5691df",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/balanced-particle_2.jsonl",
+      "bytes": 445669,
+      "sha256": "da655e6f96653129880809d1c106b9890206ead832e50a33823f58a5ae58bb18",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/confirmation-particle_1.jsonl",
+      "bytes": 451705,
+      "sha256": "2143b7595369feec28c7d5a0571557ede0269231cd573dcb3c99de39cc76b0d7",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-lora.jsonl",
+      "bytes": 47409,
+      "sha256": "4abead2c1ca59287fba77b97de2703523d087f68e2b8e1819ff9d7acb1a92f60",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-lora.jsonl",
+      "bytes": 718121,
+      "sha256": "7908fadeebd3c154a350b8b3cac7042868490ba5e5c8a0b3f7e435387ac567bd",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/balanced-lora_original.jsonl",
+      "bytes": 443880,
+      "sha256": "428ec55f2d884530550ffb0342bcc1ca10444d57f241bbbce238c0a9d3d36e67",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/balanced-particle_1.jsonl",
+      "bytes": 445268,
+      "sha256": "1676f2bd05575ff4bca4a06b5bbb85928193ed139efb4c97621c74d07c795fa0",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/balanced-hinted_particle_1.jsonl",
+      "bytes": 445683,
+      "sha256": "055f429c9546fc00e8f5b4306240bf30a4628ad95f098a880cd48fe3d61965f3",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-off.jsonl",
+      "bytes": 118889,
+      "sha256": "731237677717a043edcb536f4af025f2b963d7d970b4044853cb206970ab8f99",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-lora_original.jsonl",
+      "bytes": 47502,
+      "sha256": "5c1742da78230ee45fa8e295d9f98fee29db71852ee4577b047305f424a99e15",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/confirmation-lora_original.jsonl",
+      "bytes": 450395,
+      "sha256": "b01572a488c57ad1c58dbe817d769df649c65c1628a6e703e10f7962a2f9d728",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-lora_original.jsonl",
+      "bytes": 139643,
+      "sha256": "dea7b19da85c4190223f8d166e41060a192907e7738310852d893663cd56e9d5",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/balanced-off.jsonl",
+      "bytes": 379974,
+      "sha256": "c842e4974519378062b4fc4eb64a9e2b65e3880c08ad97f448e66aa5a0b87a27",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-off.jsonl",
+      "bytes": 41034,
+      "sha256": "16430bdbd8dcb65707214e7812b78baf71ca06398adf31c149fa3c58c3bd4b79",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/confirmation-off.jsonl",
+      "bytes": 386751,
+      "sha256": "8c62c90b9bf614dba3f585e63c18a4435540f037d0b2d5c4dfd2e0107cc41ed5",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/confirmation-particle_2.jsonl",
+      "bytes": 451954,
+      "sha256": "723ddc0c1e98122814a116dc5a6a0e8e3e703ad07a023607c1399c893968d030",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/confirmation-hinted_particle_1.jsonl",
+      "bytes": 452082,
+      "sha256": "b648c8ea800b0556ee1031f306913dc8373e8eaf9f7c1821e9ee10feb3c86579",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-particle_1.jsonl",
+      "bytes": 140528,
+      "sha256": "324455191b43d30a817d7d9a520f0718d3dc5cd908809565084c6125466aaa81",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-particle_1.jsonl",
+      "bytes": 47860,
+      "sha256": "8d17a27aa1ed796c334407b9640a49769961109c10221b89ab4fd0ed7342f26f",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-lora_original.jsonl",
+      "bytes": 714903,
+      "sha256": "7a90e524d9048cb24336bd44bf48c6b04161a9c19701c98824cc67d767dfb9ce",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-off.jsonl",
+      "bytes": 649290,
+      "sha256": "656f1acc8cccbf9ad57a178ef0e753db26c54f5c6392e6b96e659723de0b2a89",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-particle_2.jsonl",
+      "bytes": 710035,
+      "sha256": "6b2451787e361a9608f80ca20e7ca2d6e960c76be8deb0e6a9181d49360f1e6c",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-lora.jsonl",
+      "bytes": 139643,
+      "sha256": "ea61c94083052680ed31ccab804beb2213c129cdf56049b586a412de829ba185",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-particle_2.jsonl",
+      "bytes": 140446,
+      "sha256": "80663fcd6faf51d97da68d39c57111229d7dbd203481b7ceea2e988fe277cfe6",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-hinted_particle_1.jsonl",
+      "bytes": 140582,
+      "sha256": "3fe67863d582b1ba97a9305ab29beb9680c549fa2bd23da6b0453da484957a7c",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-hinted_particle_2.jsonl",
+      "bytes": 723828,
+      "sha256": "723ed942b108d8399b27926c8da51f6f19b8a73704c3a96d65a18d107371958b",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-particle_2.jsonl",
+      "bytes": 47777,
+      "sha256": "28e804cfd5cf9048204936acf64ae3302b70412dbeb77a79eb136db7e77f7110",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-hinted_particle_2.jsonl",
+      "bytes": 47889,
+      "sha256": "49e54bf836a4b08db7d5357964d600cbd8ffff64bd904aac6a620bcde3bfb97a",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/policy-hinted_particle_2.jsonl",
+      "bytes": 140697,
+      "sha256": "b95a7ad1cd8074b22ba2b28a670b4f9610fec24dc78badec430bec1fd77571dc",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-hinted_particle_1.jsonl",
+      "bytes": 724803,
+      "sha256": "f8eb3d2ac4a159288c2290e4d182b074fc87f8c4d3e00055f8c0c75da4b24eef",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/confirmation-lora.jsonl",
+      "bytes": 450689,
+      "sha256": "b55aa73cbc4f0a14cc2eb28bb359c060b9852c887e4d19aa121fded70da1b504",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/cue_audit-hinted_particle_1.jsonl",
+      "bytes": 47858,
+      "sha256": "c2a432b71bab1c8c9c9c47fb9a30c242cd53f48df3818fdfc9593013e3a1ca6d",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-retry-v1/predictions/faith-particle_1.jsonl",
+      "bytes": 711205,
+      "sha256": "0b0d4015425a19013130808aadc9915806dc7c85ef00366813d013c03d678bb8",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 8452,
+      "sha256": "c8fa48eebab806f87704555e5757349f48c06a4c13563deb203bfdf51365ff91",
+      "anonymous_HTTP_bytes_verified": true
+    },
+    {
+      "file": "curated-publication-manifest.json",
+      "bytes": 10552,
+      "sha256": "55915f2a4e4d820706e2b2a7cdc32ef36daf9dd59509dad6628b73564b4b70b9",
+      "anonymous_HTTP_bytes_verified": true
+    }
+  ],
+  "measurements": 17868,
+  "distinct_paired_cases": 2772,
+  "loader_verified": true,
+  "original_release_file_hashes_unchanged": true,
+  "all_first_reports_reproduce_full_release": true
+}

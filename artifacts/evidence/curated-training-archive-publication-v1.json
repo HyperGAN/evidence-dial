@@ -1,0 +1,28 @@
+{
+  "repository": "ntc-ai/evidence-dial-training-archive",
+  "commit": "310f70935d2b02a136ab6c0f7dfc2214347a5f48",
+  "private": false,
+  "new_archives": [
+    {
+      "file": "particle-curated-G001-RAW128.tar.gz",
+      "bytes": 2614405125,
+      "sha256": "f17c2dae2258b93aa8b00abc3ac3e316b42195a27fce0a06f5383d8bb2c59c17",
+      "remote_LFS_metadata_verified": true,
+      "anonymous_whole_HTTP_hash_verified": true,
+      "download_seconds": 201.42338347434998
+    },
+    {
+      "file": "aligntune-curated-RAW128.tar.gz",
+      "bytes": 185373134,
+      "sha256": "608dee175d58630a881a3c764f249552dfa3175ed2008db2231ae2285c0488b2",
+      "remote_LFS_metadata_verified": true,
+      "anonymous_whole_HTTP_hash_verified": true,
+      "download_seconds": 46.26394748687744
+    }
+  ],
+  "all_inner_files_verified": true,
+  "original_four_archive_values_unchanged": true,
+  "anonymous_card_bytes_verified": true,
+  "negative_development_reported": true,
+  "corrected_holdout_pending": true
+}

@@ -1,0 +1,39 @@
+{
+  "repository": "ntc-ai/evidence-dial-training-archive",
+  "commit": "310f70935d2b02a136ab6c0f7dfc2214347a5f48",
+  "original_archive_files_before": {
+    "aligntune-RAW128.tar.gz": {
+      "sha256": "a6eac00750429b6995ed26bf5f65a30ef866c3af3ce36828f280d12ceb1dc03c",
+      "bytes": 185420994
+    },
+    "particle-G001-RAW128.tar.gz": {
+      "sha256": "d3c9afc911f7546aa7ad3410c281caa52d6429b804856cbb33afd8270ff142b3",
+      "bytes": 2578140011
+    },
+    "particle-G004-RAW128-guard-unmeasured.tar.gz": {
+      "sha256": "a660000a428288bfc4e52634c7daa9b84480995f1a3226b3b36eae42175c558a",
+      "bytes": 1435915701
+    },
+    "particle-G012-stopped32.tar.gz": {
+      "sha256": "f9d340332f4f95f31c043553d6267431d27f68f88567d3092415793c5089ff91",
+      "bytes": 149677788
+    }
+  },
+  "new_archives_expected": {
+    "particle-curated-G001-RAW128.tar.gz": {
+      "file": "particle-curated-G001-RAW128.tar.gz",
+      "bytes": 2614405125,
+      "sha256": "f17c2dae2258b93aa8b00abc3ac3e316b42195a27fce0a06f5383d8bb2c59c17",
+      "files": 510,
+      "excluded_base_assets": 3
+    },
+    "aligntune-curated-RAW128.tar.gz": {
+      "file": "aligntune-curated-RAW128.tar.gz",
+      "bytes": 185373134,
+      "sha256": "608dee175d58630a881a3c764f249552dfa3175ed2008db2231ae2285c0488b2",
+      "files": 185,
+      "excluded_base_assets": 21
+    }
+  },
+  "anonymous_download_verification_pending": true
+}

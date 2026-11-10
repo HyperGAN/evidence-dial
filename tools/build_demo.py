@@ -85,12 +85,23 @@ def build(release,out):
             'detail':'All selected ties, in strength order; paired intervals below'},
            {'label':'Matched LoRA strict success','value':f"{100*primary['arms']['lora']['success_rate']:.1f}%",
             'detail':'Same curated training-case pool' if corrected else 'Same64 source cases'}]
+    if corrected:
+        faith=result['datasets']['faith']
+        transfer=[faith['comparisons_vs_lora']['particle_'+str(r['strength'])]['paired_success_difference'] for r in selected]
+        stats=[{'label':'Curated: fresh policy − LoRA','value':' / '.join(fmt(c['effect_gain']) for c in comparisons),
+                'detail':str(primary['n'])+' fresh cases; paired intervals below'},
+               {'label':'Curated: FaithEval − LoRA','value':' / '.join(fmt(c['effect_gain']) for c in transfer),
+                'detail':str(faith['n'])+' repeated transfer cases; strict format counts'},
+               {'label':'Dev-selected strength(s)','value':', '.join(str(r['strength']) for r in selected),
+                'detail':'Frozen before new test outputs; ties retained'},
+               {'label':'Native case-arm measurements','value':f"{sum(d['n']*len(d['arms']) for d in result['datasets'].values()):,}",
+                'detail':'Every planned gain and regression is retained'}]
     summary='; '.join(f'G{r["g_rate"]:g} / strength {r["strength"]:g}' for r in selected)
     write_json(out,{'status':('Complete corrected and original retained benchmarks. ' if corrected else 'Complete original answer-hinted benchmark; corrected Jev-curated retry is pending. ')+'Development selection: '+summary+'. Every regression is retained.',
         'strengths':strengths,'selected_strengths':[r['strength'] for r in selected],
         'dataset_strengths':dataset_strengths,'dataset_labels':labels,'experiments':experiments,
         'experiment_strengths':experiment_strengths,'aggregates':aggregates,'stats':stats,'rates':cohort,'cases':public,
-        'scope':'The original policy test shares question frames and has a document-count shortcut. Balanced tests break that cue; each 768-case cohort has32 families and384 order pairs. The corrected retry uses Jev-approved Tiny Aya successes and exact paired hidden states, with a same-case-pool LoRA control. These synthetic tests do not establish general grounding. FaithEval is a frozen external subset without verified matched answerable controls; its passages stay at pinned sources. Strict format gains count. G0.004 remains blocked for uncertain mathematical-notation guard coverage. Shared-GPU timing includes contention; one legacy diagnostic has an unverified-device exception documented in the article.',
+        'scope':'The original policy test shares question frames and has a document-count shortcut. Balanced tests break that cue; each 768-case cohort has32 families and384 order pairs. The corrected retry uses Jev-approved Tiny Aya successes and exact paired hidden states, with a LoRA control trained on the same cases. It wins on the repeated FaithEval subset and regresses on fresh policies. Much of the strict MC gap is formatting; the article reports an additional diagnostic accepting a correct label plus exact option text. FaithEval lacks verified matched answerable controls and its passages stay at pinned sources. These results do not establish general grounding. G0.004 remains blocked for uncertain mathematical-notation guard coverage. Shared-GPU timing includes contention; one legacy diagnostic has an unverified-device exception documented in the article.',
         'links':[{'label':'Code and article','url':'https://github.com/HyperGAN/evidence-dial'},
                  {'label':'Model collection','url':'https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f'},
                  {'label':'Datasets and benchmark','url':'https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87'}]})

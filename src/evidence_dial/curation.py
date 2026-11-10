@@ -260,7 +260,7 @@ def mine(out, attempt, recipe_path):
 def main():
     p = argparse.ArgumentParser(); p.add_argument('phase', choices=['qualify', 'mine'])
     p.add_argument('--out', type=Path, required=True); p.add_argument('--attempt', default='first')
-    p.add_argument('--recipe', type=Path, default=ROOT / 'artifacts/method-repair-v1/recipe.json')
+    p.add_argument('--recipe', type=Path, default=ROOT / 'artifacts/method-repair-v1/recipe-v2.json')
     args = p.parse_args(); args.out.mkdir(parents=True, exist_ok=True)
     if not re.fullmatch(r'[A-Za-z0-9_-]+', args.attempt):
         raise ValueError('Invalid immutable attempt label')

@@ -1,0 +1,74 @@
+{
+  "completed": [
+    {
+      "repository": "ntc-ai/evidence-dial-particle",
+      "commit": "031c5c288e661b6951047a26cc00421d2bacbfe5",
+      "private": false,
+      "files": [
+        {
+          "file": "README.md",
+          "bytes": 7139,
+          "sha256": "7c627f138c77589fa7ecbdaae07308164b85cbab6d9147bf065552926587bfd0",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "distribution-equivalence.json",
+          "bytes": 1160,
+          "sha256": "1078c910ac6348a85b6775d45947b20f977c3bc4db292df7e6610daa6526f73f",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "particle_adapter.json",
+          "bytes": 558866,
+          "sha256": "21b94dc68fe01b968cd9b11f579ec4c57c964c0729ab7d4c3fc6188e648d63f4",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "particle_adapter.safetensors",
+          "bytes": 19399648,
+          "sha256": "a7c65d5281ccf1c550f042884b8a6878e4dbc4fe63e46045f014997fd0352457",
+          "anonymous_HTTP_bytes_verified": true
+        }
+      ],
+      "collection_added": true
+    },
+    {
+      "repository": "ntc-ai/evidence-dial-aligntune-curated",
+      "commit": "812b5a3d2170118f82e0692d6ed0a45d218e94c1",
+      "private": false,
+      "files": [
+        {
+          "file": "README.md",
+          "bytes": 5972,
+          "sha256": "cc1c71ac3704f602f1931828ff38afcf085480b77229b06e31f4627eacf175ed",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "adapter_config.json",
+          "bytes": 1044,
+          "sha256": "d77a516d4626110673ac6d3bea29794e2155dfe0fedfca03df6ca6e4c48f1caf",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "adapter_model.safetensors",
+          "bytes": 15373488,
+          "sha256": "6e22b7faedf2c4a766e67ef5fd6cd30b592e80c24d94611be72fe9c9f4fc8ad2",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "distribution-equivalence.json",
+          "bytes": 1086,
+          "sha256": "ad097678bf014bcb8404aad4db58aafc200aa5ea457ef8b7672a1f4905abdace",
+          "anonymous_HTTP_bytes_verified": true
+        },
+        {
+          "file": "training_provenance.json",
+          "bytes": 483,
+          "sha256": "f90444cb962e3494ed0a59688ce3182474f4ed978eabf02a6240d4582198c77a",
+          "anonymous_HTTP_bytes_verified": true
+        }
+      ],
+      "collection_added": true
+    }
+  ]
+}

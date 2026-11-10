@@ -1,0 +1,37 @@
+{
+  "repository": "ntc-ai/evidence-dial",
+  "commit": "eb07edf7af80e8ccf946d4cf521d8c86719b5356",
+  "url": "https://ntc-ai-evidence-dial.static.hf.space",
+  "sdk": "static",
+  "private": false,
+  "runtime_stage": "RUNNING",
+  "hardware": null,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 14849,
+      "repository_sha256": "18f21f0b6675e3a29ede0d098b13690ba9a4d0705a11b29eccdfe5fff0a8f9af",
+      "anonymous_repository_bytes_verified": true,
+      "served_sha256": "404b0311a51016e7668ec7914422166402dfcdb3e766ed1232301db621b6afb3",
+      "served_HTML_matches_after_only_platform_head_insertions": true
+    },
+    {
+      "file": "benchmark.json",
+      "bytes": 4785226,
+      "repository_sha256": "c9b8b389bd9c32310963f5840850bfe5d43ba85ee65cdc32a79ba53cc12a9d5e",
+      "anonymous_repository_bytes_verified": true,
+      "served_sha256": "c9b8b389bd9c32310963f5840850bfe5d43ba85ee65cdc32a79ba53cc12a9d5e",
+      "served_bytes_identical": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 1839,
+      "repository_sha256": "29858b4340beb62515de558542f0b69e2c1c5e9e9e4b157f69abaed6e96edae5",
+      "anonymous_repository_bytes_verified": true
+    }
+  ],
+  "cases": 2772,
+  "aggregate_rows": 10,
+  "real_browser_visual_QA": false,
+  "model_or_API_inference_calls": 0
+}

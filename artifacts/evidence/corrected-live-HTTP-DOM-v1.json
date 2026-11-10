@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "url": "https://ntc-ai-evidence-dial.static.hf.space",
+  "cases": 2772,
+  "aggregate_rows": 10,
+  "views": [
+    {
+      "variant": "curated",
+      "dataset": "confirmation",
+      "strength": 1,
+      "cases": 768,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "confirmation",
+      "strength": 2,
+      "cases": 768,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "policy",
+      "strength": 1,
+      "cases": 256,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "policy",
+      "strength": 2,
+      "cases": 256,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "faith",
+      "strength": 1,
+      "cases": 900,
+      "case_type_filters_verified": 3
+    },
+    {
+      "variant": "curated",
+      "dataset": "faith",
+      "strength": 2,
+      "cases": 900,
+      "case_type_filters_verified": 3
+    },
+    {
+      "variant": "curated",
+      "dataset": "cue_audit",
+      "strength": 1,
+      "cases": 80,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "cue_audit",
+      "strength": 2,
+      "cases": 80,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "balanced",
+      "strength": 1,
+      "cases": 768,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "curated",
+      "dataset": "balanced",
+      "strength": 2,
+      "cases": 768,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "hinted",
+      "dataset": "confirmation",
+      "strength": 1,
+      "cases": 768,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "hinted",
+      "dataset": "policy",
+      "strength": 1,
+      "cases": 256,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "hinted",
+      "dataset": "policy",
+      "strength": 2,
+      "cases": 256,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "hinted",
+      "dataset": "faith",
+      "strength": 1,
+      "cases": 900,
+      "case_type_filters_verified": 3
+    },
+    {
+      "variant": "hinted",
+      "dataset": "faith",
+      "strength": 2,
+      "cases": 900,
+      "case_type_filters_verified": 3
+    },
+    {
+      "variant": "hinted",
+      "dataset": "cue_audit",
+      "strength": 1,
+      "cases": 80,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "hinted",
+      "dataset": "cue_audit",
+      "strength": 2,
+      "cases": 80,
+      "case_type_filters_verified": 4
+    },
+    {
+      "variant": "hinted",
+      "dataset": "balanced",
+      "strength": 1,
+      "cases": 768,
+      "case_type_filters_verified": 4
+    }
+  ],
+  "runtime": "v24.22.1",
+  "checks": [
+    "actual public HTTP assets",
+    "all measured variant/dataset/strength views",
+    "case-type filters",
+    "matched native answer text and strict verdicts",
+    "aggregate rates",
+    "positive and negative summary stats"
+  ],
+  "real_browser_visual_QA": false,
+  "model_or_API_inference_calls": 0
+}

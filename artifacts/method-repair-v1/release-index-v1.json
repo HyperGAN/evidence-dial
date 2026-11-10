@@ -1,0 +1,64 @@
+{
+  "selection": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/method-repair-v1/selection-v1.json",
+  "datasets": {
+    "confirmation": {
+      "data": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/data/balanced-grounding-confirm-v1/holdout.jsonl",
+      "arms": {
+        "off": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/confirmation/off",
+        "hinted_particle_1": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/confirmation/hinted_particle_1",
+        "lora_original": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/confirmation/lora_original",
+        "particle_1": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/confirmation/particle_1",
+        "particle_2": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/confirmation/particle_2",
+        "lora": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/confirmation/lora"
+      }
+    },
+    "policy": {
+      "data": "artifacts/data/policy-v1/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/holdout-v1/policy/off",
+        "hinted_particle_1": "artifacts/holdout-v1/policy/particle_1",
+        "lora_original": "artifacts/holdout-v1/policy/lora",
+        "hinted_particle_2": "artifacts/holdout-v1/policy/particle_2",
+        "particle_1": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/policy/particle_1",
+        "particle_2": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/policy/particle_2",
+        "lora": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/policy/lora"
+      }
+    },
+    "faith": {
+      "data": "artifacts/data/faith-v1/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/holdout-v1/faith/off",
+        "hinted_particle_1": "artifacts/holdout-v1/faith/particle_1",
+        "lora_original": "artifacts/holdout-v1/faith/lora",
+        "hinted_particle_2": "artifacts/holdout-v1/faith/particle_2",
+        "particle_1": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/faith/particle_1",
+        "particle_2": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/faith/particle_2",
+        "lora": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/faith/lora"
+      }
+    },
+    "cue_audit": {
+      "data": "artifacts/data/evidence-interventions-v1/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/followup-tests-v2/cue_audit/off",
+        "hinted_particle_1": "artifacts/followup-tests-v2/cue_audit/particle_1",
+        "lora_original": "artifacts/followup-tests-v2/cue_audit/lora",
+        "hinted_particle_2": "artifacts/followup-tests-v2/cue_audit/particle_2",
+        "particle_1": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/cue_audit/particle_1",
+        "particle_2": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/cue_audit/particle_2",
+        "lora": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/cue_audit/lora"
+      }
+    },
+    "balanced": {
+      "data": "artifacts/data/balanced-grounding-v2/holdout.jsonl",
+      "arms": {
+        "off": "artifacts/followup-tests-v2/balanced/off",
+        "hinted_particle_1": "artifacts/followup-tests-v2/balanced/particle_1",
+        "lora_original": "artifacts/followup-tests-v2/balanced/lora",
+        "particle_1": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/balanced/particle_1",
+        "particle_2": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/balanced/particle_2",
+        "lora": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/curated-eval-v1/balanced/lora"
+      }
+    }
+  },
+  "variant": "curated_success_retry_with_prior_hinted_comparisons"
+}
