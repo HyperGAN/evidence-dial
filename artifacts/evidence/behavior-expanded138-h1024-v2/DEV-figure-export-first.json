@@ -1,0 +1,11 @@
+{
+  "time": 1794674628.6141675,
+  "figure": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/docs/figures/expanded138-complete-answer-DEV.png",
+    "sha256": "dab296abf315d0e8a6c24228bb15b3fb957407704685f7aeb3d23ee48c03d923"
+  },
+  "closure_sha256": "36f99240677e1ebb18215f3a06dedff37a6220863c66632dbdf3c556b09c3740",
+  "all24_measured_cells": true,
+  "scope": "Development only; not a new test measurement. Y-axis shown .5 to.75; scoredefined0\u20131. Allquarterpoints/three strengths/bothcontrols retained.",
+  "new_model_or_Jev_calls": 0
+}

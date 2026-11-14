@@ -6,7 +6,7 @@ The owner fills the submission form; this repository does not claim a form submi
 | Submission field | Value |
 | --- | --- |
 | Main project and thorough README | https://github.com/HyperGAN/evidence-dial |
-| Complete-answer DEV demo and archived short-answer study | https://huggingface.co/spaces/ntc-ai/evidence-dial |
+| Fresh complete-answer confirmation and archived earlier studies | https://huggingface.co/spaces/ntc-ai/evidence-dial |
 | Behavior model and raw adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
 | Data, all predictions, training logs and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
 | Model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
@@ -14,37 +14,35 @@ The owner fills the submission form; this repository does not claim a form submi
 
 ## Abstract
 
-We investigate preference and style alignment through internal-state training
-with ParticleGAN. Frozen Tiny Aya explores 16 behavioral instructions for each
-of 64 training questions. NanoGPT's Jev evaluates the replies against a fixed
-rubric for sympathetic, constructive support with independent judgment.
-Thirty-seven questions pass the declared threshold. CuratorKIT provides schema
-validation and exact deduplication; AuditKIT connects native generation to the
-frozen evaluator.
+Evidence Dial connects language-defined response preferences to a learned
+behavior control for frozen Tiny Aya Global 3.35B. For each of 64 training
+questions, the base model explores 16 behavioral instructions. NanoGPT Jev
+judges sympathetic, constructive support with independent judgment. The expanded
+dataset retains all 138 passing contexts across 37 questions. CuratorKIT
+validates and deduplicates the corpus; AuditKIT connects native generation to a
+fixed evaluator.
 
-For each retained question, we capture the model's final hidden state before
-its first answer token under a selected instruction. The neutral context is
-the same user question without an added behavioral system message. Both
-contexts have empty continuation history. A routed particle adapter learns
-from these paired states using the unchanged ParticleGAN formulation, with a
-frozen backbone, raw weights, and no cross-entropy text-imitation loss or
-weight EMA.
+Positive and neutral contexts retain the same user question and empty
+continuation history. Only the positive context receives the behavioral system
+instruction. We capture frozen final hidden states before the first answer token
+and train a routed particle adapter using the unchanged ParticleGAN formulation.
+There is no SFT warm start, text-imitation loss, or weight EMA. At inference,
+the adapter sees the ordinary question and its strength is adjustable.
 
-The original two-rate, 128-update study used a 64-token evaluation budget,
-which truncated many answers. A complete-answer remeasurement of its fixed
-32-update checkpoint scores 0.6775 at the previously selected strength 1,
-versus 0.6620 OFF and 0.6666 prompt-only on 16 development questions. Its paired
-gain over OFF is +0.0155, with an individual 95% bootstrap interval of
-[−0.0419, +0.0750]. This is an uncertain development comparison. Fresh training
-on all 138 passing contexts through 1,024 updates and a new confirmation set
-are in progress. The saved-output demo exposes complete responses and retains
-regressions.
+Both fresh learning-rate cohorts finished 1,024 updates. All 24 development
+settings were audited using complete native-EOS answers. Development selection
+chose step 256, strength 1, scoring 0.6950 versus 0.6620 OFF. Longer training
+did not improve that maximum. On a fresh 32-question confirmation, the locked
+adapter scored 0.6739 versus 0.6867 OFF and 0.6494 prompt-only. Its change from
+OFF was −0.0128, with an individual paired 95% bootstrap interval [−0.0473,
++0.0208]. The expanded study does not establish an improvement over the base
+model; stronger steering regresses.
 
-Earlier QA testing reached the same development score as SFT, 174/192, but
-held-out results favored SFT. Our contribution is a reusable connection
-between language-defined preferences, curated internal states, and a learned
-behavior control. The small synthetic corpus, one training seed, shared
-curation/evaluation judge, and limited first-state supervision constrain the claims.
+The contribution is the reusable curation, internal-state training, evaluation
+and recorded-output pipeline, including its failures. A separate QA study tied
+SFT on DEV but favored SFT on held-out data. One synthetic corpus, one training
+seed, a shared curation/evaluation judge and first-state supervision limit the
+claims.
 
 ## Where we add value
 
@@ -61,6 +59,6 @@ A concrete connection from a written response preference to curated internal-sta
 
 ## Delivery scope and limits
 
-The main README supplies the abstract, results, full native-EOS examples, method, artifact links, and limitations. The original 128-update / 64-token study and its locked test are archived. A full-answer remeasurement of the fixed published checkpoint is complete on all 16 DEV questions (80 complete responses). Fresh training on 138 context pairs from 0 through 1,024 is underway on both GPUs; its results and fresh-question confirmation are pending. No paper or claim of SFT superiority is part of this entry. Tiny Aya and derived weights/states are CC-BY-NC-4.0; retain upstream code licenses.
+The main README supplies the abstract, complete results, all 24 DEV settings, native-EOS examples, method, artifact links and honest limitations. Both expanded 138-context cohorts completed 1,024 updates; all 160 fresh-confirmation answers are independently verified. The locked selected adapter scored 0.673906 versus OFF 0.686719 and prompt-only 0.649375, with uncertain differences. There is no demonstrated improvement over the base model, no greater-caring claim, and no SFT superiority claim. Earlier 37-pair/64-token and fixed-checkpoint studies remain archived. No paper or owner-form submission is claimed. Tiny Aya-derived weights/states retain CC-BY-NC-4.0 and upstream code licenses.
 
 The Space is a recorded-output explorer. Live files and content hashes are verified; interactive browser QA requires an available browser host and is not claimed here.

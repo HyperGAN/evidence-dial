@@ -1,0 +1,88 @@
+{
+  "time": 1794676004.3687766,
+  "revision": "f4ed4649d4b97d57aa7f0b77bc8c69eb4d62eb26",
+  "checks": [
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/",
+      "status": 200,
+      "served_sha256": "3f5a9931b59075570f2109986d80bb34a5ad183c5ed8d41bf0b02c2e3b64f540",
+      "authored_sha256": "88ff503dd1b8ec1e5c894c408faf728fd92d39daa996245135f312169cca873f",
+      "whole_authored_body_matches": true,
+      "named_HF_insertions_removed": [
+        "<script>window.huggingface={variables:{\"SPACE_CREATOR_USER_ID\":\"641bb4dcaf42e9b7dd4609dc\"}};</script>",
+        "<meta property=\"og:title\" content=\"Evidence Dial\">",
+        "<meta property=\"og:description\" content=\"Complete answers, learned steering and regressions\">",
+        "<meta property=\"og:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+        "<meta name=\"twitter:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">"
+      ]
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/expanded-confirmation.html",
+      "status": 200,
+      "served_sha256": "3f5a9931b59075570f2109986d80bb34a5ad183c5ed8d41bf0b02c2e3b64f540",
+      "authored_sha256": "88ff503dd1b8ec1e5c894c408faf728fd92d39daa996245135f312169cca873f",
+      "whole_authored_body_matches": true,
+      "named_HF_insertions_removed": [
+        "<script>window.huggingface={variables:{\"SPACE_CREATOR_USER_ID\":\"641bb4dcaf42e9b7dd4609dc\"}};</script>",
+        "<meta property=\"og:title\" content=\"Evidence Dial\">",
+        "<meta property=\"og:description\" content=\"Complete answers, learned steering and regressions\">",
+        "<meta property=\"og:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+        "<meta name=\"twitter:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">"
+      ]
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/expanded-confirmation.json",
+      "status": 200,
+      "served_sha256": "1575474c86f3a77dcb07ceb992c1608300852cbfb369d88bb41c203d6daedcb2",
+      "authored_sha256": "1575474c86f3a77dcb07ceb992c1608300852cbfb369d88bb41c203d6daedcb2",
+      "whole_authored_body_matches": true,
+      "named_HF_insertions_removed": []
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/complete-answers.html",
+      "status": 200,
+      "served_sha256": "5aacbfb1ef9c9da4222408fa6d4517c98d2c5bbb00d50511d845456f2be77225",
+      "authored_sha256": "5d09241efb678f7c7d260c9938d9d39fec05a0051742ca0bdf94c80f600e1af8",
+      "whole_authored_body_matches": true,
+      "named_HF_insertions_removed": [
+        "<script>window.huggingface={variables:{\"SPACE_CREATOR_USER_ID\":\"641bb4dcaf42e9b7dd4609dc\"}};</script>",
+        "<meta property=\"og:title\" content=\"Evidence Dial\">",
+        "<meta property=\"og:description\" content=\"Complete answers, learned steering and regressions\">",
+        "<meta property=\"og:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+        "<meta name=\"twitter:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">"
+      ]
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/complete-answers.json",
+      "status": 200,
+      "served_sha256": "d8a45e3ffc66b98caf4c8514d517ffb214e4792e7a3505569e9cc979ac0a5960",
+      "authored_sha256": "d8a45e3ffc66b98caf4c8514d517ffb214e4792e7a3505569e9cc979ac0a5960",
+      "whole_authored_body_matches": true,
+      "named_HF_insertions_removed": []
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/short-answer-holdout.html",
+      "status": 200,
+      "served_sha256": "920c30a90398a9167137ea602e7a63e565083016eacf0e3b97dad74b882e45af",
+      "authored_sha256": "d4c73d6659d0feb4fe21711eddadb010ba2ae32f0f5303672eb926fa83d524a0",
+      "whole_authored_body_matches": true,
+      "named_HF_insertions_removed": [
+        "<script>window.huggingface={variables:{\"SPACE_CREATOR_USER_ID\":\"641bb4dcaf42e9b7dd4609dc\"}};</script>",
+        "<meta property=\"og:title\" content=\"Evidence Dial\">",
+        "<meta property=\"og:description\" content=\"Complete answers, learned steering and regressions\">",
+        "<meta property=\"og:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">",
+        "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+        "<meta name=\"twitter:image\" content=\"https://cdn-thumbnails.huggingface.co/social-thumbnails/spaces/ntc-ai/evidence-dial.png\">"
+      ]
+    }
+  ],
+  "all160_native_EOS_answers": true,
+  "both_archived_comparisons_preserved": true,
+  "browser_interactions_unverified": true,
+  "browser_host_status": "unavailable, CUAinventory empty",
+  "new_model_or_Jev_calls": 0,
+  "initial_diff_diagnostic": "requests.text guessedLatin1; bytecontent explicitly decodedUTF8 per authored charset for validation; no application source change"
+}

@@ -41,7 +41,8 @@ def main():
     assert manifest['cases'] == 32; verified(holdout); inputs.append(holdout)
     names = ['src/evidence_dial/behavior_fullanswer_confirmation_v2.py', 'tools/freeze_behavior_fullanswer_holdout_v3.py',
         'tools/measure_behavior_fullanswer_holdout_arm_v2.py', 'tools/run_behavior_fullanswer_holdout_gpu_v2.py',
-        'tools/audit_behavior_fullanswer_holdout_v2.py', 'tools/close_behavior_expanded_training_v3.py',
+        'tools/audit_behavior_fullanswer_holdout_v2.py', 'tools/close_behavior_expanded_training_v4.py', 'tools/resume_behavior_expanded_training_v4.py',
+        'tools/recover_behavior_fullanswer_health_auth_v1.py', 'tools/followup_nanogpt_route.py',
         'tools/prepare_behavior_fullanswer_strength_guard_v2.py', 'src/evidence_dial/behavior_fullanswer_generate_v2.py',
         'src/evidence_dial/behavior_protocol_v1.py', 'src/evidence_dial/behavior_expanded_binding_v2.py',
         'src/evidence_dial/shared_gpu_resources_v1.py', 'src/evidence_dial/continuation_resources_v1.py',

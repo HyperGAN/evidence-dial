@@ -1,0 +1,34 @@
+{
+  "time": 1794675858.7663555,
+  "revision": "f4ed4649d4b97d57aa7f0b77bc8c69eb4d62eb26",
+  "parent": "a01e9046a504a3055cc10f2f3ec9a376beb6b872",
+  "public": true,
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "f7dc54c28d7c50d4c7a2e01ad5fd6504e3c78590ec630eab6f53926b334124a3",
+      "bytes": 3073
+    },
+    {
+      "path": "expanded-confirmation.html",
+      "sha256": "88ff503dd1b8ec1e5c894c408faf728fd92d39daa996245135f312169cca873f",
+      "bytes": 13397
+    },
+    {
+      "path": "expanded-confirmation.json",
+      "sha256": "1575474c86f3a77dcb07ceb992c1608300852cbfb369d88bb41c203d6daedcb2",
+      "bytes": 184221
+    },
+    {
+      "path": "index.html",
+      "sha256": "88ff503dd1b8ec1e5c894c408faf728fd92d39daa996245135f312169cca873f",
+      "bytes": 13397
+    }
+  ],
+  "whole_remote_bodies_verified": true,
+  "old_archived_pages_and_data_preserved": true,
+  "all160_native_EOS": true,
+  "scope": "Full fresh32confirmation of expanded138context DEV-selectedstep256; bothtraining1024 complete",
+  "live_HTTP_pending": true,
+  "browser_interactions_unverified": true
+}

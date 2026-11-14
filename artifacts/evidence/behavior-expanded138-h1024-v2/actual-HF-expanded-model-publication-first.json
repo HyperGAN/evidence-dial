@@ -1,0 +1,16 @@
+{
+  "time": 1794675797.0661497,
+  "repo": "ntc-ai/evidence-dial-behavior-particle",
+  "repo_type": "model",
+  "public": true,
+  "commit": "96888ae8a261041ddb3dfda30c6122f7984b7b7a",
+  "parent": "c8a33bcc5cde8ba68f8cb97c42b681b77e4d9671",
+  "commit_url": "https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/commit/96888ae8a261041ddb3dfda30c6122f7984b7b7a",
+  "every_uploaded_Git_or_LFS_content_identity_verified": true,
+  "files_verified": 6,
+  "old_file_identities_preserved": 2,
+  "no_deletion": true,
+  "upload_plan": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-expanded-h1024-20261114-v2/actual-HF-expanded-model-publication-first-upload-plan.json",
+  "upload_plan_sha256": "52e839f40c939171899881ee2aba20f9c550ab365ea83ef7d76697f93bf3aece",
+  "new_model_or_Jev_calls": 0
+}

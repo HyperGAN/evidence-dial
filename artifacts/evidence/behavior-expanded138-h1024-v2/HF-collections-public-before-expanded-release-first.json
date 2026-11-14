@@ -1,0 +1,86 @@
+{
+  "time": 1794675127.0996716,
+  "anonymous": true,
+  "collections": [
+    {
+      "slug": "ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f",
+      "public": true,
+      "items": [
+        {
+          "id": "ntc-ai/evidence-dial-aligntune",
+          "type": "model",
+          "sha": "5f7dfb6fff3841034bde19c02afa03e2da60329c",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-particle-hinted",
+          "type": "model",
+          "sha": "79c43d3d13a134072fab7d904989b4f8ecb30c3f",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-particle",
+          "type": "model",
+          "sha": "031c5c288e661b6951047a26cc00421d2bacbfe5",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-aligntune-curated",
+          "type": "model",
+          "sha": "812b5a3d2170118f82e0692d6ed0a45d218e94c1",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-behavior-particle",
+          "type": "model",
+          "sha": "c8a33bcc5cde8ba68f8cb97c42b681b77e4d9671",
+          "public": true
+        }
+      ]
+    },
+    {
+      "slug": "ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87",
+      "public": true,
+      "items": [
+        {
+          "id": "ntc-ai/evidence-dial-policies",
+          "type": "dataset",
+          "sha": "581d29da86c022f2ad3835171513f362b9ab62bd",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-training-archive",
+          "type": "dataset",
+          "sha": "e459aa812031f9834046152da18e5f25d0b7a274",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-grounding-tests",
+          "type": "dataset",
+          "sha": "7ce92303e45c121a355a8a1c8a1d707bc6c4fc27",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-curated-successes",
+          "type": "dataset",
+          "sha": "763c36f9a963499a8a558d31b89d625484d9123c",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-benchmark",
+          "type": "dataset",
+          "sha": "bbebf36c42294ea0814a397147b5809f1e846b04",
+          "public": true
+        },
+        {
+          "id": "ntc-ai/evidence-dial-behavior",
+          "type": "dataset",
+          "sha": "42c15646c2e1404d7b404a206ac14d30d3dbde06",
+          "public": true
+        }
+      ]
+    }
+  ],
+  "unique_public_repos": 11,
+  "expanded_weights_not_yet_published": true
+}
