@@ -1,45 +1,63 @@
-# Evidence Dial submission packet
+# Evidence Dial — hackathon submission packet
 
-Owner handoff: Mikkel will fill in the final hackathon form. This file supplies
-copyable project material; no submission receipt is claimed.
+Team: **Particle Sliders**. Category: **Track 1, section 7 — Preference and style alignment**.
+The owner fills the submission form; this repository does not claim a form submission receipt.
 
-Team: **Particle Sliders**. Project: **Evidence Dial**.
-Track **1**, problem statement **3**: grounded answers on an organisation's
-documents, with explicit missing-evidence and conflict answers.
-
-| Field | Value |
+| Submission field | Value |
 | --- | --- |
-| Code and README article | https://github.com/HyperGAN/evidence-dial |
+| Main project and thorough README | https://github.com/HyperGAN/evidence-dial |
+| Recorded held-out behavior demo | https://huggingface.co/spaces/ntc-ai/evidence-dial |
+| Behavior model and raw adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
+| Data, all predictions, training logs and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
 | Model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
-| Dataset and benchmark collection | https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87 |
-| Original 64-case AlignTune model | https://huggingface.co/ntc-ai/evidence-dial-aligntune |
-| Policy corpus | https://huggingface.co/datasets/ntc-ai/evidence-dial-policies |
-| Checkpoints and training logs | https://huggingface.co/datasets/ntc-ai/evidence-dial-training-archive |
-| Original answer-hinted particle comparison | https://huggingface.co/ntc-ai/evidence-dial-particle-hinted |
-| Corrected Jev-curated particle | https://huggingface.co/ntc-ai/evidence-dial-particle |
-| Same-48-case AlignTune control | https://huggingface.co/ntc-ai/evidence-dial-aligntune-curated |
-| Successful samples, seeds and paired states | https://huggingface.co/datasets/ntc-ai/evidence-dial-curated-successes |
-| Public demo | https://huggingface.co/spaces/ntc-ai/evidence-dial |
-| Complete original and corrected benchmark | https://huggingface.co/datasets/ntc-ai/evidence-dial-benchmark |
-| Corrected benchmark results | https://huggingface.co/datasets/ntc-ai/evidence-dial-benchmark/tree/bbebf36c42294ea0814a397147b5809f1e846b04/curated-retry-v1 |
+| Dataset collection | https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87 |
 
 ## Abstract
 
-Evidence Dial addresses Track 1, problem statement 3: answer from an organization's documents, return UNKNOWN when evidence is absent, and CONFLICT when equally authoritative records disagree.
+We investigate preference and style alignment through internal-state training
+with ParticleGAN. Frozen Tiny Aya explores 16 behavioral instructions for each
+of 64 training questions. NanoGPT's Jev evaluates the replies against a fixed
+rubric for sympathetic, constructive support with independent judgment.
+Thirty-seven questions pass the declared threshold. CuratorKIT provides schema
+validation and exact deduplication; AuditKIT connects native generation to the
+frozen evaluator.
 
-Our CuratorKIT → Particle Sliders / AlignTune → AuditKIT pipeline uses Tiny Aya Global 3.35B. Frozen Tiny Aya generates explanations without reference-answer hints; strict checks and Jev 1.14 retain successful examples within a fixed seeded budget. 48 of 64 fictional policy cases qualify. Tokens, RNG states and hidden trajectories are preserved. Approved explanations supply positive context for 118 cached neutral/positive internal state pairs. A routed particle adapter and supervised LoRA both train for 128 updates, batch two, on the same source cases. Weight EMA is disabled.
+For each retained question, we capture the model's final hidden state before
+its first answer token under a selected instruction. The neutral context is
+the same user question without an added behavioral system message. Both
+contexts have empty continuation history. A routed particle adapter learns
+from these paired states using the unchanged ParticleGAN formulation, with a
+frozen backbone, raw weights, and no cross-entropy text-imitation loss or
+weight EMA.
 
-Results depend strongly on the benchmark. On the repeated 900-case FaithEval subset, the development-selected particle scores 501/900 (55.7%), versus matched LoRA 270/900 (30.0%) and original 64-case LoRA 375/900 (41.7%). The paired gain over matched LoRA is 25.7 percentage points, 95% interval [22.7, 28.7]. A post hoc check accepting a correct choice label plus its exact option text reduces the gain to 19.9 points [17.2, 22.7]. Choice accuracy is then nearly tied; the substantial advantage is refusing unsupported answers.
+Two learning rates run for 128 updates each. Checkpoint and strength selection
+uses 16 development questions, retaining all maximum ties before a separate
+32-question confirmation. The preselected adapter scores 0.5996 versus 0.5888 OFF on 32 held-out questions,
+a +0.0108 change with an individual paired 95% bootstrap interval of
+[−0.0122, +0.0347]. Prompt-only scores 0.6123. Strength 2 regresses to 0.5202. The saved-output demo exposes the identical
+question across strengths and retains regressions.
 
-Fresh balanced policy confirmation exposes the tradeoff: particle 209/768 (27.2%), matched LoRA 477/768 (62.1%), OFF 354/768 (46.1%). Particle minus LoRA is −34.9 points [−38.4, −31.4], driven by excess abstention. Thus the original perfect template score was not a ceiling, and the transfer win does not establish reliable organizational grounding.
+Earlier QA testing reached the same development score as SFT, 174/192, but
+held-out results favored SFT. Our contribution is a reusable connection
+between language-defined preferences, curated internal states, and a learned
+behavior control. The small synthetic corpus, one training seed, shared
+curation/evaluation judge, and 64-token evaluation limit constrain the claims.
 
-The public release preserves all regressions, original comparisons, checkpoints, predictions, exact commands and a static HF explorer. Selection precedes new test outputs; intervals resample families or source questions. One training seed and absent verified FaithEval answerable QA controls limit generalization. The Cohere2 binding, corpus, curation and evaluation are new hackathon work; Particle Sliders core existed beforehand. Tiny Aya and derived weights are CC-BY-NC-4.0 for noncommercial use.
+## Where we add value
 
-Word count: 305.
+A concrete connection from a written response preference to curated internal-state pairs, ParticleGAN training, and an adjustable raw-weight adapter. The same ordinary user question is retained at inference. The public explorer exposes all 32 held-out cases, the prompt-only baseline, and regressions. The reusable pipeline and complete records are the contribution; this small study does not demonstrate a quality advantage over prompting or SFT.
 
-## Account fields
+## Repositories and attribution
 
-The owner has supplied the registration email and confirmed Discord membership.
-Personal form fields are intentionally kept out of this public packet. The
-registration's Hugging Face username matching `ntc-ai` remains an owner credit
-check. No further form action is requested from an agent.
+- [Evidence Dial](https://github.com/HyperGAN/evidence-dial): this entry's integration, corpus, curation, training/evaluation harness, audits, and demo.
+- [CuratorKIT](https://github.com/Lexsi-Labs/CuratorKIT): schema validation and exact deduplication.
+- [AuditKIT](https://github.com/Lexsi-Labs/AuditKIT): native callable evaluation with the fixed Jev scorer.
+- [AlignTune](https://github.com/Lexsi-Labs/aligntune): SFT baselines in the separate QA study; it does not train the behavior PG adapter.
+- [ParticleGAN](https://github.com/HyperGAN/ParticleGAN) and [Particle Sliders](https://github.com/HyperGAN/particle-sliders): pre-existing training and adapter libraries.
+- [Meta Glimmer](https://github.com/HyperGAN/meta-glimmer-particle-slider/tree/813ea28dd37c156a23470d1ef9a4f1e418c581ac): paired prompts and frozen first-state capture reference.
+
+## Delivery scope and limits
+
+The main README supplies the abstract, complete development grid, held-out results table, actual examples, method, environment, artifact links, and honest limitations. Both original training roots and all five held-out arms completed and passed independent audit. The 138-context data derivative is prepared but untrained. No paper or claim of SFT superiority is part of this entry. Tiny Aya and derived weights/states are CC-BY-NC-4.0; retain upstream code licenses.
+
+The Space is a recorded-output explorer. Live files and content hashes are verified; interactive browser QA requires an available browser host and is not claimed here.

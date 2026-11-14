@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Particle Sliders · Support with independent judgment</title>
+<style>
+:root{color-scheme:light;--paper:#f7f7f2;--ink:#182d2b;--muted:#536966;--line:#d6ded8;--blue:#245fbd;--soft:#e8eef9;--warm:#fff3d9}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1120px;padding:34px 24px 60px;margin:auto}a{color:var(--blue)}header{border-bottom:1px solid var(--line);padding-bottom:25px}.eyebrow{font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(29px,4.5vw,47px);line-height:1.12;letter-spacing:-.035em;max-width:760px;margin:14px 0}h2{font-size:20px;line-height:1.3;margin:0 0 12px}p{margin:10px 0}.intro{max-width:770px;color:var(--muted);font-size:18px}.status{padding:12px 16px;background:var(--warm);border:1px solid #e7d6ae;border-radius:10px;margin:24px 0 20px;font-size:14px}.controls{background:white;border:1px solid var(--line);border-radius:16px;padding:22px}.label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:7px}select{font:inherit;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;width:100%;max-width:100%}.question{font-size:19px;line-height:1.55;white-space:pre-wrap;margin:19px 0 21px}.slider-row{display:grid;grid-template-columns:1fr 110px;gap:28px;align-items:center}.strength{font-size:35px;font-weight:750;text-align:right;font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--blue);cursor:pointer}.ticks{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;padding:0 3px}.hint{font-size:13px;color:var(--muted)}.answers{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:20px 0}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:23px;min-width:0}.card.on{border-color:#9db9df;box-shadow:inset 0 4px var(--blue)}.card.off{box-shadow:inset 0 4px #82968c}.card-tag{font-size:12px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.response{white-space:pre-wrap;overflow-wrap:anywhere;font-size:17px;min-height:125px}.score{font-size:13px;color:var(--muted);margin-top:20px;border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:10px}.score strong{color:var(--ink);font-variant-numeric:tabular-nums}.termination{font-size:12px;color:var(--muted);margin-top:8px}details{border:1px solid var(--line);border-radius:12px;background:white;padding:16px 19px;margin:15px 0}summary{font-weight:650;cursor:pointer}details .response{min-height:0;margin-top:15px}.instruction{font-size:13px;color:var(--muted);padding:12px;background:var(--paper);border-radius:8px;white-space:pre-wrap}.results{margin-top:30px}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:white}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:12px 15px;border-bottom:1px solid var(--line);white-space:nowrap}th{background:#edf1ec;font-size:12px;color:var(--muted)}tbody tr:last-child td{border-bottom:0}.active td{background:var(--soft)}.method{display:grid;grid-template-columns:1fr 1fr 1fr;gap:17px;margin-top:14px}.method div{padding:19px;border:1px solid var(--line);border-radius:12px}.method b{display:block;margin:4px 0}.method p{font-size:14px;color:var(--muted)}.method span{font-size:12px;color:var(--blue);font-weight:750}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:14px}.error{background:var(--warm);padding:24px;border-radius:12px}.hidden{display:none}code{font-size:12px;overflow-wrap:anywhere}#model{max-width:500px;margin-top:9px}.small{font-size:13px;color:var(--muted)}footer{margin-top:35px;padding-top:20px;border-top:1px solid var(--line)}@media(max-width:660px){main{padding:22px 16px 40px}.answers,.method{grid-template-columns:1fr}.card{padding:19px}.response{min-height:0}.slider-row{gap:15px;grid-template-columns:1fr 75px}.controls{padding:18px}.score{flex-wrap:wrap}.question{font-size:17px}th,td{padding:10px}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<div class="eyebrow">Particle Sliders · Track 1, section 7</div>
+<h1>Support with independent judgment</h1>
+<p class="intro">Our target: an assistant that responds with sympathy while thinking fairly about the situation. Compare real answers to the same question as a learned adapter changes strength.</p>
+</header>
+<p id="loading">Loading verified saved responses…</p>
+<div id="app" class="hidden">
+<div class="status" id="status"></div>
+<section class="controls" aria-label="Compare saved answers">
+<label class="label" for="question">Choose a situation</label>
+<select id="question"></select>
+<div class="question" id="question-text"></div>
+<div class="slider-row"><div>
+<label class="label" for="strength">Adapter strength</label>
+<input id="strength" type="range" min="0" max="3" step="1" value="2" aria-valuetext="1">
+<div class="ticks" aria-hidden="true"><span>OFF</span><span>0.5</span><span>1</span><span>2</span></div>
+</div><div class="strength" id="strength-value">1</div></div>
+<p class="hint">Each position loads an actual saved response. Stronger steering can help or hurt; response text is never interpolated.</p>
+</section>
+<div class="answers" aria-live="polite">
+<article class="card off"><div class="card-tag">Original model · OFF</div><h2>Same question, no adapter</h2><div class="response" id="off-text"></div><div class="score"><span>Jev behavior score</span><strong id="off-score"></strong></div><div class="termination" id="off-termination"></div></article>
+<article class="card on"><div class="card-tag" id="on-tag">Learned adapter</div><h2 id="on-title">Strength 1</h2><div class="response" id="on-text"></div><div class="score"><span>Jev behavior score</span><strong id="on-score"></strong></div><div class="termination" id="on-termination"></div></article>
+</div>
+<details id="prompt-details"><summary>Compare with an ordinary behavioral instruction</summary><p class="small">This baseline adds the fixed instruction below to the same user question. The learned adapter above receives the ordinary question alone.</p><div class="instruction" id="prompt-instruction"></div><div class="response" id="prompt-text"></div><div class="score"><span>Jev behavior score</span><strong id="prompt-score"></strong></div><div class="termination" id="prompt-termination"></div></details>
+<section class="results"><h2 id="results-title">Results across the question set</h2><div class="table-wrap"><table><thead><tr><th>Condition</th><th>Behavior score ↑</th><th>Change from OFF</th><th>Sympathy judgment</th><th>Sycophancy judgment</th></tr></thead><tbody id="metrics"></tbody></table></div><p class="hint">The behavior score measures the combined target, on a 0–1 scale. Sympathy and sycophancy columns are mean Jev probabilities, shown separately as diagnostics. These are model judgments, not accuracy percentages or human preference rates.</p><p class="small" id="uncertainty"></p></section>
+<section class="results"><h2>How the behavior is learned</h2><div class="method"><div><span>01 · CURATE</span><b>Find successful contexts</b><p>Explore 16 behavioral instructions per training question. Jev judges the replies; CuratorKIT validates and deduplicates the data.</p></div><div><span>02 · TRAIN</span><b>Learn from internal states</b><p>ParticleGAN trains a routed adapter toward the frozen model’s first-answer hidden states under selected instructions. The backbone stays frozen.</p></div><div><span>03 · EVALUATE</span><b>Keep the question unchanged</b><p>AuditKIT compares OFF, prompt-only, and adapter responses. Checkpoints and strengths are chosen on development data before held-out evaluation.</p></div></div></section>
+<details><summary>Checkpoint, evaluation scope, and limitations</summary><label class="label" for="model">Recorded checkpoint</label><select id="model"></select><p id="provenance" class="small"></p><p class="small">Targets are captured before the first response token, rather than from the entire approved response trajectory. New preferences require new curation and training. This study uses a small synthetic corpus, one training seed, the same Jev judge for curation and evaluation, and a 64-token evaluation limit.</p><p class="small" id="secondary-qa"></p><a id="download" href="behavior.json" download>Download these saved responses and metrics</a></details>
+<footer><p class="small">A recorded-output explorer. It does not generate new responses or call a paid API.</p><div class="links"><a href="https://github.com/HyperGAN/evidence-dial" target="_blank" rel="noopener">Project code</a><a href="https://github.com/HyperGAN/ParticleGAN" target="_blank" rel="noopener">ParticleGAN</a><a href="grounding.html">Earlier grounding experiments</a></div></footer>
+</div>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),levels=[0,0.5,1,2];let data,modelIndex=0;
+const number=x=>Number(x).toFixed(3),signed=x=>(x>=0?'+':'')+number(x);
+function text(id,value){$(id).textContent=value;}
+function termination(record){return record.termination==='native_eos'?'Ended at the model’s end-of-response token.':'Reached the shared 64-token limit; the full saved output is shown.';}
+function fill(prefix,record){text(prefix+'-text',record.output||'[Empty response ending at a legal end token]');text(prefix+'-score',number(record.effect)+' / 1');text(prefix+'-termination',termination(record));}
+function render(){
+ const q=data.cases[Number($('question').value)],m=data.models[modelIndex],strength=levels[Number($('strength').value)],key=String(strength),r=strength===0?q.off:q.models[m.id][key];
+ text('question-text',q.question);text('strength-value',strength===0?'OFF':key);$('strength').setAttribute('aria-valuetext',strength===0?'OFF':key);
+ text('on-tag',strength===0?'Adapter OFF':'Learned adapter');text('on-title',strength===0?'Adapter disabled':'Strength '+key);fill('off',q.off);fill('on',r);fill('prompt',q.prompt_only);
+ text('prompt-instruction',data.prompt_instruction);text('results-title',data.cases.length+' '+(data.split==='dev'?'development':'held-out')+' questions · '+m.title);
+ const rows=[['Original model · OFF',data.controls.off,0],['Prompt-only baseline',data.controls.prompt_only,null],...m.metrics.map(v=>['Adapter · strength '+v.strength,v,v.strength])];
+ $('metrics').replaceChildren();for(const [label,values,alpha] of rows){const tr=document.createElement('tr');if(alpha===strength)tr.className='active';for(const v of [label,number(values.mean_effect),signed(values.mean_effect-data.controls.off.mean_effect),number(values.mean_sympathy_probability),number(values.mean_sycophancy_probability)]){const td=document.createElement('td');td.textContent=v;tr.append(td);}$('metrics').append(tr);}
+ text('provenance',m.description+' · Raw weights, no weight EMA. Checkpoint SHA-256: '+m.sha256+'. '+data.scope_note);
+ const interval=m.metrics.find(v=>v.strength===strength)?.paired_bootstrap95;
+ text('uncertainty',interval?'Paired change from OFF: '+signed(r.effect-q.off.effect)+' on this question. Across the set, the individual 95% bootstrap interval is ['+interval.map(number).join(', ')+']. Question resampling; no claim of semantic-family independence.':data.uncertainty_note);
+}
+async function start(){
+ const url=new URL(location.href).searchParams.get('data')||'behavior.json';
+ const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error('Verified comparison data has not been published at this path yet.');
+ data=await response.json();if(data.schema!=='particle-behavior-explorer-v1'||!data.cases.length||!data.models.length)throw new Error('The saved comparison data is incomplete.');
+ text('status',data.status);text('secondary-qa',data.secondary_qa);$('download').href=url;
+ for(let i=0;i<data.cases.length;i++){const o=document.createElement('option');o.value=i;o.textContent=(i+1)+' · '+data.cases[i].question;$('question').append(o);}
+ for(let i=0;i<data.models.length;i++){const o=document.createElement('option');o.value=i;o.textContent=data.models[i].title;$('model').append(o);}
+ $('question').addEventListener('change',render);$('strength').addEventListener('input',render);$('model').addEventListener('change',()=>{modelIndex=Number($('model').value);render();});
+ $('loading').classList.add('hidden');$('app').classList.remove('hidden');render();
+}
+start().catch(error=>{text('loading',error.message);$('loading').className='error';});
+</script>
+</body>
+</html>

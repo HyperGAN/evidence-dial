@@ -1,0 +1,229 @@
+{
+  "time": 1794630229.3719056,
+  "state": "all-locked-behavior-holdout-arms-independently-admitted",
+  "source": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/audit_behavior_holdout_v1.py",
+    "sha256": "a3a87ce4d9f09e9bb9b42a60099f9c015c3e66868fc7298fd42aab0f68c98810"
+  },
+  "plan": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/plan-first.json",
+    "sha256": "686072e8864a18eae4d6794b8cc081d50be322b1320b14fb9ea10e137d8ec5f6"
+  },
+  "selection_lock": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/selection-lock-first.json",
+    "sha256": "1fb42cb8d86e1ff3dc13458d226fbe8d9b889227efd781f300447a41a61c794d"
+  },
+  "actual_root_terminals": [
+    {
+      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/GPU0/actual-tool-terminal-receipt-first.json",
+      "sha256": "c00561607c15f8ef87787468472dbc2a2cf69ad7cfb237bf754961adfbfb63ce"
+    },
+    {
+      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/GPU1/actual-tool-terminal-receipt-first.json",
+      "sha256": "acbf7e224b3b8f59380eb7bdb131061ebbb3a0489953ad0e079717a3acb17e8f"
+    }
+  ],
+  "all_own_processes_absent_and_private_leases_released": true,
+  "cases_each": 32,
+  "native_generations_verified": 160,
+  "Jev_judgment_records_verified": 160,
+  "unique_per_arm_Jev_firsts_verified": 160,
+  "arms": [
+    {
+      "name": "off",
+      "kind": "off",
+      "selected_on_DEV": false,
+      "display_grid": false,
+      "mean_effect": 0.5888281249999999,
+      "mean_sympathy_probability": 0.5812499999999998,
+      "mean_sycophancy_probability": 0.07,
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/off/predictions.jsonl",
+        "sha256": "2aa376fff54ad0e3fd4181acaa95be69dd985435d5573c40e72822cf5d61039d"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/off/summary.json",
+        "sha256": "4ba68b41e50743ef50e45eb50a88c1d49b5e134de18f7613474ff3973914c075"
+      }
+    },
+    {
+      "name": "prompt-only",
+      "kind": "prompt-only",
+      "selected_on_DEV": false,
+      "display_grid": false,
+      "mean_effect": 0.6122656249999999,
+      "mean_sympathy_probability": 0.5746875000000001,
+      "mean_sycophancy_probability": 0.06656250000000002,
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/prompt-only/predictions.jsonl",
+        "sha256": "10a43ffa1d3259744c231d2955dfe7b43744c8f22b7127673896b0a2e1493904"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/prompt-only/summary.json",
+        "sha256": "57dcb304b7c9bdbd1dcc951072adf95df54e2fb441beabf32c40eda821595cbf"
+      }
+    },
+    {
+      "name": "PG-GPU0-step32-alpha1",
+      "kind": "particle",
+      "selected_on_DEV": true,
+      "display_grid": true,
+      "mean_effect": 0.5996093749999999,
+      "mean_sympathy_probability": 0.5078125,
+      "mean_sycophancy_probability": 0.06906250000000001,
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/PG-GPU0-step32-alpha1/predictions.jsonl",
+        "sha256": "0d00c00f14cd9447558c975488f3783229415a973b709787c7ca34fe82b8d1e6"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/PG-GPU0-step32-alpha1/summary.json",
+        "sha256": "762c40621d0e5c8a2e99b336d85f51225361c4ee62ef0ac0f91a5295dd24aa52"
+      }
+    },
+    {
+      "name": "PG-GPU0-step32-alpha0.5",
+      "kind": "particle",
+      "selected_on_DEV": false,
+      "display_grid": true,
+      "mean_effect": 0.6007812500000002,
+      "mean_sympathy_probability": 0.5375,
+      "mean_sycophancy_probability": 0.06531250000000002,
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/PG-GPU0-step32-alpha0.5/predictions.jsonl",
+        "sha256": "b124c565af4b33a6e063f52b9956f215f23c80aebed2cbd4fe1024579b50c1bd"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/PG-GPU0-step32-alpha0.5/summary.json",
+        "sha256": "163855822b997ddf462fd3fc44657e545958a2740d188f4975e00fb792229404"
+      }
+    },
+    {
+      "name": "PG-GPU0-step32-alpha2",
+      "kind": "particle",
+      "selected_on_DEV": false,
+      "display_grid": true,
+      "mean_effect": 0.520234375,
+      "mean_sympathy_probability": 0.38687499999999997,
+      "mean_sycophancy_probability": 0.0996875,
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/PG-GPU0-step32-alpha2/predictions.jsonl",
+        "sha256": "f26cc189dbe7abb35eb9ee1478729947318373e7a7966bfea01df8663aa7db9a"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/locked-holdout32-v1/arms/PG-GPU0-step32-alpha2/summary.json",
+        "sha256": "b1ca4f609d48f237721f4fc14760b137fe114fd52733e9e607dcc0ed4534099c"
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "arm": "prompt-only",
+      "baseline": "off",
+      "cases": 32,
+      "mean_effect_difference": 0.023437499999999983,
+      "paired_bootstrap95": [
+        -0.0049218750000000235,
+        0.05390624999999996
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    },
+    {
+      "arm": "PG-GPU0-step32-alpha1",
+      "baseline": "off",
+      "cases": 32,
+      "mean_effect_difference": 0.010781249999999994,
+      "paired_bootstrap95": [
+        -0.01218750000000001,
+        0.034687499999999996
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    },
+    {
+      "arm": "PG-GPU0-step32-alpha1",
+      "baseline": "prompt-only",
+      "cases": 32,
+      "mean_effect_difference": -0.012656249999999989,
+      "paired_bootstrap95": [
+        -0.041564453125,
+        0.017033203124999983
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    },
+    {
+      "arm": "PG-GPU0-step32-alpha0.5",
+      "baseline": "off",
+      "cases": 32,
+      "mean_effect_difference": 0.011953124999999998,
+      "paired_bootstrap95": [
+        -0.006564453125000009,
+        0.029689453124999977
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    },
+    {
+      "arm": "PG-GPU0-step32-alpha0.5",
+      "baseline": "prompt-only",
+      "cases": 32,
+      "mean_effect_difference": -0.011484374999999984,
+      "paired_bootstrap95": [
+        -0.037499999999999985,
+        0.014375000000000016
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    },
+    {
+      "arm": "PG-GPU0-step32-alpha2",
+      "baseline": "off",
+      "cases": 32,
+      "mean_effect_difference": -0.06859375000000001,
+      "paired_bootstrap95": [
+        -0.104689453125,
+        -0.03171875
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    },
+    {
+      "arm": "PG-GPU0-step32-alpha2",
+      "baseline": "prompt-only",
+      "cases": 32,
+      "mean_effect_difference": -0.09203124999999998,
+      "paired_bootstrap95": [
+        -0.131484375,
+        -0.052968749999999974
+      ],
+      "unit": "matched_question",
+      "resamples": 10000,
+      "seed": 20261114,
+      "scope": "Individual descriptive intervals; no test-based selection or simultaneous-coverage claim"
+    }
+  ],
+  "all_preselected_ties_reported": true,
+  "holdout_based_reselection": false,
+  "new_model_calls": 0,
+  "new_Jev_calls": 0,
+  "new_updates": 0,
+  "limitations": [
+    "Single synthetic question set and training seed",
+    "Same Jev rubric/judge in curation and evaluation",
+    "Native evaluation capped at64 tokens; truncation retained",
+    "Question bootstrap does not establish semantic-family independence"
+  ]
+}

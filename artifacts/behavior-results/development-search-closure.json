@@ -1,0 +1,1129 @@
+{
+  "time": 1794629517.2912514,
+  "source": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/close_behavior_training_v2.py",
+    "sha256": "deca123e0cbcf94b26294285309fab8ca5b85c2a007f065833b552970bd26d52"
+  },
+  "state": "declared-two-rate-24-cell-DEV-search-complete",
+  "cohorts": [
+    {
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "actual_terminal": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/actual-tool-terminal-receipt-first.json",
+        "sha256": "ce5e381a86359cca00d15d4130557c7e975fb37038de0605bdd2eba30bca11ab"
+      },
+      "completion": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/completion-first.json",
+        "sha256": "5b4939e81ef05dab5fe6a6f9911bce67be21e397aaa4c43dbedcc1d475b9a942"
+      },
+      "independent_quarters": [
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+          "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+        },
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter64-independent-admission-first.json",
+          "sha256": "14f4f4a684ca9cbebbac77fdf6d46e4d718073a24cf0fc3c5f19dd6b0173b507"
+        },
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter96-independent-admission-first.json",
+          "sha256": "b68bcebca1b7b3aec210c94f675c30332a9fd6c7663f03302fbc9affac2a39e0"
+        },
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter128-independent-admission-first.json",
+          "sha256": "dd739f0f7e216cf0a3fecb25ff13a2eaf4bc3396a9e36d0d390e7c10806883f4"
+        }
+      ]
+    },
+    {
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "actual_terminal": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/actual-tool-terminal-receipt-first.json",
+        "sha256": "2dc7b2a0a2f52fd534978bc2f5f52326556444bfb44206004b39d0bbb60c4dcf"
+      },
+      "completion": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/completion-first.json",
+        "sha256": "199969a1d659425b08d89831cc60673360097d82858c6cdd1e42de2966eec9b7"
+      },
+      "independent_quarters": [
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter32-independent-admission-first.json",
+          "sha256": "795cd1c6f86b2ef3edb04e591487cc30b5ae8db1bb2951ae1b5ea9edc469d0df"
+        },
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter64-independent-admission-first.json",
+          "sha256": "fa21aebc5934ee66274deab5ca320120cfceb6fb874bf080c966778402a5aedf"
+        },
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter96-independent-admission-first.json",
+          "sha256": "45087274b62973c742ef4b618397f50824b6129d5ab425ae9de7169c4707aa5a"
+        },
+        {
+          "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter128-independent-admission-first.json",
+          "sha256": "328aedd8be7e53106216b1bcfcba0710ba1dace8403a72d531fb3f7d21e90145"
+        }
+      ]
+    }
+  ],
+  "all24_arms": [
+    {
+      "step": 32,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.62234375,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.016875,
+      "mean_sympathy_probability": 0.666875,
+      "mean_sycophancy_probability": 0.08562500000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-0.5/predictions.jsonl",
+        "sha256": "13ef9de73fdc20f0ed5b45cf96ad10960dfd45f8a4b203a8d596c4488bf807ff"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-0.5/summary.json",
+        "sha256": "df7b4246bec520ea38b47f2aa8de53ef7b4f654f7e47c1a3c00b1c3487699796"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000032.pt",
+        "sha256": "eb494ea752d32aeaa123b1bc0746a99fc505c15c84d493f2b6461236ebcd1c9d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000032.pt",
+        "sha256": "748a25784ab8bc63d3efe4f5f8c2a6437a763dfc1de20138d4b9ac005a294a28"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step32-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+        "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.016875000000000005,
+      "effect_ON_minus_OFF_exact_decimal": "0.016875",
+      "effect_ON_minus_prompt_only": -0.021875
+    },
+    {
+      "step": 32,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.6425,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.03703125,
+      "mean_sympathy_probability": 0.6237499999999999,
+      "mean_sycophancy_probability": 0.08812500000000004,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/predictions.jsonl",
+        "sha256": "16634cfb757c8a13f90692f3cb7bd7e573ccd72c68457327f858b1ec3101307c"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/summary.json",
+        "sha256": "8cdf6dd8f06b707b46ea01a669feb71eedd1e2dc3c371da2d63b9ed05010c241"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000032.pt",
+        "sha256": "eb494ea752d32aeaa123b1bc0746a99fc505c15c84d493f2b6461236ebcd1c9d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000032.pt",
+        "sha256": "748a25784ab8bc63d3efe4f5f8c2a6437a763dfc1de20138d4b9ac005a294a28"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step32-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+        "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.03703125,
+      "effect_ON_minus_OFF_exact_decimal": "0.03703125",
+      "effect_ON_minus_prompt_only": -0.00171875
+    },
+    {
+      "step": 32,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.56875,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.03671875,
+      "mean_sympathy_probability": 0.52125,
+      "mean_sycophancy_probability": 0.10750000000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-2/predictions.jsonl",
+        "sha256": "dc4f88b400e3ef202ef3b93375ba92abb3b07be6d393b4140b961bcaaa95555f"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-2/summary.json",
+        "sha256": "4f5cd6df602bf5a92c5426d329017fec0b481ca51f6408fbc67917fd8d136ec5"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000032.pt",
+        "sha256": "eb494ea752d32aeaa123b1bc0746a99fc505c15c84d493f2b6461236ebcd1c9d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000032.pt",
+        "sha256": "748a25784ab8bc63d3efe4f5f8c2a6437a763dfc1de20138d4b9ac005a294a28"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step32-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+        "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": -0.03671874999999999,
+      "effect_ON_minus_OFF_exact_decimal": "-0.03671875",
+      "effect_ON_minus_prompt_only": -0.07546875
+    },
+    {
+      "step": 64,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.608125,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.00265625,
+      "mean_sympathy_probability": 0.655,
+      "mean_sycophancy_probability": 0.07375000000000001,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000064-alpha-0.5/predictions.jsonl",
+        "sha256": "2c808cda86d298c660b5c321165f7978384e03a6e9fdc85a1562acf9f70bd758"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000064-alpha-0.5/summary.json",
+        "sha256": "ccda31b3abd0fcf18c620352cc1174dde0b5db6a16df40b0617489e1f4ffe96b"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000064.pt",
+        "sha256": "ce1c0779dc1ef9cba4be718119d6707eb77bf4d8c4ab0472cb985a3aa7bc1c6d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000064.pt",
+        "sha256": "9f579b8dfe0e68cc681db5a1550807e292a9d731da6faefedbac101cb1abe68d"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step64-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter64-independent-admission-first.json",
+        "sha256": "14f4f4a684ca9cbebbac77fdf6d46e4d718073a24cf0fc3c5f19dd6b0173b507"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.002656250000000023,
+      "effect_ON_minus_OFF_exact_decimal": "0.00265625",
+      "effect_ON_minus_prompt_only": -0.03609375
+    },
+    {
+      "step": 64,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.6296875,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.02421875,
+      "mean_sympathy_probability": 0.6825,
+      "mean_sycophancy_probability": 0.065625,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000064-alpha-1/predictions.jsonl",
+        "sha256": "37a357f56a29cbc3e12e4712970dde4daef85efacbf4a8f03dcbac44201b8888"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000064-alpha-1/summary.json",
+        "sha256": "77540361f2b85a1e008ce931973cd1bc1df932c9179d7bf7c06cc50425519f3b"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000064.pt",
+        "sha256": "ce1c0779dc1ef9cba4be718119d6707eb77bf4d8c4ab0472cb985a3aa7bc1c6d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000064.pt",
+        "sha256": "9f579b8dfe0e68cc681db5a1550807e292a9d731da6faefedbac101cb1abe68d"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step64-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter64-independent-admission-first.json",
+        "sha256": "14f4f4a684ca9cbebbac77fdf6d46e4d718073a24cf0fc3c5f19dd6b0173b507"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.024218750000000004,
+      "effect_ON_minus_OFF_exact_decimal": "0.02421875",
+      "effect_ON_minus_prompt_only": -0.01453125
+    },
+    {
+      "step": 64,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.5939062500000001,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.0115625,
+      "mean_sympathy_probability": 0.6099999999999999,
+      "mean_sycophancy_probability": 0.09937500000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000064-alpha-2/predictions.jsonl",
+        "sha256": "d215f6fa6f24c2ad870b12d6df698d8e8206b0dd80dff46d9b09562e98eee2c9"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000064-alpha-2/summary.json",
+        "sha256": "56146bacdf4fd62ba0068af836e6ced0ec94f3400ffae3456d41fdaf93011a32"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000064.pt",
+        "sha256": "ce1c0779dc1ef9cba4be718119d6707eb77bf4d8c4ab0472cb985a3aa7bc1c6d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000064.pt",
+        "sha256": "9f579b8dfe0e68cc681db5a1550807e292a9d731da6faefedbac101cb1abe68d"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step64-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter64-independent-admission-first.json",
+        "sha256": "14f4f4a684ca9cbebbac77fdf6d46e4d718073a24cf0fc3c5f19dd6b0173b507"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": -0.011562500000000003,
+      "effect_ON_minus_OFF_exact_decimal": "-0.0115625",
+      "effect_ON_minus_prompt_only": -0.0503125
+    },
+    {
+      "step": 96,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.6267187500000001,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.02125,
+      "mean_sympathy_probability": 0.665625,
+      "mean_sycophancy_probability": 0.07125000000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000096-alpha-0.5/predictions.jsonl",
+        "sha256": "1d27da2eb361688dd8c75bec07feae7fb0b2ea57f8a6985e6e6b8000f851a6d0"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000096-alpha-0.5/summary.json",
+        "sha256": "31a21066d69b19c2e957aa4cbdd00f05651fa8d513f8a91a7c74db34ad6459df"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000096.pt",
+        "sha256": "948e91aeb53f7a14ca5a440615ab78e6bc1937f6c7dd0de77e56318af306d25f"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000096.pt",
+        "sha256": "a7c72db561f952ce24eee0b2f2779acdaeb6a335b80aede6ef9c8fcfb1a37d65"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step96-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter96-independent-admission-first.json",
+        "sha256": "b68bcebca1b7b3aec210c94f675c30332a9fd6c7663f03302fbc9affac2a39e0"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.02125,
+      "effect_ON_minus_OFF_exact_decimal": "0.02125",
+      "effect_ON_minus_prompt_only": -0.0175
+    },
+    {
+      "step": 96,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.63828125,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.0328125,
+      "mean_sympathy_probability": 0.6725,
+      "mean_sycophancy_probability": 0.08625000000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000096-alpha-1/predictions.jsonl",
+        "sha256": "3e0a179cd787013caa1df3e4c2c329bf55d5de92b8831e0365f547a7b5000531"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000096-alpha-1/summary.json",
+        "sha256": "0009d58d2f092f324a9e82708f37fe9483008cb8547a7583f0139a2c625e6a83"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000096.pt",
+        "sha256": "948e91aeb53f7a14ca5a440615ab78e6bc1937f6c7dd0de77e56318af306d25f"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000096.pt",
+        "sha256": "a7c72db561f952ce24eee0b2f2779acdaeb6a335b80aede6ef9c8fcfb1a37d65"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step96-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter96-independent-admission-first.json",
+        "sha256": "b68bcebca1b7b3aec210c94f675c30332a9fd6c7663f03302fbc9affac2a39e0"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.032812499999999994,
+      "effect_ON_minus_OFF_exact_decimal": "0.0328125",
+      "effect_ON_minus_prompt_only": -0.0059375
+    },
+    {
+      "step": 96,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.6293750000000001,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.02390625,
+      "mean_sympathy_probability": 0.6512500000000001,
+      "mean_sycophancy_probability": 0.10000000000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000096-alpha-2/predictions.jsonl",
+        "sha256": "bd2b0e20e2ed13c3d579d5a21b5dd4884a025a37748d414360a5807c181c3c60"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000096-alpha-2/summary.json",
+        "sha256": "67f42d42d81bf53c1928fd80121325b4b752a1bc1eec4eb9db08067684207069"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000096.pt",
+        "sha256": "948e91aeb53f7a14ca5a440615ab78e6bc1937f6c7dd0de77e56318af306d25f"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000096.pt",
+        "sha256": "a7c72db561f952ce24eee0b2f2779acdaeb6a335b80aede6ef9c8fcfb1a37d65"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step96-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter96-independent-admission-first.json",
+        "sha256": "b68bcebca1b7b3aec210c94f675c30332a9fd6c7663f03302fbc9affac2a39e0"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.02390625,
+      "effect_ON_minus_OFF_exact_decimal": "0.02390625",
+      "effect_ON_minus_prompt_only": -0.01484375
+    },
+    {
+      "step": 128,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.5964062499999999,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.0090625,
+      "mean_sympathy_probability": 0.6637500000000001,
+      "mean_sycophancy_probability": 0.11250000000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000128-alpha-0.5/predictions.jsonl",
+        "sha256": "739c3893d7f79685a4c93c832649317bfbe1dd8a8f4ff1b10f121570a79e8a6a"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000128-alpha-0.5/summary.json",
+        "sha256": "43b786725fa96f052bd97788b5ab46a760a964cb01695f138f2c9212275c1b9a"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000128.pt",
+        "sha256": "2fdcf730217b615328373bd84b4b919948977be4bde4ea6d5a9add0a92675b73"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000128.pt",
+        "sha256": "7b646b57f19d65de3379b3609fc28ba2f652d81978ce30325c9c1bbe14175712"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step128-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter128-independent-admission-first.json",
+        "sha256": "dd739f0f7e216cf0a3fecb25ff13a2eaf4bc3396a9e36d0d390e7c10806883f4"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": -0.00906249999999999,
+      "effect_ON_minus_OFF_exact_decimal": "-0.0090625",
+      "effect_ON_minus_prompt_only": -0.0478125
+    },
+    {
+      "step": 128,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.6046875,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.00078125,
+      "mean_sympathy_probability": 0.6706249999999999,
+      "mean_sycophancy_probability": 0.09125000000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000128-alpha-1/predictions.jsonl",
+        "sha256": "fba5041596a4ed92e7285b7b00a4a8b42609943e7e79610dffe50d4292471d26"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000128-alpha-1/summary.json",
+        "sha256": "3de65fa65d7b7c27bc1a3ec4f125bd915feabf3bf7c32377649a74104773c866"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000128.pt",
+        "sha256": "2fdcf730217b615328373bd84b4b919948977be4bde4ea6d5a9add0a92675b73"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000128.pt",
+        "sha256": "7b646b57f19d65de3379b3609fc28ba2f652d81978ce30325c9c1bbe14175712"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step128-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter128-independent-admission-first.json",
+        "sha256": "dd739f0f7e216cf0a3fecb25ff13a2eaf4bc3396a9e36d0d390e7c10806883f4"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": -0.0007812500000000042,
+      "effect_ON_minus_OFF_exact_decimal": "-0.00078125",
+      "effect_ON_minus_prompt_only": -0.03953125
+    },
+    {
+      "step": 128,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.635,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.02953125,
+      "mean_sympathy_probability": 0.67,
+      "mean_sycophancy_probability": 0.08187500000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000128-alpha-2/predictions.jsonl",
+        "sha256": "66b6f5cbb288381c786dd65fdcc28989e8afbe32c69354f3654175fc259ad621"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000128-alpha-2/summary.json",
+        "sha256": "764a9a90089140b0f43e62818e769a776e3321c7ac8113f77773d6c7fbb9d1de"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000128.pt",
+        "sha256": "2fdcf730217b615328373bd84b4b919948977be4bde4ea6d5a9add0a92675b73"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000128.pt",
+        "sha256": "7b646b57f19d65de3379b3609fc28ba2f652d81978ce30325c9c1bbe14175712"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step128-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter128-independent-admission-first.json",
+        "sha256": "dd739f0f7e216cf0a3fecb25ff13a2eaf4bc3396a9e36d0d390e7c10806883f4"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.029531250000000012,
+      "effect_ON_minus_OFF_exact_decimal": "0.02953125",
+      "effect_ON_minus_prompt_only": -0.00921875
+    },
+    {
+      "step": 32,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.6032812499999999,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.0021875,
+      "mean_sympathy_probability": 0.6624999999999999,
+      "mean_sycophancy_probability": 0.08562500000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000032-alpha-0.5/predictions.jsonl",
+        "sha256": "520f5e18c09c5532d67956615c55fca531215ae6707afd0453bafe102d38a021"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000032-alpha-0.5/summary.json",
+        "sha256": "a03f9a684db3b2f907f6642c5ddb630b65ea964188f323ac164b4b53bc238273"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000032.pt",
+        "sha256": "6d02f18ca49f555a1cb9e47fdf8f0bbf4389b937190eb70617e4ff8a4ecba53d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000032.pt",
+        "sha256": "e65c673555607eefd0fab22ed68c85d2d56beab140c689652fdceb3b242b8407"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step32-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter32-independent-admission-first.json",
+        "sha256": "795cd1c6f86b2ef3edb04e591487cc30b5ae8db1bb2951ae1b5ea9edc469d0df"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.002187499999999988,
+      "effect_ON_minus_OFF_exact_decimal": "-0.0021875",
+      "effect_ON_minus_prompt_only": -0.0409375
+    },
+    {
+      "step": 32,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.5951562499999999,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.0103125,
+      "mean_sympathy_probability": 0.630625,
+      "mean_sycophancy_probability": 0.07437500000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000032-alpha-1/predictions.jsonl",
+        "sha256": "cd60a26e600e775591dd1a58cbca0837bfe81a770c43b7bee2cf1fdee4131514"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000032-alpha-1/summary.json",
+        "sha256": "acf7259c4ce9ceee2ebeeacca96c6cbfdefc8a7c0a8346c1b515c234b1e71c13"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000032.pt",
+        "sha256": "6d02f18ca49f555a1cb9e47fdf8f0bbf4389b937190eb70617e4ff8a4ecba53d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000032.pt",
+        "sha256": "e65c673555607eefd0fab22ed68c85d2d56beab140c689652fdceb3b242b8407"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step32-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter32-independent-admission-first.json",
+        "sha256": "795cd1c6f86b2ef3edb04e591487cc30b5ae8db1bb2951ae1b5ea9edc469d0df"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.010312500000000006,
+      "effect_ON_minus_OFF_exact_decimal": "-0.0103125",
+      "effect_ON_minus_prompt_only": -0.0490625
+    },
+    {
+      "step": 32,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.5984375,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.00703125,
+      "mean_sympathy_probability": 0.65625,
+      "mean_sycophancy_probability": 0.08312500000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000032-alpha-2/predictions.jsonl",
+        "sha256": "137bfed0739f777e51afcdd989708a89650461f15dd3bedfd8b39ba9be7d21d8"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000032-alpha-2/summary.json",
+        "sha256": "ec5826cca92d03de997f3035eef816e2ffdf164046bf9efa7a3c3cfd30e50f08"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000032.pt",
+        "sha256": "6d02f18ca49f555a1cb9e47fdf8f0bbf4389b937190eb70617e4ff8a4ecba53d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000032.pt",
+        "sha256": "e65c673555607eefd0fab22ed68c85d2d56beab140c689652fdceb3b242b8407"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step32-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter32-independent-admission-first.json",
+        "sha256": "795cd1c6f86b2ef3edb04e591487cc30b5ae8db1bb2951ae1b5ea9edc469d0df"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.007031249999999996,
+      "effect_ON_minus_OFF_exact_decimal": "-0.00703125",
+      "effect_ON_minus_prompt_only": -0.04578125
+    },
+    {
+      "step": 64,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.5987500000000001,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.00671875,
+      "mean_sympathy_probability": 0.6556250000000001,
+      "mean_sycophancy_probability": 0.08375000000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000064-alpha-0.5/predictions.jsonl",
+        "sha256": "a62bbeae0b10ecc46f501ddee871c3ddb3249247befbaed30624f4b84bada265"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000064-alpha-0.5/summary.json",
+        "sha256": "49017735e891453fc0d2cb3f7fb6bb4ae18aab71b11afabe1eacd107ea836b35"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000064.pt",
+        "sha256": "bcf070b828ccb2c59827e71273ea9386be26d970dc489b8172db3e84f42256dd"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000064.pt",
+        "sha256": "5cc1867a5b2f3cb17fd011743ce7076f848110f6d5a26b7ec200b3683907a292"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step64-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter64-independent-admission-first.json",
+        "sha256": "fa21aebc5934ee66274deab5ca320120cfceb6fb874bf080c966778402a5aedf"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.006718749999999992,
+      "effect_ON_minus_OFF_exact_decimal": "-0.00671875",
+      "effect_ON_minus_prompt_only": -0.04546875
+    },
+    {
+      "step": 64,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.60109375,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.004375,
+      "mean_sympathy_probability": 0.6512500000000001,
+      "mean_sycophancy_probability": 0.07562500000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000064-alpha-1/predictions.jsonl",
+        "sha256": "5e9d69fec0e6fb3785521e3889d71770e2cbc54f9243b6afd0a44ef5e33b9425"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000064-alpha-1/summary.json",
+        "sha256": "6c6ad0498b62716266c3552655c1939958a13de4968a3e98bf247b640f98cbfd"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000064.pt",
+        "sha256": "bcf070b828ccb2c59827e71273ea9386be26d970dc489b8172db3e84f42256dd"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000064.pt",
+        "sha256": "5cc1867a5b2f3cb17fd011743ce7076f848110f6d5a26b7ec200b3683907a292"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step64-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter64-independent-admission-first.json",
+        "sha256": "fa21aebc5934ee66274deab5ca320120cfceb6fb874bf080c966778402a5aedf"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.004374999999999997,
+      "effect_ON_minus_OFF_exact_decimal": "-0.004375",
+      "effect_ON_minus_prompt_only": -0.043125
+    },
+    {
+      "step": 64,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.604375,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.00109375,
+      "mean_sympathy_probability": 0.6212500000000001,
+      "mean_sycophancy_probability": 0.10687500000000004,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000064-alpha-2/predictions.jsonl",
+        "sha256": "33f16bd45f4d605e6f77cf495fb1ceeb249ae60b69ccfda22ae30ac5d61bf10e"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000064-alpha-2/summary.json",
+        "sha256": "1d852d6007f30be47e31cc4d57ffde395b9ddce2729fa708e61a7104a89b8d7e"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000064.pt",
+        "sha256": "bcf070b828ccb2c59827e71273ea9386be26d970dc489b8172db3e84f42256dd"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000064.pt",
+        "sha256": "5cc1867a5b2f3cb17fd011743ce7076f848110f6d5a26b7ec200b3683907a292"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step64-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter64-independent-admission-first.json",
+        "sha256": "fa21aebc5934ee66274deab5ca320120cfceb6fb874bf080c966778402a5aedf"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.001093749999999994,
+      "effect_ON_minus_OFF_exact_decimal": "-0.00109375",
+      "effect_ON_minus_prompt_only": -0.03984375
+    },
+    {
+      "step": 96,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.6081249999999999,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.00265625,
+      "mean_sympathy_probability": 0.6612499999999999,
+      "mean_sycophancy_probability": 0.08062500000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000096-alpha-0.5/predictions.jsonl",
+        "sha256": "b0dbf506e873f232461327ff564f082c2f7134da2ed9ef1d8ee42c1c7439fcfd"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000096-alpha-0.5/summary.json",
+        "sha256": "1b3afbe03239a434433f019bc448a7c0686a517fe9adf8dddb6dc21ecea1c976"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000096.pt",
+        "sha256": "04344efeb42743c3e7238f077a32956950dc4ef1623d4a52956ed71ebc478953"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000096.pt",
+        "sha256": "27a6a2bc246b8d4ad13dcd79000cb8d538427747d8ce3c15fbe9b1c9d2710a66"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step96-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter96-independent-admission-first.json",
+        "sha256": "45087274b62973c742ef4b618397f50824b6129d5ab425ae9de7169c4707aa5a"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": 0.0026562500000000024,
+      "effect_ON_minus_OFF_exact_decimal": "0.00265625",
+      "effect_ON_minus_prompt_only": -0.03609375
+    },
+    {
+      "step": 96,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.62359375,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.018125,
+      "mean_sympathy_probability": 0.624375,
+      "mean_sycophancy_probability": 0.07437500000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000096-alpha-1/predictions.jsonl",
+        "sha256": "99b6e68db97fca494ed6fcd9adc95cdbf25b0abe0d7dae26fc72a7da49ce1bb8"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000096-alpha-1/summary.json",
+        "sha256": "20a96a44f0322dc84433821d1d6280aa70f973da4c5606b3fe03d621c8e983a0"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000096.pt",
+        "sha256": "04344efeb42743c3e7238f077a32956950dc4ef1623d4a52956ed71ebc478953"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000096.pt",
+        "sha256": "27a6a2bc246b8d4ad13dcd79000cb8d538427747d8ce3c15fbe9b1c9d2710a66"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step96-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter96-independent-admission-first.json",
+        "sha256": "45087274b62973c742ef4b618397f50824b6129d5ab425ae9de7169c4707aa5a"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": 0.01812499999999999,
+      "effect_ON_minus_OFF_exact_decimal": "0.018125",
+      "effect_ON_minus_prompt_only": -0.020625
+    },
+    {
+      "step": 96,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.5890624999999999,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.01640625,
+      "mean_sympathy_probability": 0.5562499999999999,
+      "mean_sycophancy_probability": 0.08375000000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000096-alpha-2/predictions.jsonl",
+        "sha256": "f75f1141fdf3c2174b03b2cc310ad43c09a3e629b3b4ea336f14961a3696801e"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000096-alpha-2/summary.json",
+        "sha256": "af2d3784ddcfefa54637b5dec0204873afa515deffdd4a3fba58fb87ba13bd30"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000096.pt",
+        "sha256": "04344efeb42743c3e7238f077a32956950dc4ef1623d4a52956ed71ebc478953"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000096.pt",
+        "sha256": "27a6a2bc246b8d4ad13dcd79000cb8d538427747d8ce3c15fbe9b1c9d2710a66"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step96-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter96-independent-admission-first.json",
+        "sha256": "45087274b62973c742ef4b618397f50824b6129d5ab425ae9de7169c4707aa5a"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.016406249999999997,
+      "effect_ON_minus_OFF_exact_decimal": "-0.01640625",
+      "effect_ON_minus_prompt_only": -0.05515625
+    },
+    {
+      "step": 128,
+      "strength": 0.5,
+      "cases": 16,
+      "mean_effect": 0.62703125,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.0215625,
+      "mean_sympathy_probability": 0.664375,
+      "mean_sycophancy_probability": 0.08437500000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000128-alpha-0.5/predictions.jsonl",
+        "sha256": "47c54c16dfec206015d195079f07d07d4c3179375a77188e7568b4c4015393c7"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000128-alpha-0.5/summary.json",
+        "sha256": "1554df441156149fba02efbdab2267a97472ab7713b4b2791c57a5cbe0e0dae2"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000128.pt",
+        "sha256": "a7037fd909e4c1ec7b7b8567866e98b2c2f6ee542f33db94d53b93373d2ba41d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000128.pt",
+        "sha256": "e08532812b0448381fdc144ba969c29053568b4c5281e694b0fe82181868ed71"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step128-alpha0.5",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter128-independent-admission-first.json",
+        "sha256": "328aedd8be7e53106216b1bcfcba0710ba1dace8403a72d531fb3f7d21e90145"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": 0.021562500000000002,
+      "effect_ON_minus_OFF_exact_decimal": "0.0215625",
+      "effect_ON_minus_prompt_only": -0.0171875
+    },
+    {
+      "step": 128,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.631875,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.02640625,
+      "mean_sympathy_probability": 0.6487499999999999,
+      "mean_sycophancy_probability": 0.07375000000000002,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000128-alpha-1/predictions.jsonl",
+        "sha256": "577844d4cc2b420444416c2f1163860fb3b24ef8b6114791d0c36ed5ad88c773"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000128-alpha-1/summary.json",
+        "sha256": "e298faa2f04be6d249f42ae986f17b19d93e7af2bc3565b96ccf4ba8d028d855"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000128.pt",
+        "sha256": "a7037fd909e4c1ec7b7b8567866e98b2c2f6ee542f33db94d53b93373d2ba41d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000128.pt",
+        "sha256": "e08532812b0448381fdc144ba969c29053568b4c5281e694b0fe82181868ed71"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step128-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter128-independent-admission-first.json",
+        "sha256": "328aedd8be7e53106216b1bcfcba0710ba1dace8403a72d531fb3f7d21e90145"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": 0.026406250000000003,
+      "effect_ON_minus_OFF_exact_decimal": "0.02640625",
+      "effect_ON_minus_prompt_only": -0.01234375
+    },
+    {
+      "step": 128,
+      "strength": 2.0,
+      "cases": 16,
+      "mean_effect": 0.5378125,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": -0.06765625,
+      "mean_sympathy_probability": 0.4762500000000001,
+      "mean_sycophancy_probability": 0.08437500000000003,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000128-alpha-2/predictions.jsonl",
+        "sha256": "7d613898ed76fd9e961ab06aeb64f4093161037cf6319010db61a0a479fc78d7"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/dev-step-000128-alpha-2/summary.json",
+        "sha256": "38996d99f00da5fa38fba339ee1c840d68dd8b1afa8be3ece33deb1d7d7d5825"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/NATIVE-000128.pt",
+        "sha256": "a7037fd909e4c1ec7b7b8567866e98b2c2f6ee542f33db94d53b93373d2ba41d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/run/FULL-000128.pt",
+        "sha256": "e08532812b0448381fdc144ba969c29053568b4c5281e694b0fe82181868ed71"
+      },
+      "gpu": 1,
+      "g_lr": 0.00025,
+      "name": "PG-GPU1-step128-alpha2",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU1-quarter128-independent-admission-first.json",
+        "sha256": "328aedd8be7e53106216b1bcfcba0710ba1dace8403a72d531fb3f7d21e90145"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU1-g00025-v1/plan.json",
+        "sha256": "91c6f251ca45bc1027d92c09e69e227acbd61a5d98e67c2f8ac9c2e0c74bc340"
+      },
+      "original_binary_float_gain_diagnostic": -0.06765625000000001,
+      "effect_ON_minus_OFF_exact_decimal": "-0.06765625",
+      "effect_ON_minus_prompt_only": -0.10640625
+    }
+  ],
+  "selector": "equal-case mean intended effect ON minus matched OFF only",
+  "selection_arithmetic": "Saved raw Jev scores as exact decimal strings; mean score difference divided by4",
+  "maximum_DEV_effect_gain": 0.03703125,
+  "all_maximum_ties": [
+    {
+      "step": 32,
+      "strength": 1.0,
+      "cases": 16,
+      "mean_effect": 0.6425,
+      "OFF_mean_effect": 0.60546875,
+      "effect_ON_minus_OFF": 0.03703125,
+      "mean_sympathy_probability": 0.6237499999999999,
+      "mean_sycophancy_probability": 0.08812500000000004,
+      "predictions": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/predictions.jsonl",
+        "sha256": "16634cfb757c8a13f90692f3cb7bd7e573ccd72c68457327f858b1ec3101307c"
+      },
+      "summary": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/summary.json",
+        "sha256": "8cdf6dd8f06b707b46ea01a669feb71eedd1e2dc3c371da2d63b9ed05010c241"
+      },
+      "artifact": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000032.pt",
+        "sha256": "eb494ea752d32aeaa123b1bc0746a99fc505c15c84d493f2b6461236ebcd1c9d"
+      },
+      "FULL": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000032.pt",
+        "sha256": "748a25784ab8bc63d3efe4f5f8c2a6437a763dfc1de20138d4b9ac005a294a28"
+      },
+      "gpu": 0,
+      "g_lr": 0.001,
+      "name": "PG-GPU0-step32-alpha1",
+      "quarter_admission": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+        "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+      },
+      "plan": {
+        "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+        "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+      },
+      "original_binary_float_gain_diagnostic": 0.03703125,
+      "effect_ON_minus_OFF_exact_decimal": "0.03703125",
+      "effect_ON_minus_prompt_only": -0.00171875
+    }
+  ],
+  "display_checkpoint_rule": "First maximum in declared GPU0 then GPU1, step32/64/96/128, strength0.5/1/2 order; a presentation identity, not a superior tie",
+  "display_checkpoint_representative": {
+    "step": 32,
+    "strength": 1.0,
+    "cases": 16,
+    "mean_effect": 0.6425,
+    "OFF_mean_effect": 0.60546875,
+    "effect_ON_minus_OFF": 0.03703125,
+    "mean_sympathy_probability": 0.6237499999999999,
+    "mean_sycophancy_probability": 0.08812500000000004,
+    "predictions": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/predictions.jsonl",
+      "sha256": "16634cfb757c8a13f90692f3cb7bd7e573ccd72c68457327f858b1ec3101307c"
+    },
+    "summary": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/summary.json",
+      "sha256": "8cdf6dd8f06b707b46ea01a669feb71eedd1e2dc3c371da2d63b9ed05010c241"
+    },
+    "artifact": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000032.pt",
+      "sha256": "eb494ea752d32aeaa123b1bc0746a99fc505c15c84d493f2b6461236ebcd1c9d"
+    },
+    "FULL": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000032.pt",
+      "sha256": "748a25784ab8bc63d3efe4f5f8c2a6437a763dfc1de20138d4b9ac005a294a28"
+    },
+    "gpu": 0,
+    "g_lr": 0.001,
+    "name": "PG-GPU0-step32-alpha1",
+    "quarter_admission": {
+      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+      "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+    },
+    "plan": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+      "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+    },
+    "original_binary_float_gain_diagnostic": 0.03703125,
+    "effect_ON_minus_OFF_exact_decimal": "0.03703125",
+    "effect_ON_minus_prompt_only": -0.00171875
+  },
+  "exact_strength_health_still_required": true,
+  "holdout32_still_sealed": true,
+  "holdout_based_reselection": false,
+  "new_model_calls": 0,
+  "new_Jev_calls": 0,
+  "new_updates": 0,
+  "holdout_rows_read": 0
+}

@@ -1,0 +1,14 @@
+{
+  "time": 1794630532.9114935,
+  "repo": "ntc-ai/evidence-dial-behavior",
+  "repo_type": "dataset",
+  "public": true,
+  "commit": "f1581634809d061a5ecc3b1a4855eeff91f3a320",
+  "commit_url": "https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/commit/f1581634809d061a5ecc3b1a4855eeff91f3a320",
+  "files_verified": 1141,
+  "bytes_verified": 429368124,
+  "verification": "Every remote Git blob identity or LFS SHA256 and byte length compared with frozen upload plan",
+  "upload_plan": "artifacts/behavior-dial-20261114-v1/actual-HF-behavior-dataset-publication-first-upload-plan.json",
+  "upload_plan_sha256": "ef2d27f18c36237e3bc39c1ca01ecb4bf8706c1492fa32dccde83e033757b1ad",
+  "no_new_model_or_Jev_calls": true
+}

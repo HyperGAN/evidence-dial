@@ -1,0 +1,54 @@
+{
+  "time": 1794630801.0713236,
+  "state": "final-HF-static-behavior-live-HTTP-content-verified",
+  "revision": "7ed397b0318bf15c6673c783eaa95db107d89764",
+  "actual_app_url": "https://ntc-ai-evidence-dial.static.hf.space/",
+  "checks": [
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/",
+      "status": 200,
+      "served_sha256": "9ada210fbe3ca7c152b698ae8abdfa3419d1175b57cc5f98be6fa4e92039b2de",
+      "source_sha256": "d4c73d6659d0feb4fe21711eddadb010ba2ae32f0f5303672eb926fa83d524a0",
+      "authored_HTML_and_script_exact_after_named_platform_insertions_removed": true,
+      "platform_scripts": 1,
+      "platform_social_metas": 5
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/behavior.json",
+      "status": 200,
+      "served_sha256": "8a19ddae1615b2b628f533ab8ee25f078e1681b503ffcb3b70494bb6245b6ac0",
+      "source_sha256": "8a19ddae1615b2b628f533ab8ee25f078e1681b503ffcb3b70494bb6245b6ac0",
+      "exact_bytes_match": true
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/grounding.html",
+      "status": 200,
+      "served_sha256": "def4982e64c4ff6adbdaf0458d3600044a90fbc3bc36df4f30413b8fe03e67fc",
+      "source_sha256": "18f21f0b6675e3a29ede0d098b13690ba9a4d0705a11b29eccdfe5fff0a8f9af",
+      "authored_HTML_and_script_exact_after_named_platform_insertions_removed": true,
+      "platform_scripts": 1,
+      "platform_social_metas": 5
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/behavior-preview.html",
+      "status": 200,
+      "served_sha256": "bf248512e4290a863f5e82fd3c5476e8e59eeeafa27f54185ee2b5e69cd0111d",
+      "source_sha256": "51a644b7b0080fecfe1671e9448a3c2358cb8577f3cc1c26042b4f621e92af11",
+      "authored_HTML_and_script_exact_after_named_platform_insertions_removed": true,
+      "platform_scripts": 1,
+      "platform_social_metas": 5
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/behavior-preview.json",
+      "status": 200,
+      "served_sha256": "61e407ddea3bf03d5feab482721d1703cb20a2a152186d57f06ea83327e05481",
+      "source_sha256": "61e407ddea3bf03d5feab482721d1703cb20a2a152186d57f06ea83327e05481",
+      "exact_bytes_match": true
+    }
+  ],
+  "all32cases_all3strengths_and_controls_present": true,
+  "earlier_grounding_and_development_preview_preserved": true,
+  "browser_interaction_and_visual_QA": "Unverified: CUA still reports browser access host unavailable; actual getState returned no browsers",
+  "new_paid_compute": false,
+  "new_model_or_Jev_calls": 0
+}
