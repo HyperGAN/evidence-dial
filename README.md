@@ -1,5 +1,7 @@
 # Evidence Dial
 
+**Calculated memory:** Expanded batch 8/512-token training: **18 GiB GPU / 20 GiB host**. Native full answers≤512+4096 tokens: **12 GiB GPU**; Jev judging is remote. [Full memory ledger and limits](MEMORY.md). These are planning estimates, not measured peaks.
+
 **Lexsi hackathon — Track 1, section 7: Preference and style alignment.**
 
 Evidence Dial explores a learned behavior control for Cohere Labs' Tiny Aya
