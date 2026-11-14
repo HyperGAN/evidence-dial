@@ -14,7 +14,7 @@
 <header>
 <div class="eyebrow">Particle Sliders · Track 1, section 7</div>
 <h1>Support with independent judgment</h1>
-<p class="intro">Our target: an assistant that responds with sympathy while thinking fairly about the situation. Compare real answers to the same question as a learned adapter changes strength.</p>
+<p class="intro">Our target: an assistant that responds with sympathy while thinking fairly about the situation. Compare complete recorded answers to the same question as a learned adapter changes strength.</p>
 </header>
 <p id="loading">Loading verified saved responses…</p>
 <div id="app" class="hidden">
@@ -37,8 +37,8 @@
 <details id="prompt-details"><summary>Compare with an ordinary behavioral instruction</summary><p class="small">This baseline adds the fixed instruction below to the same user question. The learned adapter above receives the ordinary question alone.</p><div class="instruction" id="prompt-instruction"></div><div class="response" id="prompt-text"></div><div class="score"><span>Jev behavior score</span><strong id="prompt-score"></strong></div><div class="termination" id="prompt-termination"></div></details>
 <section class="results"><h2 id="results-title">Results across the question set</h2><div class="table-wrap"><table><thead><tr><th>Condition</th><th>Behavior score ↑</th><th>Change from OFF</th><th>Sympathy judgment</th><th>Sycophancy judgment</th></tr></thead><tbody id="metrics"></tbody></table></div><p class="hint">The behavior score measures the combined target, on a 0–1 scale. Sympathy and sycophancy columns are mean Jev probabilities, shown separately as diagnostics. These are model judgments, not accuracy percentages or human preference rates.</p><p class="small" id="uncertainty"></p></section>
 <section class="results"><h2>How the behavior is learned</h2><div class="method"><div><span>01 · CURATE</span><b>Find successful contexts</b><p>Explore 16 behavioral instructions per training question. Jev judges the replies; CuratorKIT validates and deduplicates the data.</p></div><div><span>02 · TRAIN</span><b>Learn from internal states</b><p>ParticleGAN trains a routed adapter toward the frozen model’s first-answer hidden states under selected instructions. The backbone stays frozen.</p></div><div><span>03 · EVALUATE</span><b>Keep the question unchanged</b><p>AuditKIT compares OFF, prompt-only, and adapter responses. Checkpoints and strengths are chosen on development data before held-out evaluation.</p></div></div></section>
-<details><summary>Checkpoint, evaluation scope, and limitations</summary><label class="label" for="model">Recorded checkpoint</label><select id="model"></select><p id="provenance" class="small"></p><p class="small">Targets are captured before the first response token, rather than from the entire approved response trajectory. New preferences require new curation and training. This study uses a small synthetic corpus, one training seed, the same Jev judge for curation and evaluation, and a 64-token evaluation limit.</p><p class="small" id="secondary-qa"></p><a id="download" href="behavior.json" download>Download these saved responses and metrics</a></details>
-<footer><p class="small">A recorded-output explorer. It does not generate new responses or call a paid API.</p><div class="links"><a href="https://github.com/HyperGAN/evidence-dial" target="_blank" rel="noopener">Project code</a><a href="https://github.com/HyperGAN/ParticleGAN" target="_blank" rel="noopener">ParticleGAN</a><a href="grounding.html">Earlier grounding experiments</a></div></footer>
+<details><summary>Checkpoint, evaluation scope, and limitations</summary><label class="label" for="model">Recorded checkpoint</label><select id="model"></select><p id="provenance" class="small"></p><p class="small">Targets are captured before the first response token, rather than from the entire approved response trajectory. New preferences require new curation and training. This study uses a small synthetic corpus, one training seed, and the same Jev judge for curation and evaluation. This page remeasures16development cases from the previously selected32-update checkpoint. Generation has a4096-token safety cap, and only replies ending naturally are scored. Fresh expanded-data training through1024updates is in progress.</p><p class="small" id="secondary-qa"></p><a id="download" href="complete-answers.json" download>Download these saved responses and metrics</a></details>
+<footer><p class="small">A recorded-output explorer. It does not generate new responses or call a paid API.</p><div class="links"><a href="https://github.com/HyperGAN/evidence-dial" target="_blank" rel="noopener">Project code</a><a href="https://github.com/HyperGAN/ParticleGAN" target="_blank" rel="noopener">ParticleGAN</a><a href="short-answer-holdout.html">Archived64-token held-out comparison</a><a href="grounding.html">Earlier grounding experiments</a></div></footer>
 </div>
 </main>
 <script>
@@ -46,7 +46,7 @@
 const $=id=>document.getElementById(id),levels=[0,0.5,1,2];let data,modelIndex=0;
 const number=x=>Number(x).toFixed(3),signed=x=>(x>=0?'+':'')+number(x);
 function text(id,value){$(id).textContent=value;}
-function termination(record){return record.termination==='native_eos'?'Ended at the model’s end-of-response token.':'Reached the shared 64-token limit; the full saved output is shown.';}
+function termination(record){return record.termination==='native_eos'?'Ended at the model’s end-of-response token'+(record.output_tokens?' · '+record.output_tokens+' generated tokens.':'.'):'Reached the declared token limit; the full saved output is shown.';}
 function fill(prefix,record){text(prefix+'-text',record.output||'[Empty response ending at a legal end token]');text(prefix+'-score',number(record.effect)+' / 1');text(prefix+'-termination',termination(record));}
 function render(){
  const q=data.cases[Number($('question').value)],m=data.models[modelIndex],strength=levels[Number($('strength').value)],key=String(strength),r=strength===0?q.off:q.models[m.id][key];
@@ -60,7 +60,7 @@ function render(){
  text('uncertainty',interval?'Paired change from OFF: '+signed(r.effect-q.off.effect)+' on this question. Across the set, the individual 95% bootstrap interval is ['+interval.map(number).join(', ')+']. Question resampling; no claim of semantic-family independence.':data.uncertainty_note);
 }
 async function start(){
- const url=new URL(location.href).searchParams.get('data')||'behavior.json';
+ const url=new URL(location.href).searchParams.get('data')||'complete-answers.json';
  const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error('Verified comparison data has not been published at this path yet.');
  data=await response.json();if(data.schema!=='particle-behavior-explorer-v1'||!data.cases.length||!data.models.length)throw new Error('The saved comparison data is incomplete.');
  text('status',data.status);text('secondary-qa',data.secondary_qa);$('download').href=url;

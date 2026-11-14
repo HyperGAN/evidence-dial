@@ -6,7 +6,7 @@ The owner fills the submission form; this repository does not claim a form submi
 | Submission field | Value |
 | --- | --- |
 | Main project and thorough README | https://github.com/HyperGAN/evidence-dial |
-| Recorded held-out behavior demo | https://huggingface.co/spaces/ntc-ai/evidence-dial |
+| Complete-answer DEV demo and archived short-answer study | https://huggingface.co/spaces/ntc-ai/evidence-dial |
 | Behavior model and raw adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
 | Data, all predictions, training logs and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
 | Model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
@@ -30,18 +30,21 @@ from these paired states using the unchanged ParticleGAN formulation, with a
 frozen backbone, raw weights, and no cross-entropy text-imitation loss or
 weight EMA.
 
-Two learning rates run for 128 updates each. Checkpoint and strength selection
-uses 16 development questions, retaining all maximum ties before a separate
-32-question confirmation. The preselected adapter scores 0.5996 versus 0.5888 OFF on 32 held-out questions,
-a +0.0108 change with an individual paired 95% bootstrap interval of
-[−0.0122, +0.0347]. Prompt-only scores 0.6123. Strength 2 regresses to 0.5202. The saved-output demo exposes the identical
-question across strengths and retains regressions.
+The original two-rate, 128-update study used a 64-token evaluation budget,
+which truncated many answers. A complete-answer remeasurement of its fixed
+32-update checkpoint scores 0.6775 at the previously selected strength 1,
+versus 0.6620 OFF and 0.6666 prompt-only on 16 development questions. Its paired
+gain over OFF is +0.0155, with an individual 95% bootstrap interval of
+[−0.0419, +0.0750]. This is an uncertain development comparison. Fresh training
+on all 138 passing contexts through 1,024 updates and a new confirmation set
+are in progress. The saved-output demo exposes complete responses and retains
+regressions.
 
 Earlier QA testing reached the same development score as SFT, 174/192, but
 held-out results favored SFT. Our contribution is a reusable connection
 between language-defined preferences, curated internal states, and a learned
 behavior control. The small synthetic corpus, one training seed, shared
-curation/evaluation judge, and 64-token evaluation limit constrain the claims.
+curation/evaluation judge, and limited first-state supervision constrain the claims.
 
 ## Where we add value
 
@@ -58,6 +61,6 @@ A concrete connection from a written response preference to curated internal-sta
 
 ## Delivery scope and limits
 
-The main README supplies the abstract, complete development grid, held-out results table, actual examples, method, environment, artifact links, and honest limitations. Both original training roots and all five held-out arms completed and passed independent audit. The 138-context data derivative is prepared but untrained. No paper or claim of SFT superiority is part of this entry. Tiny Aya and derived weights/states are CC-BY-NC-4.0; retain upstream code licenses.
+The main README supplies the abstract, results, full native-EOS examples, method, artifact links, and limitations. The original 128-update / 64-token study and its locked test are archived. A full-answer remeasurement of the fixed published checkpoint is complete on all 16 DEV questions (80 complete responses). Fresh training on 138 context pairs from 0 through 1,024 is underway on both GPUs; its results and fresh-question confirmation are pending. No paper or claim of SFT superiority is part of this entry. Tiny Aya and derived weights/states are CC-BY-NC-4.0; retain upstream code licenses.
 
 The Space is a recorded-output explorer. Live files and content hashes are verified; interactive browser QA requires an available browser host and is not claimed here.

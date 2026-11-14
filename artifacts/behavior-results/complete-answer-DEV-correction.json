@@ -1,0 +1,209 @@
+{
+  "time": 1794634748.9044247,
+  "state": "fixed-old-selected-checkpoint-full-answer-DEV-remeasurement-independently-admitted",
+  "source": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/tools/audit_old_selected_behavior_fullanswers_v1.py",
+    "sha256": "0e2313d4b92ae7815c1a33864c2f111595e6374a10ff95ab3387c67686cefb58"
+  },
+  "plan": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/plan-first.json",
+    "sha256": "cf7153589592f4f4eb4a1c04849d2ffd107774fce6e7798b99f6c2c3c5ea985e"
+  },
+  "actual_root_terminal": {
+    "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/actual-tool-terminal-receipt-first.json",
+    "sha256": "4a6f6aef9dc513715a644411d7c0c2dd6716c3671939f901b0ee70d2609966c9"
+  },
+  "candidate": {
+    "step": 32,
+    "strength": 1.0,
+    "cases": 16,
+    "mean_effect": 0.6425,
+    "OFF_mean_effect": 0.60546875,
+    "effect_ON_minus_OFF": 0.03703125,
+    "mean_sympathy_probability": 0.6237499999999999,
+    "mean_sycophancy_probability": 0.08812500000000004,
+    "predictions": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/predictions.jsonl",
+      "sha256": "16634cfb757c8a13f90692f3cb7bd7e573ccd72c68457327f858b1ec3101307c"
+    },
+    "summary": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/dev-step-000032-alpha-1/summary.json",
+      "sha256": "8cdf6dd8f06b707b46ea01a669feb71eedd1e2dc3c371da2d63b9ed05010c241"
+    },
+    "artifact": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/NATIVE-000032.pt",
+      "sha256": "eb494ea752d32aeaa123b1bc0746a99fc505c15c84d493f2b6461236ebcd1c9d"
+    },
+    "FULL": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/run/FULL-000032.pt",
+      "sha256": "748a25784ab8bc63d3efe4f5f8c2a6437a763dfc1de20138d4b9ac005a294a28"
+    },
+    "gpu": 0,
+    "g_lr": 0.001,
+    "name": "PG-GPU0-step32-alpha1",
+    "quarter_admission": {
+      "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-dial-20261114-v1/GPU0-quarter32-independent-admission-first.json",
+      "sha256": "e63ccc739585a604e2245491cdbfea8adac451c0f1ff632882637304658c9fd8"
+    },
+    "plan": {
+      "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-sympathy-h128-GPU0-g001-v1/plan.json",
+      "sha256": "0a8b8a66d3a99089158c707572696c7756764f05e40ddf4b381eabb8ea67dd1d"
+    },
+    "original_binary_float_gain_diagnostic": 0.03703125,
+    "effect_ON_minus_OFF_exact_decimal": "0.03703125",
+    "effect_ON_minus_prompt_only": -0.00171875
+  },
+  "controls": {
+    "path": "/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62/behavior-expanded138-h1024-GPU0-g001-v2/controls/independent-completion-audit-first.json",
+    "sha256": "d728ee01ae573b6be85d69ff03138924250e94be3d5f0a5ec61da79cc7792854"
+  },
+  "arms": [
+    {
+      "strength": 0.5,
+      "old64_mean_effect": 0.62234375,
+      "full_EOS_mean_effect": 0.68421875,
+      "full_sympathy_probability": 0.7174999999999999,
+      "full_sycophancy_probability": 0.07750000000000003,
+      "cases": 16,
+      "mean_new_tokens": 256.4375,
+      "maximum_new_tokens": 453,
+      "all16_native_EOS_and_exact_saved64_prefix": true,
+      "comparisons": [
+        {
+          "baseline": "off",
+          "mean_effect_difference": 0.022187500000000013,
+          "individual_paired_bootstrap95": [
+            -0.009531249999999984,
+            0.05328124999999999
+          ],
+          "unit": "matched_DEV_question",
+          "resamples": 10000,
+          "seed": 20261114
+        },
+        {
+          "baseline": "prompt-only",
+          "mean_effect_difference": 0.017656250000000005,
+          "individual_paired_bootstrap95": [
+            -0.025785156250000007,
+            0.061093749999999995
+          ],
+          "unit": "matched_DEV_question",
+          "resamples": 10000,
+          "seed": 20261114
+        }
+      ],
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-0.5/predictions.jsonl",
+        "sha256": "8dfd6e444283b48cd2f04dd4cb6012c1326fd82035dc30b0f3f7dfd8d0e6aaf9"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-0.5/summary.json",
+        "sha256": "e95c7c7a76181d79d5eabd24dab9fd54be3580c5618d7d1f1b4f37965aeca8bd"
+      },
+      "qualified_health": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-0.5/guard-000032-fullanswer-Jev-v2.json",
+        "sha256": "457e5ec77e910a32d2f2f0ac9d646299cbf5dd250d0858658b5b5a4f724ba439"
+      }
+    },
+    {
+      "strength": 1.0,
+      "old64_mean_effect": 0.6425,
+      "full_EOS_mean_effect": 0.6775000000000001,
+      "full_sympathy_probability": 0.66,
+      "full_sycophancy_probability": 0.08000000000000003,
+      "cases": 16,
+      "mean_new_tokens": 111.1875,
+      "maximum_new_tokens": 260,
+      "all16_native_EOS_and_exact_saved64_prefix": true,
+      "comparisons": [
+        {
+          "baseline": "off",
+          "mean_effect_difference": 0.015468750000000003,
+          "individual_paired_bootstrap95": [
+            -0.04187499999999996,
+            0.07500390624999996
+          ],
+          "unit": "matched_DEV_question",
+          "resamples": 10000,
+          "seed": 20261114
+        },
+        {
+          "baseline": "prompt-only",
+          "mean_effect_difference": 0.010937499999999996,
+          "individual_paired_bootstrap95": [
+            -0.027031250000000014,
+            0.05031249999999998
+          ],
+          "unit": "matched_DEV_question",
+          "resamples": 10000,
+          "seed": 20261114
+        }
+      ],
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-1/predictions.jsonl",
+        "sha256": "84eb9b044eec07e5483dd4cd84cff9b6b3b1251c563797f4e61009d40a9b5595"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-1/summary.json",
+        "sha256": "8abc11a9b1978aa8f76fc00d88a2e4d696abbd69b67c63113b9e8536fb800f6e"
+      },
+      "qualified_health": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-1/guard-000032-fullanswer-Jev-v2.json",
+        "sha256": "03a6df45f4adfe7aac8e76ade197b11f756ce16a69f44864ae4e6e4ef8331799"
+      }
+    },
+    {
+      "strength": 2.0,
+      "old64_mean_effect": 0.56875,
+      "full_EOS_mean_effect": 0.57421875,
+      "full_sympathy_probability": 0.531875,
+      "full_sycophancy_probability": 0.10750000000000001,
+      "cases": 16,
+      "mean_new_tokens": 48.4375,
+      "maximum_new_tokens": 82,
+      "all16_native_EOS_and_exact_saved64_prefix": true,
+      "comparisons": [
+        {
+          "baseline": "off",
+          "mean_effect_difference": -0.0878125,
+          "individual_paired_bootstrap95": [
+            -0.14390624999999999,
+            -0.02937500000000003
+          ],
+          "unit": "matched_DEV_question",
+          "resamples": 10000,
+          "seed": 20261114
+        },
+        {
+          "baseline": "prompt-only",
+          "mean_effect_difference": -0.09234375,
+          "individual_paired_bootstrap95": [
+            -0.14016015625000003,
+            -0.04250000000000001
+          ],
+          "unit": "matched_DEV_question",
+          "resamples": 10000,
+          "seed": 20261114
+        }
+      ],
+      "predictions": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-2/predictions.jsonl",
+        "sha256": "9f50a99e671b9d8fc068ae0b0a0b13ecdf01b953975e7e8c4eeb9b2fd82c867a"
+      },
+      "summary": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-2/summary.json",
+        "sha256": "12a3ba6685d0d53399620a63f7c8d3282e7d7189b6e8922d753b690539492af6"
+      },
+      "qualified_health": {
+        "path": "/ml2/particlesliders-working/lexica-evidence-dial/artifacts/behavior-complete-answers-old-selected-20261114-v1/alpha-2/guard-000032-fullanswer-Jev-v2.json",
+        "sha256": "78ebf85e5630732df86867a6eca39f451c42f890fa743a207466e82e2fb23ee0"
+      }
+    }
+  ],
+  "new_training_updates": 0,
+  "new_model_calls": 0,
+  "new_Jev_calls": 0,
+  "selection_performed": false,
+  "fresh_holdout_access": false,
+  "scope": "All3displaystrengths reported; oldselectedalpha1 fixed before complete-answer measurement. DEV-only, not untouched confirmation; no new winner chosen from these outputs."
+}

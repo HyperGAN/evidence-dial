@@ -1,0 +1,43 @@
+{
+  "time": 1794635653.1404724,
+  "revision": "a01e9046a504a3055cc10f2f3ec9a376beb6b872",
+  "checks": [
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/",
+      "http_status": 200,
+      "served_sha256": "5aacbfb1ef9c9da4222408fa6d4517c98d2c5bbb00d50511d845456f2be77225",
+      "authored_sha256": "5d09241efb678f7c7d260c9938d9d39fec05a0051742ca0bdf94c80f600e1af8",
+      "only_named_HF_platform_insertions_removed": true,
+      "whole_authored_body_matches": true
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/complete-answers.html",
+      "http_status": 200,
+      "served_sha256": "5aacbfb1ef9c9da4222408fa6d4517c98d2c5bbb00d50511d845456f2be77225",
+      "authored_sha256": "5d09241efb678f7c7d260c9938d9d39fec05a0051742ca0bdf94c80f600e1af8",
+      "only_named_HF_platform_insertions_removed": true,
+      "whole_authored_body_matches": true
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/complete-answers.json",
+      "http_status": 200,
+      "served_sha256": "d8a45e3ffc66b98caf4c8514d517ffb214e4792e7a3505569e9cc979ac0a5960",
+      "authored_sha256": "d8a45e3ffc66b98caf4c8514d517ffb214e4792e7a3505569e9cc979ac0a5960",
+      "whole_authored_body_matches": true
+    },
+    {
+      "url": "https://ntc-ai-evidence-dial.static.hf.space/short-answer-holdout.html",
+      "http_status": 200,
+      "served_sha256": "920c30a90398a9167137ea602e7a63e565083016eacf0e3b97dad74b882e45af",
+      "authored_sha256": "d4c73d6659d0feb4fe21711eddadb010ba2ae32f0f5303672eb926fa83d524a0",
+      "only_named_HF_platform_insertions_removed": true,
+      "whole_authored_body_matches": true
+    }
+  ],
+  "old32case_behavior_json_byteexact_unchanged": true,
+  "all80_complete_answers_native_EOS": true,
+  "new_training_still_separate": true,
+  "scope_DEV16_explicit": true,
+  "browser_interactions_unverified": true,
+  "new_model_or_Jev_calls": 0
+}

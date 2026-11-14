@@ -1,0 +1,29 @@
+{
+  "time": 1794635914.178564,
+  "updates": [
+    {
+      "repo": "ntc-ai/evidence-dial-behavior",
+      "type": "dataset",
+      "parent": "f1581634809d061a5ecc3b1a4855eeff91f3a320",
+      "commit": "42c15646c2e1404d7b404a206ac14d30d3dbde06",
+      "public_anonymous_access": true,
+      "new_contents_verified": true,
+      "weight_files_changed": false
+    },
+    {
+      "repo": "ntc-ai/evidence-dial-behavior-particle",
+      "type": "model",
+      "parent": "ec09d77301844864e13e8b7e3fad39cda4e2b828",
+      "commit": "c8a33bcc5cde8ba68f8cb97c42b681b77e4d9671",
+      "public_anonymous_access": true,
+      "new_contents_verified": true,
+      "weight_files_changed": false
+    }
+  ],
+  "dataset_new_files_verified": 18,
+  "old_dataset_files_preserved": true,
+  "all_weights_unchanged": true,
+  "both_collections_anonymously_public": true,
+  "all80_answers_EOS": true,
+  "new_training_updates": 0
+}
