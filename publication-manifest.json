@@ -1,7 +1,7 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T16:44:13.269946+00:00",
-  "parent_commit": "641ec548a101bcdcd17e0b89830b295b34e7a426",
+  "time": "2026-11-15T17:32:47.703059+00:00",
+  "parent_commit": "5c5cd87e5e4e7cda976e1ff5440ba394fa5a6964",
   "files": [
     {
       "path": ".gitignore",
@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12605,
-      "sha256": "f74b9f5c87ba54e20c01d601b0b5048ec304e06fdc5e2313119fb9e9e4db1190"
+      "bytes": 12973,
+      "sha256": "16ed19c8ba0abbb66094f5fa5b4c6bc15f89a32bb2828bcb49f9e322fc428ad8"
     },
     {
       "path": "artifacts/behavior-results/HF-Space-publication.json",
@@ -815,8 +815,8 @@
     },
     {
       "path": "demo/README.md",
-      "bytes": 5113,
-      "sha256": "3c53ecb53ba752f2eb967b5db97663ddc2502f11604cdcbfa91daf794978dd21"
+      "bytes": 2492,
+      "sha256": "60df7e64b01bd1d078df39dadca10b8e4afba1df5616f7e2f355291a043650e8"
     },
     {
       "path": "demo/behavior-preview.html",
@@ -844,9 +844,199 @@
       "sha256": "c9b8b389bd9c32310963f5840850bfe5d43ba85ee65cdc32a79ba53cc12a9d5e"
     },
     {
+      "path": "demo/brand/255labs-0xff-ink.svg",
+      "bytes": 1459,
+      "sha256": "51f0a9483ddab564703f7991aaa29e3c098dd23d622ecab8a57142ef82eabcfe"
+    },
+    {
+      "path": "demo/brand/255labs-0xff-paper.svg",
+      "bytes": 1463,
+      "sha256": "4532ac4635784afacb6ee376ca8211d84b83b02c49419c550b987c268cd57e3a"
+    },
+    {
+      "path": "demo/brand/255labs-0xff-signal.svg",
+      "bytes": 1465,
+      "sha256": "15f03dc95ad95aa3873f7c79960c9e07e17f99305d4e8a663a79afe051dee519"
+    },
+    {
+      "path": "demo/brand/255labs-app-example.html",
+      "bytes": 4278,
+      "sha256": "4cdd55a50736360fd1e8a19e84e81cf1cd98dd49f2c5963c94d619f18ee5ec2f"
+    },
+    {
+      "path": "demo/brand/255labs-app-example.js",
+      "bytes": 4573,
+      "sha256": "4d2b004353a0a5bba7ef9b71137b97fbc477505615e2a5e80f8af9927cf2c672"
+    },
+    {
+      "path": "demo/brand/255labs-avatar.png",
+      "bytes": 10954,
+      "sha256": "b9cae958edd68fc9d6053d92ada40f1a34ff34b0ba9e538e93356d0d68343817"
+    },
+    {
+      "path": "demo/brand/255labs-avatar.svg",
+      "bytes": 348,
+      "sha256": "4186d7e295bee590e8779cb599de0acef60c443e8d154a071ed9a3f0c596a622"
+    },
+    {
+      "path": "demo/brand/255labs-company-social.png",
+      "bytes": 39590,
+      "sha256": "921e15ab93ddc07443b5a7ffb06640ce3f5717ff9facb3c8127bb041fd6be66a"
+    },
+    {
+      "path": "demo/brand/255labs-company-social.svg",
+      "bytes": 18987,
+      "sha256": "f3ff690924d7ec475d79a33dfbcd254e81f4c9041152118cca971d08c8cbe90c"
+    },
+    {
+      "path": "demo/brand/255labs-ff-ink.png",
+      "bytes": 11095,
+      "sha256": "fb2a5f0e19e8654d6cc324c0054f9dd22775954dd875eafff9fc32c492f6f6d4"
+    },
+    {
+      "path": "demo/brand/255labs-ff-ink.svg",
+      "bytes": 279,
+      "sha256": "ff1b0a76a229cb3898d58c4b2defe924d9356f9e95f77a68e903aed39230c4ff"
+    },
+    {
+      "path": "demo/brand/255labs-ff-paper.png",
+      "bytes": 11107,
+      "sha256": "1504ca3570b1e2724a8b4b7c43b9ee528669ef0d067116be64d09238cf0323a9"
+    },
+    {
+      "path": "demo/brand/255labs-ff-paper.svg",
+      "bytes": 283,
+      "sha256": "1e853c148dd006c65cb53c21bffe340d0509d6021f5ca72e439cb9e250b43c1a"
+    },
+    {
+      "path": "demo/brand/255labs-ff-signal.png",
+      "bytes": 11148,
+      "sha256": "f75d3511a64918f4d3d47adb52465e61becb27daa973fdfaa7274e431b684178"
+    },
+    {
+      "path": "demo/brand/255labs-ff-signal.svg",
+      "bytes": 285,
+      "sha256": "4fe31ab11613f4245515186ad14a40bbd2eb082cefc5b49cf3f21317f3a29537"
+    },
+    {
+      "path": "demo/brand/255labs-lockup-ink.png",
+      "bytes": 30951,
+      "sha256": "2361933bf5c72dfcda544cb905d364b54e2aee488024efc8143026d3a47f4b73"
+    },
+    {
+      "path": "demo/brand/255labs-lockup-ink.svg",
+      "bytes": 3849,
+      "sha256": "8bbb9ecc1c3160a27560a626c0053539a8605c04ac477bf585190018372c0ee3"
+    },
+    {
+      "path": "demo/brand/255labs-lockup-paper.png",
+      "bytes": 32072,
+      "sha256": "c6785e087051472de951f6f6e9d4360c7b2df0db5f73c2d3243e4b4bb9a9d4e1"
+    },
+    {
+      "path": "demo/brand/255labs-lockup-paper.svg",
+      "bytes": 3853,
+      "sha256": "843d6ec42ebdf3d0baa27ab70ccb31b4b7478effab8c4f463eaf1b1a84a49450"
+    },
+    {
+      "path": "demo/brand/255labs-lockup-signal.png",
+      "bytes": 31512,
+      "sha256": "f1b760dea62a2759f5350e0f633418df3d0fbf9d9dea34f63f403588dd7aa638"
+    },
+    {
+      "path": "demo/brand/255labs-lockup-signal.svg",
+      "bytes": 3855,
+      "sha256": "6594bc5f3290bcf4b9d5e0eb4d0a50dbbd8daa8d665cfb32dc8917af10a6cc14"
+    },
+    {
+      "path": "demo/brand/255labs-lockup.png",
+      "bytes": 32439,
+      "sha256": "9aa47d44fb5edc33efb985dae282ad591662a46b6097c94ec0503df74419876a"
+    },
+    {
+      "path": "demo/brand/255labs-lockup.svg",
+      "bytes": 3849,
+      "sha256": "4916cb8c3e44c8e85475355b3c0490d5f6750bbd21d95d07143849d30c548db7"
+    },
+    {
+      "path": "demo/brand/255labs-manifest.json",
+      "bytes": 3640,
+      "sha256": "08b28208d770df511b527a27c629d6ec1d3832ccef635390a5da1193b564e071"
+    },
+    {
+      "path": "demo/brand/255labs-social.png",
+      "bytes": 42766,
+      "sha256": "8e72a5599e501f8bdbdc3878a27e6adf7ee53c253b71bedaf7163d9761d5a0e7"
+    },
+    {
+      "path": "demo/brand/255labs-social.svg",
+      "bytes": 26433,
+      "sha256": "650797072bf826149cfdf1e5d6b95b0228fe2a62755d368220ee08836d407af1"
+    },
+    {
+      "path": "demo/brand/255labs-tokens.css",
+      "bytes": 3110,
+      "sha256": "21289f64575b064a692d8ff14fb1a5049b51b6efc4736fa5a9ce726c17b703df"
+    },
+    {
+      "path": "demo/brand/255labs-tokens.json",
+      "bytes": 2368,
+      "sha256": "31221b28badf5c6dac370383ae4f644f3339d8bccb4a5d7df64cf768bad05d42"
+    },
+    {
+      "path": "demo/brand/255labs-ui.css",
+      "bytes": 7349,
+      "sha256": "3e40dae897b1911126e97b75765fa434055a62b4ae2d003a84c4cf9b66aaea55"
+    },
+    {
+      "path": "demo/brand/BRAND-README.txt",
+      "bytes": 3012,
+      "sha256": "2b5fedd98bad35cf922c8119f7cf7e3a0f3bfba118f55ca99e8edd48082c8273"
+    },
+    {
+      "path": "demo/brand/favicon-16.png",
+      "bytes": 340,
+      "sha256": "bdf638a2c75da12fe970cf6d7732d8ff2958327b6cc818a70c48652ff4ddf375"
+    },
+    {
+      "path": "demo/brand/favicon-32.png",
+      "bytes": 491,
+      "sha256": "8c59bfe478d77b903c5609c94898cea6a70d0213a2356e1be82e1be5bfeb84f3"
+    },
+    {
+      "path": "demo/brand/favicon.ico",
+      "bytes": 513,
+      "sha256": "c858f435cca2d163169f1b0721606f4f637360695da4cfaf530b090fa05ea45a"
+    },
+    {
+      "path": "demo/brand/favicon.svg",
+      "bytes": 328,
+      "sha256": "7881557ceda8f43f7b6e634ba2d0e7efbde7f5e2ce517a4767b65a7b96b1cccf"
+    },
+    {
+      "path": "demo/brand/fonts/IBM-Plex-Mono-OFL.txt",
+      "bytes": 5299,
+      "sha256": "23b0a9d0c6d3f140a0b77e483c5cfa6bba574325ef5cb189ed9f2fec4884533f"
+    },
+    {
+      "path": "demo/brand/fonts/Manrope-OFL.txt",
+      "bytes": 4383,
+      "sha256": "d826ab6583b12c26807d8716a545bdbbb672df04f48608a364ba9efdbe501c30"
+    },
+    {
+      "path": "demo/brand/fonts/ibm-plex-mono-latin-400.woff2",
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+    },
+    {
+      "path": "demo/brand/fonts/manrope-latin-variable.woff2",
+      "bytes": 24836,
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
       "path": "demo/check-render-contract.js",
-      "bytes": 7479,
-      "sha256": "58d1871e29ac85a045c3d501c658ce9e7b508615bedf25391be6f77679b44b03"
+      "bytes": 7190,
+      "sha256": "83ac655843ba4dba5e6f906b6e73d2c3fbdc437c334f0d4ff7e8fec55f80e565"
     },
     {
       "path": "demo/complete-answers.html",
@@ -874,19 +1064,24 @@
       "sha256": "1575474c86f3a77dcb07ceb992c1608300852cbfb369d88bb41c203d6daedcb2"
     },
     {
+      "path": "demo/explorer.css",
+      "bytes": 8084,
+      "sha256": "7cc6e3dec8cb660d25b7a7a857911269d7431b6246109dffbe845fce71dcb7cb"
+    },
+    {
       "path": "demo/grounding.html",
       "bytes": 14849,
       "sha256": "18f21f0b6675e3a29ede0d098b13690ba9a4d0705a11b29eccdfe5fff0a8f9af"
     },
     {
       "path": "demo/index.html",
-      "bytes": 7321,
-      "sha256": "b37a9748aec5bfeab8bd758a1c169a88870c037888a43a30cb39b9e2e0f2d549"
+      "bytes": 12381,
+      "sha256": "9b70ba1a016299a61e439d6c83814b30b274674e1a26eabbe605f70ad31ea63f"
     },
     {
       "path": "demo/promptfix-confirmation.html",
-      "bytes": 14916,
-      "sha256": "bad8c26b7ec70e80d303455054b930113c41822bb8b06f0c6936452c6c19c1cb"
+      "bytes": 12381,
+      "sha256": "9b70ba1a016299a61e439d6c83814b30b274674e1a26eabbe605f70ad31ea63f"
     },
     {
       "path": "demo/promptfix-confirmation.json",
@@ -2916,8 +3111,9 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Technique-first current documentation and one successful showcase; complete previous README preserved byte-exact as EVALUATION.md; scientific sources/weights/data unchanged",
+  "source_copy_scope": "Restore full64-question Space explorer with original control logic, concise technique copy and pinned255labs1.1.0 dark branding; model/dataset/science unchanged",
   "upstream_MEMORY_md_preserved": true,
   "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
-  "scientific_training_sources_and_weights_unchanged": true
+  "scientific_training_sources_and_weights_unchanged": true,
+  "concurrent_upstream_README_video_preserved": true
 }
