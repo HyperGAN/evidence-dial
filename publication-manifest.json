@@ -1,12 +1,17 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T16:22:11.605571+00:00",
-  "parent_commit": "a575f896555fc99a60ff4e2b87177fef8195820d",
+  "time": "2026-11-15T16:44:13.269946+00:00",
+  "parent_commit": "641ec548a101bcdcd17e0b89830b295b34e7a426",
   "files": [
     {
       "path": ".gitignore",
       "bytes": 732,
       "sha256": "fc5e8d0ed33fd5a3160c7dd862b85f2b00bba72969b8e0899e9bd36db418f3d6"
+    },
+    {
+      "path": "EVALUATION.md",
+      "bytes": 28834,
+      "sha256": "88f26aa9942d381ec86d6d8c44746eb8e1dc7e8d5ad2b8e0764aa9e2f6c9fb0e"
     },
     {
       "path": "LICENSE",
@@ -25,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 28834,
-      "sha256": "88f26aa9942d381ec86d6d8c44746eb8e1dc7e8d5ad2b8e0764aa9e2f6c9fb0e"
+      "bytes": 12605,
+      "sha256": "f74b9f5c87ba54e20c01d601b0b5048ec304e06fdc5e2313119fb9e9e4db1190"
     },
     {
       "path": "artifacts/behavior-results/HF-Space-publication.json",
@@ -810,8 +815,8 @@
     },
     {
       "path": "demo/README.md",
-      "bytes": 3267,
-      "sha256": "ae3517002ca93d73af77b5259523fd8a3b5cc49e5a2d1f40f48fa2e10811e916"
+      "bytes": 5113,
+      "sha256": "3c53ecb53ba752f2eb967b5db97663ddc2502f11604cdcbfa91daf794978dd21"
     },
     {
       "path": "demo/behavior-preview.html",
@@ -840,8 +845,8 @@
     },
     {
       "path": "demo/check-render-contract.js",
-      "bytes": 5893,
-      "sha256": "1dffcdabed1a2ccea7367a9369c02cd5b3e5b85cc2fb02c69217f2a9bc1bbb53"
+      "bytes": 7479,
+      "sha256": "58d1871e29ac85a045c3d501c658ce9e7b508615bedf25391be6f77679b44b03"
     },
     {
       "path": "demo/complete-answers.html",
@@ -875,8 +880,8 @@
     },
     {
       "path": "demo/index.html",
-      "bytes": 14916,
-      "sha256": "bad8c26b7ec70e80d303455054b930113c41822bb8b06f0c6936452c6c19c1cb"
+      "bytes": 7321,
+      "sha256": "b37a9748aec5bfeab8bd758a1c169a88870c037888a43a30cb39b9e2e0f2d549"
     },
     {
       "path": "demo/promptfix-confirmation.html",
@@ -965,8 +970,8 @@
     },
     {
       "path": "docs/submission-packet.md",
-      "bytes": 5064,
-      "sha256": "752ea7219944f5f6b9ae32a63edb2525e38c6b3464ff7ce342cc1ab7ea4918e3"
+      "bytes": 6682,
+      "sha256": "31c075d48ed696dd99e9dd1f8adeb4889e7177f1bc61e8e46a97e6ccf5088de1"
     },
     {
       "path": "docs/training-objective.md",
@@ -2911,7 +2916,7 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Owner-authorized HF model/dataset/Space renames; current links and examples updated; frozen science unchanged",
+  "source_copy_scope": "Technique-first current documentation and one successful showcase; complete previous README preserved byte-exact as EVALUATION.md; scientific sources/weights/data unchanged",
   "upstream_MEMORY_md_preserved": true,
   "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
   "scientific_training_sources_and_weights_unchanged": true

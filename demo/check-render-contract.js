@@ -4,10 +4,29 @@ const vm = require('vm');
 const assert = require('assert/strict');
 const path = require('path');
 const folder = __dirname;
-const html = fs.readFileSync(path.join(folder, 'index.html'), 'utf8');
+// The homepage is the selected technique example; the named explorer retains
+// the complete original comparison and its existing controls.
+const html = fs.readFileSync(path.join(folder, 'promptfix-confirmation.html'), 'utf8');
+const showcase = fs.readFileSync(path.join(folder, 'index.html'), 'utf8');
 const data = JSON.parse(fs.readFileSync(path.join(folder, 'promptfix-confirmation.json'), 'utf8'));
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
-assert.equal(fs.readFileSync(path.join(folder, 'promptfix-confirmation.html'), 'utf8'), html);
+const chosen = data.cases.find(c => c.id === 'behavior-promptfix-fresh64-021');
+const selected = chosen.models[data.default_model_id]['1'];
+const entities = {'&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&#x27;': "'"};
+function quoteBody(id) {
+  const match = showcase.match(new RegExp('<blockquote[^>]*id="' + id + '"[^>]*>([\\s\\S]*?)</blockquote>'));
+  assert.ok(match, 'Response must be a blockquote: ' + id);
+  return match[1].replace(/&(amp|lt|gt|quot|#x27);/g, value => entities[value]);
+}
+assert.equal(quoteBody('original-answer'), chosen.off.output);
+assert.equal(quoteBody('adapter-answer'), selected.output);
+assert.ok(showcase.indexOf('id="quality-criterion"') < showcase.indexOf('id="original-answer"'));
+assert.ok(showcase.indexOf('id="adapter-score"') < showcase.indexOf('id="adapter-answer"'));
+assert.ok(showcase.includes('✅ Trained adapter · ' + Number(selected.effect).toFixed(4)));
+assert.equal((showcase.match(/data-case-id=/g) || []).length, 1);
+assert.ok(!/prompt-only|role-consistency regression|<script/i.test(showcase));
+assert.ok(showcase.includes('The criterion can be anything you can describe and judge with Jev.'));
+assert.ok(showcase.includes('three instructions per TRAIN question'));
 for (const prefix of ['off', 'on', 'prompt']) {
   assert.ok(html.indexOf(`id="${prefix}-score"`) < html.indexOf(`id="${prefix}-text"`), 'Score must precede answer');
   assert.ok(html.indexOf(`id="${prefix}-verdict"`) < html.indexOf(`id="${prefix}-text"`), 'Verdict must precede answer');
@@ -111,11 +130,15 @@ async function run(query) {
     full_answer_text_matches_export_without_truncation: true,
     scores_and_verdicts_precede_answers: true,
     green_only_for_strict_improvement_and_red_including_ties: badges,
+    homepage_single_successful_case: chosen.id,
+    homepage_complete_responses_are_blockquotes: true,
+    homepage_criterion_precedes_example: true,
+    homepage_has_no_prompt_only_panel_or_second_example: true,
     browser_visual_or_click_QA: 'unverified; this is an offline DOM contract, not a browser',
     network_calls: 0,
     new_model_or_Jev_calls: 0,
   };
-  const output = path.join(folder, 'render-contract-scored-samples-v2.json');
+  const output = path.join(folder, 'render-contract-technique-showcase-v3.json');
   assert.ok(!fs.existsSync(output));
   fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');
   process.stdout.write(JSON.stringify(result) + '\n');
