@@ -1,7 +1,7 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T08:25:34.873416+00:00",
-  "parent_commit": "bf8b880b41552be47b8506afbc384dc09309ab8a",
+  "time": "2026-11-15T16:12:57.169726+00:00",
+  "parent_commit": "bf0b1a7a8600efb0e814677e9a73314cbf9a60a3",
   "files": [
     {
       "path": ".gitignore",
@@ -25,8 +25,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 25764,
-      "sha256": "d2651885ae21dfd6a2f427beb7f9199d4ce6842c63e82e0e22ac0e769cba18e9"
+      "bytes": 28804,
+      "sha256": "c8bf8bf2508ff0717ae6df2140c3c21c6e9ae2fd8b3558d7d31c7e97f0bd1c9a"
     },
     {
       "path": "artifacts/behavior-results/HF-Space-publication.json",
@@ -810,8 +810,8 @@
     },
     {
       "path": "demo/README.md",
-      "bytes": 3411,
-      "sha256": "a22cfcb8f48381d243cedf9b506c8fa849391b58521f53c8811021b16d7edcea"
+      "bytes": 3288,
+      "sha256": "60f087b8ea698bf3b8b3b2d1ed06b8d023961abe89bc7760648c33b56fadd60f"
     },
     {
       "path": "demo/behavior-preview.html",
@@ -840,8 +840,8 @@
     },
     {
       "path": "demo/check-render-contract.js",
-      "bytes": 4740,
-      "sha256": "d22a8efb9a015ab1a7bdbf49653cfaaed960f087828779d98f70d3245e0252c1"
+      "bytes": 5893,
+      "sha256": "1dffcdabed1a2ccea7367a9369c02cd5b3e5b85cc2fb02c69217f2a9bc1bbb53"
     },
     {
       "path": "demo/complete-answers.html",
@@ -875,13 +875,13 @@
     },
     {
       "path": "demo/index.html",
-      "bytes": 13609,
-      "sha256": "d1069417a0ea01eba241a1b1f7bca7945337b252a6daf17b399401e2a4805bd7"
+      "bytes": 14928,
+      "sha256": "059c3a85176aac2198788f8ae200348a688ac467e29744d1e52c5135105d9641"
     },
     {
       "path": "demo/promptfix-confirmation.html",
-      "bytes": 13609,
-      "sha256": "d1069417a0ea01eba241a1b1f7bca7945337b252a6daf17b399401e2a4805bd7"
+      "bytes": 14928,
+      "sha256": "059c3a85176aac2198788f8ae200348a688ac467e29744d1e52c5135105d9641"
     },
     {
       "path": "demo/promptfix-confirmation.json",
@@ -934,6 +934,11 @@
       "sha256": "d8ab920afd082607cedced9e16d902907393f867096c5508dc6476e54f50d9ef"
     },
     {
+      "path": "docs/method.md",
+      "bytes": 11541,
+      "sha256": "4418b8bb6471c2195d63e1ccff4c372d41860f591871c9115d0130767588b161"
+    },
+    {
       "path": "docs/prompt-setup-diagnosis-v3.md",
       "bytes": 8203,
       "sha256": "ec765b5101e1fe16ad9f21fac563ad74c114b2ad415cb327c1d60f62993633c1"
@@ -960,13 +965,18 @@
     },
     {
       "path": "docs/submission-packet.md",
-      "bytes": 4660,
-      "sha256": "379d8a1639c52ca535fd408cd62e2bbb8952c19fe8e65dac1d002d4861bc22e2"
+      "bytes": 5067,
+      "sha256": "a1e113e645cfd8fbd9d905a8b3c9a7ff276eb4ca123527208a01e5c54f645a0d"
     },
     {
       "path": "docs/training-objective.md",
       "bytes": 4168,
       "sha256": "54b8b30bc4427f3b204c2ad32f770703ce53abe25e3ac696cf09bb5e40bc2a3e"
+    },
+    {
+      "path": "docs/winner.json",
+      "bytes": 3165,
+      "sha256": "9b7322f850d0ef1774412ec55db2de3d361fc49f4c246dc915fcada6e938afb7"
     },
     {
       "path": "pyproject.toml",
@@ -2901,7 +2911,8 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Explicit scientific pins/static imports plus reviewed final documentation, helpers and demo assets",
+  "source_copy_scope": "Previous published science unchanged; authorized project rename, winner links, exact checkpoint math and scored-sample presentation",
   "upstream_MEMORY_md_preserved": true,
-  "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312"
+  "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
+  "scientific_training_sources_and_weights_unchanged": true
 }

@@ -1,20 +1,22 @@
-# Evidence Dial — hackathon submission packet
+# Particle Sliders for Tiny Aya — hackathon submission packet
 
 Team: **Particle Sliders**. **Track 1, section 7: Preference and style alignment.**
 The owner completes the submission form; this repository claims no form-submission receipt.
 
 | Submission field | Value |
 | --- | --- |
-| Main source and thorough README | https://github.com/HyperGAN/evidence-dial |
+| Main source and thorough README | https://github.com/HyperGAN/tiny-aya-particle-sliders |
 | Complete recorded-output demo | https://huggingface.co/spaces/ntc-ai/evidence-dial |
-| Raw behavior adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
+| Winning raw behavior adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
 | Full data, checkpoints, predictions and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
 | Public model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
 | Public dataset collection | https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87 |
 
+Winner: **step 1,024, strength 1, G 0.0000625**. [Direct native weights](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true) · [Winner record](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/winner.json) · [Method and math](method.md).
+
 ## Abstract
 
-Evidence Dial turns written response preferences into an adjustable adapter for frozen Tiny Aya Global 3.35B. Its target is sympathetic, constructive support with independent judgment. For each of 64 TRAIN questions, the unmodified model generates complete responses under three unrestricted behavioral instructions and a neutral control. NanoGPT Jev filters successful contexts; one best qualifying context per question yields 37 paired first-answer hidden states. Neutral and positive inputs retain the same question and empty continuation history, while only positive receives the behavioral instruction.
+Particle Sliders for Tiny Aya turns written response preferences into an adjustable adapter for frozen Tiny Aya Global 3.35B. Its target is sympathetic, constructive support with independent judgment. For each of 64 TRAIN questions, the unmodified model generates complete responses under three unrestricted behavioral instructions and a neutral control. NanoGPT Jev filters successful contexts; one best qualifying context per question yields 37 paired first-answer hidden states. Neutral and positive inputs retain the same question and empty continuation history, while only positive receives the behavioral instruction.
 
 The unchanged ParticleGAN 0.9.5 formulation trains a routed adapter, critic and particle bank while the backbone stays frozen. Two fresh learning-rate cohorts complete 1,024 updates each, with raw weights and no weight EMA. Selection uses finished intended effect ON minus matched OFF across all 24 declared DEV settings. At inference, the adapter retains the ordinary question, adds no behavioral prompt, and exposes an intensity control.
 

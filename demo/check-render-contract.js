@@ -7,6 +7,11 @@ const folder = __dirname;
 const html = fs.readFileSync(path.join(folder, 'index.html'), 'utf8');
 const data = JSON.parse(fs.readFileSync(path.join(folder, 'promptfix-confirmation.json'), 'utf8'));
 const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+assert.equal(fs.readFileSync(path.join(folder, 'promptfix-confirmation.html'), 'utf8'), html);
+for (const prefix of ['off', 'on', 'prompt']) {
+  assert.ok(html.indexOf(`id="${prefix}-score"`) < html.indexOf(`id="${prefix}-text"`), 'Score must precede answer');
+  assert.ok(html.indexOf(`id="${prefix}-verdict"`) < html.indexOf(`id="${prefix}-text"`), 'Verdict must precede answer');
+}
 
 class Element {
   constructor(tag = 'div') {
@@ -53,6 +58,7 @@ async function run(query) {
   const nodes = await run('?case=' + directId);
   assert.equal(nodes['question-text'].textContent, data.cases.find(c => c.id === directId).question);
   const covered = new Set();
+  const badges = {won: 0, not_better: 0, tied: 0};
   let rendered = 0;
   for (let mi = 0; mi < data.models.length; mi++) {
     nodes.model.value = String(mi);
@@ -73,7 +79,15 @@ async function run(query) {
         assert.equal(nodes['off-text'].textContent, q.off.output);
         assert.equal(nodes['prompt-text'].textContent, q.prompt_only.output);
         assert.equal(nodes['on-text'].textContent, record.output);
-        assert.equal(nodes['on-score'].textContent, Number(record.effect).toFixed(3) + ' / 1');
+        assert.equal(nodes['on-score'].textContent, Number(record.effect).toFixed(4) + ' / 1');
+        for (const [prefix, answer] of [['on', record], ['prompt', q.prompt_only]]) {
+          const gain = Number(answer.effect) - Number(q.off.effect);
+          const won = gain > 0;
+          assert.equal(nodes[prefix + '-verdict'].className, 'verdict ' + (won ? 'won' : 'not-better'));
+          assert.ok(nodes[prefix + '-verdict'].textContent.startsWith(won ? '✅ Beats original' : '❌ Does not beat original'));
+          badges[won ? 'won' : 'not_better']++;
+          if (gain === 0) badges.tied++;
+        }
         assert.ok(nodes['on-termination'].textContent.includes('end-of-response token'));
         assert.equal(nodes.metrics.children.length, 2 + model.metrics.length);
         covered.add(q.id + '|off');
@@ -84,6 +98,7 @@ async function run(query) {
     }
   }
   assert.equal(covered.size, 384);
+  assert.ok(badges.won > 0 && badges.not_better > 0 && badges.tied > 0);
   const fallback = await run('?case=unknown-question');
   assert.equal(fallback['question-text'].textContent, data.cases[0].question);
   const result = {
@@ -94,11 +109,13 @@ async function run(query) {
     invalid_question_link_falls_back: true,
     variable_strength_count_per_model_verified: true,
     full_answer_text_matches_export_without_truncation: true,
+    scores_and_verdicts_precede_answers: true,
+    green_only_for_strict_improvement_and_red_including_ties: badges,
     browser_visual_or_click_QA: 'unverified; this is an offline DOM contract, not a browser',
     network_calls: 0,
     new_model_or_Jev_calls: 0,
   };
-  const output = path.join(folder, 'render-contract-passed-first.json');
+  const output = path.join(folder, 'render-contract-scored-samples-v2.json');
   assert.ok(!fs.existsSync(output));
   fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');
   process.stdout.write(JSON.stringify(result) + '\n');

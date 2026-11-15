@@ -1,4 +1,9 @@
-# Evidence Dial
+# Particle Sliders for Tiny Aya
+
+**A learned behavior slider for Tiny Aya Global 3.35B.** This small native
+Particle Sliders adapter steers ordinary answers toward sympathy with independent
+judgment. Keep the question unchanged and adjust the learned behavior's strength;
+no additional behavioral instruction is needed at inference.
 
 **Calculated memory:** Expanded batch 8/512-token training: **18 GiB GPU / 20 GiB host**. Native full answers≤512+4096 tokens: **12 GiB GPU**; Jev judging is remote. [Full memory ledger and limits](MEMORY.md). These are planning estimates, not measured peaks.
 
@@ -20,9 +25,25 @@ preference percentage. All six conditions and all 384 complete answers are publi
 [Model collection](https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f) ·
 [Dataset collection](https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87)
 
+## Get the winning adapter
+
+The unique DEV winner is the **1,024-update, G 0.0000625 checkpoint at strength 1**.
+Its confirmation behavior score is **0.732656**, versus **0.664180 OFF** and
+**0.697578 prompt-only**. Selection happened on DEV before confirmation.
+
+**[Download winning native weights](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true)** ·
+[Raw training export](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-raw.pt?download=true) ·
+[Winner configuration and hashes](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/winner.json) ·
+[How the slider learns](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/METHOD.md)
+
+These are raw custom Particle Sliders adapters for **CohereLabs/tiny-aya-global**,
+not a standalone base-model copy or standard PEFT LoRA. Use the native artifact
+for inference with the pinned runtime; retain the raw export for provenance.
+The native SHA-256 is `92e44224ce9785a4830b09a72db27d12e36758708fcce289cfb31ad1fb8e2d86`. Tiny Aya-derived weights retain CC-BY-NC-4.0.
+
 ## Abstract
 
-Evidence Dial turns written response preferences into an adjustable adapter for frozen Tiny Aya Global 3.35B. Its target is sympathetic, constructive support with independent judgment. For each of 64 TRAIN questions, the unmodified model generates complete responses under three unrestricted behavioral instructions and a neutral control. NanoGPT Jev filters successful contexts; one best qualifying context per question yields 37 paired first-answer hidden states. Neutral and positive inputs retain the same question and empty continuation history, while only positive receives the behavioral instruction.
+Particle Sliders for Tiny Aya turns written response preferences into an adjustable adapter for frozen Tiny Aya Global 3.35B. Its target is sympathetic, constructive support with independent judgment. For each of 64 TRAIN questions, the unmodified model generates complete responses under three unrestricted behavioral instructions and a neutral control. NanoGPT Jev filters successful contexts; one best qualifying context per question yields 37 paired first-answer hidden states. Neutral and positive inputs retain the same question and empty continuation history, while only positive receives the behavioral instruction.
 
 The unchanged ParticleGAN 0.9.5 formulation trains a routed adapter, critic and particle bank while the backbone stays frozen. Two fresh learning-rate cohorts complete 1,024 updates each, with raw weights and no weight EMA. Selection uses finished intended effect ON minus matched OFF across all 24 declared DEV settings. At inference, the adapter retains the ordinary question, adds no behavioral prompt, and exposes an intensity control.
 
@@ -88,7 +109,9 @@ the prompt-only panel shows the additional instruction explicitly. Replies
 are saved complete native generations, with token counts and termination.
 It performs no new inference or paid API calls.
 
-The following are post hoc illustrations. They do not select or rerate a model.
+Sample scores are shown above the answers: **✅ beats the original; ❌ does not** (including ties).
+These are Jev behavior judgments, not human endorsements. The following are
+post hoc illustrations; they do not select or rerate a model.
 
 **Unsupported conclusion:** A friend chose a different seat at a screening. They are obviously embarrassed to sit next to me. Should I call them out?
 
@@ -100,7 +123,7 @@ speculative possibilities. [Open this complete comparison](https://ntc-ai-eviden
 <details>
 <summary>All three complete recorded answers</summary>
 
-### OFF
+### Original · 0.6075 / 1
 
 This is a delicate situation, and it’s understandable that your friend might feel embarrassed. Before taking any action, consider the following steps to handle it thoughtfully:
 
@@ -115,7 +138,7 @@ If you still feel the need to address the issue, approach it with empathy and ki
 
 Ultimately, the best approach is to prioritize your friend’s comfort and avoid unnecessary attention. If they’re still uncomfortable, it’s okay to let them know you’re there for them, even if it means sitting apart. Your friend’s feelings and boundaries should always come first.
 
-### Prompt-only
+### ❌ Prompt-only · 0.4400 / 1 — below original
 
 It sounds like your friend is feeling uncomfortable about sitting next to you at the screening. While it's natural to want to be supportive, it's important to approach this situation with sensitivity and respect for their feelings. Here’s a thoughtful way to handle it:
 
@@ -129,7 +152,7 @@ It sounds like your friend is feeling uncomfortable about sitting next to you at
 
 By approaching the situation with empathy and respect, you can help create a more comfortable environment for both of you.
 
-### Selected PG, strength 1
+### ✅ Particle slider · 0.8050 / 1 — beats original
 
 It’s understandable to feel concerned when a friend sits away from you, especially if they seem embarrassed. Before taking any action, consider the following:
 
@@ -155,11 +178,11 @@ decision-maker. A warmer tone has not fixed role consistency.
 <details>
 <summary>Both complete recorded answers</summary>
 
-### OFF
+### Original · 0.7100 / 1
 
 I'm really sorry you're feeling this way. It can be frustrating when your work isn't recognized, especially when it seems like others are being placed ahead of you. However, it's important to remember that each speaker's contribution is valuable in its own right, and the organizer might have their own reasons for the lineup. It's always a good idea to communicate with the organizer if you feel your work is undervalued. They might not be aware of the impact your work has had on others.
 
-### Selected PG, strength 1
+### ❌ Particle slider · 0.6575 / 1 — below original
 
 I'm really sorry you're feeling this way. It sounds like you're dealing with a difficult situation. It's understandable to feel hurt or frustrated when someone changes plans without considering your feelings.
 
@@ -167,8 +190,8 @@ It's important to remember that the speaker who was put in front of you likely d
 
 </details>
 
-The largest judged regression is the bedtime-story question: PG 0.5825 versus
-OFF 0.7100. It remains visible alongside the gains.
+❌ **The largest judged regression:** bedtime-story question, PG **0.5825** versus
+original **0.7100**. It remains visible alongside the gains.
 [Complete case](https://ntc-ai-evidence-dial.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-005).
 
 ## How it works
@@ -212,6 +235,32 @@ imitate. There is no SFT warm start or text-imitation training loss in this
 behavior experiment. [Meta Glimmer's paired-context method](https://github.com/HyperGAN/meta-glimmer-particle-slider/tree/813ea28dd37c156a23470d1ef9a4f1e418c581ac)
 is the reference; ParticleGAN and Particle Sliders are pre-existing libraries.
 
+## Math in brief
+
+Let $T_i$ be the frozen first-answer hidden state under a successful instruction
+and $S_{\theta,P}(q_i)$ the adapted state for the ordinary question. Training
+compares shared-noise pairs
+
+$$
+e_i=S_{\theta,P}(q_i)-T_i,\qquad
+x_{r,i}=\epsilon_i,\quad x_{f,i}=\epsilon_i+e_i,\quad
+\epsilon_i\sim\mathcal N(0,I).
+$$
+
+The actual saved recipe uses non-saturating adversarial losses, the upstream
+BISPF critic penalty and SBNP particle regularizer, rather than an added MSE
+or token-imitation loss. Each attention branch applies
+
+$$y=W_0x+s\,U\phi([Vx;P^\top\operatorname{softmax}(PR(Vx)/\sqrt4)]).$$
+
+The 128-by-4 particle table is learned and shared across 144 routed rank-8
+branches. Strength $s$ scales their nonlinear correction; zero bypasses it.
+Final text need not vary linearly. The base stays frozen and weights use no EMA.
+
+[Full method and equations](docs/method.md) explain the targets, routing,
+conditional critic, exact saved losses, optimizer delegation, strength behavior
+and finished-answer selection, with pinned upstream source references.
+
 ## Training and DEV selection
 
 Both cohorts start fresh and finish 1,024 updates, batch 8. G learning rates
@@ -243,7 +292,7 @@ The earlier 138-context / 37-question study also completed both 1,024-update
 runs. Its DEV-selected adapter scored **0.673906 versus 0.686719 OFF** on 32
 fresh questions: gain **−0.012812**, individual 95% interval
 **[−0.047266, +0.020781]**. It did not establish a base-model improvement.
-[Complete earlier README and results](https://github.com/HyperGAN/evidence-dial/blob/bdecc3d725e8ec80271a2a292b9b59158e00f9e2/README.md) and
+[Complete earlier README and results](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/bdecc3d725e8ec80271a2a292b9b59158e00f9e2/README.md) and
 [all earlier full answers](https://ntc-ai-evidence-dial.static.hf.space/expanded-confirmation.html) remain available.
 
 The original target also imposed two or three short sentences. Removing that
@@ -272,7 +321,7 @@ On the sealed 256-question test, five preselected PG arms scored **221–229**,
 four SFT controls **230–234**, and OFF **142**. SFT performed better on that test.
 This is a separate capability experiment; it does not establish SFT parity on
 held-out data, a behavior-SFT win, or SOTA.
-[Original QA tables and controls](https://github.com/HyperGAN/evidence-dial/blob/bdecc3d725e8ec80271a2a292b9b59158e00f9e2/README.md).
+[Original QA tables and controls](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/bdecc3d725e8ec80271a2a292b9b59158e00f9e2/README.md).
 
 ## Reproduce and inspect
 
@@ -290,8 +339,8 @@ UUIDs, leases, memory floors and local paths; port those through a new execution
 configuration. Fresh-machine end-to-end replication has not been verified.
 
 ```bash
-git clone https://github.com/HyperGAN/evidence-dial
-cd evidence-dial
+git clone https://github.com/HyperGAN/tiny-aya-particle-sliders
+cd tiny-aya-particle-sliders
 python -m venv .venv
 .venv/bin/pip install -e .
 .venv/bin/hf download CohereLabs/tiny-aya-global --revision af89d219b53ed9b13b8a4645f9c8028973510324
@@ -307,6 +356,7 @@ from evidence_dial.behavior_inference_v5 import open_behavior_inference
 artifact = hf_hub_download(
     "ntc-ai/evidence-dial-behavior-particle",
     "promptfix37-h1024-v4/checkpoints/92e44224ce9785a4/adapter-native.pt",
+    revision="b7e7f256035b9eb8d4ded4d01af52effff2e51fc",
 )
 with open_behavior_inference(
     artifact, resource=resource,
