@@ -1,7 +1,7 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T17:47:22.035085+00:00",
-  "parent_commit": "d0fb97988c22989aad0de077994b9b26e9e9b58d",
+  "time": "2026-11-15T18:17:46.911310+00:00",
+  "parent_commit": "18b213158ba7e30acfc676eb486d859d11ea80f6",
   "files": [
     {
       "path": ".gitignore",
@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12973,
-      "sha256": "6e7cad234247fc2411e8772f7ae177c47b1952545c50feeb94540b51428d031e"
+      "bytes": 13659,
+      "sha256": "13b0b3115ef0515742c269ec453ef5d94745dc67dfa2ff5cb855920a5daaa403"
     },
     {
       "path": "artifacts/behavior-results/HF-Space-publication.json",
@@ -815,8 +815,8 @@
     },
     {
       "path": "demo/README.md",
-      "bytes": 1987,
-      "sha256": "96c446591ad354add66189156e1408580129b75cac789f2aeecfe641fe2907c8"
+      "bytes": 2673,
+      "sha256": "b1fd0dce2f8b5db89947578da21bca7eeb4cb743bf99119a789d8cb0fc5b2a65"
     },
     {
       "path": "demo/behavior-preview.html",
@@ -1075,13 +1075,13 @@
     },
     {
       "path": "demo/index.html",
-      "bytes": 11012,
-      "sha256": "376df4780db7841a230cd3d1459333c3e2dd573128b0cd7b5de98695ae3d4312"
+      "bytes": 11509,
+      "sha256": "38a5a65a0ade92a624f5e60bbb529da150f7269c112afdd58adce3b086d833a5"
     },
     {
       "path": "demo/promptfix-confirmation.html",
-      "bytes": 11012,
-      "sha256": "376df4780db7841a230cd3d1459333c3e2dd573128b0cd7b5de98695ae3d4312"
+      "bytes": 11509,
+      "sha256": "38a5a65a0ade92a624f5e60bbb529da150f7269c112afdd58adce3b086d833a5"
     },
     {
       "path": "demo/promptfix-confirmation.json",
@@ -1094,6 +1094,16 @@
       "sha256": "d4c73d6659d0feb4fe21711eddadb010ba2ae32f0f5303672eb926fa83d524a0"
     },
     {
+      "path": "docs/article.md",
+      "bytes": 9060,
+      "sha256": "5345e76c9960becabecc741db1da480317e8655860269918d240414b23bdc0c8"
+    },
+    {
+      "path": "docs/artifact-links.md",
+      "bytes": 1305,
+      "sha256": "dfbdc7e5e1aa9b81c961c27c688915e70f249c6151abf8b78342d5567c514ba8"
+    },
+    {
       "path": "docs/behavior-alignment-entry-draft.md",
       "bytes": 239,
       "sha256": "0a1ebf50120f512382325e70c9f99a5b77172f09e6f76445cf6559af641d0e3a"
@@ -1102,6 +1112,11 @@
       "path": "docs/benchmark-audit.md",
       "bytes": 3357,
       "sha256": "30a6c8de7a728c17ccb3204bbcc3163da39f69d980dbabfe31c320144f9dae3b"
+    },
+    {
+      "path": "docs/data-card.md",
+      "bytes": 12057,
+      "sha256": "74cd4a85240d8c67df1a5f73cadcd2bab33c58f966dd96e5caaae31d9b563922"
     },
     {
       "path": "docs/figures/expanded138-complete-answer-DEV.png",
@@ -3111,7 +3126,7 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Space examples first: retain the short statement, remove workflow/criterion/status blocks; all64 examples,384 saved responses and pinned255labs dark branding retained",
+  "source_copy_scope": "Cross-linked hackathon artifacts, reviewed article preview, current dataset card and explicit remaining community-blog/screenshot access blockers; all science and saved responses unchanged",
   "upstream_MEMORY_md_preserved": true,
   "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
   "scientific_training_sources_and_weights_unchanged": true,

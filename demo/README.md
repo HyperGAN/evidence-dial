@@ -36,3 +36,5 @@ from content and offline rendering checks.
 - [Winning weights and model card](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders)
 - [Full method and equations](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md)
 - [Data, checkpoints and audits](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/tree/main/promptfix37-h1024-v4)
+
+[Demo: all 64 examples](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders) · [Article preview](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/ARTICLE.md) · [Code](https://github.com/HyperGAN/tiny-aya-particle-sliders) · [Weights](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders) · [Dataset](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders) · [Model collection](https://huggingface.co/collections/ntc-ai/particle-sliders-for-tiny-aya-models-and-adapters-6af28e2624ee9d502264a99f) · [Dataset collection](https://huggingface.co/collections/ntc-ai/particle-sliders-for-tiny-aya-datasets-and-evidence-6af2746d22e8aefe32cafb87)

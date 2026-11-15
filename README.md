@@ -6,6 +6,8 @@ https://github.com/user-attachments/assets/9a2a0522-639f-448f-ad55-507450de44c1
 
 **Write what “good” means. Train it into an adapter. Apply it to the model.**
 
+[Demo: all 64 examples](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders) · [Article preview](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/ARTICLE.md) · [Code](https://github.com/HyperGAN/tiny-aya-particle-sliders) · [Weights](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders) · [Dataset](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders) · [Model collection](https://huggingface.co/collections/ntc-ai/particle-sliders-for-tiny-aya-models-and-adapters-6af28e2624ee9d502264a99f) · [Dataset collection](https://huggingface.co/collections/ntc-ai/particle-sliders-for-tiny-aya-datasets-and-evidence-6af2746d22e8aefe32cafb87)
+
 This entry demonstrates a technique for turning a quality criterion you define
 in language into a controllable **Particle Sliders** adapter. The criterion can
 be **anything you can describe and judge with Jev**: a response style, a reasoning
