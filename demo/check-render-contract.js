@@ -11,8 +11,11 @@ const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 assert.ok(html.includes('data-brand-theme="dark"'));
 assert.ok(html.includes('class="brand-ui"'));
 assert.ok(html.includes('brand/255labs-lockup.svg'));
-assert.ok(html.indexOf('id="quality-criterion"') < html.indexOf('id="question"'));
-assert.ok(html.includes('Vary target system prompts'));
+assert.ok(html.includes('<p class="intro">'));
+assert.ok(!html.includes('class="workflow"'));
+assert.ok(!html.includes('class="criterion"'));
+assert.ok(!html.includes('id="status"'));
+assert.ok(html.indexOf('<p class="intro">') < html.indexOf('id="question"'));
 for (const name of ['brand/255labs-tokens.css', 'brand/255labs-ui.css', 'explorer.css']) {
   assert.ok(html.includes('href="' + name + '"'));
   assert.ok(fs.statSync(path.join(folder, name)).size > 0);
@@ -130,14 +133,14 @@ async function run(query) {
     homepage_restored_full_example_selector: data.cases.length,
     homepage_all_checkpoints_and_strengths_restored: true,
     complete_responses_are_blockquotes: true,
-    criterion_precedes_examples: true,
+    short_statement_then_examples_without_explanatory_blocks: true,
     dark_theme_and_pinned_brand_kit_verified: brand.version,
     exact_original_brand_files_verified: Object.keys(brand.files).length,
     browser_visual_or_click_QA: 'unverified; this is an offline DOM contract, not a browser',
     network_calls: 0,
     new_model_or_Jev_calls: 0,
   };
-  const output = path.join(folder, 'render-contract-restored-dark-explorer-v4.json');
+  const output = path.join(folder, 'render-contract-example-focus-v5.json');
   assert.ok(!fs.existsSync(output));
   fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');
   process.stdout.write(JSON.stringify(result) + '\n');

@@ -10,18 +10,10 @@ short_description: Explore all 64 examples. Adjust learned behavior.
 
 # Particle Sliders for Tiny Aya — full example explorer
 
-Define a quality with Jev, train it into a ParticleGAN adapter, then apply it.
-The criterion can be anything you can describe and judge; the released Tiny Aya
-adapter uses sympathy with independent judgment as one worked example.
-
-The Space restores the complete 64-question explorer, both recorded checkpoints,
-all available strengths, score comparisons and all 384 complete saved answers.
-Choose any example, adjust strength, and compare against the original model.
-Additional controls and the complete results table remain available.
-
-Dataset creation varies the target system prompt and uses Jev to curate
-successful contexts. ParticleGAN learns their frozen internal-state targets.
-The adapted model receives the ordinary question without that training prompt.
+Choose from all 64 examples, adjust the adapter strength, and compare complete
+answers against the original model. The short opening statement leads directly
+to the examples. Both recorded checkpoints, every strength and all 384 saved
+answers remain available.
 
 Scores appear above answers. ✅ means strictly higher than the matched original;
 ❌ means equal or lower. These are fixed Jev behavior judgments, not accuracy

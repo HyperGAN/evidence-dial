@@ -20,18 +20,9 @@
 <div class="hero"><div class="eyebrow">Particle Sliders / Tiny Aya Global 3.35B · Lexsi Track 1, section 7</div>
 <h1>Particle Sliders for Tiny Aya</h1>
 <p class="intro">Define a quality with Jev, train it into a ParticleGAN adapter, then apply it. Explore every complete recorded example as the adapter’s strength changes.</p></div>
-<ol class="workflow" aria-label="How the technique works">
-<li><span>01 / Define</span><strong>Write your quality prompt</strong><p>The criterion can be anything you can describe and judge with Jev.</p></li>
-<li><span>02 / Curate and train</span><strong>Learn successful internal states</strong><p>Vary target system prompts, let Jev curate contexts, and train the adapter with ParticleGAN.</p></li>
-<li><span>03 / Apply</span><strong>Keep the ordinary question</strong><p>Set the learned behavior’s strength. No extra training system prompt is needed at inference.</p></li>
-</ol>
-<section class="criterion" aria-labelledby="criterion-heading"><div class="eyebrow">This adapter’s example criterion</div><h2 id="criterion-heading">Sympathy with independent judgment</h2>
-<blockquote id="quality-criterion">Respond with attentive sympathy and useful support while keeping independent judgment. Acknowledge feelings without automatically endorsing accusations, self-condemnation, certainty, or requested praise. Agree when warranted; be gentle and specific when challenging an unsupported conclusion.</blockquote>
-<a href="https://huggingface.co/ntc-ai/tiny-aya-particle-sliders#quality-criterion-used-for-this-example" target="_blank" rel="noopener">See the exact Jev quality prompt ↗</a></section>
 </header>
 <p id="loading">Loading all recorded examples…</p>
 <div id="app" class="hidden">
-<div class="status" id="status"></div>
 <section class="controls" aria-label="Compare saved answers"><h2>Explore the examples</h2>
 <label class="label" for="question">Choose an example</label>
 <select id="question"></select>
@@ -87,7 +78,7 @@ async function start(){
  const url=params.get('data')||'promptfix-confirmation.json';
  const response=await fetch(url,{cache:'no-store'});if(!response.ok)throw new Error('Verified comparison data has not been published at this path yet.');
  data=await response.json();if(data.schema!=='particle-behavior-explorer-v1'||!data.cases.length||!data.models.length)throw new Error('The saved comparison data is incomplete.');
- text('status',data.status);text('secondary-qa',data.secondary_qa);text('method-curation',data.method_note);text('study-note',data.study_note);$('download').href=url;
+ text('secondary-qa',data.secondary_qa);text('method-curation',data.method_note);text('study-note',data.study_note);$('download').href=url;
  for(let i=0;i<data.cases.length;i++){const o=document.createElement('option');o.value=i;o.textContent=(i+1)+' · '+data.cases[i].question;$('question').append(o);}
  for(let i=0;i<data.models.length;i++){const o=document.createElement('option');o.value=i;o.textContent=data.models[i].title;$('model').append(o);}
  const requestedCase=data.cases.findIndex(c=>c.id===params.get('case'));$('question').value=String(Math.max(0,requestedCase));

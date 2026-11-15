@@ -13,22 +13,10 @@ a:hover { color: var(--brand-ui-text); }
 .masthead .brand-button:hover { color: var(--brand-ui-on-action); }
 .masthead .brand-button.secondary:hover { color: var(--brand-ui-text); }
 .hero { padding: 32px 0 24px; }
-.eyebrow, .label, .card-tag, .workflow span { font: 400 12px/1.6 var(--brand-font-mono); letter-spacing: .06em; text-transform: uppercase; }
+.eyebrow, .label, .card-tag { font: 400 12px/1.6 var(--brand-font-mono); letter-spacing: .06em; text-transform: uppercase; }
 .eyebrow { color: var(--brand-ui-text-muted); margin-bottom: 16px; }
 .hero h1 { font-size: clamp(32px, 4vw, 48px); line-height: 1.08; max-width: 960px; }
 .hero .intro { font-size: 18px; line-height: 1.7; color: var(--brand-ui-text-muted); max-width: 72ch; margin-top: 20px; }
-.workflow { display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; padding: 0; margin: 0 0 28px; border: 1px solid var(--brand-ui-border); border-radius: var(--brand-radius-medium); background: var(--brand-ui-surface); }
-.workflow li { min-width: 0; padding: 20px 24px; }
-.workflow li + li { border-left: 1px solid var(--brand-ui-border); }
-.workflow span { color: var(--brand-ui-action); }
-.workflow strong { display: block; margin: 7px 0; font-weight: 650; }
-.workflow p { color: var(--brand-ui-text-muted); font-size: 14px; line-height: 1.7; }
-.criterion { border-left: 3px solid var(--brand-ui-action); padding: 0 0 0 20px; margin-bottom: 32px; max-width: 90ch; }
-.criterion .eyebrow { margin: 0 0 8px; }
-.criterion h2 { font-size: 20px; margin-bottom: 8px; }
-.criterion blockquote { margin: 0; font-size: 15px; line-height: 1.75; color: var(--brand-ui-text-muted); }
-.criterion a { display: inline-block; margin-top: 8px; font-size: 14px; }
-.status { padding: 14px 18px; border: 1px solid var(--brand-ui-border); border-radius: var(--brand-radius-medium); color: var(--brand-ui-text-muted); font-size: 14px; margin: 0 0 20px; }
 .controls { padding: 24px; border: 1px solid var(--brand-ui-control-border); border-radius: var(--brand-radius-large); background: var(--brand-ui-surface); }
 .controls h2 { margin-bottom: 20px; }
 .label { display: block; color: var(--brand-ui-text-muted); margin-bottom: 8px; }
@@ -81,7 +69,6 @@ footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--brand-
 @media(max-width:800px) {
   main { padding: 0 20px 40px; }
   .answers { grid-template-columns: 1fr; }
-  .workflow li { padding: 18px; }
 }
 @media(max-width:600px) {
   main { padding: 0 16px 32px; }
@@ -92,9 +79,6 @@ footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--brand-
   .masthead-links .secondary { display: none; }
   .hero { padding: 32px 0 24px; }
   .hero .intro { font-size: 16px; }
-  .workflow { grid-template-columns: 1fr; }
-  .workflow li + li { border-left: 0; border-top: 1px solid var(--brand-ui-border); }
-  .criterion { padding-left: 16px; }
   .controls, .card, details { padding: 20px; }
   .question { font-size: 18px; }
   .slider-row { grid-template-columns: 1fr 70px; gap: 16px; }

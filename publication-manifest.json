@@ -1,7 +1,7 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T17:32:47.703059+00:00",
-  "parent_commit": "5c5cd87e5e4e7cda976e1ff5440ba394fa5a6964",
+  "time": "2026-11-15T17:47:22.035085+00:00",
+  "parent_commit": "d0fb97988c22989aad0de077994b9b26e9e9b58d",
   "files": [
     {
       "path": ".gitignore",
@@ -31,7 +31,7 @@
     {
       "path": "README.md",
       "bytes": 12973,
-      "sha256": "16ed19c8ba0abbb66094f5fa5b4c6bc15f89a32bb2828bcb49f9e322fc428ad8"
+      "sha256": "6e7cad234247fc2411e8772f7ae177c47b1952545c50feeb94540b51428d031e"
     },
     {
       "path": "artifacts/behavior-results/HF-Space-publication.json",
@@ -815,8 +815,8 @@
     },
     {
       "path": "demo/README.md",
-      "bytes": 2492,
-      "sha256": "60df7e64b01bd1d078df39dadca10b8e4afba1df5616f7e2f355291a043650e8"
+      "bytes": 1987,
+      "sha256": "96c446591ad354add66189156e1408580129b75cac789f2aeecfe641fe2907c8"
     },
     {
       "path": "demo/behavior-preview.html",
@@ -1035,8 +1035,8 @@
     },
     {
       "path": "demo/check-render-contract.js",
-      "bytes": 7190,
-      "sha256": "83ac655843ba4dba5e6f906b6e73d2c3fbdc437c334f0d4ff7e8fec55f80e565"
+      "bytes": 7333,
+      "sha256": "2746bbb70bb75d183031938ad45f29d45f8bbdd1bba6411eb36ed9bd0a98bbcb"
     },
     {
       "path": "demo/complete-answers.html",
@@ -1065,8 +1065,8 @@
     },
     {
       "path": "demo/explorer.css",
-      "bytes": 8084,
-      "sha256": "7cc6e3dec8cb660d25b7a7a857911269d7431b6246109dffbe845fce71dcb7cb"
+      "bytes": 6717,
+      "sha256": "14330ff332ffcf1847778ee5a432148098dd583693ebce596e67195d266f8a97"
     },
     {
       "path": "demo/grounding.html",
@@ -1075,13 +1075,13 @@
     },
     {
       "path": "demo/index.html",
-      "bytes": 12381,
-      "sha256": "9b70ba1a016299a61e439d6c83814b30b274674e1a26eabbe605f70ad31ea63f"
+      "bytes": 11012,
+      "sha256": "376df4780db7841a230cd3d1459333c3e2dd573128b0cd7b5de98695ae3d4312"
     },
     {
       "path": "demo/promptfix-confirmation.html",
-      "bytes": 12381,
-      "sha256": "9b70ba1a016299a61e439d6c83814b30b274674e1a26eabbe605f70ad31ea63f"
+      "bytes": 11012,
+      "sha256": "376df4780db7841a230cd3d1459333c3e2dd573128b0cd7b5de98695ae3d4312"
     },
     {
       "path": "demo/promptfix-confirmation.json",
@@ -3111,7 +3111,7 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Restore full64-question Space explorer with original control logic, concise technique copy and pinned255labs1.1.0 dark branding; model/dataset/science unchanged",
+  "source_copy_scope": "Space examples first: retain the short statement, remove workflow/criterion/status blocks; all64 examples,384 saved responses and pinned255labs dark branding retained",
   "upstream_MEMORY_md_preserved": true,
   "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
   "scientific_training_sources_and_weights_unchanged": true,
