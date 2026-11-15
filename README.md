@@ -24,6 +24,8 @@ example of that technique.
 A different criterion calls for its own curation and training; this release
 demonstrates one choice, not guaranteed success on every possible criterion.
 
+**Watch: [Particle Sliders — the entry video (1:39)](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/download/lexsi-video-v6/particle-sliders-video-v6.mp4)** — the technique, the sympathy-vs-sycophancy problem, a recorded fresh case, and the confirmation results.
+
 ## Dataset creation also searches the target prompt
 
 The quality prompt is the **judge**. The target system prompts are candidate
