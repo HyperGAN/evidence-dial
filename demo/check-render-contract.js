@@ -1,0 +1,105 @@
+// Offline rendering contract only: no browser, network, inference or new judgments.
+const fs = require('fs');
+const vm = require('vm');
+const assert = require('assert/strict');
+const path = require('path');
+const folder = __dirname;
+const html = fs.readFileSync(path.join(folder, 'index.html'), 'utf8');
+const data = JSON.parse(fs.readFileSync(path.join(folder, 'promptfix-confirmation.json'), 'utf8'));
+const script = html.match(/<script>([\s\S]*?)<\/script>/)[1];
+
+class Element {
+  constructor(tag = 'div') {
+    this.tagName = tag;
+    this.value = '0';
+    this.textContent = '';
+    this.children = [];
+    this.events = {};
+    this.attributes = {};
+    this.classList = {add() {}, remove() {}};
+  }
+  append(...children) { this.children.push(...children); }
+  replaceChildren(...children) { this.children = [...children]; }
+  addEventListener(type, handler) { this.events[type] = handler; }
+  setAttribute(name, value) { this.attributes[name] = value; }
+}
+
+async function run(query) {
+  const nodes = Object.fromEntries([...html.matchAll(/\bid="([^"]+)"/g)].map(m => [m[1], new Element()]));
+  const context = {
+    document: {
+      getElementById(id) { assert.ok(nodes[id], 'Unknown HTML id: ' + id); return nodes[id]; },
+      createElement(tag) { return new Element(tag); },
+    },
+    location: {href: 'https://example.test/promptfix-confirmation.html' + query},
+    URL,
+    fetch: async url => {
+      assert.equal(url, 'promptfix-confirmation.json');
+      return {ok: true, json: async () => data};
+    },
+  };
+  vm.createContext(context);
+  assert.equal((script.match(/start\(\)\.catch/g) || []).length, 1);
+  vm.runInContext(script.replace('start().catch', 'globalThis.ready=start().catch'), context);
+  await context.ready;
+  assert.notEqual(nodes.loading.className, 'error', nodes.loading.textContent);
+  assert.equal(nodes.question.children.length, 64);
+  assert.equal(nodes.model.children.length, 2);
+  return nodes;
+}
+
+(async () => {
+  const directId = 'behavior-promptfix-fresh64-031';
+  const nodes = await run('?case=' + directId);
+  assert.equal(nodes['question-text'].textContent, data.cases.find(c => c.id === directId).question);
+  const covered = new Set();
+  let rendered = 0;
+  for (let mi = 0; mi < data.models.length; mi++) {
+    nodes.model.value = String(mi);
+    nodes.model.events.change();
+    const model = data.models[mi];
+    const strengths = [0, ...model.metrics.map(m => m.strength).sort((a, b) => a - b)];
+    assert.equal(Number(nodes.strength.max), strengths.length - 1);
+    for (let qi = 0; qi < data.cases.length; qi++) {
+      const q = data.cases[qi];
+      nodes.question.value = String(qi);
+      nodes.question.events.change();
+      for (let si = 0; si < strengths.length; si++) {
+        nodes.strength.value = String(si);
+        nodes.strength.events.input();
+        const strength = strengths[si];
+        const record = strength === 0 ? q.off : q.models[model.id][String(strength)];
+        assert.equal(nodes['question-text'].textContent, q.question);
+        assert.equal(nodes['off-text'].textContent, q.off.output);
+        assert.equal(nodes['prompt-text'].textContent, q.prompt_only.output);
+        assert.equal(nodes['on-text'].textContent, record.output);
+        assert.equal(nodes['on-score'].textContent, Number(record.effect).toFixed(3) + ' / 1');
+        assert.ok(nodes['on-termination'].textContent.includes('end-of-response token'));
+        assert.equal(nodes.metrics.children.length, 2 + model.metrics.length);
+        covered.add(q.id + '|off');
+        covered.add(q.id + '|prompt-only');
+        if (strength !== 0) covered.add(q.id + '|' + model.metrics.find(m => m.strength === strength).source_arm);
+        rendered++;
+      }
+    }
+  }
+  assert.equal(covered.size, 384);
+  const fallback = await run('?case=unknown-question');
+  assert.equal(fallback['question-text'].textContent, data.cases[0].question);
+  const result = {
+    state: 'pass-offline-recorded-answer-rendering-contract',
+    rendered_states: rendered,
+    exact_saved_responses_covered: covered.size,
+    direct_question_link_verified: directId,
+    invalid_question_link_falls_back: true,
+    variable_strength_count_per_model_verified: true,
+    full_answer_text_matches_export_without_truncation: true,
+    browser_visual_or_click_QA: 'unverified; this is an offline DOM contract, not a browser',
+    network_calls: 0,
+    new_model_or_Jev_calls: 0,
+  };
+  const output = path.join(folder, 'render-contract-passed-first.json');
+  assert.ok(!fs.existsSync(output));
+  fs.writeFileSync(output, JSON.stringify(result, null, 2) + '\n');
+  process.stdout.write(JSON.stringify(result) + '\n');
+})().catch(error => { process.stderr.write(error.stack + '\n'); process.exitCode = 1; });

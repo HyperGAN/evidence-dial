@@ -1,64 +1,59 @@
 # Evidence Dial — hackathon submission packet
 
-Team: **Particle Sliders**. Category: **Track 1, section 7 — Preference and style alignment**.
-The owner fills the submission form; this repository does not claim a form submission receipt.
+Team: **Particle Sliders**. **Track 1, section 7: Preference and style alignment.**
+The owner completes the submission form; this repository claims no form-submission receipt.
 
 | Submission field | Value |
 | --- | --- |
-| Main project and thorough README | https://github.com/HyperGAN/evidence-dial |
-| Fresh complete-answer confirmation and archived earlier studies | https://huggingface.co/spaces/ntc-ai/evidence-dial |
-| Behavior model and raw adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
-| Data, all predictions, training logs and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
-| Model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
-| Dataset collection | https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87 |
+| Main source and thorough README | https://github.com/HyperGAN/evidence-dial |
+| Complete recorded-output demo | https://huggingface.co/spaces/ntc-ai/evidence-dial |
+| Raw behavior adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
+| Full data, checkpoints, predictions and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
+| Public model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
+| Public dataset collection | https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87 |
 
 ## Abstract
 
-Evidence Dial connects language-defined response preferences to a learned
-behavior control for frozen Tiny Aya Global 3.35B. For each of 64 training
-questions, the base model explores 16 behavioral instructions. NanoGPT Jev
-judges sympathetic, constructive support with independent judgment. The expanded
-dataset retains all 138 passing contexts across 37 questions. CuratorKIT
-validates and deduplicates the corpus; AuditKIT connects native generation to a
-fixed evaluator.
+Evidence Dial turns written response preferences into an adjustable adapter for frozen Tiny Aya Global 3.35B. Its target is sympathetic, constructive support with independent judgment. For each of 64 TRAIN questions, the unmodified model generates complete responses under three unrestricted behavioral instructions and a neutral control. NanoGPT Jev filters successful contexts; one best qualifying context per question yields 37 paired first-answer hidden states. Neutral and positive inputs retain the same question and empty continuation history, while only positive receives the behavioral instruction.
 
-Positive and neutral contexts retain the same user question and empty
-continuation history. Only the positive context receives the behavioral system
-instruction. We capture frozen final hidden states before the first answer token
-and train a routed particle adapter using the unchanged ParticleGAN formulation.
-There is no SFT warm start, text-imitation loss, or weight EMA. At inference,
-the adapter sees the ordinary question and its strength is adjustable.
+The unchanged ParticleGAN 0.9.5 formulation trains a routed adapter, critic and particle bank while the backbone stays frozen. Two fresh learning-rate cohorts complete 1,024 updates each, with raw weights and no weight EMA. Selection uses finished intended effect ON minus matched OFF across all 24 declared DEV settings. At inference, the adapter retains the ordinary question, adds no behavioral prompt, and exposes an intensity control.
 
-Both fresh learning-rate cohorts finished 1,024 updates. All 24 development
-settings were audited using complete native-EOS answers. Development selection
-chose step 256, strength 1, scoring 0.6950 versus 0.6620 OFF. Longer training
-did not improve that maximum. On a fresh 32-question confirmation, the locked
-adapter scored 0.6739 versus 0.6867 OFF and 0.6494 prompt-only. Its change from
-OFF was −0.0128, with an individual paired 95% bootstrap interval [−0.0473,
-+0.0208]. The expanded study does not establish an improvement over the base
-model; stronger steering regresses.
+On 64 fresh synthetic questions, the preselected adapter scores 0.7327, versus 0.6642 OFF and 0.6976 prompt-only. Its gains are +0.0685 and +0.0351; both individual paired bootstrap intervals exclude zero. All 384 comparison answers reach native EOS. Sympathy judgments rise, while the separate sycophancy diagnostic does not fall versus OFF. Earlier negative results remain public. One training seed, related synthetic scenario families, a shared curation/evaluation judge and first-state supervision limit the conclusions.
 
-The contribution is the reusable curation, internal-state training, evaluation
-and recorded-output pipeline, including its failures. A separate QA study tied
-SFT on DEV but favored SFT on held-out data. One synthetic corpus, one training
-seed, a shared curation/evaluation judge and first-state supervision limit the
-claims.
+## Results and value
 
-## Where we add value
+| Frozen condition, 64 fresh questions each | Mean behavior score | Change from OFF |
+| --- | ---: | ---: |
+| OFF — unmodified base | 0.664180 | +0.000000 |
+| Unrestricted prompt-only | 0.697578 | +0.033398 |
+| PG strength 1 — selected on DEV | 0.732656 | +0.068477 |
+| PG strength 0.25 — descriptive | 0.695195 | +0.031016 |
+| PG strength 0.5 — descriptive | 0.703555 | +0.039375 |
+| Earlier expanded-study adapter — fixed reference | 0.668086 | +0.003906 |
 
-A concrete connection from a written response preference to curated internal-state pairs, ParticleGAN training, and an adjustable raw-weight adapter. The same ordinary user question is retained at inference. The public explorer exposes all 32 held-out cases, the prompt-only baseline, and regressions. The reusable pipeline and complete records are the contribution; this small study does not demonstrate a quality advantage over prompting or SFT.
+The added value is the concrete connection from written preferences to curated
+internal-state targets, original ParticleGAN training, an adjustable raw adapter
+and auditable finished outputs. The selected model keeps the ordinary user
+question and receives no extra behavioral instruction. The gallery contains all
+64 fresh questions, both controls, every frozen strength and the earlier reference.
 
-## Repositories and attribution
+The primary gain over OFF is +0.068477, individual paired 95% interval
+[+0.051211, +0.085392]; over prompt-only it is +0.035078
+[+0.013358, +0.058320]. Sympathy rises, but sycophancy probability does not
+fall versus OFF. This is one synthetic corpus/seed and a shared model judge,
+with no human preference or matched behavior-SFT study. Earlier negative results
+remain public. Separate QA tied SFT on DEV, while held-out results favored SFT.
 
-- [Evidence Dial](https://github.com/HyperGAN/evidence-dial): this entry's integration, corpus, curation, training/evaluation harness, audits, and demo.
-- [CuratorKIT](https://github.com/Lexsi-Labs/CuratorKIT): schema validation and exact deduplication.
-- [AuditKIT](https://github.com/Lexsi-Labs/AuditKIT): native callable evaluation with the fixed Jev scorer.
-- [AlignTune](https://github.com/Lexsi-Labs/aligntune): SFT baselines in the separate QA study; it does not train the behavior PG adapter.
-- [ParticleGAN](https://github.com/HyperGAN/ParticleGAN) and [Particle Sliders](https://github.com/HyperGAN/particle-sliders): pre-existing training and adapter libraries.
-- [Meta Glimmer](https://github.com/HyperGAN/meta-glimmer-particle-slider/tree/813ea28dd37c156a23470d1ef9a4f1e418c581ac): paired prompts and frozen first-state capture reference.
+## Attribution and delivery
 
-## Delivery scope and limits
+CuratorKIT handles schema/deduplication; AuditKIT wraps native generation and Jev.
+AlignTune supplies the separate QA SFT baselines. ParticleGAN, Particle Sliders
+and Meta Glimmer are pre-existing foundations; the entry is the Tiny Aya
+integration, curation/training/evaluation pipeline and recorded-output explorer.
 
-The main README supplies the abstract, complete results, all 24 DEV settings, native-EOS examples, method, artifact links and honest limitations. Both expanded 138-context cohorts completed 1,024 updates; all 160 fresh-confirmation answers are independently verified. The locked selected adapter scored 0.673906 versus OFF 0.686719 and prompt-only 0.649375, with uncertain differences. There is no demonstrated improvement over the base model, no greater-caring claim, and no SFT superiority claim. Earlier 37-pair/64-token and fixed-checkpoint studies remain archived. No paper or owner-form submission is claimed. Tiny Aya-derived weights/states retain CC-BY-NC-4.0 and upstream code licenses.
-
-The Space is a recorded-output explorer. Live files and content hashes are verified; interactive browser QA requires an available browser host and is not claimed here.
+Both 1,024-update runs, all 24 DEV cells and all 384 fresh answers are verified.
+Weights are raw, with model-weight EMA disabled. The README supplies method,
+full tables, inference/source entry points, improvement/regression examples and
+honest limitations. Tiny Aya-derived weights/states use CC-BY-NC-4.0. The Space
+uses saved outputs; fresh-machine replication and browser visual/click QA are
+not claimed without separate evidence. No paper or owner form submission is claimed.
