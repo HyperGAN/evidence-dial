@@ -114,7 +114,7 @@ question. With the saved response scale and noise both set to 1, training forms
 $$
 e_i=S_{\theta,P}(q_i)-T_i,\qquad
 x_{r,i}=\epsilon_i,\quad x_{f,i}=\epsilon_i+e_i,\quad
-\epsilon_i\sim\mathcal N(0,I).
+\epsilon_i\sim\mathcal{N}(0,I).
 $$
 
 A conditional critic distinguishes the shared Gaussian reference from its
@@ -124,7 +124,7 @@ critic penalty and SBNP particle regularizer, with no added token-imitation loss
 
 Each attention branch computes
 
-$$y=W_0x+s\,U\phi([Vx;P^\top\operatorname{softmax}(PR(Vx)/\sqrt4)]).$$
+$$y=W_0x+s\,U\phi([Vx;P^\top\mathrm{softmax}(PR(Vx)/\sqrt{4})]).$$
 
 $W_0$ is frozen. The learned 128-by-4 particle table $P$ is shared across 144
 rank-8 routed branches; their routers mix particles according to the input.
