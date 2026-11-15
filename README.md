@@ -1,5 +1,9 @@
 # Particle Sliders for Tiny Aya
 
+https://github.com/user-attachments/assets/e75f687d-4788-47ac-b60b-a7a42ecef25a
+
+*The entry video (1:39, 720p web encode). Full-quality master: [GitHub release](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/tag/lexsi-video-v6) · [Hugging Face](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/video/particle-sliders-video-v6.mp4)*
+
 **Write what “good” means. Train it into an adapter. Apply it to the model.**
 
 This entry demonstrates a technique for turning a quality criterion you define
@@ -24,7 +28,6 @@ example of that technique.
 A different criterion calls for its own curation and training; this release
 demonstrates one choice, not guaranteed success on every possible criterion.
 
-**Watch: [Particle Sliders — the entry video (1:39)](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/download/lexsi-video-v6/particle-sliders-video-v6.mp4)** — the technique, the sympathy-vs-sycophancy problem, a recorded fresh case, and the confirmation results.
 
 ## Dataset creation also searches the target prompt
 
