@@ -1,7 +1,7 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T18:17:46.911310+00:00",
-  "parent_commit": "18b213158ba7e30acfc676eb486d859d11ea80f6",
+  "time": "2026-11-15T18:30:10.243638+00:00",
+  "parent_commit": "130c48a6f3500f09fba882b720eb5fee8f52b04d",
   "files": [
     {
       "path": ".gitignore",
@@ -1095,8 +1095,8 @@
     },
     {
       "path": "docs/article.md",
-      "bytes": 9060,
-      "sha256": "5345e76c9960becabecc741db1da480317e8655860269918d240414b23bdc0c8"
+      "bytes": 10121,
+      "sha256": "64727d1301a6d86431c6bf7f2803b191b2b13f2bc6b4793c9245b5a1fc80c7c3"
     },
     {
       "path": "docs/artifact-links.md",
@@ -3126,7 +3126,7 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Cross-linked hackathon artifacts, reviewed article preview, current dataset card and explicit remaining community-blog/screenshot access blockers; all science and saved responses unchanged",
+  "source_copy_scope": "Refine the linked article preview with concrete author controls and an optional numerical critic example; science and all other artifacts unchanged",
   "upstream_MEMORY_md_preserved": true,
   "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
   "scientific_training_sources_and_weights_unchanged": true,

@@ -4,17 +4,15 @@
 
 [Demo: all 64 examples](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders) · [Code](https://github.com/HyperGAN/tiny-aya-particle-sliders) · [Adapter](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders) · [Dataset](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders)
 
-<video controls playsinline preload="metadata" width="100%">
-  <source src="https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/main/video/particle-sliders-video-v7.mp4" type="video/mp4">
-</video>
+A useful instruction can bring out a better answer from a model. We use those successful contexts as training material for a small **Particle Sliders adapter**, while keeping the base model frozen. We then measure whether that adapter helps when the extra instruction is absent.
 
-[Watch or download the entry video](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/main/video/particle-sliders-video-v7.mp4) · [GitHub video release](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/tag/lexsi-video-v7)
+This gives the author three useful controls:
 
-A useful instruction can change how a model answers a question. It might draw out more careful reasoning, a more appropriate voice, or more attentive support. The model reaches different internal states when its context brings out that behavior.
+- **Describe the quality instead of writing one ideal answer for every question.** A model's successful context supplies the internal training target.
+- **Use different target instructions for different examples.** A common judge can select contexts that reach the same quality in different ways.
+- **Expose a strength setting at inference.** The user asks the ordinary question; the setting scales the learned adapter's contribution.
 
-**Particle Sliders learns from those states.** We keep the base model frozen and train a small adapter to make a chosen behavior more available when the extra instruction is absent. The user keeps asking ordinary questions; a strength setting controls the adapter's contribution.
-
-Our Lexsi hackathon entry, **Track 1, section 7: preference and style alignment**, connects a written quality criterion to this training process. Tiny Aya and sympathetic responses are the example. The broader idea is that *you choose what “good” means*, then curate and train for it.
+Our Lexsi **Track 1, section 7: preference and style alignment** entry connects that workflow to Tiny Aya. Sympathetic responses are one worked example. A different quality requires its own curation, adapter training, and evaluation; this slider does not learn a new quality at inference.
 
 ## One question, two different jobs
 
@@ -44,11 +42,22 @@ The ordinary and positive contexts share the question and empty conversation his
 
 ## What ParticleGAN learns
 
-Before the model starts each successful answer, we save its internal state: a vector of 2,048 numbers. We then train the adapted model to approach that state when given the question without the extra instruction.
+Before the model starts each successful answer, we save its final hidden vector: a list of 2,048 numbers. That is the target for the adapted model answering the same question without the extra instruction.
 
-ParticleGAN uses a small neural network called a critic to detect numerical differences between the adapted state and the saved target. Its feedback trains the adapter and a shared table of learned vectors called the particle bank. This critic is separate from Jev. We do not backpropagate through Jev or train by copying the answer tokens.
+Jev has already selected the successful contexts. A separate small neural network, the **critic**, now guides training on these numerical states.
 
-The adapter computes a correction from the current input and adds it inside Tiny Aya. The slider controls how much of that correction is applied. **OFF bypasses the adapter exactly.** A larger strength need not produce a better answer, and changing strength never interpolates response text.
+The critic distinguishes random noise from that same noise shifted by the difference between the adapted and target states. ParticleGAN updates the adapter to make the distinction harder. When the states match, the shift is zero.
+
+<details>
+<summary>A small numerical example of the critic's task</summary>
+
+Suppose the target is `(2, 5)` and the adapted state is `(3, 4)`. Their difference is `(1, -1)`. A noise draw `(0.4, -0.3)` becomes `(1.4, -1.3)` after that shift. If the adapted state reaches `(2, 5)`, its difference from the target is zero and both versions of the noise coincide. The real experiment uses 2,048-number states and standard Gaussian noise; these two-number values are only an illustration.
+
+</details>
+
+The **particle bank** is a shared table of 128 learned, four-number vectors. Each adapter branch mixes those vectors according to its input and uses the mixture to construct a nonlinear correction. The bank and branch parameters train together. The slider scales that correction: **OFF bypasses the adapter exactly.** Higher strength can help or hurt, and final response text is never blended between settings.
+
+Jev chooses contexts and evaluates finished answers. The critic supplies the numerical training feedback. We do not differentiate through Jev or add an answer-token imitation loss.
 
 Two fresh learning-rate runs completed **1,024 updates each**, batch size 8. Training, selection, and inference used the raw checkpoint weights, without averaging them. The [method guide](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md) gives the equations, architecture, saved ParticleGAN 0.9.5 recipe, and source pins.
 
@@ -64,6 +73,12 @@ We selected the checkpoint and strength on **16 DEV questions across 24 declared
 The paired gain is **+0.068477**, with an individual 95% interval from resampling questions of **[+0.051211, +0.085392]**. These are fixed model-judge scores, not accuracy percentages or human preference rates.
 
 [Open the example explorer](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders). Choose any question, vary strength, and read the complete original and adapted answers. Green checks mean a strictly higher score; red crosses include ties and losses. All **384 complete answers across six recorded conditions** are retained in the dataset. The demo plays back saved outputs rather than generating new answers.
+
+<video controls playsinline preload="metadata" width="100%">
+  <source src="https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/main/video/particle-sliders-video-v7.mp4" type="video/mp4">
+</video>
+
+[Watch or download the entry video](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/main/video/particle-sliders-video-v7.mp4) · [GitHub video release](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/tag/lexsi-video-v7)
 
 ## Where the evidence stops
 
