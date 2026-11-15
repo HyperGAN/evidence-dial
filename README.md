@@ -19,9 +19,9 @@ versus **0.6642 OFF** and **0.6976 prompt-only**, on 64 new questions.
 This is a fixed Jev behavior score on a 0–1 scale, not accuracy or a human
 preference percentage. All six conditions and all 384 complete answers are public.
 
-[Recorded complete-answer demo](https://huggingface.co/spaces/ntc-ai/evidence-dial) ·
-[Raw model adapter](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle) ·
-[Data, checkpoints and audits](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/tree/main/promptfix37-h1024-v4) ·
+[Recorded complete-answer demo](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders) ·
+[Raw model adapter](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders) ·
+[Data, checkpoints and audits](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/tree/main/promptfix37-h1024-v4) ·
 [Model collection](https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f) ·
 [Dataset collection](https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87)
 
@@ -31,10 +31,10 @@ The unique DEV winner is the **1,024-update, G 0.0000625 checkpoint at strength 
 Its confirmation behavior score is **0.732656**, versus **0.664180 OFF** and
 **0.697578 prompt-only**. Selection happened on DEV before confirmation.
 
-**[Download winning native weights](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true)** ·
-[Raw training export](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-raw.pt?download=true) ·
-[Winner configuration and hashes](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/winner.json) ·
-[How the slider learns](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/METHOD.md)
+**[Download winning native weights](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true)** ·
+[Raw training export](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-raw.pt?download=true) ·
+[Winner configuration and hashes](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/winner.json) ·
+[How the slider learns](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md)
 
 These are raw custom Particle Sliders adapters for **CohereLabs/tiny-aya-global**,
 not a standalone base-model copy or standard PEFT LoRA. Use the native artifact
@@ -86,7 +86,7 @@ winner on the confirmation set.
 Intervals use 10,000 paired-question bootstrap resamples, seed 20261114.
 They are individual intervals, with no simultaneous-coverage or independent
 semantic-family claim. Questions receive equal weight.
-[Independent comparison audit](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/fresh-confirmation-comparison.json).
+[Independent comparison audit](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/fresh-confirmation-comparison.json).
 
 ### Separate behavioral diagnostics
 
@@ -118,7 +118,7 @@ post hoc illustrations; they do not select or rerate a model.
 Jev scores OFF **0.6075**, prompt-only **0.4400**,
 and selected PG **0.8050**. The adapter explicitly advises
 against assuming the friend's motive, but still produces a generic list and
-speculative possibilities. [Open this complete comparison](https://ntc-ai-evidence-dial.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-021).
+speculative possibilities. [Open this complete comparison](https://ntc-ai-tiny-aya-particle-sliders.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-021).
 
 <details>
 <summary>All three complete recorded answers</summary>
@@ -173,7 +173,7 @@ If you decide to talk, keep it light and non-confrontational. If they’re open,
 OFF scores **0.7100** and PG **0.6575**.
 The adapter invents a change of plans and treats the other speaker as the
 decision-maker. A warmer tone has not fixed role consistency.
-[Open this complete comparison](https://ntc-ai-evidence-dial.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-031).
+[Open this complete comparison](https://ntc-ai-tiny-aya-particle-sliders.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-031).
 
 <details>
 <summary>Both complete recorded answers</summary>
@@ -192,7 +192,7 @@ It's important to remember that the speaker who was put in front of you likely d
 
 ❌ **The largest judged regression:** bedtime-story question, PG **0.5825** versus
 original **0.7100**. It remains visible alongside the gains.
-[Complete case](https://ntc-ai-evidence-dial.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-005).
+[Complete case](https://ntc-ai-tiny-aya-particle-sliders.static.hf.space/promptfix-confirmation.html?case=behavior-promptfix-fresh64-005).
 
 ## How it works
 
@@ -293,7 +293,7 @@ runs. Its DEV-selected adapter scored **0.673906 versus 0.686719 OFF** on 32
 fresh questions: gain **−0.012812**, individual 95% interval
 **[−0.047266, +0.020781]**. It did not establish a base-model improvement.
 [Complete earlier README and results](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/bdecc3d725e8ec80271a2a292b9b59158e00f9e2/README.md) and
-[all earlier full answers](https://ntc-ai-evidence-dial.static.hf.space/expanded-confirmation.html) remain available.
+[all earlier full answers](https://ntc-ai-tiny-aya-particle-sliders.static.hf.space/expanded-confirmation.html) remain available.
 
 The original target also imposed two or three short sentences. Removing that
 unrelated restriction improved prompt-only DEV performance from 0.666563 to
@@ -354,7 +354,7 @@ from huggingface_hub import hf_hub_download
 from evidence_dial.behavior_inference_v5 import open_behavior_inference
 
 artifact = hf_hub_download(
-    "ntc-ai/evidence-dial-behavior-particle",
+    "ntc-ai/tiny-aya-particle-sliders",
     "promptfix37-h1024-v4/checkpoints/92e44224ce9785a4/adapter-native.pt",
     revision="b7e7f256035b9eb8d4ded4d01af52effff2e51fc",
 )
@@ -389,9 +389,9 @@ locally; the route is NanoGPT `typesafe/jev-1.14`. Credentials are excluded.
 
 ## Public artifacts
 
-- [Raw adapters and selection metadata](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/tree/main/promptfix37-h1024-v4).
-- [Questions, accepted states, all results, update journals and audits](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/tree/main/promptfix37-h1024-v4). Public FULL/RAW/NATIVE milestones are at 0/256/512/768/1,024; every per-update FULL checkpoint is retained locally.
-- [Native captures, original Jev records, execution receipts and source bodies](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/provenance/observations-and-sources.tar.gz).
+- [Raw adapters and selection metadata](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/tree/main/promptfix37-h1024-v4).
+- [Questions, accepted states, all results, update journals and audits](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/tree/main/promptfix37-h1024-v4). Public FULL/RAW/NATIVE milestones are at 0/256/512/768/1,024; every per-update FULL checkpoint is retained locally.
+- [Native captures, original Jev records, execution receipts and source bodies](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/provenance/observations-and-sources.tar.gz).
 - [All 384 saved answers as portable JSON](demo/promptfix-confirmation.json).
 - Both HF collections above contain public repositories. Earlier weights, datasets, logs and demo pages remain preserved.
 

@@ -45,12 +45,12 @@ pages and their data remain preserved. The main README includes the method,
 all24 DEV settings, full results, real regressions, source/provenance and limits.
 
 - [Project source and thorough README](https://github.com/HyperGAN/tiny-aya-particle-sliders)
-- [Winning native adapter](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle)
-- [All data, checkpoints and original judgments](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/tree/main/promptfix37-h1024-v4)
+- [Winning native adapter](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders)
+- [All data, checkpoints and original judgments](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/tree/main/promptfix37-h1024-v4)
 - [Model collection](https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f)
 - [Dataset collection](https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87)
 
 Separate earlier QA evidence tied PG and SFT at174/192 onDEV; held-out256-question
 results favored SFT. This behavior study does not establish SFT parity or SOTA.
 
-[Direct winning weights](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true) · [Winner record](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/winner.json) · [Method and equations](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/METHOD.md)
+[Direct winning weights](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true) · [Winner record](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/winner.json) · [Method and equations](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md)

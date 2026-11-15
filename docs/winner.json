@@ -5,20 +5,20 @@
   "scientific_source_revision": "bf0b1a7a8600efb0e814677e9a73314cbf9a60a3",
   "base_model": "CohereLabs/tiny-aya-global",
   "base_revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
-  "model_repo": "ntc-ai/evidence-dial-behavior-particle",
+  "model_repo": "ntc-ai/tiny-aya-particle-sliders",
   "weights_revision": "b7e7f256035b9eb8d4ded4d01af52effff2e51fc",
   "format": "custom native Particle Sliders adapter; requires frozen base and pinned runtime",
   "native": {
     "path": "adapter-native.pt",
     "sha256": "92e44224ce9785a4830b09a72db27d12e36758708fcce289cfb31ad1fb8e2d86",
-    "download": "https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true"
+    "download": "https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true"
   },
   "raw": {
     "path": "adapter-raw.pt",
     "sha256": "ddd14d481f0331cd63984fd8c969d99698b0f935f1841631483c540cad4192eb",
-    "download": "https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-raw.pt?download=true"
+    "download": "https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-raw.pt?download=true"
   },
-  "versioned_checkpoint_directory": "https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/tree/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/promptfix37-h1024-v4/checkpoints/92e44224ce9785a4",
+  "versioned_checkpoint_directory": "https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/tree/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/promptfix37-h1024-v4/checkpoints/92e44224ce9785a4",
   "training": {
     "updates": 1024,
     "batch": 8,
@@ -55,11 +55,11 @@
     "selected_mean": 0.73265625,
     "off_mean": 0.6641796875,
     "prompt_only_mean": 0.697578125,
-    "audit": "https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/fresh-confirmation-comparison.json",
-    "all_answers": "https://huggingface.co/spaces/ntc-ai/evidence-dial/resolve/main/promptfix-confirmation.json"
+    "audit": "https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/fresh-confirmation-comparison.json",
+    "all_answers": "https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders/resolve/main/promptfix-confirmation.json"
   },
-  "demo": "https://huggingface.co/spaces/ntc-ai/evidence-dial",
-  "method": "https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/METHOD.md",
+  "demo": "https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders",
+  "method": "https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md",
   "license": "cc-by-nc-4.0",
   "limitations": [
     "One training seed; synthetic related scenario families.",

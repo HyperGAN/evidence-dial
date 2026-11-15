@@ -6,13 +6,13 @@ The owner completes the submission form; this repository claims no form-submissi
 | Submission field | Value |
 | --- | --- |
 | Main source and thorough README | https://github.com/HyperGAN/tiny-aya-particle-sliders |
-| Complete recorded-output demo | https://huggingface.co/spaces/ntc-ai/evidence-dial |
-| Winning raw behavior adapter | https://huggingface.co/ntc-ai/evidence-dial-behavior-particle |
-| Full data, checkpoints, predictions and audits | https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior |
+| Complete recorded-output demo | https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders |
+| Winning raw behavior adapter | https://huggingface.co/ntc-ai/tiny-aya-particle-sliders |
+| Full data, checkpoints, predictions and audits | https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders |
 | Public model collection | https://huggingface.co/collections/ntc-ai/evidence-dial-models-and-adapters-6af28e2624ee9d502264a99f |
 | Public dataset collection | https://huggingface.co/collections/ntc-ai/evidence-dial-datasets-and-benchmark-6af2746d22e8aefe32cafb87 |
 
-Winner: **step 1,024, strength 1, G 0.0000625**. [Direct native weights](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true) · [Winner record](https://huggingface.co/ntc-ai/evidence-dial-behavior-particle/blob/main/winner.json) · [Method and math](method.md).
+Winner: **step 1,024, strength 1, G 0.0000625**. [Direct native weights](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/resolve/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-native.pt?download=true) · [Winner record](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/winner.json) · [Method and math](method.md).
 
 ## Abstract
 

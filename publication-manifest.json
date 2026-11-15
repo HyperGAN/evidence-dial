@@ -1,7 +1,7 @@
 {
   "schema": "clean-public-source-tree-v2",
-  "time": "2026-11-15T16:12:57.169726+00:00",
-  "parent_commit": "bf0b1a7a8600efb0e814677e9a73314cbf9a60a3",
+  "time": "2026-11-15T16:22:11.605571+00:00",
+  "parent_commit": "a575f896555fc99a60ff4e2b87177fef8195820d",
   "files": [
     {
       "path": ".gitignore",
@@ -25,8 +25,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 28804,
-      "sha256": "c8bf8bf2508ff0717ae6df2140c3c21c6e9ae2fd8b3558d7d31c7e97f0bd1c9a"
+      "bytes": 28834,
+      "sha256": "88f26aa9942d381ec86d6d8c44746eb8e1dc7e8d5ad2b8e0764aa9e2f6c9fb0e"
     },
     {
       "path": "artifacts/behavior-results/HF-Space-publication.json",
@@ -810,8 +810,8 @@
     },
     {
       "path": "demo/README.md",
-      "bytes": 3288,
-      "sha256": "60f087b8ea698bf3b8b3b2d1ed06b8d023961abe89bc7760648c33b56fadd60f"
+      "bytes": 3267,
+      "sha256": "ae3517002ca93d73af77b5259523fd8a3b5cc49e5a2d1f40f48fa2e10811e916"
     },
     {
       "path": "demo/behavior-preview.html",
@@ -875,13 +875,13 @@
     },
     {
       "path": "demo/index.html",
-      "bytes": 14928,
-      "sha256": "059c3a85176aac2198788f8ae200348a688ac467e29744d1e52c5135105d9641"
+      "bytes": 14916,
+      "sha256": "bad8c26b7ec70e80d303455054b930113c41822bb8b06f0c6936452c6c19c1cb"
     },
     {
       "path": "demo/promptfix-confirmation.html",
-      "bytes": 14928,
-      "sha256": "059c3a85176aac2198788f8ae200348a688ac467e29744d1e52c5135105d9641"
+      "bytes": 14916,
+      "sha256": "bad8c26b7ec70e80d303455054b930113c41822bb8b06f0c6936452c6c19c1cb"
     },
     {
       "path": "demo/promptfix-confirmation.json",
@@ -935,13 +935,13 @@
     },
     {
       "path": "docs/method.md",
-      "bytes": 11541,
-      "sha256": "4418b8bb6471c2195d63e1ccff4c372d41860f591871c9115d0130767588b161"
+      "bytes": 11532,
+      "sha256": "fbf350d44e672dd649fc9bbafb270462cc6a03fdd1e71b206b0b1e6b9a46c14d"
     },
     {
       "path": "docs/prompt-setup-diagnosis-v3.md",
-      "bytes": 8203,
-      "sha256": "ec765b5101e1fe16ad9f21fac563ad74c114b2ad415cb327c1d60f62993633c1"
+      "bytes": 8224,
+      "sha256": "1843a6e6f70b827974b4b1fe5b270c007aeb39aaaa6659e0ba906a3cbbe02363"
     },
     {
       "path": "docs/reproduce.md",
@@ -965,8 +965,8 @@
     },
     {
       "path": "docs/submission-packet.md",
-      "bytes": 5067,
-      "sha256": "a1e113e645cfd8fbd9d905a8b3c9a7ff276eb4ca123527208a01e5c54f645a0d"
+      "bytes": 5064,
+      "sha256": "752ea7219944f5f6b9ae32a63edb2525e38c6b3464ff7ce342cc1ab7ea4918e3"
     },
     {
       "path": "docs/training-objective.md",
@@ -975,8 +975,8 @@
     },
     {
       "path": "docs/winner.json",
-      "bytes": 3165,
-      "sha256": "9b7322f850d0ef1774412ec55db2de3d361fc49f4c246dc915fcada6e938afb7"
+      "bytes": 3162,
+      "sha256": "7cf9170af70531dc323865c8540b4055d588d90781c6053cf1f7e9c71404cb88"
     },
     {
       "path": "pyproject.toml",
@@ -2911,7 +2911,7 @@
   ],
   "research_Git_history_included": false,
   "private_coordination_history_included": false,
-  "source_copy_scope": "Previous published science unchanged; authorized project rename, winner links, exact checkpoint math and scored-sample presentation",
+  "source_copy_scope": "Owner-authorized HF model/dataset/Space renames; current links and examples updated; frozen science unchanged",
   "upstream_MEMORY_md_preserved": true,
   "study_audit_sha256": "033fb5aa6f6d266f071039c451b80c83fe18698494728f64030045251cf0b312",
   "scientific_training_sources_and_weights_unchanged": true

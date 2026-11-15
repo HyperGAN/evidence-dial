@@ -40,7 +40,7 @@ old restricted prompt, the gain is 0.038594 with interval
 [−0.011094, 0.089066]. These are descriptive DEV intervals after comparing
 prompts. The experiment supports removing the unrelated constraint, but does
 not isolate it as the sole cause of the earlier learned adapter's failure.
-[Independent ablation audit](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/prompt-setup-ablation.json).
+[Independent ablation audit](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/prompt-setup-ablation.json).
 
 ## New curation and complete training
 
@@ -55,7 +55,7 @@ Twenty-six questions overlap the previous cache; eleven newly qualify and
 eleven old accepted questions are excluded. Teacher-prompt counts are concrete
 20 / full-goal 12 / unrestricted original 5. Selected TRAIN targets average
 0.815338 versus matched OFF 0.706149. These selection-biased curation statistics
-are not evaluation results. [Cache admission](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/training-cache-admission.json).
+are not evaluation results. [Cache admission](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/training-cache-admission.json).
 
 Neutral and positive retain the same question and empty continuation history;
 only positive receives the extra instruction. The original initialization,
@@ -71,7 +71,7 @@ mean 0.713906 versus OFF 0.662031 and prompt-only 0.705156. Both actual outer
 controllers exit zero and all 13 children in each run are reaped. Final
 strength-1 results improve each cohort's earlier maximum; intermediate and
 other-strength results are mixed.
-[Complete development closure](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/development-search-closure.json).
+[Complete development closure](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/development-search-closure.json).
 
 ## Fresh confirmation
 
@@ -88,7 +88,7 @@ versus OFF 0.664180, prompt-only 0.697578 and earlier reference 0.668086.
 The paired gain over OFF is +0.068477 [0.051211, 0.085392]; over prompting it
 is +0.035078 [0.013358, 0.058320]. Intervals are individual question-bootstrap
 intervals; there is no test-based reselection.
-[All fresh comparison results](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/fresh-confirmation-comparison.json).
+[All fresh comparison results](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/fresh-confirmation-comparison.json).
 
 Sympathy judgment rises to 0.802500 from OFF 0.687813. Sycophancy judgment is
 0.088594 versus OFF 0.086094; it does not demonstrate a reduction. These are
@@ -106,7 +106,7 @@ reuse four original Jev judgments, and reject unfinished or unknown committed
 calls. The scorer, native decoder and Jev request remain unchanged. No new
 model, API or confirmation calls occur in that qualification. Failed earlier
 qualification attempts remain in the provenance archive.
-[Namespace qualification](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/confirmation-cache-namespace-v5-qualification.json).
+[Namespace qualification](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/confirmation-cache-namespace-v5-qualification.json).
 
 The public `open_behavior_inference` owner calls the same 4,096-token/EOS
 generator, validates the raw packet and exact strength, and loads once per
@@ -115,7 +115,7 @@ DEV capture and rejects wrong-strength reuse, unfinished output, changed SHA,
 EMA and a closed owner. The CPU fixture replaces the model-loading boundary;
 it is not fresh-machine GPU replication. Native inference is separately
 covered by actual experiment runs and reload proofs.
-[Owner qualification](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/audits/fullanswer-owner-qualification.json).
+[Owner qualification](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/audits/fullanswer-owner-qualification.json).
 
 ## Scope and retained evidence
 
@@ -126,7 +126,7 @@ weighting and learning rate changed together. First-state supervision does
 not directly evaluate private reasoning. A separate locally prepared role-aware
 46-question / 138-context derivative remains untrained and contributes no result.
 
-The [provenance archive](https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior/blob/main/promptfix37-h1024-v4/provenance/observations-and-sources.tar.gz)
+The [provenance archive](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/blob/main/promptfix37-h1024-v4/provenance/observations-and-sources.tar.gz)
 contains original captures, raw judgments, plans, execution records, source
 bodies and preserved failed checks with per-file hashes. Earlier full-answer
 and short-answer studies remain archived. Raw/full checkpoints, actual update
