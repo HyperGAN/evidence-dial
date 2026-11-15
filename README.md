@@ -1,8 +1,8 @@
 # Particle Sliders for Tiny Aya
 
-https://github.com/user-attachments/assets/e75f687d-4788-47ac-b60b-a7a42ecef25a
+https://github.com/user-attachments/assets/9a2a0522-639f-448f-ad55-507450de44c1
 
-*The entry video (1:39, 720p web encode). Full-quality master: [GitHub release](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/tag/lexsi-video-v6) · [Hugging Face](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/video/particle-sliders-video-v6.mp4)*
+*The entry video (1:41, 720p web encode). Full-quality master: [GitHub release](https://github.com/HyperGAN/tiny-aya-particle-sliders/releases/tag/lexsi-video-v7) · [Hugging Face](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/video/particle-sliders-video-v7.mp4)*
 
 **Write what “good” means. Train it into an adapter. Apply it to the model.**
 
