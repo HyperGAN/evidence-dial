@@ -8,6 +8,7 @@ import re
 
 from huggingface_hub import CommitOperationCopy, HfApi
 from huggingface_hub.hf_api import RepoFile
+from huggingface_hub.utils import get_session, hf_raise_for_status
 
 
 REPO = "ntc-ai/tiny-aya-particle-sliders"
@@ -129,8 +130,16 @@ def github_writer(kind):
     if not token.startswith("hf_jwt_"):
         raise ValueError("Publication requires a short-lived Hub Trusted Publisher token")
     writer = HfApi(endpoint="https://huggingface.co", token=token)
-    writer.auth_check(REPO, repo_type=kind, write=True)
-    print(f"Verified short-lived write authorization for {kind}/{REPO}", flush=True)
+    # The Hub upload endpoint accepts repo publisher tokens and an empty file list.
+    response = get_session().post(
+        f"{writer.endpoint}/api/{kind}s/{REPO}/preupload/main",
+        headers={"Authorization": f"Bearer {token}"},
+        json={"files": []},
+        timeout=20,
+    )
+    hf_raise_for_status(response)
+    preflight_head = revision(response.json()["commitOid"])
+    print(f"Verified the upload preflight for {kind}/{REPO} at {preflight_head}", flush=True)
     return writer
 
 

@@ -4,8 +4,8 @@ The model and dataset each have a release manifest in `releases/` and a separate
 Hugging Face Trusted Publisher. A push to `main` runs the publication workflow
 when a manifest or its release tooling changes. CI uses a short-lived token
 scoped to the exact Hub repository. The initial manifests point to the existing
-public revisions and let CI verify its permission and readback before the next
-artifact release.
+public revisions. CI exercises the Hub upload preflight with an empty file list
+and reads back both production revisions before the next artifact release.
 
 1. Build and validate the model or dataset with its existing artifact tooling.
    Record the evaluation or dataset quality evidence in the GitHub PR.
