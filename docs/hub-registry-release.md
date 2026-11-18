@@ -1,11 +1,21 @@
-# Tiny Aya model and dataset releases
+# Tiny Aya and Evidence Dial model and dataset releases
 
-The model and dataset each have a release manifest in `releases/` and a separate
+Each active repository has a release manifest in `releases/` and a separate
 Hugging Face Trusted Publisher. A push to `main` runs the publication workflow
 when a manifest or its release tooling changes. CI uses a short-lived token
 scoped to the exact Hub repository. The initial manifests point to the existing
 public revisions. CI exercises the Hub upload preflight with an empty file list
-and reads back both production revisions before the next artifact release.
+and reads back the production revisions before the next artifact release.
+
+The Evidence Dial model and dataset repositories keep their original weights,
+corpora, test cases, and numerical evidence at their released paths. Stage
+corrections to a model or dataset card in `README.md`. Add new versioned files
+for reviewed artifacts, and include any Hugging Face LFS metadata changes in
+the same manifest.
+
+The original Policies dataset is sourced from `artifacts/data/policy-v1`.
+The public `policy/` tree at `581d29da86c022f2ad3835171513f362b9ab62bd`
+matches all seven versioned source files byte for byte.
 
 1. Build and validate the model or dataset with its existing artifact tooling.
    Record the evaluation or dataset quality evidence in the GitHub PR.
@@ -20,6 +30,12 @@ and reads back both production revisions before the next artifact release.
    ```
 
    For the dataset, use `dataset` and `releases/huggingface-dataset.json`.
+   For a historical Evidence Dial publication, pass the exact repository ID.
+
+   ```sh
+   python tools/publish_hub_release.py dataset --repo ntc-ai/evidence-dial-benchmark \
+     --stage <staged-sha> > releases/huggingface-evidence-dial-benchmark.json
+   ```
 4. Review the manifest delta together with the staged files and merge the PR.
    The workflow rechecks file identities and the base revision, copies only
    the reviewed changes, and reads back the complete production tree. The Hub
