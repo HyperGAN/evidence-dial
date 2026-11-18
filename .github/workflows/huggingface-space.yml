@@ -28,7 +28,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: node demo/check-render-contract.js
-      - run: python -m pip install huggingface_hub==0.35.0 PyYAML==6.0.3
+      - run: python -m pip install huggingface_hub==1.19.0 PyYAML==6.0.3
       - run: python tools/publish_space.py
 
   deploy:
@@ -37,6 +37,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment: huggingface-space-production
+    permissions:
+      contents: read
+      id-token: write
     concurrency:
       group: tiny-aya-space-production
       cancel-in-progress: false
@@ -51,7 +54,16 @@ jobs:
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: '3.12'
-      - run: python -m pip install huggingface_hub==0.35.0 PyYAML==6.0.3
-      - run: python tools/publish_space.py --apply
+      - run: python -m pip install huggingface_hub==1.19.0 PyYAML==6.0.3
+      - name: Publish with the Space Trusted Publisher
         env:
-          HF_SPACE_WRITE_TOKEN: ${{ secrets.HF_SPACE_WRITE_TOKEN }}
+          HF_OIDC_RESOURCE: spaces/ntc-ai/tiny-aya-particle-sliders
+        run: |
+          set -euo pipefail
+          token="$(hf auth token)"
+          case "$token" in
+            hf_jwt_*) ;;
+            *) echo 'Expected a short-lived Hugging Face repository token' >&2; exit 1 ;;
+          esac
+          echo "::add-mask::$token"
+          HF_SPACE_WRITE_TOKEN="$token" python tools/publish_space.py --apply

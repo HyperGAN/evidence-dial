@@ -123,7 +123,7 @@ def deploy(files, *, apply):
             raise RuntimeError("The tested revision is no longer the GitHub main head")
         token = os.environ.get("HF_SPACE_WRITE_TOKEN")
         if not token:
-            raise RuntimeError("Set the Space write token in huggingface-space-production")
+            raise RuntimeError("Expected the GitHub workflow to mint a Space Trusted Publisher token")
         writer = HfApi(endpoint="https://huggingface.co", token=token)
         written = writer.create_commit(
             SPACE,
