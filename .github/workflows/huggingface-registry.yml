@@ -22,6 +22,8 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      targets: ${{ steps.targets.outputs.matrix }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -31,11 +33,15 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install huggingface_hub==1.19.0
       - run: python -m unittest discover -s tests -p test_hub_release.py
+      - name: Check the publication matrix
+        id: targets
+        run: |
+          set -euo pipefail
+          matrix="$(python tools/publish_hub_release.py --matrix)"
+          printf 'matrix=%s\n' "$matrix" >> "$GITHUB_OUTPUT"
       - name: Verify the proposed manifests
         if: github.event_name == 'pull_request'
-        run: |
-          python tools/publish_hub_release.py model
-          python tools/publish_hub_release.py dataset
+        run: python tools/publish_hub_release.py --check-all
 
   publish:
     if: github.repository == 'HyperGAN/tiny-aya-particle-sliders' && github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -48,14 +54,10 @@ jobs:
       id-token: write
     strategy:
       fail-fast: false
-      matrix:
-        include:
-          - kind: model
-            resource: ntc-ai/tiny-aya-particle-sliders
-          - kind: dataset
-            resource: datasets/ntc-ai/tiny-aya-particle-sliders
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.verify.outputs.targets) }}
     concurrency:
-      group: tiny-aya-hub-${{ matrix.kind }}-production
+      group: tiny-aya-hub-${{ matrix.resource }}-production
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -69,6 +71,7 @@ jobs:
         env:
           HF_OIDC_RESOURCE: ${{ matrix.resource }}
           REPO_KIND: ${{ matrix.kind }}
+          HUB_REPO: ${{ matrix.repo }}
         run: |
           set -euo pipefail
           token="$(hf auth token)"
@@ -77,4 +80,4 @@ jobs:
             *) echo 'Expected a short-lived Hugging Face repository token' >&2; exit 1 ;;
           esac
           echo "::add-mask::$token"
-          HF_TOKEN="$token" python tools/publish_hub_release.py "$REPO_KIND" --apply
+          HF_TOKEN="$token" python tools/publish_hub_release.py "$REPO_KIND" --repo "$HUB_REPO" --apply

@@ -21,7 +21,7 @@ class HubReleaseTests(unittest.TestCase):
 
     def use_trees(self, **extra):
         trees = {BASE: self.base, STAGED: self.staged, **extra}
-        return patch.object(hub, "tree", side_effect=lambda api, kind, sha: trees[sha])
+        return patch.object(hub, "tree", side_effect=lambda api, kind, sha, repo: trees[sha])
 
     def test_read_only_validation(self):
         with self.use_trees():
@@ -79,3 +79,20 @@ class HubReleaseTests(unittest.TestCase):
             self.assertEqual(hub.release(self.api, "model", manifest, writer=self.writer),
                              (BASE, "already-current"))
         self.writer.create_commit.assert_not_called()
+
+    def test_matrix_uses_exact_and_distinct_publish_resources(self):
+        targets = list(hub.targets())
+        self.assertEqual(len({target["resource"] for target in targets}), len(targets))
+        self.assertIn({"kind": "dataset", "repo": "ntc-ai/evidence-dial-benchmark",
+                       "resource": "datasets/ntc-ai/evidence-dial-benchmark"}, targets)
+        with self.assertRaisesRegex(ValueError, "allowlist"):
+            hub.release(self.api, "model", self.manifest, repo="ntc-ai/evidence-dial-benchmark")
+        self.api.repo_info.assert_not_called()
+
+    def test_evidence_targets_preserve_existing_weight_aliases(self):
+        repo = "ntc-ai/evidence-dial-particle"
+        base = self.base | {"adapter-native.pt": WEIGHT}
+        with self.assertRaisesRegex(ValueError, "overwrites a historical"):
+            hub.reviewed_delta("model", base, base | {"adapter-native.pt": README}, repo)
+        delta = {"README.md": WEIGHT, ".gitattributes": README, "v2/adapter-native.pt": WEIGHT}
+        self.assertEqual(hub.reviewed_delta("model", base, base | delta, repo), delta)
