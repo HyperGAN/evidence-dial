@@ -12,10 +12,10 @@ conditioned on the Space revision observed before publication, then verifies the
 repository files and three public routes. For identical payloads, the workflow
 logs the verified live revision.
 
-For the first change that needs a write, configure a Hugging Face fine-grained
-token scoped to writing only `ntc-ai/tiny-aya-particle-sliders`. Add it as
-`HF_SPACE_WRITE_TOKEN` in the GitHub `huggingface-space-production` environment,
-restricted to `main`. Start with a reviewed change to the existing demo.
+The release workflow uses the [Space Trusted Publisher](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders/settings).
+It exchanges the GitHub Actions identity for a short-lived token scoped to this
+Space. The publisher matches this repository, the `main` push, the exact
+workflow ref, and the `huggingface-space-production` environment.
 
 The commit message on Hugging Face records the GitHub revision. For a rollback,
 revert the affected demo change on GitHub and let the next `main` release restore
