@@ -25,7 +25,8 @@ REPOSITORIES = {
     ),
     "dataset": (
         REPO, "ntc-ai/evidence-dial-benchmark", "ntc-ai/evidence-dial-curated-successes",
-        "ntc-ai/evidence-dial-grounding-tests", "ntc-ai/evidence-dial-training-archive",
+        "ntc-ai/evidence-dial-grounding-tests", "ntc-ai/evidence-dial-policies",
+        "ntc-ai/evidence-dial-training-archive",
     ),
 }
 REVISION = re.compile(r"[0-9a-f]{40}")
@@ -62,7 +63,8 @@ def reviewed_delta(kind, base, staged, repo=REPO):
             continue
         normalized = PurePosixPath(path)
         if (
-            normalized.is_absolute() or normalized.as_posix() != path or ".." in normalized.parts
+            not normalized.parts or normalized.is_absolute() or normalized.as_posix() != path
+            or ".." in normalized.parts
             or (path not in mutable and any(part.startswith(".") for part in normalized.parts))
             or "\\" in path or any(ord(char) < 32 for char in path)
         ):

@@ -13,6 +13,10 @@ corrections to a model or dataset card in `README.md`. Add new versioned files
 for reviewed artifacts, and include any Hugging Face LFS metadata changes in
 the same manifest.
 
+The original Policies dataset is sourced from `artifacts/data/policy-v1`.
+The public `policy/` tree at `581d29da86c022f2ad3835171513f362b9ab62bd`
+matches all seven versioned source files byte for byte.
+
 1. Build and validate the model or dataset with its existing artifact tooling.
    Record the evaluation or dataset quality evidence in the GitHub PR.
 2. Stage the approved files on a branch of the corresponding Hub repository
