@@ -1,5 +1,10 @@
 {
   "base_revision": "5f7dfb6fff3841034bde19c02afa03e2da60329c",
-  "staged_revision": "5f7dfb6fff3841034bde19c02afa03e2da60329c",
-  "changes": {}
+  "changes": {
+    "README.md": {
+      "git_blob": "ec93d5319d475db6a851bd96c913b693d9e56387",
+      "size": 4883
+    }
+  },
+  "staged_revision": "7544111d85a370f8f1a239d28feb72aad812b27d"
 }
