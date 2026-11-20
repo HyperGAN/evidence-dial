@@ -2,10 +2,10 @@ name: Publish Tiny Aya demo
 
 on:
   pull_request:
-    paths: [demo/**, tools/publish_space.py, tools/space-files.txt, .github/workflows/huggingface-space.yml]
+    paths: [demo/**, tools/publish_space.py, tools/space-files.txt, tests/test_publish_space.py, .github/workflows/huggingface-space.yml]
   push:
     branches: [main]
-    paths: [demo/**, tools/publish_space.py, tools/space-files.txt, .github/workflows/huggingface-space.yml]
+    paths: [demo/**, tools/publish_space.py, tools/space-files.txt, tests/test_publish_space.py, .github/workflows/huggingface-space.yml]
 
 permissions:
   contents: read
@@ -21,6 +21,7 @@ jobs:
           sparse-checkout: |
             demo
             tools
+            tests
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: '22'
@@ -29,6 +30,7 @@ jobs:
           python-version: '3.12'
       - run: node demo/check-render-contract.js
       - run: python -m pip install huggingface_hub==1.19.0 PyYAML==6.0.3
+      - run: python tests/test_publish_space.py
       - run: python tools/publish_space.py
 
   deploy:
