@@ -30,7 +30,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--out',type=Path,required=True);args=ap.parse_args()
     assert not args.out.exists();os.environ['CUDA_VISIBLE_DEVICES']=''
     import torch
-    from particle_sliders.pg09_audio import AudioRow,PreparedAudioResponse
+    from particle_sliders.audio import AudioRow,PreparedAudioResponse
     from particle_sliders.lifecycle import atomic_save
     from evidence_dial.behavior_protocol_v1 import TARGETS,QUESTIONS,JEV,ENDPOINT,messages
     from evidence_dial.protocol import digest,MODEL,REVISION

@@ -12,8 +12,8 @@ from pathlib import Path
 
 import torch
 from torch import nn
-from particle_sliders.pg09 import ConditionalPG09, PG_SOURCE_PROFILE, PG_VERSION
-from particle_sliders.pg09_audio import ARLastHiddenResponseAdapter, AudioRow, PreparedAudioResponse, AudioResponseCritic, audio_conditions
+from particle_sliders.engine import ConditionalParticleGAN, PG_SOURCE_PROFILE, PG_VERSION
+from particle_sliders.audio import ARLastHiddenResponseAdapter, AudioRow, PreparedAudioResponse, AudioResponseCritic, audio_conditions
 from particle_sliders.routed_projection import TinyParticleProjection
 from particle_sliders.response import ResponseBackend, ResponseCapabilities
 from particle_sliders.lifecycle import Binding, atomic_save
@@ -140,7 +140,7 @@ def initialize(native, critic, cohort):
         distributions={"z": R2Normal(mean=0., std=1.)})
     receipt = initialize_fresh_components(scopes, cohort_id=cohort,
         source_identity={"binding_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-            "core": "63f6e3942340d8aadca816800d19fb1ac88d92a9", "policy": "declared-host-RMS-QR-zero-up-R2-v1"},
+            "core": "c13890f8e2a1ecf1dc8eb9f2a37f9187cb9fea78", "policy": "declared-host-RMS-QR-zero-up-R2-v1"},
         completed_steps=0, restored_from=None, optimizers=())
     assert all(torch.count_nonzero(a.lora_up.weight) == 0 for a in native.slider.adapters.values())
     return receipt
@@ -210,7 +210,7 @@ def prepare(options, *, restored_from=None):
         original = torch.load(cache / "responses.pt", map_location="cpu", weights_only=False)
         rows = [PreparedAudioResponse(p.row, p.target.to("cuda:0"), p.neutral.to("cuda:0")) for p in original]
         rate = options["g_lr"]
-        game = ConditionalPG09(native, rows, critic, conditions=audio_conditions(rows), particles=native.particles,
+        game = ConditionalParticleGAN(native, rows, critic, conditions=audio_conditions(rows), particles=native.particles,
             response_domain="continuous_vector", penalty_input_domain="continuous",
             batch_size=2, seed=SEED, total_steps=128, response_scale=1.,
             recipe_overrides={"lr": rate, "d_lr_mult": .018/rate, "prior_lr_mult": .03/rate})

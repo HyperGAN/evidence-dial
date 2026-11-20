@@ -10,8 +10,8 @@ import json
 import torch
 from torch import nn
 
-from particle_sliders.pg09 import ConditionalPG09
-from particle_sliders.pg09_audio import ARLastHiddenResponseAdapter, PreparedAudioResponse
+from particle_sliders.engine import ConditionalParticleGAN
+from particle_sliders.audio import ARLastHiddenResponseAdapter, PreparedAudioResponse
 from particle_sliders.routed_projection import TinyParticleProjection
 from particle_sliders.response import ResponseBackend
 from particle_sliders.lifecycle import Binding, atomic_save
@@ -191,7 +191,7 @@ def prepare(options, *, restored_from=None):
         assert index['frozen_SFT_adapter_sha256'] == SFT_SHA256
         stored = torch.load(cache / 'responses.pt', map_location='cpu', weights_only=False)
         rows = [PreparedAudioResponse(x.row, x.target.to('cuda:0'), x.neutral.to('cuda:0')) for x in stored]
-        game = ConditionalPG09(native, rows, critic, conditions=critic_conditions(rows), particles=native.particles,
+        game = ConditionalParticleGAN(native, rows, critic, conditions=critic_conditions(rows), particles=native.particles,
             response_domain='continuous_vector', penalty_input_domain='continuous', batch_size=2,
             seed=SEED, total_steps=128, response_scale=1.,
             recipe_overrides={'lr': .001, 'd_lr_mult': 18., 'prior_lr_mult': 30.})

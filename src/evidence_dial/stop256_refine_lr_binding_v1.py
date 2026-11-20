@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 import torch
 
-from particle_sliders.pg09 import ConditionalPG09
-from particle_sliders.pg09_audio import PreparedAudioResponse, AudioResponseCritic, audio_conditions
+from particle_sliders.engine import ConditionalParticleGAN
+from particle_sliders.audio import PreparedAudioResponse, AudioResponseCritic, audio_conditions
 from particle_sliders.response import ResponseBackend
 from particle_sliders.lifecycle import Binding
 from .binding import initialize, CAPS, MODEL_IDENTITY
@@ -93,7 +93,7 @@ def prepare(options, *, restored_from=None):
         rows = [PreparedAudioResponse(x.row,x.target.to('cuda:0'),x.neutral.to('cuda:0')) for x in stored]
         conditions = audio_conditions(rows)
         conditions[:,2048:2050] /= 512.
-        game = ConditionalPG09(native,rows,critic,conditions=conditions,particles=native.particles,
+        game = ConditionalParticleGAN(native,rows,critic,conditions=conditions,particles=native.particles,
             response_domain='continuous_vector',penalty_input_domain='continuous',batch_size=BATCH,
             seed=SEED,total_steps=STEPS,response_scale=1.,
             recipe_overrides={'lr':options['g_lr'],'d_lr_mult':18.,'prior_lr_mult':30.})

@@ -10,8 +10,8 @@ from pathlib import Path
 import torch
 from torch import nn
 
-from particle_sliders.pg09 import ConditionalPG09
-from particle_sliders.pg09_audio import PreparedAudioResponse, audio_conditions
+from particle_sliders.engine import ConditionalParticleGAN
+from particle_sliders.audio import PreparedAudioResponse, audio_conditions
 from particle_sliders.response import ResponseBackend
 from particle_sliders.lifecycle import Binding
 from particle_sliders.inference import InferenceBackend, InferenceBinding, native_identity
@@ -107,7 +107,7 @@ def prepare(options, *, restored_from=None):
         assert len(stored) == index['cases'] == 60
         assert all(x.row.history_tokens == 0 for x in stored)
         rows = [PreparedAudioResponse(x.row, x.target.to('cuda:0'), x.neutral.to('cuda:0')) for x in stored]
-        game = ConditionalPG09(native, rows, critic, conditions=critic_conditions(rows), particles=native.particles,
+        game = ConditionalParticleGAN(native, rows, critic, conditions=critic_conditions(rows), particles=native.particles,
             response_domain='continuous_vector', penalty_input_domain='continuous', batch_size=2,
             seed=SEED, total_steps=128, response_scale=1.,
             recipe_overrides={'lr': .001, 'd_lr_mult': 18., 'prior_lr_mult': 30.})

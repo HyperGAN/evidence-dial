@@ -6,8 +6,8 @@ This does not modify the completed curated-v1 backend or its checkpoints.
 from pathlib import Path
 import json
 import torch
-from particle_sliders.pg09 import ConditionalPG09
-from particle_sliders.pg09_audio import AudioResponseCritic, audio_conditions
+from particle_sliders.engine import ConditionalParticleGAN
+from particle_sliders.audio import AudioResponseCritic, audio_conditions
 from particle_sliders.response import ResponseBackend
 from particle_sliders.lifecycle import Binding
 from particle_sliders.inference import InferenceBackend, InferenceBinding, native_identity
@@ -54,11 +54,11 @@ def prepare(options, *, restored_from=None):
         elif not receipt.is_file():raise ValueError('Resume requires original initialization receipt')
         cache=Path(options['cache']);index=json.loads((cache/'index.json').read_text())
         assert index['responses_sha256']==file_sha(cache/'responses.pt')
-        from particle_sliders.pg09_audio import PreparedAudioResponse
+        from particle_sliders.audio import PreparedAudioResponse
         original=torch.load(cache/'responses.pt',map_location='cpu',weights_only=False)
         rows=[PreparedAudioResponse(r.row,r.target.to('cuda:0'),r.neutral.to('cuda:0')) for r in original]
         conditions=critic_conditions(rows)
-        game=ConditionalPG09(native,rows,critic,conditions=conditions,particles=native.particles,
+        game=ConditionalParticleGAN(native,rows,critic,conditions=conditions,particles=native.particles,
             response_domain='continuous_vector',penalty_input_domain='continuous',batch_size=2,
             seed=SEED,total_steps=128,response_scale=1.,recipe_overrides={'lr':.001,'d_lr_mult':18.,'prior_lr_mult':30.})
         assert sorted(g['lr'] for g in game.opt_g.param_groups)==[.001,.03]

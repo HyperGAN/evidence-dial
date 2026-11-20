@@ -73,6 +73,6 @@ finished strict success ON minus OFF. The saved model was selected before any
 holdout output. Stronger tests do not change that selection or launch training.
 
 Sources: `src/evidence_dial/binding.py`, `protocol.py`, and the pinned core's
-`routed_projection.py`, `reference.py:RoutedMLP`, `pg09.py:ConditionalPG09`, and
-`pg09_audio.py:audio_conditions`. Exact source revisions and historical content
+`routed_projection.py`, `reference.py:RoutedMLP`, `engine.py:ConditionalParticleGAN`, and
+`audio.py:audio_conditions`. Exact source revisions and historical content
 hashes are retained in the reproduction bundle and training archive.

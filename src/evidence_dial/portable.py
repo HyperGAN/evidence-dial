@@ -28,7 +28,7 @@ def export(full: Path, native: Path, out: Path, *, guard: Path):
     from safetensors.torch import save_file
     from particle_sliders.lifecycle import read_packet
     from particle_sliders.inference import read_inference
-    from particle_sliders.pg09 import _hash
+    from particle_sliders.engine import _hash
     from particle_sliders.routed_projection import TinyParticleProjection
     from particle_sliders.reference import RoutedMLP
     if out.exists():

@@ -18,16 +18,21 @@ def pin(p):
     p=Path(p).resolve();return {'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 
 
+from evidence_dial.train import check_reference
+
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--folder',type=Path,default=ROOT/'artifacts/behavior-dial-20261114-v1');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--folder',type=Path,default=ROOT/'artifacts/behavior-dial-20261114-v1');ap.add_argument('--reference-full0', type=Path, required=True);args=ap.parse_args()
     os.environ['CUDA_VISIBLE_DEVICES']=''
     from evidence_dial.io import write_json
     from evidence_dial.behavior_binding_v1 import validate,Native,initialize,PROTOCOL
     from evidence_dial.binding import Native as OriginalNative,initialize as OriginalInitialize
-    from particle_sliders.pg09_audio import ARLastHiddenResponseAdapter,AudioResponseCritic
-    from particle_sliders.pg09 import PG_VERSION
+    from particle_sliders.audio import ARLastHiddenResponseAdapter,AudioResponseCritic
+    from particle_sliders.lifecycle import read_packet
+    from particle_sliders.engine import PG_VERSION
     from particle_sliders.lifecycle import SessionConfig
     from evidence_dial.protocol import SEED
+    original = args.reference_full0.resolve()
+    check_reference(read_packet(original), PG_VERSION)
     folder=args.folder.resolve();cache=folder/'cache';admission=folder/'independent-cache-audit-first.json'
     a=json.loads(admission.read_text());assert a['state']=='all1024-saved-native-and-Jev-firsts-readmitted'
     assert a['native_generations_verified']==1024 and a['all_own_processes_absent_and_leases_released']
@@ -36,13 +41,12 @@ def main():
     manifest=json.loads((folder/'data/manifest-first.json').read_text());data=manifest['files']['train'];dev=manifest['files']['dev']
     assert pin(data['path'])==data and pin(dev['path'])==dev
     assert Native._hidden is OriginalNative._hidden and Native._response is ARLastHiddenResponseAdapter._response and Native.generated is ARLastHiddenResponseAdapter.generated
-    assert initialize is OriginalInitialize and PG_VERSION=='0.9.5'
+    assert initialize is OriginalInitialize
     critic=AudioResponseCritic(2048,2052)
     assert tuple(critic.net[0].weight.shape)==(16,4100) and type(critic.net[1]).__name__=='SiLU' and tuple(critic.net[2].weight.shape)==(1,16)
     evaluator_gate=folder/'CPU-AuditKIT-evaluator-qualification-first.json';e=json.loads(evaluator_gate.read_text())
     assert e['generation_source_sha256']==pin(ROOT/'src/evidence_dial/behavior_generate_v1.py')['sha256']
     assert e['actual_AuditKIT_inferences']==4 and e['new_native_model_calls']==e['new_Jev_calls']==0
-    original=ROOT/'artifacts/first-answer-control-20261111-v1/runs/first-answer/FULL-000000.pt'
     names=['tools/prepare_behavior_training_v1.py','tools/behavior_phase_worker_v1.py','tools/run_behavior_training_v1.py',
         'tools/merge_behavior_cache_v1.py','src/evidence_dial/behavior_binding_v1.py','src/evidence_dial/behavior_native_proof_v1.py',
         'src/evidence_dial/behavior_generate_v1.py','src/evidence_dial/behavior_protocol_v1.py','src/evidence_dial/binding.py',
@@ -50,7 +54,7 @@ def main():
         'src/evidence_dial/continuation_resources_v1.py','src/evidence_dial/qualified_text_guard_admission_v1.py',
         'tools/check_native_text_guard_gpu0_shared_v1.py','tools/check_native_text_guard_gpu1_continued_v1.py']
     sources=[pin(ROOT/n) for n in names]
-    runtime=[pin(importlib.import_module(n).__file__) for n in ['particle_sliders.pg09','particle_sliders.pg09_audio','particle_sliders.lifecycle',
+    runtime=[pin(importlib.import_module(n).__file__) for n in ['particle_sliders.engine','particle_sliders.audio','particle_sliders.lifecycle',
         'particle_sliders.inference','particle_sliders.routed_projection','particle_sliders.initialization']]
     root=Path('/mnt/nvme/lexica-evidence-dial-work/01a1c84b-5d17-7e32-80ef-34d8e4ee2e62')
     assert shutil.disk_usage(root).free>12*1024**3,'Insufficient observed space for own checkpoints; preserve other work'
@@ -93,7 +97,7 @@ def main():
         'new_native_model_calls':0,'new_Jev_calls':0,'training_updates':0,'native_first_proof_and_training_still_required':True}
     write_json(folder/'training-CPU-qualification-first.json',gate)
     write_json(folder/'training-declaration-first.json',{'time':time.time(),'cohorts':declarations,'CPU_qualification':pin(folder/'training-CPU-qualification-first.json'),
-        'declared_before_first_update':True,'both_GPUs':True,'formula':'Unchanged ConditionalPG09 sigma1; real epsilon; fake epsilon+(generated-target)/1; official optimizer laws',
+        'declared_before_first_update':True,'both_GPUs':True,'formula':'Unchanged ConditionalParticleGAN sigma1; real epsilon; fake epsilon+(generated-target)/1; official optimizer laws',
         'development_only_selection':True,'all24_candidate_cells_required':True,'behavior_holdout32_still_sealed':True})
     print(json.dumps({'declared':declarations,'CPU_negative_refusals':negative_checks,'training_updates':0,'native_proof_pending':True}))
 

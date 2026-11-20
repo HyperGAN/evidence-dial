@@ -16,7 +16,7 @@ def config(out: Path, cache: Path, rate: float):
     options = dict(steps=128, batch=2, seed=SEED, g_lr=rate,
         ema_decay=None, base_precision="bfloat16", cache=str(cache.resolve()),
         initialization_receipt=str((out / "initialization.json").resolve()),
-        cohort_id=f"evidence-dial-pg095-G{rate}-{out.name}")
+        cohort_id=f"evidence-dial-engine-G{rate}-{out.name}")
     expected = SessionConfig("tiny-aya-evidence-dial", options["cohort_id"], **options)
     if path.exists():
         if json.loads(path.read_text()) != expected.as_dict():
@@ -35,6 +35,17 @@ def tensor_equal(a, b):
     if isinstance(a,(tuple,list)):
         return type(a)==type(b) and len(a)==len(b) and all(tensor_equal(x,y) for x,y in zip(a,b))
     return a == b
+
+
+def check_reference(packet, pg_version):
+    """Require a zero-update RAW-only reference from the current engine."""
+    game = packet.get("payload", {}).get("game", {})
+    config = game.get("config", {})
+    if (game.get("schema") != "conditional-engine-v1"
+            or config.get("pg_version") != pg_version
+            or game.get("completed_steps") != 0
+            or packet["payload"].get("ema") != {"decay": None, "values": None}):
+        raise ValueError("Provide a fresh zero-update FULL reference from the current raw-weight engine")
 
 
 def fresh_arm(out: Path, cache: Path, rate: float, gpu: int, reference: Path):

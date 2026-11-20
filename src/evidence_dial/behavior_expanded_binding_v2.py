@@ -1,4 +1,4 @@
-"""New behavior data; unchanged Tiny Aya native adapter and ConditionalPG09.
+"""New behavior data; unchanged Tiny Aya native adapter and ConditionalParticleGAN.
 
 Only rows, target-prompt metadata and declared hyperparameters differ. No CE,
 reconstruction, SFT initialization, EMA, critic widening or latent replacement.
@@ -6,8 +6,8 @@ reconstruction, SFT initialization, EMA, critic widening or latent replacement.
 import json
 from pathlib import Path
 import torch
-from particle_sliders.pg09 import ConditionalPG09
-from particle_sliders.pg09_audio import PreparedAudioResponse,AudioResponseCritic,audio_conditions
+from particle_sliders.engine import ConditionalParticleGAN
+from particle_sliders.audio import PreparedAudioResponse,AudioResponseCritic,audio_conditions
 from particle_sliders.response import ResponseBackend
 from particle_sliders.lifecycle import Binding
 from particle_sliders.inference import InferenceBackend,InferenceBinding,native_identity
@@ -57,7 +57,7 @@ def prepare(options,*,restored_from=None):
         stored=torch.load(Path(options['cache'])/'responses.pt',map_location='cpu',weights_only=False)
         rows=[PreparedAudioResponse(x.row,x.target.to('cuda:0'),x.neutral.to('cuda:0')) for x in stored]
         conditions=audio_conditions(rows);conditions[:,2048:2050]/=512.
-        game=ConditionalPG09(native,rows,critic,conditions=conditions,particles=native.particles,
+        game=ConditionalParticleGAN(native,rows,critic,conditions=conditions,particles=native.particles,
             response_domain='continuous_vector',penalty_input_domain='continuous',batch_size=8,seed=SEED,total_steps=1024,response_scale=1.,
             recipe_overrides={'lr':options['g_lr'],'d_lr_mult':options['d_lr']/options['g_lr'],'prior_lr_mult':options['bank_lr']/options['g_lr']})
         assert game.recipe.ema_decay==0.

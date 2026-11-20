@@ -174,6 +174,8 @@ python -m venv .venv
 .venv/bin/hf download CohereLabs/tiny-aya-global --revision af89d219b53ed9b13b8a4645f9c8028973510324
 ```
 
+The checkout installs Particle Sliders core 0.15.1 at `c13890f8` with ParticleGAN 0.11.0. Fresh training uses a new cohort. The [historical reproduction guide](docs/reproduce.md) records the earlier training sources.
+
 These are custom native artifacts, not standard PEFT weights. Inside an active
 bounded GPU runner, `resource` supplies its monitor's `check()` method:
 
