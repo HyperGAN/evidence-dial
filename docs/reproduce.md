@@ -4,7 +4,14 @@ Published predictions are the authoritative first measurements. Recomputing
 scores from them requires no GPU, API key, teacher cache or model generation.
 Fresh training is a separate experiment; never overwrite or replay this cohort.
 
-## Environment and source
+## Historical environment and source
+
+Use the archived Tiny Aya revision for the measured training walkthrough.
+The [historical method sources](method.md#historical-experiment-sources-and-attribution)
+identify the exact binding and engine. For a new cohort, install this checkout
+with `python -m pip install -e '.[training]'` in a fresh environment and use new
+output paths. The behavior preparation tools require `--reference-full0` from
+a fresh zero-update session on the current engine.
 
 The measured host used Python3.11.17, Torch2.14.1+cu130 and Transformers4.57.6.
 The finite package versions are in `configs/training-environment.json`; kit

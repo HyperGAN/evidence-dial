@@ -16,7 +16,7 @@ from mine_behavior_promptfix_v4 import BASE, read, pin, validate
 def main():
     os.environ['CUDA_VISIBLE_DEVICES'] = ''
     import torch
-    from particle_sliders.pg09_audio import AudioRow, PreparedAudioResponse
+    from particle_sliders.audio import AudioRow, PreparedAudioResponse
     from particle_sliders.lifecycle import atomic_save
     from evidence_dial.evaluate import tokenizer
     from evidence_dial.behavior_protocol_v1 import messages, QUESTIONS, ENDPOINT, JEV

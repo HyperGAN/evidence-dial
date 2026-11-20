@@ -216,7 +216,7 @@ flowchart LR
    token. Positive and neutral share the question and empty continuation
    history. Only positive adds the behavior instruction; Aya's default
    preamble is preserved.
-3. Train with original ConditionalPG09 Gaussian paired-error behavior,
+3. Train with the captured Gaussian paired-error behavior,
    sigma 1, a rank-8 routed adapter and a 128×4 particle bank. The backbone is
    frozen. Initialization is scoped; saved states resume exactly. Model-weight
    EMA is disabled for adapter, critic and particle bank; raw weights are used

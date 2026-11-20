@@ -36,7 +36,7 @@ def main():
     from evidence_dial.io import read_jsonl,write_json
     from evidence_dial.long_measure_admission_v13 import require_root_identity
     import torch
-    from particle_sliders.pg09_audio import AudioRow,PreparedAudioResponse
+    from particle_sliders.audio import AudioRow,PreparedAudioResponse
     from particle_sliders.lifecycle import atomic_save
     manifest=json.loads((folder/'data/manifest-first.json').read_text());rows=read_jsonl(verified(manifest['files']['train']))
     assert len(rows)==64 and all(r['split']=='train' for r in rows)

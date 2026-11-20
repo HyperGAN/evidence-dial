@@ -1,4 +1,5 @@
 """Admit two fresh RAW/noEMA1024 cohorts after complete-answer TRAIN curation."""
+import argparse
 import importlib
 import json
 import os
@@ -13,15 +14,21 @@ sys.path.insert(0, str(ROOT / 'tools'))
 from mine_behavior_promptfix_v4 import BASE, DIAG, pin, read, GPUS
 
 
+from evidence_dial.train import check_reference
+
 def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--reference-full0', type=Path, required=True)
+    original = ap.parse_args().reference_full0.resolve()
     os.environ['CUDA_VISIBLE_DEVICES'] = ''
     from evidence_dial.io import write_json
     from evidence_dial.behavior_promptfix_binding_v4 import NAME, PROTOCOL, Native, initialize, validate
     from evidence_dial.binding import Native as OriginalNative, initialize as OriginalInitialize
-    from particle_sliders.pg09_audio import ARLastHiddenResponseAdapter, AudioResponseCritic
-    from particle_sliders.pg09 import PG_VERSION
-    from particle_sliders.lifecycle import SessionConfig
+    from particle_sliders.audio import ARLastHiddenResponseAdapter, AudioResponseCritic
+    from particle_sliders.engine import PG_VERSION
+    from particle_sliders.lifecycle import SessionConfig, read_packet
     from evidence_dial.protocol import SEED
+    check_reference(read_packet(original), PG_VERSION)
     admission = BASE / 'independent-cache-audit-first.json'
     admitted = read(admission)
     assert admitted['state'] == 'all256-full-EOS-TRAIN-firsts-audited'
@@ -36,7 +43,6 @@ def main():
     assert 16 <= n <= 64 and admitted['unique_training_questions'] == n
     assert Native._hidden is OriginalNative._hidden and Native._response is ARLastHiddenResponseAdapter._response
     assert Native.generated is ARLastHiddenResponseAdapter.generated and initialize is OriginalInitialize
-    assert PG_VERSION == '0.9.5'
     critic = AudioResponseCritic(2048, 2052)
     assert tuple(critic.net[0].weight.shape) == (16, 4100) and type(critic.net[1]).__name__ == 'SiLU'
     assert tuple(critic.net[2].weight.shape) == (1, 16)
@@ -47,7 +53,6 @@ def main():
     train = ROOT / 'artifacts/behavior-dial-20261114-v1/data/train.jsonl'
     dev = ROOT / 'artifacts/behavior-dial-20261114-v1/data/dev.jsonl'
     assert pin(train) == admitted['source_train']
-    original = ROOT / 'artifacts/first-answer-control-20261111-v1/runs/first-answer/FULL-000000.pt'
     parent = ROOT / 'artifacts/behavior-expanded-h1024-20261114-v2'
     qualification = parent / 'fullanswer-health-qualification-v3-first.json'
     assert read(qualification)['qualified']
@@ -64,8 +69,8 @@ def main():
         'src/evidence_dial/shared_gpu_resources_v1.py', 'src/evidence_dial/continuation_resources_v1.py',
         'src/evidence_dial/fresh_native_zero_proof_v2.py']
     sources = [pin(ROOT / n) for n in names]
-    sources += [pin(importlib.import_module(n).__file__) for n in ['particle_sliders.pg09',
-        'particle_sliders.pg09_audio', 'particle_sliders.lifecycle', 'particle_sliders.inference',
+    sources += [pin(importlib.import_module(n).__file__) for n in ['particle_sliders.engine',
+        'particle_sliders.audio', 'particle_sliders.lifecycle', 'particle_sliders.inference',
         'particle_sliders.routed_projection', 'particle_sliders.initialization']]
     controls = read(DIAG / 'plan-first.json')['controls_reused_without_new_calls']
     off = next(c for c in controls if c['name'] == 'off')

@@ -51,6 +51,6 @@ Source facts (read as text; no model execution):
 - [src/evidence_dial/evaluate.py](src/evidence_dial/evaluate.py)
 - [src/evidence_dial/protocol.py](src/evidence_dial/protocol.py)
 - [Pinned model metadata](https://huggingface.co/CohereLabs/tiny-aya-global/tree/af89d219b53ed9b13b8a4645f9c8028973510324) (architecture/parameter metadata or exact file-size lock as described above).
-- ParticleGAN 0.9.5 release `1b8355b184b21bb7d81104ee590813c262f6df0a`, `recipes.py:bispf_optimized`, `optim/dualnorm.py`, `optim/direction_blend.py` and `optim/constraint_geometry.py`; shared core `routed_projection.py`, `reference.py:RoutedMLP`, `pg09_audio.py:AudioResponseCritic`. These optimizer formulas are shared dependencies, not a new optimizer implementation.
+- ParticleGAN 0.11.0, `recipes.py:bispf_optimized`, `optim/dualnorm.py`, `optim/direction_blend.py` and `optim/constraint_geometry.py`; shared core `routed_projection.py`, `reference.py:RoutedMLP`, `audio.py:AudioResponseCritic`. These optimizer formulas are shared dependencies, not a new optimizer implementation.
 
 Calculated 2026-11-14. Counts, live runtime qualification and memory requirements are separate facts.

@@ -33,3 +33,20 @@ def test_teacher_information_only_privileged():
     row = {"context": "A policy", "question": "How long?", "gold": "23 days"}
     assert "23 days" not in prompt(row)
     assert "Verified answer (private teacher information): 23 days" in prompt(row, teacher=True)
+
+
+def test_behavior_reference_requires_a_current_raw_full_zero():
+    from particle_sliders.engine import PG_VERSION
+    from evidence_dial.train import check_reference
+
+    game = dict(schema="conditional-engine-v1", config={"pg_version": PG_VERSION},
+                completed_steps=0)
+    raw = {"decay": None, "values": None}
+    check_reference({"payload": {"game": game, "ema": raw}}, PG_VERSION)
+    for changed, ema in (
+        (dict(game, config={"pg_version": "0.10.1"}), raw),
+        (dict(game, completed_steps=1), raw),
+        (game, {"decay": 0.9, "values": {}}),
+    ):
+        with pytest.raises(ValueError, match="fresh zero-update FULL"):
+            check_reference({"payload": {"game": changed, "ema": ema}}, PG_VERSION)
