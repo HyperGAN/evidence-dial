@@ -2,6 +2,7 @@
 """Publish the reviewed Tiny Aya demo files to the existing static Space."""
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import hashlib
 import os
 from pathlib import Path, PurePosixPath
@@ -20,7 +21,7 @@ SPACE = "ntc-ai/tiny-aya-particle-sliders"
 HOST = "https://ntc-ai-tiny-aya-particle-sliders.static.hf.space"
 DEMO = Path(__file__).resolve().parents[1] / "demo"
 MANIFEST = Path(__file__).with_name("space-files.txt")
-PROBES = ("index.html", "explorer.css", "promptfix-confirmation.json")
+REQUIRED_FILES = {"README.md", "index.html", "explorer.css", "promptfix-confirmation.json"}
 THUMBNAIL = rb"https://cdn-thumbnails\.huggingface\.co/social-thumbnails/spaces/ntc-ai/tiny-aya-particle-sliders\.png"
 SPACE_SCRIPT = re.compile(
     rb'(?<=<head>)<script>window\.huggingface=\{variables:'
@@ -51,7 +52,7 @@ def payload():
         ):
             raise ValueError(f"Invalid Space file: {name!r}")
         files[name] = source.read_bytes()
-    if not {"README.md", *PROBES} <= files.keys():
+    if not REQUIRED_FILES <= files.keys():
         raise ValueError("Space manifest is missing a required file")
     preamble, opening, body = files["README.md"].decode("utf-8").partition("---\n")
     header, closing, _ = body.partition("\n---\n")
@@ -79,27 +80,38 @@ def remote_files(api, revision):
 
 def verify_live(api, revision, files):
     deadline = time.monotonic() + 180
-    while time.monotonic() < deadline:
-        if api.space_info(SPACE).sha != revision:
-            raise RuntimeError("Space head changed while verifying the release")
-        if api.get_space_runtime(SPACE).stage == "RUNNING":
-            try:
-                for name in PROBES:
-                    url = f"{HOST}/{quote(name)}?release={revision}"
-                    with urlopen(url, timeout=12) as response:
-                        received = response.read()
-                    if name == "index.html":
-                        # The static host injects platform metadata into the page head.
-                        received = SPACE_METADATA.sub(b"", SPACE_SCRIPT.sub(b"", received, count=1), count=1)
-                    if received != files[name]:
-                        break
-                else:
-                    print(f"Verified live Space revision {revision}")
+    # The Hub tree verifies README.md, which configures the Space rather than its pages.
+    pending = [name for name in files if name != "README.md"]
+    served_files = len(pending)
+
+    def matches(name):
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            return False
+        url = f"{HOST}/{quote(name)}?release={revision}"
+        try:
+            with urlopen(url, timeout=min(12, remaining)) as response:
+                received = response.read()
+        except (URLError, TimeoutError):
+            return False
+        if name.endswith(".html"):
+            # The static host injects platform metadata into the page head.
+            received = SPACE_METADATA.sub(b"", SPACE_SCRIPT.sub(b"", received, count=1), count=1)
+        return received == files[name]
+
+    with ThreadPoolExecutor(max_workers=6) as readers:
+        while time.monotonic() < deadline:
+            if api.space_info(SPACE).sha != revision:
+                raise RuntimeError("Space head changed while verifying the release")
+            if api.get_space_runtime(SPACE).stage == "RUNNING":
+                pending = [name for name, matched in zip(pending, readers.map(matches, pending)) if not matched]
+                if not pending:
+                    if api.space_info(SPACE).sha != revision:
+                        raise RuntimeError("Space head changed while verifying the release")
+                    print(f"Verified {served_files} live files for Space revision {revision}")
                     return
-            except (URLError, TimeoutError):
-                pass
-        time.sleep(5)
-    raise RuntimeError("The live Space did not serve the reviewed files within 180 seconds")
+            time.sleep(min(5, max(0, deadline - time.monotonic())))
+    raise RuntimeError(f"The live Space did not serve these reviewed files within 180 seconds: {', '.join(pending)}")
 
 
 def deploy(files, *, apply):
