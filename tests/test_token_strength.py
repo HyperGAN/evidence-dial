@@ -1,4 +1,5 @@
 from contextlib import contextmanager
+from threading import RLock
 
 import torch
 from transformers import BatchEncoding, Cohere2Config, Cohere2ForCausalLM
@@ -38,6 +39,7 @@ def test_portable_raw_generation_uses_cached_token_gains(monkeypatch):
 
     instance = portable.Portable.__new__(portable.Portable)
     instance.model, instance.tokenizer, instance.slider = model, Tokenizer(), Slider()
+    instance._inference_lock = RLock()
     request = {"context": "Blue is a color.", "question": "What is blue?", "strength": 0.5}
     original = instance.generate(**request)
     constant = instance.generate(**request, step_gains=[1.0] * 3)

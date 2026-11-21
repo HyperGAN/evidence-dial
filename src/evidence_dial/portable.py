@@ -6,12 +6,13 @@ only the same learned parameter values, by logical name, with their provenance.
 It cannot resume training or silently migrate a scientific checkpoint.
 """
 from __future__ import annotations
-from contextlib import contextmanager, nullcontext
+from contextlib import ExitStack
 import hashlib
 import importlib.metadata
 import inspect
 import json
 from pathlib import Path
+from threading import RLock
 import time
 
 from .protocol import MODEL, REVISION, MAX_NEW_TOKENS, messages
@@ -77,6 +78,7 @@ class Portable:
         from particle_sliders.routed_projection import TinyParticleProjection
         from particle_sliders.reference import RoutedMLP
         from .binding import Slider
+        self._inference_lock = RLock()
         if str(device).startswith('cuda'):
             gpu_device=torch.device(device)
             torch.cuda.set_per_process_memory_fraction(22*1024**3/torch.cuda.get_device_properties(gpu_device).total_memory,gpu_device)
@@ -119,8 +121,12 @@ class Portable:
             raise
         self.config=config
 
-    def generate(self, context, question, *, strength=1., options=None, step_gains=None):
+    def generate(self, context, question, *, strength=None, options=None, step_gains=None, adaptive=None):
         import torch
+        if adaptive is not None and (strength is None or step_gains is not None):
+            raise ValueError('Adaptive steering requires explicit strength and no fixed step_gains')
+        if strength is None:
+            strength = 1.0
         row={'context':context,'question':question,'options':options}
         device=next(self.model.parameters()).device
         inputs=self.tokenizer.apply_chat_template(messages(row),add_generation_prompt=True,
@@ -129,14 +135,21 @@ class Portable:
         count=inputs['input_ids'].shape[-1]
         if count>2048:
             raise ValueError('Input exceeds2048 tokens; evidence is never truncated')
-        gains_scope = nullcontext()
-        if step_gains is not None:
-            from .token_strength import token_strengths
-
-            gains_scope = token_strengths(self.model, self.slider.scaled,
-                prefix_tokens=count, max_tokens=MAX_NEW_TOKENS, strength=strength, step_gains=step_gains)
         start=time.perf_counter()
-        with self.slider.scaled(strength), gains_scope as applied, torch.inference_mode():
+        applied = adaptive_receipt = None
+        base_strength = strength if adaptive is None else 0.0
+        with self._inference_lock, self.slider.scaled(base_strength), torch.inference_mode(), ExitStack() as hooks:
+            if adaptive is not None:
+                from .adaptive_strength import adaptive_token_strengths
+
+                applied, adaptive_receipt = hooks.enter_context(adaptive_token_strengths(
+                    self.model, self.slider.scaled, prefix_tokens=count,
+                    max_tokens=MAX_NEW_TOKENS, strength=strength, steering=adaptive))
+            elif step_gains is not None:
+                from .token_strength import token_strengths
+
+                applied = hooks.enter_context(token_strengths(self.model, self.slider.scaled,
+                    prefix_tokens=count, max_tokens=MAX_NEW_TOKENS, strength=strength, step_gains=step_gains))
             output=self.model.generate(**inputs,do_sample=False,max_new_tokens=MAX_NEW_TOKENS,
                 use_cache=True,eos_token_id=3,pad_token_id=self.tokenizer.pad_token_id)
         ids=output[0,count:].tolist()
@@ -147,10 +160,16 @@ class Portable:
             'strength':strength,'weights_kind':'raw','ema_decay':None}
         if applied is not None:
             result['effective_strengths'] = applied
+        if adaptive_receipt is not None:
+            adaptive_receipt['base_revision'] = self.config['base_revision']
+            if adaptive_receipt['intervention'] == 'raw_adapter':
+                adaptive_receipt['raw_sha256'] = self.config['weights_sha256']
+            result['adaptive_steering'] = adaptive_receipt
         return result
 
     def close(self):
-        self.slider.close()
+        with self._inference_lock:
+            self.slider.close()
 
     def __enter__(self):return self
     def __exit__(self,*args):self.close()
