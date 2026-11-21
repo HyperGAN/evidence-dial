@@ -216,6 +216,21 @@ locally; the route is NanoGPT `typesafe/jev-1.14`. Credentials are excluded.
 | `tools/audit_behavior_promptfix_confirmation_v4.py` | Independent complete-answer comparison and paired intervals |
 | `src/evidence_dial/behavior_inference_v5.py` | Complete-answer inference owner |
 | `tools/export_behavior_promptfix_explorer_v4.py` | Every saved comparison answer for the demo |
+| `tools/audit_grounding_abstention.py` | Paired strict abstention on saved grounding probes |
+
+For a retained grounding benchmark release, run `python
+tools/audit_grounding_abstention.py --release PATH --dataset balanced --data
+artifacts/data/balanced-grounding-v2/holdout.jsonl --on particle_1`. It checks
+the frozen dataset and prediction hashes, then reports exact `UNKNOWN` on
+missing-evidence cases and abstention on answerable cases. Both rates use
+matched prompts and disclose incomplete coverage. This is a diagnostic of
+the grounding benchmark. The recorded slider-selection score stays in the
+original release report.
+
+On the corrected balanced release, strict `UNKNOWN` on the 192 missing-evidence
+pairs went from 118/192 at OFF to 191/192 at strength 1 and 192/192 at strength
+2. Abstention on the 384 answerable pairs went from 48/384 at OFF to 302/384
+and 384/384 respectively. Comparing OFF to itself gave zero on both measures.
 
 ## What the entry contributes
 
