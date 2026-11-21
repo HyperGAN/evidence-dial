@@ -99,8 +99,8 @@ scopes and distinct held-out panels.
 | Answer onset, balanced grounding confirmation | 353/768 | 349/768 | 339/768 |
 
 The cached-only scores tied. The answer-onset A-PSR fit scored 14 fewer
-correct than OFF and 10 fewer than its matched constant control. The
-independent integrity verdicts remain unmeasured. Both pilots used RAW
-weights. Neither qualified an adaptive default or established a production
-gain. The project publishes the aggregate evidence and keeps the fitted
-weights private. [Pilot evidence](../artifacts/evidence/tiny-aya-a-psr-pilots.json)
+correct than OFF and 10 fewer than its matched constant control. The qualified
+independent observer passed all 768 saved replies in each answer-onset arm.
+It reused verdicts for byte-identical reply text across cases. Integrity
+remains unmeasured for the cached-only pilot. Both RAW fits remain opt-in
+research. [Pilot evidence](../artifacts/evidence/tiny-aya-a-psr-pilots.json)
