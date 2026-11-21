@@ -35,6 +35,9 @@ On the grounding development panel, the first-decode schedule raised
 accuracy from 95 to 103 correct answers out of 128 at equal dose.
 [Per-case evidence](artifacts/evidence/grounding-raw256-strength-schedule.json)
 
+The same method accepts explicitly calibrated CFP, CLABS and fitted S-PSR
+policies for cached decoding. [Adaptive steering and qualification](docs/adaptive-strength.md)
+
 **The quality criterion is your choice.** It is not hardcoded to sympathy.
 A different criterion calls for its own curation and training; this release
 demonstrates one choice, not guaranteed success on every possible criterion.
