@@ -1,11 +1,12 @@
 # Activation-dependent Tiny Aya steering
 
 `evidence_dial.portable.Portable.generate` accepts an opt-in `adaptive` policy
-and an explicit signed `strength`. Each request starts with unedited prefill.
-The policy observes one pre-intervention residual per subsequent cached forward
-and records one decision through native EOS. Output index `0` is predicted by
-prefill. Output index `1` is the first cached prediction. The API retains
-constant strength and `step_gains` for the existing RAW controls.
+and an explicit signed `strength`. The default scope starts with unedited
+prefill and steers the subsequent cached forwards through native EOS. A direct
+residual policy can set `include_answer_onset=True` to also steer the final
+prompt token, which predicts output index `0`. Earlier prompt tokens retain
+their original residuals. Output index `1` remains the first cached prediction.
+The existing RAW gate, constant strength and `step_gains` retain their scope.
 
 ## Choose the intervention
 
@@ -14,14 +15,15 @@ constant strength and `step_gains` for the existing RAW controls.
 | `CachedGate(intervention="residual")` | Input to the calibrated Cohere2 decoder layer | Apply the shared CFP or CLABS gate with the paper's fixed-direction residual edit. Use `method="random"` for the same-direction budget control. |
 | `CachedGate(intervention="raw_adapter")` | Layer 0 input, before every RAW attention target | Gate the saved routed adapter with CFP or CLABS. This uses the paper's allocation equation with the learned RAW adapter as the edit. Layer 0 reads a token embedding before contextualization. |
 | `CachedPromptSteering` | Input to the decoder layer where the S-PSR module was fitted | Apply the shared fitted affine-ReLU coefficient and rank-one residual edit. |
+| `AllDecoderPromptSteering` | Input to every native decoder layer in order | Apply one distinct fitted shared `PromptSteering` module per layer for A-PSR. |
 
-Both direct residual paths run with the RAW adapter off. Replaying the RAW
+Direct residual paths run with the RAW adapter off. Replaying the RAW
 fixed-strength control for a cached-only comparison uses a prefill gain of
 zero. The previously archived RAW256 timing result has its own prefill gain
 and stays reproducible through `step_gains`.
 
 ```python
-from evidence_dial.adaptive_strength import CachedGate, CachedPromptSteering
+from evidence_dial.adaptive_strength import AllDecoderPromptSteering, CachedGate, CachedPromptSteering
 from evidence_dial.portable import Portable
 
 # Load direction and all gate settings from the selected calibration record.
@@ -42,6 +44,10 @@ policy = CachedGate(
 psr_policy = CachedPromptSteering(
     layer=fitted_layer, fitted=fitted_psr_module, evidence_ref=fit_manifest,
 )
+# For A-PSR, load one distinct fitted module per decoder layer in native order.
+a_psr_policy = AllDecoderPromptSteering(
+    fitted=tuple(fitted_modules), evidence_ref=fit_manifest, include_answer_onset=True,
+)
 with Portable(raw256_directory) as engine:
     result = engine.generate(context, question, strength=calibrated_strength, adaptive=policy)
 ```
@@ -50,6 +56,9 @@ Use the recorded absolute cache positions, measured alignment or PSR
 coefficient, effective strengths, and gate counts in `adaptive_steering` to
 replay and audit the request. The trace includes the decoder input layer,
 base revision, evidence reference and, for RAW gating, the adapter checksum.
+The onset record appears in `answer_onset_step` when enabled. The
+`cached_steps` field retains the records after prefill. A-PSR returns
+`effective_layer_strengths` indexed by output position, then decoder layer.
 The calibration or fit manifest must identify the decoder input boundary,
 checkpoint, activation dtype, artifacts and dataset versions. Use the
 [shared equations and calibration APIs](https://github.com/HyperGAN/particle-sliders/blob/b1f780decc516808cfd3019d5e5b674457161f86/docs/strength-schedules.md#activation-dependent-steering).
@@ -75,7 +84,23 @@ checkpoint, activation dtype, artifacts and dataset versions. Use the
   [archived RAW256 timing result](../artifacts/evidence/grounding-raw256-strength-schedule.json)
   is a development result. [Frozen benchmark and splits](reproduce.md)
 
-The cached paths have been verified with a small native Cohere2 fixture. A
-Tiny Aya calibration artifact, fitted S-PSR probe and adaptive finished-output
-gain still require qualification. The packaged path needs caller-supplied
-settings, so it installs no adaptive preset.
+## Native A-PSR research pilots
+
+Two separately trained fits used aligned original Tiny Aya activations from
+42 qualified positive prompt pairs. Each fit trained 36 decoder-input PSR
+modules jointly for 630 updates. The matched constant control used each
+layer's mean fitted coefficient from live 128-case development rollouts.
+The cached-only fit and the answer-onset fit used their own aligned position
+scopes and distinct held-out panels.
+
+| Native held-out pilot | OFF | Matched constant | A-PSR |
+| --- | ---: | ---: | ---: |
+| Cached-only, Policies | 160/256 | 160/256 | 160/256 |
+| Answer onset, balanced grounding confirmation | 353/768 | 349/768 | 339/768 |
+
+The cached-only scores tied. The answer-onset A-PSR fit scored 14 fewer
+correct than OFF and 10 fewer than its matched constant control. The
+independent integrity verdicts remain unmeasured. Both pilots used RAW
+weights. Neither qualified an adaptive default or established a production
+gain. The project publishes the aggregate evidence and keeps the fitted
+weights private. [Pilot evidence](../artifacts/evidence/tiny-aya-a-psr-pilots.json)

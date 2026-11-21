@@ -1,0 +1,55 @@
+{
+  "base_model": "CohereLabs/tiny-aya-global",
+  "base_revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "measure": "equal-case exact grounded-answer success ON minus matched OFF",
+  "fit_training_pairs": 42,
+  "fit_decoder_layers": 36,
+  "fit_optimizer_updates": 630,
+  "paired_capture_sha256": "b4b8414ba4faa5cc690b5d8ba00a30a8ef2bc901d14d9fb50dd9722f2e30c185",
+  "calibration_control": "per-layer mean of learned lambda over live adaptive development positions",
+  "weights": "raw",
+  "ema_decay": null,
+  "adaptive_default": false,
+  "pilots": {
+    "cached_only": {
+      "cohort": "Tiny Aya family-disjoint A-PSR native held-out",
+      "cases": 256,
+      "attribute_score_strength": 1,
+      "successes": {
+        "off": 160,
+        "constant": 160,
+        "apsr": 160
+      },
+      "mean_on_minus_off": {
+        "constant": 0.0,
+        "apsr": 0.0
+      },
+      "apsr_minus_constant": 0.0,
+      "integrity": "unmeasured",
+      "fitted_raw_sha256": "0cd7300ff4a4d90fc29a7f9e6a6f3a9c520d46e86c1ca6dae6a85ffcdad245d9",
+      "held_out_sha256": "77bce98ae223d62121016e240f5dacfd87eab7124449b96909a43813d500fe93",
+      "source_result": "tiny-aya-psr-eval/effect-result.json",
+      "source_result_sha256": "bc5398559884a7c9b22e4db4487515b825667afa28369cbd7b2efe3789f87d5f"
+    },
+    "answer_onset": {
+      "cohort": "Tiny Aya family-disjoint A-PSR from first answer prediction, native held-out",
+      "cases": 768,
+      "attribute_score_strength": 1,
+      "successes": {
+        "off": 353,
+        "constant": 349,
+        "apsr": 339
+      },
+      "mean_on_minus_off": {
+        "constant": -0.005208333333333333,
+        "apsr": -0.018229166666666668
+      },
+      "apsr_minus_constant": -0.013020833333333334,
+      "integrity": "unmeasured",
+      "fitted_raw_sha256": "1e2b764c7cdca253550a020c93123bfb22b080676320d955ec30e1ee799681d4",
+      "held_out_sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
+      "source_result": "tiny-aya-psr-answer-onset-eval/effect-result.json",
+      "source_result_sha256": "f980eb6c135cb6e08423a3ff5ac470c20ca2ea8ce24b2146146f4d6c4adcecd8"
+    }
+  }
+}
