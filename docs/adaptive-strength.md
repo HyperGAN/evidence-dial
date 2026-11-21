@@ -104,3 +104,23 @@ independent observer passed all 768 saved replies in each answer-onset arm.
 It reused verdicts for byte-identical reply text across cases. Integrity
 remains unmeasured for the cached-only pilot. Both RAW fits remain opt-in
 research. [Pilot evidence](../artifacts/evidence/tiny-aya-a-psr-pilots.json)
+
+### Question-and-response pilot with a dose-matched constant
+
+A third A-PSR fit aligned positions in the question, evidence, and response.
+It used 42 qualified prompt pairs and trained 36 decoder-input probes over
+630 updates. Its held-out benchmark covered 768 cases in 32 families.
+
+For each case and layer, the constant control used the summed realized A-PSR
+coefficient divided by the eligible position count. We chose the nearest
+representable FP32 coefficient and verified the position count under native
+greedy generation. The largest relative difference in realized steering dose
+was below 6 × 10⁻⁸ across the matched pairs.
+
+On the 763 pairs that passed independent integrity checks, A-PSR answered
+343 correctly, the constant answered 323 correctly, and OFF answered 329
+correctly. A-PSR won 54, lost 34, and tied 675 against the constant, a gain
+of 2.62 percentage points on these pairs. Two cases lack saved OFF integrity
+verdicts. Exhaustive testing of 64 eligible lengths per case found no
+self-consistent constant on three cases. The full 768-case effect remains
+unmeasured. [Per-case results and source digests](../artifacts/evidence/tiny-aya-question-response-native-dose.json)
