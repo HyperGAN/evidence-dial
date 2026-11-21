@@ -6,7 +6,7 @@ only the same learned parameter values, by logical name, with their provenance.
 It cannot resume training or silently migrate a scientific checkpoint.
 """
 from __future__ import annotations
-from contextlib import contextmanager
+from contextlib import contextmanager, nullcontext
 import hashlib
 import importlib.metadata
 import inspect
@@ -119,7 +119,7 @@ class Portable:
             raise
         self.config=config
 
-    def generate(self, context, question, *, strength=1., options=None):
+    def generate(self, context, question, *, strength=1., options=None, step_gains=None):
         import torch
         row={'context':context,'question':question,'options':options}
         device=next(self.model.parameters()).device
@@ -129,14 +129,25 @@ class Portable:
         count=inputs['input_ids'].shape[-1]
         if count>2048:
             raise ValueError('Input exceeds2048 tokens; evidence is never truncated')
+        gains_scope = nullcontext()
+        if step_gains is not None:
+            from .token_strength import token_strengths
+
+            gains_scope = token_strengths(self.model, self.slider.scaled,
+                prefix_tokens=count, max_tokens=MAX_NEW_TOKENS, strength=strength, step_gains=step_gains)
         start=time.perf_counter()
-        with self.slider.scaled(strength),torch.inference_mode():
+        with self.slider.scaled(strength), gains_scope as applied, torch.inference_mode():
             output=self.model.generate(**inputs,do_sample=False,max_new_tokens=MAX_NEW_TOKENS,
                 use_cache=True,eos_token_id=3,pad_token_id=self.tokenizer.pad_token_id)
         ids=output[0,count:].tolist()
-        return {'output':self.tokenizer.decode(ids,skip_special_tokens=True),'output_ids':ids,
+        if applied is not None and len(applied) != len(ids):
+            raise RuntimeError('Tiny Aya evaluated a different number of steps than it generated')
+        result = {'output':self.tokenizer.decode(ids,skip_special_tokens=True),'output_ids':ids,
             'input_tokens':count,'output_tokens':len(ids),'seconds':time.perf_counter()-start,
             'strength':strength,'weights_kind':'raw','ema_decay':None}
+        if applied is not None:
+            result['effective_strengths'] = applied
+        return result
 
     def close(self):
         self.slider.close()
