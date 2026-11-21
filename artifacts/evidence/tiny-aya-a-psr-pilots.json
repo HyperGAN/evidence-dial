@@ -45,11 +45,56 @@
         "apsr": -0.018229166666666668
       },
       "apsr_minus_constant": -0.013020833333333334,
-      "integrity": "unmeasured",
+      "integrity": "pass",
       "fitted_raw_sha256": "1e2b764c7cdca253550a020c93123bfb22b080676320d955ec30e1ee799681d4",
       "held_out_sha256": "c661e671494bb5ec374d191c307dca851241625489590bc81de26012c9056d9e",
       "source_result": "tiny-aya-psr-answer-onset-eval/effect-result.json",
-      "source_result_sha256": "f980eb6c135cb6e08423a3ff5ac470c20ca2ea8ce24b2146146f4d6c4adcecd8"
+      "source_result_sha256": "f980eb6c135cb6e08423a3ff5ac470c20ca2ea8ce24b2146146f4d6c4adcecd8",
+      "integrity_evidence": {
+        "source_directory": "tiny-aya-psr-answer-onset-integrity-content",
+        "distinct_reply_texts": 174,
+        "result": {
+          "file": "integrity-result.json",
+          "sha256": "ebd37f93b81f652a730560419efdab8a9aa9066b770d2837ad4f776de40bfc64"
+        },
+        "terminal": {
+          "file": "integrity-terminal.json",
+          "sha256": "bd85a177bdf334966b4922a0b2212b44f30756d55e1afe8cf958fd94a831bb1b",
+          "returncode": 0
+        },
+        "observer": {
+          "profile": "Qwen3VL8B-NF4-BF16compute-greedy-v1",
+          "profile_sha256": "d8d5c66a83953566d71d28a31ee15aff9c94d5e4180db70558a518c3edc5436a",
+          "model_revision": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+          "qualification_sha256": "618fb110ec612890a65c1524f6b619219132aea1512ec5457978102f0fe179cb"
+        },
+        "arms": {
+          "off": {
+            "status": "pass",
+            "checked_cases": 768,
+            "receipt": {
+              "file": "integrity-off.json",
+              "sha256": "d1bf37559be6be58c7095057397a3fc82c8d74c9d80de855980814c2da8ae6d7"
+            }
+          },
+          "constant": {
+            "status": "pass",
+            "checked_cases": 768,
+            "receipt": {
+              "file": "integrity-constant.json",
+              "sha256": "ea62936994bd32df0de3a5f20a3000fe240ebfe0ac30a6e3324dad8499efeed3"
+            }
+          },
+          "apsr": {
+            "status": "pass",
+            "checked_cases": 768,
+            "receipt": {
+              "file": "integrity-apsr.json",
+              "sha256": "4abae9e71c5f45223892396544bc6fa29880b8776b67c93e6bf15d134f1da581"
+            }
+          }
+        }
+      }
     }
   }
 }
