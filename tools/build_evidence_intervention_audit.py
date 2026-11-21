@@ -7,9 +7,11 @@ from evidence_dial.protocol import SEED,messages,digest
 from evidence_dial.evaluate import tokenizer
 from evidence_dial.io import read_jsonl,write_json,write_jsonl
 from evidence_dial.benchmark import file_sha
+from evidence_dial.archive_evidence import restore_file
 
 def build(out):
  if out.exists():raise FileExistsError('Retain the fixed audit; never regenerate after outputs')
+ selection_sha=file_sha(restore_file(ROOT,'artifacts/selection-v1.json'))
  tok=tokenizer();rows=[]
  old={r['family'] for s in ['train','dev','holdout'] for r in read_jsonl(ROOT/f'artifacts/data/policy-v1/{s}.jsonl')}
  for i in range(16):
@@ -33,7 +35,7 @@ def build(out):
    rows.append(row)
  random.Random(SEED+601).shuffle(rows);assert len(rows)==80 and len({r['id'] for r in rows})==80
  write_jsonl(out/'holdout.jsonl',rows)
- write_json(out/'manifest.json',{'diagnostic_audit':True,'created_after_original_primary_results':True,'frozen_before_any_audit_generation':True,'selection_unchanged_sha256':file_sha(ROOT/'artifacts/selection-v1.json'),'rows':80,'families':16,'patterns':{p:16 for p,_,_,_,_,_ in specs},'seed':SEED+601,'file_sha256':file_sha(out/'holdout.jsonl'),'source_sha256':file_sha(__file__),'all_values_structurally_verified':True,'max_input_tokens':max(r['input_tokens'] for r in rows),'purpose':'Test whether perfect template-benchmark scores survive evidence changes that break the DocumentB/conflict cue; no candidate selection or original-test replacement','planned_arms':['off','particle_1','particle_2','lora'],'decoding':'Original frozen prompt,greedy,nativeEOS3,max64newtokens','cost_cap_seconds':1800,'interpretation':'Exploratory diagnostic prompted by the perfect original score. Report all80 cases and all5 patterns. Any comparative advantage requires a fresh, separately frozen confirmation.'})
+ write_json(out/'manifest.json',{'diagnostic_audit':True,'created_after_original_primary_results':True,'frozen_before_any_audit_generation':True,'selection_unchanged_sha256':selection_sha,'rows':80,'families':16,'patterns':{p:16 for p,_,_,_,_,_ in specs},'seed':SEED+601,'file_sha256':file_sha(out/'holdout.jsonl'),'source_sha256':file_sha(__file__),'all_values_structurally_verified':True,'max_input_tokens':max(r['input_tokens'] for r in rows),'purpose':'Test whether perfect template-benchmark scores survive evidence changes that break the DocumentB/conflict cue; no candidate selection or original-test replacement','planned_arms':['off','particle_1','particle_2','lora'],'decoding':'Original frozen prompt,greedy,nativeEOS3,max64newtokens','cost_cap_seconds':1800,'interpretation':'Exploratory diagnostic prompted by the perfect original score. Report all80 cases and all5 patterns. Any comparative advantage requires a fresh, separately frozen confirmation.'})
  print(json.dumps({'frozen_cases':len(rows),'max_tokens':max(r['input_tokens'] for r in rows)}))
 
 if __name__=='__main__':build(ROOT/'artifacts/data/evidence-interventions-v1')

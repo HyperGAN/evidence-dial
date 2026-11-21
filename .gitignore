@@ -31,3 +31,7 @@ artifacts/repro-checks/
 
 # Large retained checkpoint archives are published via the HF dataset.
 publication/training-archive/*.tar.gz
+
+# Materialized immutable selection evidence.
+/artifacts/selection-v1.json
+/artifacts/method-repair-v1/selection-v1.json
