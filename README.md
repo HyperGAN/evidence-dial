@@ -240,3 +240,13 @@ have not been verified. The online examples are saved complete outputs.
 
 [Source](https://github.com/HyperGAN/tiny-aya-particle-sliders) · [Model](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders) · [Dataset](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders) ·
 [Recorded showcase](https://huggingface.co/spaces/ntc-ai/tiny-aya-particle-sliders)
+
+### Tiny Aya Evidence Dial RAW256 schedule
+
+On the 128-case grounding development panel, strength `1.0` with gains
+`[0.5, 1.5] + [1.0] * 62` gave 103 correct answers versus 95 at constant
+strength. The first gain applies during prefill and the second during the
+first cached decode. The reverse schedule gave 61 correct answers. Both
+scheduled arms passed the separate output-integrity check. Pass these gains
+as `options={"step_gains": [0.5, 1.5] + [1.0] * 62}` when reproducing this
+RAW256 grounding profile. [Comparison and checkpoint identity](artifacts/evidence/grounding-raw256-strength-schedule.json)
