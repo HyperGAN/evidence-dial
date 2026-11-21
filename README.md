@@ -31,7 +31,9 @@ method also accepts `step_gains`, one gain for each of the 64 possible output
 tokens. The first gain applies during prefill and subsequent gains apply to
 cached token evaluations. The result records the strengths used through native
 EOS. The native CPU fixture verified constant-output parity and gain order.
-Finished-answer effect from the schedule is pending.
+On the held-out-from-training grounding development panel, the first-decode
+schedule improved from 95 to 103 correct answers out of 128 at equal dose.
+[Per-case evidence](artifacts/evidence/grounding-raw256-strength-schedule.json).
 
 **The quality criterion is your choice.** It is not hardcoded to sympathy.
 A different criterion calls for its own curation and training; this release
