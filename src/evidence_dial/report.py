@@ -1,7 +1,7 @@
 """Paired effect estimates, complete coverage and clustered intervals."""
 from __future__ import annotations
 import collections
-from .protocol import normalize, SEED
+from .protocol import normalize, SEED, success
 
 
 def paired(rows, on, off, *, bootstrap=10000):
@@ -61,3 +61,45 @@ def diagnostics(rows, predictions):
         "answerable_count": len(answerable),
         "answerable_accuracy": sum(p["success"] for p in answerable)/len(answerable) if answerable else None,
         "unnecessary_abstention_rate": sum(normalize(p["output"]) in {"unknown", "conflict"} for p in answerable)/len(answerable) if answerable else None}
+
+
+def paired_abstention(rows, on, off):
+    """Compare strict abstention on the same evidence-present and missing probes."""
+    source = {row['id']: row for row in rows}
+    if len(source) != len(rows):
+        raise ValueError('Duplicate declared IDs')
+    measured = []
+    for predictions in (on, off):
+        arm = {}
+        for prediction in predictions:
+            key = prediction['id']
+            if key in arm or key not in source:
+                raise ValueError('Duplicate or out-of-cohort prediction')
+            if prediction.get('teacher'):
+                raise ValueError('Teacher output cannot enter the abstention audit')
+            output = prediction['output']
+            if success(source[key], output) != prediction['success']:
+                raise ValueError('Frozen strict score differs from the saved prediction')
+            arm[key] = prediction
+        measured.append(arm)
+    on_map, off_map = measured
+    common = on_map.keys() & off_map.keys()
+    if any(on_map[key]['prompt_sha256'] != off_map[key]['prompt_sha256'] for key in common):
+        raise ValueError('ON/OFF evaluation prompt mismatch')
+
+    def subgroup(case_types, observation):
+        keys = {row['id'] for row in rows if row['case_type'] in case_types}
+        matched = keys & common
+        paired_count = len(matched)
+        on_values = [observation(on_map[key]) for key in matched]
+        off_values = [observation(off_map[key]) for key in matched]
+        on_count, off_count = sum(on_values), sum(off_values)
+        return dict(declared=len(keys), measured_pairs=paired_count, complete=bool(keys) and matched == keys,
+                    on_rate=on_count / paired_count if paired_count else None,
+                    off_rate=off_count / paired_count if paired_count else None,
+                    on_minus_off=(on_count - off_count) / paired_count if paired_count else None)
+
+    return dict(missing_evidence_strict_unknown=subgroup({'missing'}, lambda p: normalize(p['output']) == 'unknown'),
+                answerable_evidence_abstention=subgroup({'answerable', 'altered'},
+                                                       lambda p: normalize(p['output']) in {'unknown', 'conflict'}),
+                used_for_selection=False)
