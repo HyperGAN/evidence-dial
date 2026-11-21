@@ -159,7 +159,8 @@ class Portable:
             'input_tokens':count,'output_tokens':len(ids),'seconds':time.perf_counter()-start,
             'strength':strength,'weights_kind':'raw','ema_decay':None}
         if applied is not None:
-            result['effective_strengths'] = applied
+            field = 'effective_layer_strengths' if adaptive_receipt and adaptive_receipt['method'] == 'a_psr' else 'effective_strengths'
+            result[field] = applied
         if adaptive_receipt is not None:
             adaptive_receipt['base_revision'] = self.config['base_revision']
             if adaptive_receipt['intervention'] == 'raw_adapter':

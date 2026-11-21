@@ -5,7 +5,7 @@ import torch
 from transformers import BatchEncoding, Cohere2Config, Cohere2ForCausalLM
 
 from evidence_dial import binding, portable
-from evidence_dial.adaptive_strength import CachedGate, CachedPromptSteering
+from evidence_dial.adaptive_strength import AllDecoderPromptSteering, CachedGate, CachedPromptSteering
 from particle_sliders.adaptive_steering import CLABSParameters
 from particle_sliders.prompt_steering import PromptSteering
 
@@ -179,3 +179,63 @@ def test_native_eos_in_prefill_leaves_the_gate_unused(native):
     assert result["effective_strengths"] == [0]
     assert result["adaptive_steering"]["cached_steps"] == []
     assert result["adaptive_steering"]["usage"] == {"fired": 0, "eligible": 0}
+
+
+def test_answer_onset_edits_only_the_last_prompt_token(native, monkeypatch):
+    layer = native.model.model.layers[1]
+    original_forward = layer.forward
+    after_hook = []
+
+    def capture_forward(hidden, *args, **kwargs):
+        after_hook.append(hidden.clone())
+        return original_forward(hidden, *args, **kwargs)
+
+    monkeypatch.setattr(layer, "forward", capture_forward)
+    _run(native, strength=0)
+    off_prompt = after_hook[0]
+    after_hook.clear()
+    result, _ = _run(native, strength=0.5, adaptive=CachedGate(
+        layer=1, method="cfp", parameter=1e30, intervention="residual",
+        direction=_axis_direction(), evidence_ref="test fixture", include_answer_onset=True))
+    receipt = result["adaptive_steering"]
+    assert torch.equal(after_hook[0][:, :-1], off_prompt[:, :-1])
+    assert torch.equal(after_hook[0][:, -1], off_prompt[:, -1] + 0.5 * _axis_direction())
+    assert receipt["answer_onset_step"]["output_index"] == 0
+    assert receipt["answer_onset_step"]["cache_position"] == 2
+    assert receipt["answer_onset_step"]["alignment"] == off_prompt[0, -1, 0].item()
+    assert [step["cache_position"] for step in receipt["cached_steps"]] == [3, 4]
+    assert receipt["usage"] == {"fired": 3, "eligible": 3}
+    assert result["effective_strengths"] == [0.5] * 3
+    with pytest.raises(ValueError, match="direct residual"):
+        _run(native, strength=0.5, adaptive=CachedGate(
+            layer=0, method="random", parameter=1, intervention="raw_adapter",
+            evidence_ref="test fixture", seed=2, include_answer_onset=True))
+
+
+def test_a_psr_applies_all_distinct_fitted_layers_once_per_answer_position(native):
+    probes = tuple(PromptSteering(16).eval().requires_grad_(False) for _ in range(2))
+    with torch.no_grad():
+        for probe, coefficient in zip(probes, (2, 3), strict=True):
+            probe.probe.weight.zero_()
+            probe.probe.bias.fill_(coefficient)
+            probe.direction.weight.copy_(_axis_direction().unsqueeze(0))
+    for onset in (False, True):
+        result, _ = _run(native, strength=0.5, adaptive=AllDecoderPromptSteering(
+            fitted=probes, evidence_ref="test fixture", include_answer_onset=onset))
+        receipt = result["adaptive_steering"]
+        assert receipt["method"] == "a_psr" and receipt["decoder_input_layers"] == [0, 1]
+        assert "effective_strengths" not in result
+        assert result["effective_layer_strengths"] == [[1, 1.5] if onset else [0, 0], [1, 1.5], [1, 1.5]]
+        traced = receipt["cached_steps"].copy()
+        if onset:
+            traced.insert(0, receipt["answer_onset_step"])
+        else:
+            assert "answer_onset_step" not in receipt
+        assert [step["output_index"] for step in traced] == list(range(0 if onset else 1, 3))
+        assert all([layer["coefficient"] for layer in step["layers"]] == [2, 3] for step in traced)
+    for invalid in ((probes[0],), (probes[0], probes[0])):
+        with pytest.raises(ValueError, match="different fitted A-PSR module"):
+            _run(native, strength=0.5, adaptive=AllDecoderPromptSteering(fitted=invalid, evidence_ref="test fixture"))
+    with pytest.raises(ValueError, match="for layer 1 on its native device"):
+        _run(native, strength=0.5, adaptive=AllDecoderPromptSteering(
+            fitted=(probes[0], PromptSteering(8)), evidence_ref="test fixture"))
