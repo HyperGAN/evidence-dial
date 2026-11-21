@@ -1,0 +1,35 @@
+{
+  "profile": "native Tiny Aya Evidence Dial grounding RAW256",
+  "raw_sha256": "5d1d28df6d0528bf937dcbe1b4802849340002d50d4ac8cbb42d70d958036a64",
+  "token_schedule_source_sha256": "fdcd362e3b3986da9c8272d7c9d0997499baf3cf5630a613d9659b27f270cc0d",
+  "cases": 128,
+  "decoding": {
+    "max_new_tokens": 64,
+    "sampling": false,
+    "native_eos": true
+  },
+  "strength": 1.0,
+  "score": "equal-case exact grounded-answer success ON minus matched OFF",
+  "correct_off": 86,
+  "constant": {"correct_on": 95, "effect_gain": 0.0703125},
+  "prefill_heavy": {
+    "first_two_gains": [1.5, 0.5],
+    "remaining_62_gains": 1.0,
+    "correct_on": 61,
+    "effect_gain": -0.1953125,
+    "qualified_integrity_passes": 128
+  },
+  "first_decode_heavy": {
+    "first_two_gains": [0.5, 1.5],
+    "remaining_62_gains": 1.0,
+    "correct_on": 103,
+    "effect_gain": 0.1328125,
+    "change_vs_constant": 0.0625,
+    "qualified_integrity_passes": 128
+  },
+  "all_scheduled_cases_reached_both_changed_gains": true,
+  "new_training_updates": 0,
+  "new_teacher_calls": 0,
+  "weights": "raw",
+  "ema_decay": null
+}
