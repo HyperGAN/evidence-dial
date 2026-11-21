@@ -59,7 +59,7 @@ The **particle bank** is a shared table of 128 learned, four-number vectors. Eac
 
 Jev chooses contexts and evaluates finished answers. The critic supplies the numerical training feedback. We do not differentiate through Jev or add an answer-token imitation loss.
 
-Two fresh learning-rate runs completed **1,024 updates each**, batch size 8. Training, selection, and inference used the raw checkpoint weights, without averaging them. The [method guide](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md) gives the equations, architecture, saved ParticleGAN 0.9.5 recipe, and source pins.
+Two fresh learning-rate runs completed **1,024 updates each**, batch size 8. Training, selection, and inference used the raw checkpoint weights, without averaging them. The [method guide](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/METHOD.md) gives the equations, architecture, saved ParticleGAN recipe, and source pins.
 
 ## The measured result
 

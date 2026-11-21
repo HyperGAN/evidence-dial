@@ -6,7 +6,7 @@ complete. All agent deliverables are public; Mikkel owns the final form.
 | Requirement | Verified outcome and limits |
 | --- | --- |
 | Track 1, problem 3 | Grounding in supplied organizational documents, with UNKNOWN and CONFLICT labels. Fictional policy corpora exercise the stated use case. |
-| CuratorKIT → trainers → AuditKIT | Real pinned CuratorKIT validation/export, Particle Sliders shared response backend and PG0.9.5, AlignTune RaftTrainer, AuditKIT callable/scorer path. No placeholder citation-loss mechanism credited. |
+| CuratorKIT → trainers → AuditKIT | Real pinned CuratorKIT validation/export, Particle Sliders shared response backend and the recorded ParticleGAN source, AlignTune RaftTrainer, AuditKIT callable/scorer path. No placeholder citation-loss mechanism credited. |
 | Corrected success/latent method | 455 unhinted Tiny Aya samples; 65 successful Jev calls including 8 fixtures; 48 accepted source cases, 16 ineligible; seeds/RNG/token/hidden traces and 118 exact paired states retained/public. Positive-context states are distinct from the sampled trajectory. One saved sample replay has identical tokens and hidden bits. |
 | Internal API | New Cohere2 backend registered against Particle Sliders core. Rank-8 activation-conditioned routed bank; native OFF equivalence, 2,593 connected tensors, exact FULL restore and RAW inference verified. |
 | Initialization and no EMA | Fresh components only; pretrained, zero-output and host scales preserved. Adapter/critic/bank weight EMA disabled; upstream scalar optimizer statistics unchanged. Resumes do not reinitialize. |

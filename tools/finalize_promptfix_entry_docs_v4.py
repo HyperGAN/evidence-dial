@@ -94,7 +94,7 @@ are not evaluation results. [Cache admission]({DATA}/audits/training-cache-admis
 
 Neutral and positive retain the same question and empty continuation history;
 only positive receives the extra instruction. The original initialization,
-ParticleGAN 0.9.5 formulation and optimizer laws are retained. Weight EMA is
+The recorded ParticleGAN formulation and optimizer laws are retained. Weight EMA is
 disabled. Two fresh cohorts complete 1,024 updates with batch 8, G0.00025 or
 G0.0000625, D0.018 and bank0.03. Every quarter is independently admitted before
 selection; all 384 DEV answers reach EOS.

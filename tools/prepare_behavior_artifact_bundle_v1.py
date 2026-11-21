@@ -133,7 +133,7 @@ All development maximum ties are retained. Root adapter files identify the prese
 
 Scores are Jev model judgments, not accuracy percentages. Complete OFF, prompt-only, all selected ties and display strengths are in the companion dataset. Small synthetic corpus, one training seed, a shared curation/evaluation judge and64-token generation limit restrict generalization. Stronger steering may regress. See the project README for the exact conclusion and the earlier QA study's held-out gap to SFT.
 
-Base revision: `af89d219b53ed9b13b8a4645f9c8028973510324`. Core0.14.2/PG0.9.5; full BF16/SDPA GPU backbone. Install the pinned project dependencies and download that base snapshot. Load `adapter-native.pt` with `particle_sliders.inference.open_inference`, using `evidence_dial.behavior_binding_v1.inference_backend()`. Within the context, `binding.response.__self__` exposes `model` and `slider`; use `slider.scaled(strength)` with the unchanged user chat message. The source evaluator `behavior_generate_v1.py` records the actual native greedy64 path.
+Base revision: `af89d219b53ed9b13b8a4645f9c8028973510324`. Core 0.14.2 with the recorded ParticleGAN source; full BF16/SDPA GPU backbone. Install the pinned project dependencies and download that base snapshot. Load `adapter-native.pt` with `particle_sliders.inference.open_inference`, using `evidence_dial.behavior_binding_v1.inference_backend()`. Within the context, `binding.response.__self__` exposes `model` and `slider`; use `slider.scaled(strength)` with the unchanged user chat message. The source evaluator `behavior_generate_v1.py` records the actual native greedy64 path.
 
 Code: https://github.com/HyperGAN/evidence-dial
 Data and logs: https://huggingface.co/datasets/ntc-ai/evidence-dial-behavior

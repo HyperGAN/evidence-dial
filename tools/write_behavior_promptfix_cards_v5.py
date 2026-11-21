@@ -66,7 +66,7 @@ same question and empty continuation history; only positive has a behavioral
 instruction. The previous unrelated sentence-limit instruction is removed.
 
 Two fresh cohorts completed 1,024 updates with batch8, G0.00025 or0.0000625,
-D0.018 and bank0.03. The ParticleGAN0.9.5 formulation and original scoped
+D0.018 and bank0.03. The recorded ParticleGAN formulation and original scoped
 initialization are unchanged. There is no SFT warm start, token-imitation loss
 or weight EMA. Selection uses only equal-question finished effect ON minus OFF
 across all24 DEV cells: four checkpoints and three strengths per cohort.
@@ -111,7 +111,7 @@ These are custom native Particle Sliders artifacts, not standard PEFT weights.
 ## Inference
 
 Base: `CohereLabs/tiny-aya-global@af89d219b53ed9b13b8a4645f9c8028973510324`;
-core0.14.2/PG0.9.5; raw weights; BF16/SDPA GPU backbone. Use the dedicated
+core 0.14.2 with the recorded ParticleGAN source; raw weights; BF16/SDPA GPU backbone. Use the dedicated
 `open_behavior_inference` owner from the
 [project source](https://github.com/HyperGAN/evidence-dial). It uses the same
 full-answer generator as the experiments and retains the ordinary question.

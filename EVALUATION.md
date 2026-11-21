@@ -45,7 +45,7 @@ The native SHA-256 is `92e44224ce9785a4830b09a72db27d12e36758708fcce289cfb31ad1f
 
 Particle Sliders for Tiny Aya turns written response preferences into an adjustable adapter for frozen Tiny Aya Global 3.35B. Its target is sympathetic, constructive support with independent judgment. For each of 64 TRAIN questions, the unmodified model generates complete responses under three unrestricted behavioral instructions and a neutral control. NanoGPT Jev filters successful contexts; one best qualifying context per question yields 37 paired first-answer hidden states. Neutral and positive inputs retain the same question and empty continuation history, while only positive receives the behavioral instruction.
 
-The unchanged ParticleGAN 0.9.5 formulation trains a routed adapter, critic and particle bank while the backbone stays frozen. Two fresh learning-rate cohorts complete 1,024 updates each, with raw weights and no weight EMA. Selection uses finished intended effect ON minus matched OFF across all 24 declared DEV settings. At inference, the adapter retains the ordinary question, adds no behavioral prompt, and exposes an intensity control.
+The source-bound ParticleGAN formulation trains a routed adapter, critic and particle bank while the backbone stays frozen. Two fresh learning-rate cohorts complete 1,024 updates each, with raw weights and no weight EMA. Selection uses finished intended effect ON minus matched OFF across all 24 declared DEV settings. At inference, the adapter retains the ordinary question, adds no behavioral prompt, and exposes an intensity control.
 
 On 64 fresh synthetic questions, the preselected adapter scores 0.7327, versus 0.6642 OFF and 0.6976 prompt-only. Its gains are +0.0685 and +0.0351; both individual paired bootstrap intervals exclude zero. All 384 comparison answers reach native EOS. Sympathy judgments rise, while the separate sycophancy diagnostic does not fall versus OFF. Earlier negative results remain public. One training seed, related synthetic scenario families, a shared curation/evaluation judge and first-state supervision limit the conclusions.
 
@@ -329,7 +329,7 @@ held-out data, a behavior-SFT win, or SOTA.
 experiment loader's current 22-GiB allocator-cap requirement is stated below.
 
 Recorded versions: Particle Sliders core 0.14.2 at
-`63f6e3942340d8aadca816800d19fb1ac88d92a9`, ParticleGAN 0.9.5,
+`63f6e3942340d8aadca816800d19fb1ac88d92a9`, the recorded ParticleGAN source,
 Transformers 4.57.6, CuratorKIT 0.1.21, AuditKIT 1.1.6 and PyTorch 2.14.1+cu130.
 The pinned base is
 `CohereLabs/tiny-aya-global@af89d219b53ed9b13b8a4645f9c8028973510324`.
