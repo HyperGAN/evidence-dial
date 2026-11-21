@@ -26,6 +26,21 @@ credentials are included in this repository. CuratorKIT, AuditKIT and AlignTune
 retain their upstream licences. The project code is MIT, our fictional corpus
 is CC0, and derived model weights follow Tiny Aya's CC-BY-NC-4.0 licence.
 
+## Restore the frozen selection evidence
+
+The archived experiment selections retain their original bytes and cohort
+identities. The public-source exporter and diagnostic data builders restore
+their pinned copy when needed. For manual inspection or offline reproduction,
+run the restorer from the repository root before using the historical tools.
+
+```sh
+python -m evidence_dial.archive_evidence --root .
+```
+
+The restorer checks SHA-256 and restores the original artifact paths. It can use
+local Git history, a copy supplied with `--archive-dir`, or the immutable public
+GitHub commit. Add `--offline` to require a local source.
+
 ## Frozen data
 
 Public policy files are included in this checkout and in the policies dataset.

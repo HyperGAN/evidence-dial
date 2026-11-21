@@ -4,14 +4,18 @@ import argparse
 import hashlib
 import json
 import re
-import shutil
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"src"))
+from evidence_dial.archive_evidence import ARCHIVED_FILES, restore_file
 
 
 def export(dest):
     dest=Path(dest).resolve()
     if dest==ROOT or ROOT in dest.parents:raise ValueError('Use a separate publication checkout')
+    for relative in ARCHIVED_FILES:
+        restore_file(ROOT, relative)
     files=[]
     for directory in ['src','tests','tools','configs','docs','demo','artifacts/evidence','artifacts/data/policy-v1','artifacts/data/evidence-interventions-v1','artifacts/data/balanced-grounding-v2','artifacts/data/balanced-grounding-confirm-v1','artifacts/data/policy-curated-success-v1']:
         files.extend(p for p in (ROOT/directory).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
