@@ -34,6 +34,7 @@ def _git_blob(root, relative):
         result = subprocess.run(
             ["git", "--no-replace-objects", "cat-file", "blob", f"{ARCHIVE_COMMIT}:{relative}"],
             cwd=root,
+            env={**os.environ, "GIT_ALLOW_PROTOCOL": ""},
             capture_output=True,
             timeout=10,
         )
