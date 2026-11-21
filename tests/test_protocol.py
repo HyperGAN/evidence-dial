@@ -44,7 +44,7 @@ def test_behavior_reference_requires_a_current_raw_full_zero():
     raw = {"decay": None, "values": None}
     check_reference({"payload": {"game": game, "ema": raw}}, PG_VERSION)
     for changed, ema in (
-        (dict(game, config={"pg_version": "0.10.1"}), raw),
+        (dict(game, config={"pg_version": "0.11.0"}), raw),
         (dict(game, completed_steps=1), raw),
         (game, {"decay": 0.9, "values": {}}),
     ):

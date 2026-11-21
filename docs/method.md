@@ -8,7 +8,7 @@ toward states that successful instructions already elicit from that base.
 
 This guide describes the **released Tiny Aya checkpoint**, not every possible
 ParticleGAN recipe. Its saved configuration is `bispf_optimized` with
-`loss="non_saturating"`, ParticleGAN **0.9.5**, and Particle Sliders core **0.14.2**.
+`loss="non_saturating"`, the pinned ParticleGAN source below, and Particle Sliders core **0.14.2**.
 The saved recipe is authoritative: a generic description of Sinkhorn-relativistic
 training or YuE2's training settings does not describe these weights.
 
@@ -195,7 +195,7 @@ ParticleGAN and Particle Sliders predate this entry. The contribution here is
 the Tiny Aya binding, preference curation, paired-state training/evaluation
 pipeline, auditable experiment and complete-answer explorer.
 
-- [ParticleGAN 0.9.5 source](https://github.com/HyperGAN/ParticleGAN/tree/1b8355b184b21bb7d81104ee590813c262f6df0a): official recipe, loss, penalties, regularizer and optimizers. Its released wheel SHA-256 is `c1c0de7a635ac1b1634ba158eed050b6f6aed993e01f9b463435430c77d846ae`.
+- [ParticleGAN training source](https://github.com/HyperGAN/ParticleGAN/tree/1b8355b184b21bb7d81104ee590813c262f6df0a): official recipe, loss, penalties, regularizer and optimizers. Its released wheel SHA-256 is `c1c0de7a635ac1b1634ba158eed050b6f6aed993e01f9b463435430c77d846ae`.
 - [Particle Sliders core used for the published run](https://github.com/HyperGAN/particle-sliders/tree/63f6e3942340d8aadca816800d19fb1ac88d92a9): the conditional engine, audio response adapter, routed projection and reference modules under `packages/particle-sliders-core/src/particle_sliders/`. Shared explanatory [math guide](https://github.com/HyperGAN/particle-sliders/blob/63f6e3942340d8aadca816800d19fb1ac88d92a9/docs/math.md); this checkpoint's saved non-saturating recipe, fixed scales and finished-output selection policy are specified above.
 - [Tiny Aya model binding](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/bf0b1a7a8600efb0e814677e9a73314cbf9a60a3/src/evidence_dial/binding.py) and [behavior binding](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/bf0b1a7a8600efb0e814677e9a73314cbf9a60a3/src/evidence_dial/behavior_promptfix_binding_v4.py).
 - [Winner record](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/main/winner.json), [raw checkpoint with saved recipe](https://huggingface.co/ntc-ai/tiny-aya-particle-sliders/blob/b7e7f256035b9eb8d4ded4d01af52effff2e51fc/adapter-raw.pt), and [data and audits](https://huggingface.co/datasets/ntc-ai/tiny-aya-particle-sliders/tree/main/promptfix37-h1024-v4).

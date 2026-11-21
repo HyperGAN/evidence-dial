@@ -131,7 +131,7 @@ rank-8 routed branches; their routers mix particles according to the input.
 Strength $s$ scales their nonlinear correction. Zero bypasses it exactly;
 generated text need not vary linearly with strength.
 
-This adapter used ParticleGAN 0.9.5 and Particle Sliders core 0.14.2. Two fresh
+This adapter used the pinned training sources for Particle Sliders core 0.14.2. Two fresh
 cohorts completed 1,024 updates each. The unique DEV winner used adapter rate
 0.0000625, critic 0.018 and bank 0.03, batch 8, strength 1. Raw current weights
 are used throughout; model-weight EMA is disabled.
@@ -156,8 +156,8 @@ runtime are required; this is not a standard PEFT artifact.
 [Calculated memory requirements](MEMORY.md) describe tensor storage. The
 experiment loader's current 22-GiB allocator-cap requirement is stated below.
 
-Recorded versions: Particle Sliders core 0.14.2 at
-`63f6e3942340d8aadca816800d19fb1ac88d92a9`, ParticleGAN 0.9.5,
+Recorded versions include Particle Sliders core 0.14.2 at
+`63f6e3942340d8aadca816800d19fb1ac88d92a9`,
 Transformers 4.57.6, CuratorKIT 0.1.21, AuditKIT 1.1.6 and PyTorch 2.14.1+cu130.
 The pinned base is
 `CohereLabs/tiny-aya-global@af89d219b53ed9b13b8a4645f9c8028973510324`.
@@ -169,12 +169,13 @@ configuration. Fresh-machine end-to-end replication has not been verified.
 ```bash
 git clone https://github.com/HyperGAN/tiny-aya-particle-sliders
 cd tiny-aya-particle-sliders
+git checkout ab5b4717331667bd841d722b79a1c1fa7a7f767b
 python -m venv .venv
 .venv/bin/pip install -e .
 .venv/bin/hf download CohereLabs/tiny-aya-global --revision af89d219b53ed9b13b8a4645f9c8028973510324
 ```
 
-The checkout installs Particle Sliders core 0.15.1 at `c13890f8` with ParticleGAN 0.11.0. Fresh training uses a new cohort. The [historical reproduction guide](docs/reproduce.md) records the earlier training sources.
+The current default branch installs Particle Sliders core 0.15.2 at `ec1161f5` with ParticleGAN 0.11.1. Fresh training uses a new cohort. The [historical reproduction guide](docs/reproduce.md) records the earlier training sources. The [original source manifest](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/ab5b4717331667bd841d722b79a1c1fa7a7f767b/publication-manifest.json) identifies the published evidence bytes.
 
 These are custom native artifacts, not standard PEFT weights. Inside an active
 bounded GPU runner, `resource` supplies its monitor's `check()` method:

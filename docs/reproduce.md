@@ -6,7 +6,7 @@ Fresh training is a separate experiment; never overwrite or replay this cohort.
 
 ## Historical environment and source
 
-Use the archived Tiny Aya revision for the measured training walkthrough.
+Use [the archived Tiny Aya revision](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/ab5b4717331667bd841d722b79a1c1fa7a7f767b/docs/reproduce.md) for the measured training walkthrough. Check out `ab5b4717331667bd841d722b79a1c1fa7a7f767b` before running the historical commands below.
 The [historical method sources](method.md#historical-experiment-sources-and-attribution)
 identify the exact binding and engine. For a new cohort, install this checkout
 with `python -m pip install -e '.[training]'` in a fresh environment and use new
@@ -14,21 +14,12 @@ output paths. The behavior preparation tools require `--reference-full0` from
 a fresh zero-update session on the current engine.
 
 The measured host used Python3.11.17, Torch2.14.1+cu130 and Transformers4.57.6.
-The finite package versions are in `configs/training-environment.json`; kit
+The finite package versions are in [the recorded environment](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/ab5b4717331667bd841d722b79a1c1fa7a7f767b/configs/training-environment.json); kit
 commits are in `configs/training-sources.lock.json`. The local environment
 inherited host Torch. Installing a newer all-extras AlignTune bundle is not a
 reproduction of the measured combination.
 
-Start with a compatible CUDA PyTorch environment, then stage the pinned sources:
-
-```bash
-python3.11 -m venv --system-site-packages .venv
-.venv/bin/python tools/bootstrap_sources.py
-.venv/bin/python -m pip install --no-deps -e vendor/CuratorKIT -e vendor/AuditKIT -e vendor/particle-sliders/packages/particle-sliders-core -e .
-.venv/bin/python -m pip install transformers==4.57.6 huggingface-hub==0.35.0 particlegan==0.9.5 peft==0.18.0 trl==0.25.1 datasets==4.4.1 accelerate==1.12.0 pyarrow==21.0.0 fsspec==2025.9.0 dill==0.4.0 multiprocess==0.70.18 safetensors==0.7.0 numpy==1.26.4
-.venv/bin/python -m pytest -q
-hf download CohereLabs/tiny-aya-global --revision af89d219b53ed9b13b8a4645f9c8028973510324
-```
+Follow [the archived environment setup commands](https://github.com/HyperGAN/tiny-aya-particle-sliders/blob/ab5b4717331667bd841d722b79a1c1fa7a7f767b/docs/reproduce.md#historical-environment-and-source) for the measured run.
 
 The base is gated: use your own approved HF account. No base weights or
 credentials are included in this repository. CuratorKIT, AuditKIT and AlignTune
@@ -303,7 +294,7 @@ native-v2 generation is reported separately; export validity alone is no
 behavioral improvement claim.
 
 Historical owned source versions are retained by content SHA in
-`repro/source-history`, including the original teacher-cache source. Private
+[the immutable source archive](https://github.com/HyperGAN/tiny-aya-particle-sliders/tree/ab5b4717331667bd841d722b79a1c1fa7a7f767b/repro/source-history), including the original teacher-cache source. Private
 Git history, account facts and full FaithEval passages are excluded.
 
 ## Validate the saved-output explorer
@@ -379,5 +370,5 @@ the portable inference files and exact distribution proofs.
 
 Current CLI defaults point to recipe-v2 and the completed curation-v4. These
 prospective defaults were fixed after measurement; their executed earlier
-sources are retained in source-history. No measurement, proof or completed
+sources are retained in the linked source archive. No measurement, proof or completed
 update was rerun to accommodate the defaults.

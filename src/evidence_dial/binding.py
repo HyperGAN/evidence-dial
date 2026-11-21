@@ -140,7 +140,7 @@ def initialize(native, critic, cohort):
         distributions={"z": R2Normal(mean=0., std=1.)})
     receipt = initialize_fresh_components(scopes, cohort_id=cohort,
         source_identity={"binding_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-            "core": "c13890f8e2a1ecf1dc8eb9f2a37f9187cb9fea78", "policy": "declared-host-RMS-QR-zero-up-R2-v1"},
+            "core": "ec1161f5d74481be3540cb0dfa63d0e8f8b54e90", "policy": "declared-host-RMS-QR-zero-up-R2-v1"},
         completed_steps=0, restored_from=None, optimizers=())
     assert all(torch.count_nonzero(a.lora_up.weight) == 0 for a in native.slider.adapters.values())
     return receipt

@@ -7,7 +7,7 @@ name = "lexica-evidence-dial"
 version = "0.1.0"
 description = "Learned grounding control for Tiny Aya, Lexsi hackathon 2026"
 requires-python = ">=3.11"
-dependencies = ["transformers==4.57.6", "torch>=2.6,<3", "huggingface-hub>=0.35,<1", "curatorkit==0.1.21", "auditkit==1.1.6", "safetensors>=0.7,<1", "particle-sliders-core @ git+https://github.com/HyperGAN/particle-sliders.git@c13890f8e2a1ecf1dc8eb9f2a37f9187cb9fea78#subdirectory=packages/particle-sliders-core"]
+dependencies = ["transformers==4.57.6", "torch>=2.6,<3", "huggingface-hub>=0.35,<1", "curatorkit==0.1.21", "auditkit==1.1.6", "safetensors>=0.7,<1", "particle-sliders-core @ git+https://github.com/HyperGAN/particle-sliders.git@ec1161f5d74481be3540cb0dfa63d0e8f8b54e90#subdirectory=packages/particle-sliders-core"]
 
 [project.optional-dependencies]
 training = ["peft==0.18.0", "trl==0.25.1", "datasets==4.4.1", "accelerate==1.12.0", "pyarrow==21.0.0", "fsspec==2025.9.0", "dill==0.4.0", "multiprocess==0.70.18"]

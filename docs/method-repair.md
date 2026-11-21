@@ -2,7 +2,7 @@
 
 The corrected experiment trains on model-produced solutions that passed a
 recorded correctness check. It uses the shared Particle Sliders response API,
-activation-conditioned routed bank, ParticleGAN0.9.5 game, RAW checkpoints and
+activation-conditioned routed bank, same source-bound ParticleGAN game, RAW checkpoints and
 native inference. The earlier answer-hinted experiment remains a separate
 comparison; none of its results are relabelled as this method.
 
